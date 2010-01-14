@@ -2,17 +2,17 @@
 
 == Members ==
 Cley Tang
-cleyt [at] sfu [dot] ca
+cleyt (at) sfu (dot) ca
 Skills: SVN, Objective-C, HTML, CSS, Javascript
 
 Qiong Yang
-qya7[at] sfu [dot] ca
+qya7(at) sfu (dot) ca
 Skills: C++, Java, HTML, CSS, Javascript
 
 Daniel Chappell
-dhc5  [at] sfu [dot] ca
+dhc5  (at) sfu (dot) ca
 Skills: Java, CSS, Javascript
 
 Cuiting Li
-cuitingl [at] sfu [dot] ca
+cuitingl (at) sfu (dot) ca
 Skills: Java, C++, SQL
