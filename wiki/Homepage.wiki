@@ -18,5 +18,5 @@ cuitingl (at) sfu (dot) ca
 Skills: Java, C++, SQL
 
 ===Ariel Lorenzo-Luaces===
-arielluaces (at) shaw (dot) ca
+arielluaces (at) shaw (dot) ca /n
 Skills: C++, Java, using OpenGL, VisualBasic, QBasic
