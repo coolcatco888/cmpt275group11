@@ -2,7 +2,7 @@
 
 ==Members==
 ===Cley Tang===
-cleyt (at) sfu (dot) ca
+cleyt at sfu dot ca
 Skills: SVN, Objective-C, HTML, CSS, Javascript
 
 ===Qiong Yang===
