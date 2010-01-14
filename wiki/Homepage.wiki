@@ -20,3 +20,9 @@ Skills: Java, CSS, Javascript
 cuitingl@sfu.ca
 
 Skills: Java, C++, SQL
+
+
+===Ariel Lorenzo-Luaces===
+arielluaces (at) shaw (dot) ca
+
+Skills: C++, Java, using OpenGL, VisualBasic, QBasic
