@@ -1,0 +1,13 @@
+==Meetings==
+----
+    Due to different schedules we have , our meeting schedules are not fixed. Future meeting time will be discussed during the current meeting and updated to our Google calendar. 
+
+    ===Meeting Minutes===
+
+    Activities done during meeting time, meeting content, attendance are recorded by an assigned note taker. 
+
+    To see our meeting minutes Click here 
+
+    Subversion
+
+    Subversion (SVN) is a version control system used to maintain current and historical versions of our source code. It is essential in group work coding, which can help you avoid issues such as editing conflict. To see how you can check out our project via SVN client, Click here. 
