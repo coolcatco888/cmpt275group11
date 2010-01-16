@@ -1,10 +1,10 @@
 ==Meetings==
 ----
-    Due to our changing schedules, meeting times are not fixed. We plan our next meeting at the end of the previous one.
+Due to our changing schedules, meeting times are not fixed. We plan our next meeting at the end of the previous one.
 
-    ===Meeting Minutes===
+===Meeting Minutes===
 
-    Activities done during meeting time, meeting content, and attendance are recorded by an assigned note taker. 
+Activities done during meeting time, meeting content, and attendance are recorded by an assigned note taker. 
 
 ||     *Date*          ||   *Members*   ||    *Activities*    ||
 ||Jan. 13, 2010  <br>3:30PM - 8:15PM||  Whole Team   || -created website <br>-created project plan revision 1.0||
