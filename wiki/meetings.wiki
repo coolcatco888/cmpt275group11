@@ -6,10 +6,7 @@
 
     Activities done during meeting time, meeting content, attendance are recorded by an assigned note taker. 
 
-||      Date           ||    Members    ||     Activites     ||
-||Jan. 12, 2010  3:30PM||  Whole Team   ||
+||     *Date*          ||   *Members*   ||    *Activities*    ||
+||Jan. 13, 2010  3:30PM||  Whole Team   || -created website <br>-created project plan revision 1.0||
+||Jan. 15, 2010  3:30PM||   Whole team || -updated website <br>-project plan revision 1.1||
 
-
-    Subversion
-
-    Subversion (SVN) is a version control system used to maintain current and historical versions of our source code. It is essential in group work coding, which can help you avoid issues such as editing conflict. To see how you can check out our project via SVN client, Click here. 
