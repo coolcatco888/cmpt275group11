@@ -7,6 +7,5 @@
     Activities done during meeting time, meeting content, attendance are recorded by an assigned note taker. 
 
 ||     *Date*          ||   *Members*   ||    *Activities*    ||
-||Jan. 13, 2010  3:30PM||  Whole Team   || -created website <br>-created project plan revision 1.0||
-||Jan. 15, 2010  3:30PM||   Whole team || -updated website <br>-project plan revision 1.1||
-
+||Jan. 13, 2010  <br>3:30PM - 8:15PM||  Whole Team   || -created website <br>-created project plan revision 1.0||
+||Jan. 15, 2010  <br>3:30PM - 5:30PM||   Whole Team || -updated website <br>-project plan revision 1.1||
