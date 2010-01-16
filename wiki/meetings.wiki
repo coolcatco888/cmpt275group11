@@ -4,7 +4,7 @@
 
     ===Meeting Minutes===
 
-    Activities done during meeting time, meeting content, attendance are recorded by an assigned note taker. 
+    Activities done during meeting time, meeting content, and attendance are recorded by an assigned note taker. 
 
 ||     *Date*          ||   *Members*   ||    *Activities*    ||
 ||Jan. 13, 2010  <br>3:30PM - 8:15PM||  Whole Team   || -created website <br>-created project plan revision 1.0||
