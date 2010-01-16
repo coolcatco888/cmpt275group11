@@ -1,6 +1,14 @@
 ==Meetings==
 ----
-Due to our changing schedules, meeting times are not fixed. We plan our next meeting at the end of the previous one.
+This will be our tentative meeting schedule.  Meeting times may change throughout the course of the project development.  Wednesdays will be more focused on project planning rather than on coding and development.  
+
+Meeting minutes will be taken on Wednesday and not on Saturday since the Wednesday meeting outlines tasks and goals for Saturday. Saturday will be the official group work day.
+
+ * Wednesdays @ 3:30pm – Weekly Planning
+ * Saturday @ 2:00pm 
+
+Some project members will meet on various times during the week other than the days specified since individual weekly commitments change throughout the course of the project.
+
 
 ===Meeting Minutes===
 
