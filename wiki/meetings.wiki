@@ -6,7 +6,7 @@
 
     Activities done during meeting time, meeting content, attendance are recorded by an assigned note taker. 
 
- ||Minutes|| Date || Members || Activites ||
+|| Date || Members || Activites ||
 
     Subversion
 
