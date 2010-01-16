@@ -1,11 +1,11 @@
 ==Assignments==
 ----
-    * [http://cmpt275group11.googlecode.com/files/Group-11-ProjectPlan.doc Assignment_1] - Project Plan and Project Website 
+    * [http://cmpt275group11.googlecode.com/files/Group-11-ProjectPlan.doc Assignment 1] - Project Plan and Project Website 
 
-    * Assignment_2 - Not Available
+    * Assignment 2 - Not Available
 
-    * Assignment_3 - Not Available
+    * Assignment 3 - Not Available
 
-    * Assignment_4 - Not Available
+    * Assignment 4 - Not Available
 
-    * Assignment_5 - Not Available
+    * Assignment 5 - Not Available
