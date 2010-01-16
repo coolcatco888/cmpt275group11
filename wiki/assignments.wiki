@@ -1,6 +1,6 @@
 ==Assignments==
 ----
-    * Assignment_1 - Project Plan and Project Website 
+    * [http://cmpt275group11.googlecode.com/files/Group-11-ProjectPlan.doc Assignment_1] - Project Plan and Project Website 
 
     * Assignment_2 - Not Available
 
