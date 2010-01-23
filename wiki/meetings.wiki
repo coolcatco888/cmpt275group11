@@ -5,7 +5,7 @@ This will be our tentative meeting schedule.  Meeting times may change throughou
 Meeting minutes will be taken on Wednesday and not on Saturday since the Wednesday meeting outlines tasks and goals for Saturday. Saturday will be the official group work day.
 
  * Wednesdays @ 3:30pm – Weekly Planning
- * Saturday @ 2:00pm 
+ * Fridays @ 3:30pm 
 
 Some project members will meet on various times during the week other than the days specified since individual weekly commitments change throughout the course of the project.
 
@@ -17,3 +17,5 @@ Activities done during meeting time, meeting content, and attendance are recorde
 ||     *Date*          ||   *Members*   ||    *Activities*    ||
 ||Jan. 13, 2010  <br>3:30PM - 8:15PM||  Whole Team   || -created website <br>-created project plan revision 1.0||
 ||Jan. 15, 2010  <br>3:30PM - 5:30PM||   Whole Team || -updated website <br>-project plan revision 1.1||
+||Jan. 20, 2010 <br> 3:30PM - 5:30PM||Cley, Ariel, Meiko, Tony|| -started requirements and design document<br> -created concept screencaps||
+||Jan. 22, 2010 <br> 3:30PM - 8:00PM|| Whole Team || -completed requirements document <br>-started design document<br>-planned  out structure of program||
