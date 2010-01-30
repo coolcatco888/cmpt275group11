@@ -20,4 +20,4 @@ Activities done during meeting time, meeting content, and attendance are recorde
 ||Jan. 20, 2010 <br> 3:30PM - 5:30PM|| CSIL || Cley, Ariel, Meiko, Tony|| -started requirements and design document<br> -created concept screencaps|| 
 ||Jan. 22, 2010 <br> 3:30PM - 8:00PM|| CSIL ||Whole Team || -completed requirements document <br>-started design document<br>-planned  out structure of program||
 ||Jan. 27, 2010 <br> 3:30PM - 8:30PM|| CSIL ||Cley, Daniel, Meiko, Tony|| -discussed assignment 1 feedback<br> -created UML diagram <br> -finished QA document<br> -completed requirements document <br> -started design document <br> -completed the system sequence diagram  ||
-||Jan. 29, 2010 <br> 3:30PM - ?:??PM || CSIL ||Whole Team ||-finished and compiled design diagram||
+||Jan. 29, 2010 <br> 3:30PM - ?:??PM || CSIL ||Whole Team ||-finished and compiled design document<br> -edited QA document and made touch-ups <br> -touched up Requirements document <br> -set following weeks agenda and assignment submission schedule <br> -researched iPhone application development APIs||
