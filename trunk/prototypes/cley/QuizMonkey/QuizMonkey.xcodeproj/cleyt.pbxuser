@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* QuizMonkey */ = {
+		activeExec = 0;
+		executables = (
+			4EA3ECD51129FFBA0089FB95 /* QuizMonkey */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4EA3ECD51129FFBA0089FB95 /* QuizMonkey */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* QuizMonkey */;
+		codeSenseManager = 4EA3ECEA112A00200089FB95 /* Code sense */;
+		executables = (
+			4EA3ECD51129FFBA0089FB95 /* QuizMonkey */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 287965114;
+			PBXWorkspaceStateSaveDate = 287965114;
+		};
+		sourceControlManager = 4EA3ECE9112A00200089FB95 /* Source Control */;
+		userBuildSettings = {
+			OBJROOT = /Volumes/cleyt/XCodeBuild;
+			SYMROOT = /Volumes/cleyt/XCodeBuild;
+		};
+	};
+	4EA3ECD51129FFBA0089FB95 /* QuizMonkey */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = QuizMonkey;
+		sourceDirectories = (
+		);
+	};
+	4EA3ECE9112A00200089FB95 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryName = cmpt275group11;
+		};
+	};
+	4EA3ECEA112A00200089FB95 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
