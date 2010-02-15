@@ -15,7 +15,9 @@
 		2899E5220DE3E06400AC0155 /* QuizMonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* QuizMonkeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */; };
-		4EA3ECF2112A03020089FB95 /* question.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA3ECF1112A03020089FB95 /* question.m */; };
+		4EB7AD8C112A113600DAA900 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AD8B112A113600DAA900 /* Question.m */; };
+		4EB7AD91112A11A500DAA900 /* PickOutWordsQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AD8D112A11A500DAA900 /* PickOutWordsQuestion.m */; };
+		4EB7AD92112A11A500DAA900 /* FillinBlankQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AD8F112A11A500DAA900 /* FillinBlankQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +33,12 @@
 		28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* QuizMonkey_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkey_Prefix.pch; sourceTree = "<group>"; };
-		4EA3ECF0112A03020089FB95 /* question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = question.h; sourceTree = "<group>"; };
-		4EA3ECF1112A03020089FB95 /* question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = question.m; sourceTree = "<group>"; };
+		4EB7AD8A112A113600DAA900 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		4EB7AD8B112A113600DAA900 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		4EB7AD8D112A11A500DAA900 /* PickOutWordsQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickOutWordsQuestion.m; sourceTree = "<group>"; };
+		4EB7AD8E112A11A500DAA900 /* PickOutWordsQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickOutWordsQuestion.h; sourceTree = "<group>"; };
+		4EB7AD8F112A11A500DAA900 /* FillinBlankQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillinBlankQuestion.m; sourceTree = "<group>"; };
+		4EB7AD90112A11A500DAA900 /* FillinBlankQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillinBlankQuestion.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuizMonkey-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,8 +59,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4EA3ECF0112A03020089FB95 /* question.h */,
-				4EA3ECF1112A03020089FB95 /* question.m */,
+				4EB7AD8D112A11A500DAA900 /* PickOutWordsQuestion.m */,
+				4EB7AD8E112A11A500DAA900 /* PickOutWordsQuestion.h */,
+				4EB7AD8F112A11A500DAA900 /* FillinBlankQuestion.m */,
+				4EB7AD90112A11A500DAA900 /* FillinBlankQuestion.h */,
+				4EB7AD8A112A113600DAA900 /* Question.h */,
+				4EB7AD8B112A113600DAA900 /* Question.m */,
 				1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */,
 				1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */,
@@ -169,7 +179,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* QuizMonkeyViewController.m in Sources */,
-				4EA3ECF2112A03020089FB95 /* question.m in Sources */,
+				4EB7AD8C112A113600DAA900 /* Question.m in Sources */,
+				4EB7AD91112A11A500DAA900 /* PickOutWordsQuestion.m in Sources */,
+				4EB7AD92112A11A500DAA900 /* FillinBlankQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
