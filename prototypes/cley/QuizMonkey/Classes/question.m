@@ -5,10 +5,10 @@
 //  Created by Cley on 14/02/10.
 //  Copyright 2010 Team Awesome. All rights reserved.
 //
-#import "question.h"
+#import "Question.h"
 
 
-@implementation question
+@implementation Question
 
 @synthesize type;
 @synthesize image;

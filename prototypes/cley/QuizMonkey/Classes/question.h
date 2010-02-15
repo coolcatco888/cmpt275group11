@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface question : NSObject {
+@interface Question : NSObject {
 	NSString* type;
 	NSString* image;
 	int time;
