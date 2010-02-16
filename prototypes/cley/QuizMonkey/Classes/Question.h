@@ -12,6 +12,7 @@
 @interface Question : NSObject {
 	NSString* type;
 	NSString* image;
+	NSMutableSet* answers;
 	int time;
 
 }
@@ -19,10 +20,12 @@
 @property (assign) NSString* type;
 @property (assign) NSString* image;
 @property (assign) int time;
+@property (assign) NSMutableSet* answers;
 
 
--(BOOL) validateAnswers: (int*) answers;
+-(NSArray*) validateAnswers: (NSSet*) answers;
 -(void) setType: (NSString*) newType;
 -(void) setImage: (NSString*) newImage;
+-(void) setAnswers: (NSMutableSet*) answers;
 
 @end
