@@ -1,5 +1,0 @@
-/QuizMonkey/Classes/FillinBlankQuestion.m:16: error: no declaration of property 'sentence' found in the interface
-/QuizMonkey/Classes/FillinBlankQuestion.m:36: warning: property 'question' requires method '-question' to be defined - use @synthesize, @dynamic or provide a method implementation
-/QuizMonkey/Classes/FillinBlankQuestion.m:36: warning: property 'question' requires the method 'setQuestion:' to be defined - use @synthesize, @dynamic or provide a method implementation
-/QuizMonkey/Classes/FillinBlankQuestion.m:36: warning: property 'options' requires method '-options' to be defined - use @synthesize, @dynamic or provide a method implementation
-/QuizMonkey/Classes/FillinBlankQuestion.m:36: warning: property 'options' requires the method 'setOptions:' to be defined - use @synthesize, @dynamic or provide a method implementation
