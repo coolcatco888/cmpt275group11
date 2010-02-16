@@ -28,6 +28,7 @@
 }
 -init
 {
+	[super init];
 	type=@"Fill in Blank";
 	//.........
 	return self;

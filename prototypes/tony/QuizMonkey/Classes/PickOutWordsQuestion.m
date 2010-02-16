@@ -26,6 +26,7 @@
 }
 -init
 {
+	[super init];
 	type=@"Pick Out Words";
 	//.........
 	return self;
