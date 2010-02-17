@@ -1,6 +1,4 @@
-#summary One-sentence summary of this page.
-
-= Objective C Tutorials =
+== Objective C Tutorials ==
 
   * [http://note19.com/2009/05/17/objective-c-adding-button-and-its-handler/ Adding Buttons]
   * [http://weblog.bignerdranch.com/?p=48 XML Parsing]
