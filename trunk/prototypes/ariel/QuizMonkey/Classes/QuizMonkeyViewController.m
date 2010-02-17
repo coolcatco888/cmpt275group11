@@ -10,7 +10,40 @@
 
 @implementation QuizMonkeyViewController
 
+-(IBAction)TapPlay:(id)sender
+{
+	//Popping up subview
+	[self.view addSubview:vew_Question];
+}
 
+-(IBAction)TapQuit:(id)sender
+{
+}
+
+-(IBAction)ExitQuestion:(id)sender
+{
+	//Removing subview
+	[vew_Question removeFromSuperview];
+}
+
+-(IBAction)Change_Button:(id)sender
+{
+	if(btn_Play.currentTitle == @"Play")
+		//Change button title code
+		[btn_Play setTitle:@"PlayChanged" forState:0];
+	else
+		//Change button title code
+		[btn_Play setTitle:@"Play" forState:0];
+}
+-(IBAction)Change_Picture:(id)sender
+{
+	if(img_Monkey.image == [UIImage imageNamed:@"Pic-ProfMonkey.png"])
+		//Change prof Monkey's image
+		img_Monkey.image = [UIImage imageNamed:@"Pic-Title.png"];
+	else
+		//Change prof Monkey's image
+		img_Monkey.image = [UIImage imageNamed:@"Pic-ProfMonkey.png"];
+}
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -57,6 +90,11 @@
 
 
 - (void)dealloc {
+	[btn_Play release];
+	[btn_Quit release];
+	[img_Monkey release];
+	[vew_Question release];
+	[vew_MainView release];
     [super dealloc];
 }
 
