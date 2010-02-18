@@ -13,23 +13,6 @@
 @synthesize question;
 @synthesize options;
 @synthesize answer;
--(bool)validateAnswer:(NSString*)user_answer
-{
-	if([answer compare:user_answer]==NSOrderedSame)
-	{
-		return YES;
-	}
-	else
-	{
-		return NO;
-	}
-}
--init
-{
-	type=@"Pick Out Words";
-	//.........
-	return self;
-}
 
 
 @end
