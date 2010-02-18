@@ -10,6 +10,62 @@
 
 @implementation QuizMonkeyViewController
 
+
+
+-(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event {
+}
+-(void)touchesMoved: (NSSet *)touches withEvent:(UIEvent *)event {
+}
+-(void)touchesEnded: (NSSet *)touches withEvent:(UIEvent *)event {
+	btn_New.center = [[[event allTouches] anyObject] locationInView:self.view];
+}
+
+-(IBAction)NewButton:(id)sender
+{
+/*	lbl_New = [[UILabel alloc] init];
+
+	CGPoint PointXYZ;
+	PointXYZ.x = 200;
+	PointXYZ.y = 150;
+	lbl_New.center = PointXYZ;
+
+ [lbl_New setText:@"Something"];
+ [self.view addSubview:lbl_New];
+ [lbl_New retain];
+ */	
+
+	
+	
+	btn_New = [[UIButton alloc] init];
+	//[btn_New setTitle:@"New Button" forState:0];
+	[btn_New setImage:[UIImage imageNamed:@"Pic-Title.png"] forState:0];
+
+	CGPoint PointXY;
+	PointXY.x = 200;
+	PointXY.y = 150;
+	btn_New.center = PointXY;
+
+	[self.view addSubview:btn_New];
+	[btn_New retain];
+
+	//NSLog(btn_Play);
+	//NSLog(btn_New);
+
+}
+
+-(IBAction)LoadArray:(id)sender
+{
+	ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
+	[ThisArray retain];
+	//[lbl_Question setText:[ThisArray objectAtIndex: 0]];
+}
+-(IBAction)SetQuestion:(id)sender
+{
+	//ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
+	//btn_Play setTitle: [ThisArray objectAtIndex:0] forState:0];
+    [lbl_Question setText:[ThisArray objectAtIndex: [sender tag]]];
+}
+
 -(IBAction)TapPlay:(id)sender
 {
 	//Popping up subview
