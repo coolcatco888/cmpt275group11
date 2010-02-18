@@ -15,22 +15,4 @@
 @synthesize answer;
 @synthesize sentence;
 
--(bool)validateAnswer:(NSString*)user_answer
-{
-	if([answer compare:user_answer]==NSOrderedSame)
-	{
-		return YES;
-	}
-	else
-	{
-		return NO;
-	}
-}
--init
-{
-	type=@"Fill in Blank";
-	//.........
-	return self;
-}
-
 @end
