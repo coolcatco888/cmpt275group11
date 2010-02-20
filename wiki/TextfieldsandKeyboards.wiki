@@ -1,0 +1,12 @@
+#summary A walkthrough for the keyboard.
+
+==Intro==
+
+A walkthrough for using textfields and the keyboard, and how to get the screen to scroll up with the keyboard. Also get labels to show what was just typed.
+
+
+===How To===
+
+*1. Creating the textfield*<br>
+First, open the viewcontroller.xib file in interface builder. Drag a textfield from the library into the view. Then open the viewcontroller.h file, and declare your textfield: type in {{{IBOutlet UITextField *textField;}}} (where "textField" is the name and can be anything you want,) after {{{UIViewController{}}}. Then, declare your accessors by typing {{{@property (nonatomic, retain) UITextField *textField;}}} after {{{}}}} and before {{{@end}}}. Next, implement your accessors by going to the viewcontroller.m file and typing in {{{@synthesize textField;}}}. Finally, find the {{{-(void)dealloc}}} method and add {{{[textField release];}}} to it, above {{{[super dealloc];}}}.
+<br> If you want to add the label, do the same thing, just change textfield to label, and {{{UITextField}}} to {{{UILabel}}}.
