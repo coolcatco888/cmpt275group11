@@ -10,3 +10,6 @@ A walkthrough for using textfields and the keyboard, and how to get the screen t
 *1. Creating the textfield*<br>
 First, open the viewcontroller.xib file in interface builder. Drag a textfield from the library into the view. Then open the viewcontroller.h file, and declare your textfield: type in {{{IBOutlet UITextField *textField;}}} (where "textField" is the name and can be anything you want,) after {{{UIViewController{}}}. Then, declare your accessors by typing {{{@property (nonatomic, retain) UITextField *textField;}}} after {{{}}}} and before {{{@end}}}. Next, implement your accessors by going to the viewcontroller.m file and typing in {{{@synthesize textField;}}}. Finally, find the {{{-(void)dealloc}}} method and add {{{[textField release];}}} to it, above {{{[super dealloc];}}}.
 <br> If you want to add the label, do the same thing, just change textfield to label, and {{{UITextField}}} to {{{UILabel}}}.
+<br><br>
+*2. Connecting it up in Interface Builder*<br>
+Go back to viewcontroller.xib in interface builder. Right-click File's Owner, and look for the little circle next to textField, under Outlets. Click and drag that circle to the textfield you want in the view. It should now appear next to the circle, and if you hover over it, the selected textfield in the view should highlight. Do the same for the label if you have it.
