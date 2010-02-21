@@ -1,6 +1,6 @@
-/*
+
 #import "QuestionParser.h"
-#import "Book.h"
+#import "Question.h"
 
 static NSSet *interestingKeys;
 
@@ -9,8 +9,9 @@ static NSSet *interestingKeys;
 + (void)initialize
 {
     if (!interestingKeys) {
-        interestingKeys = [[NSSet alloc] initWithObjects:@"Title",
-						   @"DetailPageURL", nil];
+        interestingKeys = [[NSSet alloc] initWithObjects:
+						   @"type",
+						   @"image", nil];
     }
 }
 
@@ -19,27 +20,29 @@ static NSSet *interestingKeys;
     [items release];
     [super dealloc];
 }
-
-- (BOOL)parseData:(NSData *)d
-{
-    // Release the old itemArray
-    [items release];
-	
-    // Create a new, empty itemArray
-    items = [[NSMutableArray alloc] init];
-	
-    // Create a parser
-    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:d];
-    [parser setDelegate:self];
-	
-    // Do the parse
-    [parser parse];
-	
-    [parser release];
-	
-    NSLog(@"items = %@", items);
-    return YES;
-}
+ 
+ - (BOOL)parseXMLFile:(NSString *)pathToFile {
+ 
+ // Release the old itemArray
+ [items release];
+ 
+ // Create a new, empty itemArray
+ items = [[NSMutableArray alloc] init];
+ 
+ BOOL success = FALSE;
+ 
+ //Create Parser From File
+ NSURL *xmlURL = [NSURL fileURLWithPath:pathToFile];
+ NSXMLParser* addressParser = [[NSXMLParser alloc] initWithContentsOfURL:xmlURL];
+ 
+ //Setup parse
+ [addressParser setDelegate:self];
+ [addressParser setShouldResolveExternalEntities:YES];
+ 
+ success = [addressParser parse]; // return value not used
+ 
+ return success;
+ }
 
 - (NSArray *)items
 {
@@ -57,10 +60,10 @@ didStartElement:(NSString *)elementName
     NSLog(@"starting Element: %@", elementName);
 	
     // Is it the start of a new item?
-    if ([elementName isEqual:@"Item"]) {
+    if ([elementName isEqual:@"Question"]) {
 		
         // Create a dictionary for the title/url for the item
-        questionInProgress = [[Book alloc] init];
+        questionInProgress = [[Question alloc] init];
         return;
     }
 	
@@ -80,7 +83,7 @@ didStartElement:(NSString *)elementName
     NSLog(@"ending Element: %@", elementName);
 	
     // Is the current item complete?
-    if ([elementName isEqual:@"Item"]) {
+    if ([elementName isEqual:@"Question"]) {
         [items addObject:questionInProgress];
 		
         // Clear the current item
@@ -91,10 +94,12 @@ didStartElement:(NSString *)elementName
 	
     // Is the current key complete?
     if ([elementName isEqual:keyInProgress]) {
+		
+		//Needs to be switch statement
         if ([elementName isEqual:@"DetailPageURL"]) {
-            [questionInProgress setDetailPage:textInProgress];
+            //[questionInProgress setDetailPage:textInProgress];
         } else {
-            [questionInProgress setTitle:textInProgress];
+            //[questionInProgress setTitle:textInProgress];
 			
         }
         // Clear the text and key
@@ -113,4 +118,4 @@ foundCharacters:(NSString *)string
     [textInProgress appendString:string];
 }
 @end
- */
+

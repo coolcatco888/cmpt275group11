@@ -12,14 +12,19 @@
 
 @synthesize type;
 @synthesize image;
-@synthesize time;
 @synthesize answers;
+@synthesize choices;
+@synthesize time;
+
 
 -init {
 	type = @"";
 	image = @"";
 	time = 0;
-	answers = [NSMutableSet new];
+	
+	//Set with arbitrarily set limits, no question will ever be this big
+	answers = [NSMutableSet setWithCapacity: 10];
+	choices = [NSMutableSet setWithCapacity: 20];
 	
 	return self;
 }
@@ -42,16 +47,23 @@
 	//if there is any difference
 	correct -= [comparisonSet count];
 	
-	//Create a score object
+	//Create a score object, simply an array with two values {correct, maxScore}
 	NSArray* score = [NSArray arrayWithObjects: @""+correct, @""+maxScore, nil];
 	
 	//Cleanup temporary sets
 	[answerKey release];
 	[comparisonSet release];
 	
-	//Do not release score because we are returning it
-					  
+	//Do not release score because we are returning it	  
 	return score;
+}
+
+-(void) addAnswer: (NSString*) answer {
+	[answers addObject:answer];
+}
+
+-(void) addChoice: (NSString*) choice {
+	[choices addObject:choice];
 }
 
 @end
