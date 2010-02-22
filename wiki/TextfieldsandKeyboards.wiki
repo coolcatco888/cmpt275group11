@@ -15,7 +15,7 @@ First, open the viewcontroller.xib file in interface builder. Drag a textfield f
 Go back to viewcontroller.xib in interface builder. Right-click File's Owner, and look for the little circle next to textField, under Outlets. Click and drag that circle to the textfield you want in the view. It should now appear next to the circle, and if you hover over it, the selected textfield in the view should highlight. Do the same for the label if you have it.
 <br><br><br>
 *3. Recognizing when the keyboard will appear*<br>
-First, we need to register to be notified by the {{{NSNotificationCenter}}} model class when the keyboard will show up. We do that by adding the following method to viewcontroller.m:<br><br>
+First, we need to register to be notified by the {{{NSNotificationCenter}}} model class when the keyboard will show up. We do that by adding the following method to viewcontroller.m:
 {{{
 - (void)viewWillAppear:(BOOL)animated {
    [[NSNotificationCenter defaultCenter] 
@@ -27,9 +27,7 @@ First, we need to register to be notified by the {{{NSNotificationCenter}}} mode
    [super viewWillAppear:animated];
 }
 }}}
-<br><br>
 We also need to unregister when the view is released. We do this by adding the following method (right underneath the previous one, to keep things organized):
-<br><br>
 {{{
 - (void)viewWillDisappear:(BOOL)animated {
    [[NSNotificationCenter defaultCenter]
@@ -40,10 +38,9 @@ We also need to unregister when the view is released. We do this by adding the f
    [super viewWillDisappear:animated];
 }
 }}}
-<br><br>
 What we are doing when we write these methods is actually overriding the methods from the superclass. What we write is basically the same, we just added some code that will register us with NSNotificationCenter.
 <br><br><br>
-*4. Deciding when to scroll, and by how much*<br><br>
+*4. Deciding when to scroll, and by how much*<br>
 Type in the following method after {{{viewWillDisappear}}}:
 {{{
 - (void)keyboardWillShow:(NSNotification *)notif {
@@ -61,5 +58,4 @@ Type in the following method after {{{viewWillDisappear}}}:
       moveViewUp = NO;
 }
 }}}
-<br>
 This method finds the height of the keyboard and the textframe, and decides how much to scroll based on these, as well as the location of the textfield. It checks to see if the view should be moved up, and acts accordingly.
