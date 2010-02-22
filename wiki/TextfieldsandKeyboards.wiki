@@ -27,7 +27,7 @@ First, we need to register to be notified by the {{{NSNotificationCenter}}} mode
    [super viewWillAppear:animated];
 }
 }}}
-<br>
+<br><br>
 We also need to unregister when the view is released. We do this by adding the following method (right underneath the previous one, to keep things organized):
 <br><br>
 {{{
@@ -40,7 +40,7 @@ We also need to unregister when the view is released. We do this by adding the f
    [super viewWillDisappear:animated];
 }
 }}}
-<br>
+<br><br>
 What we are doing when we write these methods is actually overriding the methods from the superclass. What we write is basically the same, we just added some code that will register us with NSNotificationCenter.
 <br><br><br>
 *4. Deciding when to scroll, and by how much*<br><br>
