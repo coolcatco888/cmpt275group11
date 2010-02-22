@@ -20,49 +20,47 @@
 	btn_New.center = [[[event allTouches] anyObject] locationInView:self.view];
 }
 
+-(IBAction)ShowAlert:(id)sender
+{
+	//First we set all the parameters of the Alert pop-up
+	alr_Alert = [[UIAlertView alloc] initWithTitle:@"You win" message:@"You got 0/10" delegate:nil cancelButtonTitle:@"Continue???" otherButtonTitles:nil];
+	//Then we SHOW the alert... simple
+	[alr_Alert show];
+}
+-(void)NewButtonPressed
+{
+	alr_Alert = [[UIAlertView alloc] initWithTitle:@"Yaaay" message:@"New was pressed" delegate:nil cancelButtonTitle:@"?Continue?" otherButtonTitles:nil];
+	[alr_Alert show];
+}
+
 -(IBAction)NewButton:(id)sender
 {
-/*	lbl_New = [[UILabel alloc] init];
-
-	CGPoint PointXYZ;
-	PointXYZ.x = 200;
-	PointXYZ.y = 150;
-	lbl_New.center = PointXYZ;
-
- [lbl_New setText:@"Something"];
- [self.view addSubview:lbl_New];
- [lbl_New retain];
- */	
-
+	//Must create a button object
+	btn_New = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	//Just setong the frame (x,y,Width,Height)
+	btn_New.frame = CGRectMake(100,170,100,30);
 	
+	//Set the Title of the button, MUST NOT FORGET "forState"
+	[btn_New setTitle:@"New" forState:UIControlStateNormal];
 	
-	btn_New = [[UIButton alloc] init];
-	//[btn_New setTitle:@"New Button" forState:0];
-	[btn_New setImage:[UIImage imageNamed:@"Pic-Title.png"] forState:0];
-
-	CGPoint PointXY;
-	PointXY.x = 200;
-	PointXY.y = 150;
-	btn_New.center = PointXY;
-
+	//Setting which function will be called when button pressed
+	//addTarget is not really needed and I don't know what @selector is for
+	[btn_New addTarget:self action:@selector(NewButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+	
+	//Then add the button to the current view as a subview
 	[self.view addSubview:btn_New];
-	[btn_New retain];
-
-	//NSLog(btn_Play);
-	//NSLog(btn_New);
-
 }
 
 -(IBAction)LoadArray:(id)sender
 {
 	ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
+	//MUST use retain if you want to use the array in functions outside of this one
 	[ThisArray retain];
-	//[lbl_Question setText:[ThisArray objectAtIndex: 0]];
 }
 -(IBAction)SetQuestion:(id)sender
 {
-	//ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
-	//btn_Play setTitle: [ThisArray objectAtIndex:0] forState:0];
+	//The tag is an integer that you can set as a button property in the xib
+	//Same way you were to change the tittle or font of the button
     [lbl_Question setText:[ThisArray objectAtIndex: [sender tag]]];
 }
 

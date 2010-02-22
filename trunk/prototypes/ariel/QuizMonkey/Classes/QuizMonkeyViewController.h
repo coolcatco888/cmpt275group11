@@ -18,8 +18,10 @@
 	NSArray *ThisArray;
 	IBOutlet UIButton *btn_New;
 	IBOutlet UILabel *lbl_New;
+	UIAlertView *alr_Alert;
 }
 
+-(IBAction)ShowAlert:(id)sender;
 -(IBAction)NewButton:(id)sender;
 -(IBAction)TapPlay:(id)sender;
 -(IBAction)TapQuit:(id)sender;
