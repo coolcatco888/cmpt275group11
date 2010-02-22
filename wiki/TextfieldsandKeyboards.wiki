@@ -13,6 +13,8 @@ First, open the viewcontroller.xib file in interface builder. Drag a textfield f
 <br><br><br>
 *2. Connecting it up in Interface Builder*<br>
 Go back to viewcontroller.xib in interface builder. Right-click File's Owner, and look for the little circle next to textField, under Outlets. Click and drag that circle to the textfield you want in the view. It should now appear next to the circle, and if you hover over it, the selected textfield in the view should highlight. Do the same for the label if you have it.
+<br><br>
+*Unfinished as of Feb 21*
 <br><br><br>
 *3. Recognizing when the keyboard will appear*<br>
 First, we need to register to be notified by the {{{NSNotificationCenter}}} model class when the keyboard will show up. We do that by adding the following method to viewcontroller.m:
@@ -77,3 +79,8 @@ You may have noticed a method in the last method called {{{scrollTheView}}}. Wel
    [UIView commitAnimations];
 }
 }}}
+<br><br><br>
+*6. Updating viewcontroller.h*<br>
+We have now written a method or two, but we haven't declared them, so go back to viewcontroller.h. Where your instance variables go, add {{{BOOL moveViewUp;}}} and {{{CGFloat scrollAmount;}}}. Right before {{{@end}}}, add {{{- (void)scrollTheView:(BOOL)movedUp;}}}.
+<br><br>
+*Unfinished as of Feb. 21.*
