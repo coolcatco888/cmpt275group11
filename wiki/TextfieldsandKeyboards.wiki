@@ -59,3 +59,21 @@ Type in the following method after {{{viewWillDisappear}}}:
 }
 }}}
 This method finds the height of the keyboard and the textframe, and decides how much to scroll based on these, as well as the location of the textfield. It checks to see if the view should be moved up, and acts accordingly.
+<br><br><br>
+*5. Scrolling the view*<br>
+You may have noticed a method in the last method called {{{scrollTheView}}}. Well, this isn't included, and we must implement it ourselves. To do that we use the animation features built in to the view.
+{{{
+- (void)scrollTheView:(BOOL)movedUp {
+
+   [UIView beginAnimations:nil context:NULL];
+   [UIView setAnimationDuration:0.3];
+   CGRect rect = self.view.frame;
+   if(movedUp) {
+      rect.origin.y -= scrollAmount;
+   }else {
+      rect.origin.y += scrollAmount;
+   }
+   slef.view.frame = rect;
+   [UIView commitAnimations];
+}
+}}}
