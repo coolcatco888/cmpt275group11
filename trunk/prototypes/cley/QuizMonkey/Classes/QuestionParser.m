@@ -95,13 +95,21 @@ didStartElement:(NSString *)elementName
     // Is the current key complete?
     if ([elementName isEqual:keyInProgress]) {
 		
-		//Needs to be switch statement
-        if ([elementName isEqual:@"DetailPageURL"]) {
-            //[questionInProgress setDetailPage:textInProgress];
-        } else {
-            //[questionInProgress setTitle:textInProgress];
+		//Process Tags within Question
+        if ([elementName isEqual:@"type"]) {
+
+        } else if ([elementName isEqual:@"image"]) {
+			
+        } else if ([elementName isEqual:@"answer"]) {
+			
+        } else if ([elementName isEqual:@"choice"]) {
+			
+        } else if ([elementName isEqual:@"time"]) {
+			
+        } else if ([elementName isEqual:@"sentence"]) {
 			
         }
+		
         // Clear the text and key
         [textInProgress release];
         textInProgress = nil;

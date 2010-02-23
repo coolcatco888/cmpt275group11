@@ -10,12 +10,12 @@
 #import "Question.h"
 
 @interface FillinBlankQuestion : Question {
-	NSString* sentence;
+	//NSString* sentence;
 	NSString* answer;
 	
 
 }
-@property (retain,nonatomic)NSString* sentence;
+//@property (retain,nonatomic)NSString* sentence;
 @property (retain,nonatomic)NSString* answer;
 
 
