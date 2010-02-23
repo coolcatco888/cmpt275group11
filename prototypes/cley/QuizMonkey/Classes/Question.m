@@ -12,6 +12,7 @@
 
 @synthesize type;
 @synthesize image;
+@synthesize sentence;
 @synthesize answers;
 @synthesize choices;
 @synthesize time;
@@ -20,6 +21,7 @@
 -init {
 	type = @"";
 	image = @"";
+	sentence = @"";
 	time = 0;
 	
 	//Set with arbitrarily set limits, no question will ever be this big

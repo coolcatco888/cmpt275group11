@@ -13,6 +13,6 @@
 @implementation FillinBlankQuestion
 
 @synthesize answer;
-@synthesize sentence;
+//@synthesize sentence;
 
 @end
