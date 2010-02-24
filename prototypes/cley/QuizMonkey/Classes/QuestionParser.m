@@ -104,6 +104,9 @@ didStartElement:(NSString *)elementName
 			[questionInProgress addAnswer:textInProgress];
         } else if ([elementName isEqual:@"choice"]) {
 			[questionInProgress addChoice:textInProgress];
+        } else if ([elementName isEqual:@"point"]) {
+			NSInteger newPoint = [textInProgress intValue];
+			[questionInProgress addPoint: &newPoint];
         } else if ([elementName isEqual:@"time"]) {
 			[questionInProgress setTime: [textInProgress intValue]];
         } else if ([elementName isEqual:@"sentence"]) {

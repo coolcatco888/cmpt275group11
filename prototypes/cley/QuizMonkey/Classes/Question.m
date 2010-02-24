@@ -15,6 +15,7 @@
 @synthesize sentence;
 @synthesize answers;
 @synthesize choices;
+@synthesize points;
 @synthesize time;
 
 
@@ -25,36 +26,37 @@
 	time = 0;
 	
 	//Set with arbitrarily set limits, no question will ever be this big
-	answers = [NSMutableSet setWithCapacity: 10];
-	choices = [NSMutableSet setWithCapacity: 20];
+	answers = [NSMutableArray arrayWithCapacity: 10];
+	choices = [NSMutableArray arrayWithCapacity: 20];
+	points = [NSMutableArray arrayWithCapacity: 10];
 	
 	return self;
 }
  
 -(NSArray*) validateAnswers: (NSSet*) selected {
 	
+	//Initialize correct and maxScore
+	NSInteger correct = 0;
+	NSInteger maxScore = 0;
 	
-	//Fill answer key with question answers
-	NSSet* answerKey = [NSSet new];
-	[answers setSet: answerKey];
+	//Calculate MaxScore by summing up all the elements in the list of scores
+	int i = 0;
+	for(id point in points) {
+		maxScore +=  (NSInteger) [points objectAtIndex: i];
+		i++;
+	}
 	
-	NSInteger correct = [answerKey count];
-	NSInteger maxScore = correct;
-	
-	//Fill comparison set with user selected answers
-	NSMutableSet* comparisonSet = [NSMutableSet setWithSet:answerKey];
-	[comparisonSet minusSet: selected];
-	
-	//Subtract the answer key from the comparison set and see
-	//if there is any difference
-	correct -= [comparisonSet count];
+	//Check whether the answer is in the set of answers
+	for(id answer in selected) {
+		
+		//If it is, add the amount of points associated with that answer to the student's current score
+		if([answers containsObject: answer]) {
+			correct += (NSInteger) [points objectAtIndex: [answers indexOfObject: answer]];
+		}
+	}
 	
 	//Create a score object, simply an array with two values {correct, maxScore}
 	NSArray* score = [NSArray arrayWithObjects: @""+correct, @""+maxScore, nil];
-	
-	//Cleanup temporary sets
-	[answerKey release];
-	[comparisonSet release];
 	
 	//Do not release score because we are returning it	  
 	return score;
@@ -67,5 +69,10 @@
 -(void) addChoice: (NSString*) choice {
 	[choices addObject:choice];
 }
+
+-(void) addPoint: (NSInteger*) point {
+	[points addObject: (id) point];
+}
+
 
 @end
