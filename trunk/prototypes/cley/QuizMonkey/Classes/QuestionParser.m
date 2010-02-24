@@ -97,17 +97,17 @@ didStartElement:(NSString *)elementName
 		
 		//Process Tags within Question
         if ([elementName isEqual:@"type"]) {
-
+			[questionInProgress setType:textInProgress];
         } else if ([elementName isEqual:@"image"]) {
-			
+			[questionInProgress setImage:textInProgress];
         } else if ([elementName isEqual:@"answer"]) {
-			
+			[questionInProgress addAnswer:textInProgress];
         } else if ([elementName isEqual:@"choice"]) {
-			
+			[questionInProgress addChoice:textInProgress];
         } else if ([elementName isEqual:@"time"]) {
-			
+			[questionInProgress setTime: [textInProgress intValue]];
         } else if ([elementName isEqual:@"sentence"]) {
-			
+			[questionInProgress setSentence:textInProgress];
         }
 		
         // Clear the text and key
