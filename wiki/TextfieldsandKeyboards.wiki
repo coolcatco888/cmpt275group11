@@ -112,3 +112,6 @@ Add the following method to viewcontroller.m:
 Also add {{{[self updateSavedText];}}} to textFieldShouldReturn, right before {{{return YES;}}}. Then, add {{{- (void)updateSavedText;}}} to the header file, and finally, add {{{[savedText release];}}} to the dealloc method.
 <br><br><br>
 *12. Sit back and admire your work!*
+<br><br><br>
+===Notes===
+1) If you want to make multiple textfields, repeat steps 1, 2, 9, 10, and 11 for each extra one. Keep in mind for step 11 to assign a new label if you need it.<br>
