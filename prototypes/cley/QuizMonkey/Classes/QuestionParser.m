@@ -11,7 +11,13 @@ static NSSet *interestingKeys;
     if (!interestingKeys) {
         interestingKeys = [[NSSet alloc] initWithObjects:
 						   @"type",
-						   @"image", nil];
+						   @"image",
+						   @"answer",
+						   @"choice",
+						   @"point",
+						   @"time",
+						   @"sentence",
+						   nil];
     }
 }
 
@@ -67,7 +73,7 @@ didStartElement:(NSString *)elementName
         return;
     }
 	
-    // Is it the title/url for the current item?
+    // Is it one of the attributes for the current item?
     if ([interestingKeys containsObject:elementName]) {
         keyInProgress = [elementName copy];
         // This is a string we will append to as the text arrives
