@@ -100,17 +100,17 @@ Pretty self-explanatory. The textfield relinquishes its status as the First Resp
 Open up viewcontroller.xib, and right click file's owner. Right click the textfield, but on the right side in between the x and the circle. Under outlets, drag the circle next to delegate to File's Owner.  Scrolling is now done!
 <br><br><br>
 *10. Create a way to store the text*<br>
-Before we can do anything with the typed text, we must store it in an instance variable. In the header file, type in {{{NSString *savedText;}}} and it's accessors: {{{@property (nonatomic, retain) NSString *savedText;}}}. Then add {{{@synthesize savedText;}}} to the implementation file. 
+Before we can do anything with the typed text, we must store it in an instance variable. In the header file, type in {{{NSString *enteredText;}}} and it's accessors: {{{@property (nonatomic, retain) NSString *enteredText;}}}. Then add {{{@synthesize enteredText;}}} to the implementation file. 
 <br><br><br>
 *11. Doing stuff with the text...*<br>
 Add the following method to viewcontroller.m:
 {{{
-- (void)updateSavedText {
-   self.savedText = textField.text;
-   label.text = self.savedText;
+- (void)updateEnteredText {
+   self.enteredText = textField.text;
+   label.text = self.enteredText;
 }
 }}}
-Also add {{{[self updateSavedText];}}} to textFieldShouldReturn, right before {{{return YES;}}}. Then, add {{{- (void)updateSavedText;}}} to the header file, and finally, add {{{[savedText release];}}} to the dealloc method.
+Also add {{{[self updateEnteredText];}}} to textFieldShouldReturn, right before {{{return YES;}}}. Then, add {{{- (void)updateEnteredText;}}} to the header file, and finally, add {{{[enteredText release];}}} to the dealloc method.
 <br><br><br>
 *12. Sit back and admire your work!*
 <br><br><br>
