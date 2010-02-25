@@ -1,5 +1,9 @@
-#summary How to save things using the built-in classes for user preferences.
+#summary A walkthrough for saving text using the built-in user-preferences classes.
+#labels Phase-Implementation
 
 == How To ==
 
-*1. 
+*1. Getting your text*<br>
+If you don't have a way of getting text from the user, you can create a textfield (see my other walkthrough on this wiki.) If you do, put it the text in an instance variable in the viewcontroller files.
+<br><br><br>
+*2. 
