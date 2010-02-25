@@ -19,6 +19,7 @@
 		4EB7AD91112A11A500DAA900 /* PickOutWordsQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AD8D112A11A500DAA900 /* PickOutWordsQuestion.m */; };
 		4EB7AD92112A11A500DAA900 /* FillinBlankQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB7AD8F112A11A500DAA900 /* FillinBlankQuestion.m */; };
 		4ED24614112CBE9900D7806C /* QuestionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED24613112CBE9900D7806C /* QuestionParser.m */; };
+		7F9C4AAF1135F4EB00F131CF /* sampleQuestion.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7F9C4AAE1135F4EB00F131CF /* sampleQuestion.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4EB7AD90112A11A500DAA900 /* FillinBlankQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillinBlankQuestion.h; sourceTree = "<group>"; };
 		4ED24612112CBE9900D7806C /* QuestionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionParser.h; sourceTree = "<group>"; };
 		4ED24613112CBE9900D7806C /* QuestionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionParser.m; sourceTree = "<group>"; };
+		7F9C4AAE1135F4EB00F131CF /* sampleQuestion.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sampleQuestion.xml; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuizMonkey-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */,
+				7F9C4AAE1135F4EB00F131CF /* sampleQuestion.xml */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* QuizMonkeyViewController.xib in Resources */,
+				7F9C4AAF1135F4EB00F131CF /* sampleQuestion.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
