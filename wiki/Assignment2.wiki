@@ -1,5 +1,5 @@
 ===Documents===
 
 [http://cmpt275group11.googlecode.com/files/Group-11-Requirements.pdf Requirements]<br>
-Design<br>
+[http://cmpt275group11.googlecode.com/files/Group-11-Design.pdf Design]<br>
 Quality Assurance
