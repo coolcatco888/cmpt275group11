@@ -20,10 +20,7 @@
 
 
 -init {
-	type = @"";
-	image = @"";
-	sentence = @"";
-	time = 0;
+	
 	
 	//Set with arbitrarily set limits, no question will ever be this big
 	answers = [NSMutableArray arrayWithCapacity: 10];
@@ -70,8 +67,8 @@
 	[choices addObject:choice];
 }
 
--(void) addPoint: (NSInteger*) point {
-	[points addObject: (id) point];
+-(void) addPoint: (NSInteger) point {
+	//[points addObject: (id) point];
 }
 
 

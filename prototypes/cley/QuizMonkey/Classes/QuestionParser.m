@@ -66,10 +66,10 @@ didStartElement:(NSString *)elementName
     NSLog(@"starting Element: %@", elementName);
 	
     // Is it the start of a new item?
-    if ([elementName isEqual:@"Question"]) {
+    if ([elementName isEqual:@"question"]) {
 		
         // Create a dictionary for the title/url for the item
-        questionInProgress = [[Question alloc] init];
+        questionInProgress = [Question new];
         return;
     }
 	
@@ -89,7 +89,7 @@ didStartElement:(NSString *)elementName
     NSLog(@"ending Element: %@", elementName);
 	
     // Is the current item complete?
-    if ([elementName isEqual:@"Question"]) {
+    if ([elementName isEqual:@"question"]) {
         [items addObject:questionInProgress];
 		
         // Clear the current item
@@ -100,23 +100,24 @@ didStartElement:(NSString *)elementName
 	
     // Is the current key complete?
     if ([elementName isEqual:keyInProgress]) {
+		NSString* currentText = [NSString stringWithString: textInProgress];
 		
 		//Process Tags within Question
         if ([elementName isEqual:@"type"]) {
-			[questionInProgress setType:textInProgress];
+			[questionInProgress setType:currentText];
         } else if ([elementName isEqual:@"image"]) {
-			[questionInProgress setImage:textInProgress];
+			[questionInProgress setImage:currentText];
         } else if ([elementName isEqual:@"answer"]) {
-			[questionInProgress addAnswer:textInProgress];
+			[questionInProgress addAnswer:currentText];
         } else if ([elementName isEqual:@"choice"]) {
-			[questionInProgress addChoice:textInProgress];
+			[questionInProgress addChoice:currentText];
         } else if ([elementName isEqual:@"point"]) {
-			NSInteger newPoint = [textInProgress intValue];
-			[questionInProgress addPoint: &newPoint];
+			NSInteger newPoint = [currentText intValue];
+			[questionInProgress addPoint: newPoint];
         } else if ([elementName isEqual:@"time"]) {
-			[questionInProgress setTime: [textInProgress intValue]];
+			[questionInProgress setTime: [currentText intValue]];
         } else if ([elementName isEqual:@"sentence"]) {
-			[questionInProgress setSentence:textInProgress];
+			[questionInProgress setSentence:currentText];
         }
 		
         // Clear the text and key
