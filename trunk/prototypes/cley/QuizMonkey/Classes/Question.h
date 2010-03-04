@@ -39,6 +39,6 @@
 -(void) setPoints: (NSMutableArray*) points;
 -(void) addAnswer: (NSString*) answer;
 -(void) addChoice: (NSString*) choice;
--(void) addPoint: (NSInteger*) point;
+-(void) addPoint: (NSInteger) point;
 
 @end
