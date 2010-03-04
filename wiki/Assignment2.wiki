@@ -2,4 +2,4 @@
 
 [http://cmpt275group11.googlecode.com/files/Group-11-Requirements.pdf Requirements]<br>
 [http://cmpt275group11.googlecode.com/files/Group-11-Design.pdf Design]<br>
-Quality Assurance
+[http://cmpt275group11.googlecode.com/files/Group-11-QA.pdf Quality Assurance]
