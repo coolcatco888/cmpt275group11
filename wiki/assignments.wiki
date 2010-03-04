@@ -4,7 +4,7 @@ These assignments contain the software design and project planning documents for
 
     * [http://cmpt275group11.googlecode.com/files/Group-11-ProjectPlan.doc Assignment 1] - Project Plan and Project Website 
 
-    * Assignment 2 - Not Available
+    * [http://code.google.com/p/cmpt275group11/wiki/Assignment2 Assignment 2] - Requirements, Design, and Quality Assurance Documents
 
     * Assignment 3 - Not Available
 
