@@ -1,0 +1,7 @@
+#summary One-sentence summary of this page.
+
+= Useful Links =
+
+All links to general tutorials on Mac Development, xcode and general Mac OSX use should go here.
+
+   * [http://www.openfeint.com/ OpenFeint] - We intend to use this service to keep track of the game score.  An Internet Connectivity module may have to be made to submit high scores. (unless built into every project by default).
