@@ -26,3 +26,4 @@ Activities done during meeting time, meeting content, and attendance are recorde
 ||Feb. 15, 2010 <br> 12:00PM - 8:00PM|| Library ||Cley, Meiko, Ariel, Daniel||-continued practice with Xcode<br> -prepared images for use in the menu <br> -started implementing the title screen and main menu  ||
 ||Feb. 17, 2010 <br> 11:30AM - 5:30PM|| Library ||Cley, Daniel, Meiko, Ariel|| -discussed individual progress made at home<br>-implemented the question screen subview<br>-looked into using the keyboard in the iPhone OS <br>-studied XML parser examples on the internet||
 ||Mar. 3, 2010 <br> 3:30PM - 7:00PM|| CSIL, Library || Cley, Daniel, Ariel, Meiko||-discussed the progress on the xml parser <br>-worked on the xml parser <br>-discussed the progress on switching and scrolling views <br>-updated the website with Assignment2 documents||
+||Mar. 5, 2010 <br> 3:30PM - ?:??PM|| CSIL, AQ Lab || Whole Team ||-looked into OCUnit <br>-worked on XML parser<br>-||
