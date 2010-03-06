@@ -19,6 +19,6 @@
     NSString *keyInProgress;
     NSMutableString *textInProgress;
 }
-- (BOOL)parseXMLFile:(NSString *)pathToFile;
+- (BOOL)parseData:(NSData *)d;
 - (NSArray *)items;
 @end

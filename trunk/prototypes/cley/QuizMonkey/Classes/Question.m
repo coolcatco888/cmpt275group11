@@ -68,7 +68,7 @@
 }
 
 -(void) addPoint: (NSInteger) point {
-	//[points addObject: (id) point];
+	[points addObject: [NSNumber numberWithInteger:point]];
 }
 
 

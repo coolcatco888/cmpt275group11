@@ -11,8 +11,21 @@
 
 int main(int argc, char *argv[]) {
     
+	//Initialize Parser
 	QuestionParser* parser = [QuestionParser new];
-	[parser parseXMLFile: @"/Volumes/cleyt/cmpt275group11/prototypes/cley/QuizMonkey/sampleQuestion.xml"];
+	
+	//Create a data object from xml
+	NSString * filePath = [[NSBundle mainBundle] pathForResource:@"sampleQuestion" ofType:@"xml"];
+	NSData * xml = [NSData dataWithContentsOfFile:filePath];
+	
+	//Parse the Data
+	[parser parseData: xml];
+	
+	//Get the list of questions
+	NSArray* questions = [parser items];
+	
+	
+	[questions release];
 	
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     int retVal = UIApplicationMain(argc, argv, nil, nil);
