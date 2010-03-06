@@ -10,6 +10,7 @@ static NSSet *interestingKeys;
 {
     if (!interestingKeys) {
         interestingKeys = [[NSSet alloc] initWithObjects:
+						   @"question",
 						   @"type",
 						   @"image",
 						   @"answer",
@@ -26,29 +27,30 @@ static NSSet *interestingKeys;
     [items release];
     [super dealloc];
 }
- 
- - (BOOL)parseXMLFile:(NSString *)pathToFile {
- 
- // Release the old itemArray
- [items release];
- 
- // Create a new, empty itemArray
- items = [[NSMutableArray alloc] init];
- 
- BOOL success = FALSE;
- 
- //Create Parser From File
- NSURL *xmlURL = [NSURL fileURLWithPath:pathToFile];
- NSXMLParser* addressParser = [[NSXMLParser alloc] initWithContentsOfURL:xmlURL];
- 
- //Setup parse
- [addressParser setDelegate:self];
- [addressParser setShouldResolveExternalEntities:YES];
- 
- success = [addressParser parse]; // return value not used
- 
- return success;
- }
+
+- (BOOL)parseData:(NSData *)d
+{
+	BOOL success = FALSE;
+	
+    // Release the old itemArray
+    [items release];
+	
+    // Create a new, empty itemArray
+    items = [[NSMutableArray alloc] init];
+	
+    // Create a parser
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:d];
+    [parser setDelegate:self];
+	
+    // Do the parse
+    success = [parser parse];
+	
+    [parser release];
+	
+    NSLog(@"items = %@", items);
+    return success;
+}
+
 
 - (NSArray *)items
 {
@@ -65,14 +67,6 @@ didStartElement:(NSString *)elementName
 {
     NSLog(@"starting Element: %@", elementName);
 	
-    // Is it the start of a new item?
-    if ([elementName isEqual:@"question"]) {
-		
-        // Create a dictionary for the title/url for the item
-        questionInProgress = [Question new];
-        return;
-    }
-	
     // Is it one of the attributes for the current item?
     if ([interestingKeys containsObject:elementName]) {
         keyInProgress = [elementName copy];
@@ -88,15 +82,17 @@ didStartElement:(NSString *)elementName
 {
     NSLog(@"ending Element: %@", elementName);
 	
-    // Is the current item complete?
-    if ([elementName isEqual:@"question"]) {
-        [items addObject:questionInProgress];
+    // Is the current item complete?	 
+	if ([elementName isEqual:@"question"]) {
+
+		[items addObject:questionInProgress];
 		
         // Clear the current item
         [questionInProgress release];
         questionInProgress = nil;
+		
         return;
-    }
+	}
 	
     // Is the current key complete?
     if ([elementName isEqual:keyInProgress]) {
@@ -104,6 +100,9 @@ didStartElement:(NSString *)elementName
 		
 		//Process Tags within Question
         if ([elementName isEqual:@"type"]) {
+			//Element Type must be the very first element in a question element
+			//otherwise the questions will not be parsed correctly
+			questionInProgress = [Question new];
 			[questionInProgress setType:currentText];
         } else if ([elementName isEqual:@"image"]) {
 			[questionInProgress setImage:currentText];

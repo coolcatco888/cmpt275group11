@@ -1,14 +1,28 @@
-<question>
-	<type>PickOutWords</type>
-	<image>image.jpg</image>
-	<sentence></sentence>
-	<answer>Cats </answer>
-	<answer>fish.</answer>
-	<point>1</point>
-	<point>2</point>
-	<choice>Cats </choice>
-	<choice>eat </choice>
-	<choice>tasty </choice>
-	<choice>fish.</choice>
-	<time>20</time>
-</question>
+<questions>
+	<question>
+		<type>PickOutNouns</type>
+		<image>image.jpg</image>
+		<sentence></sentence>
+		<answer>Cats </answer>
+		<answer>fish.</answer>
+		<point>1</point>
+		<point>2</point>
+		<choice>Cats </choice>
+		<choice>eat </choice>
+		<choice>tasty </choice>
+		<choice>fish.</choice>
+		<time>20</time>
+	</question>
+	<question>
+		<type>FillInBlank</type>
+		<image>image.jpg</image>
+		<sentence>I love my _unt.</sentence>
+		<answer>a</answer>
+		<point>1</point>
+		<choice>a</choice>
+		<choice>b</choice>
+		<choice>c</choice>
+		<choice>d</choice>
+		<time>10</time>
+	</question>
+</questions>
