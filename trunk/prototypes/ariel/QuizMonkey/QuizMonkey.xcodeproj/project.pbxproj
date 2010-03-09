@@ -15,11 +15,10 @@
 		2899E5220DE3E06400AC0155 /* QuizMonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* QuizMonkeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */; };
+		B0825550114598C3001B084F /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = B082554F114598C3001B084F /* Questions.xml */; };
 		DE207C30112A44CE005AD593 /* Pic-BackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2D112A44CE005AD593 /* Pic-BackGround.png */; };
 		DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2E112A44CE005AD593 /* Pic-Title.png */; };
 		DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */; };
-		DE749FC7112C835000F16594 /* ObjectQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = DE749FC6112C835000F16594 /* ObjectQuestion.m */; };
-		DE749FCD112C83D600F16594 /* ObjectQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = DE749FCC112C83D600F16594 /* ObjectQuiz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +35,13 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* QuizMonkey_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkey_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuizMonkey-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		B082554F114598C3001B084F /* Questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions.xml; sourceTree = "<group>"; };
+		B083204211457ECC005B9F8B /* ObjectQuestionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectQuestionList.h; sourceTree = "<group>"; };
+		B0842CF51145BEA7007C6A94 /* ClassQuestionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassQuestionParser.h; sourceTree = "<group>"; };
 		DE207C2D112A44CE005AD593 /* Pic-BackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-BackGround.png"; sourceTree = "<group>"; };
 		DE207C2E112A44CE005AD593 /* Pic-Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-Title.png"; sourceTree = "<group>"; };
 		DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-ProfMonkey.png"; sourceTree = "<group>"; };
 		DE749FC5112C835000F16594 /* ObjectQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectQuestion.h; sourceTree = "<group>"; };
-		DE749FC6112C835000F16594 /* ObjectQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectQuestion.m; sourceTree = "<group>"; };
-		DE749FCB112C83D600F16594 /* ObjectQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectQuiz.h; sourceTree = "<group>"; };
-		DE749FCC112C83D600F16594 /* ObjectQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectQuiz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +65,9 @@
 				1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
+				B0842CF51145BEA7007C6A94 /* ClassQuestionParser.h */,
+				B083204211457ECC005B9F8B /* ObjectQuestionList.h */,
 				DE749FC5112C835000F16594 /* ObjectQuestion.h */,
-				DE749FC6112C835000F16594 /* ObjectQuestion.m */,
-				DE749FCB112C83D600F16594 /* ObjectQuiz.h */,
-				DE749FCC112C83D600F16594 /* ObjectQuiz.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -109,6 +107,7 @@
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
 				DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */,
+				B082554F114598C3001B084F /* Questions.xml */,
 				2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */,
@@ -173,6 +172,7 @@
 				DE207C30112A44CE005AD593 /* Pic-BackGround.png in Resources */,
 				DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */,
 				DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */,
+				B0825550114598C3001B084F /* Questions.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,8 +186,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* QuizMonkeyViewController.m in Sources */,
-				DE749FC7112C835000F16594 /* ObjectQuestion.m in Sources */,
-				DE749FCD112C83D600F16594 /* ObjectQuiz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
