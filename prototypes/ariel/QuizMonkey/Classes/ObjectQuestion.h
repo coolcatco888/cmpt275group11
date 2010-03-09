@@ -10,17 +10,38 @@
 
 
 @interface ObjectQuestion : NSObject {
-	NSInteger Type;
-	NSString *Question;
-	NSString *pic_Path;
-	NSInteger pic_X;
-	NSInteger pic_Y;
-	NSInteger pic_W;
-	NSInteger pic_H;
-	NSInteger Score_Max;
-	NSInteger Score_Current;
-	NSArray *Choices_Words;
-	NSSet *Choices_Score;
+	NSString *Type;
+	NSString *pic_Name;
+	NSString *Sentence;
+	NSMutableArray *Choices_Words;
+	NSMutableArray *Choices_Points;
+	NSInteger Time;
+}
+
+@property (assign) NSString* Type;
+@property (assign) NSString* pic_Name;
+@property (assign) NSString* Sentence;
+@property (assign) NSMutableArray* Choices_Words;
+@property (assign) NSMutableArray* Choices_Points;
+@property (assign) NSInteger Time;
+
+@end
+
+@implementation ObjectQuestion
+
+@synthesize Type;
+@synthesize pic_Name;
+@synthesize Sentence;
+@synthesize Choices_Words;
+@synthesize Choices_Points;
+@synthesize Time;
+
+-(void) addChoices_Words: (NSString*) newChoice {
+	[Choices_Words addObject:newChoice];
+}
+
+-(void) addChoices_Points: (NSInteger) newPoint {
+	[Choices_Points addObject:[NSNumber numberWithInteger:newPoint]];
 }
 
 @end

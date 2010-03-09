@@ -6,6 +6,9 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+#import "ObjectQuestion.h"
+#import "ObjectQuestionList.h"
+#import "ClassQuestionParser.h"
 #import "QuizMonkeyViewController.h"
 
 @implementation QuizMonkeyViewController
@@ -16,7 +19,16 @@
 	[vew_MainMenu addSubview:vew_HighScores];
 }
 -(IBAction)ShowQuestionView:(id)sender {
+	ClassQuestionParser *Quiz = [ClassQuestionParser new];
+	//ObjectQuestionList *Questions = [ObjectQuestionList new];
+	//Questions = [ObjectQuestionList new];
+	NSLog(@"%@",[[Quiz LoadXMLQuestions:@"Questions"] getQuestion:0]);
+	//[Questions retain];
 	[vew_MainMenu addSubview:vew_Question];
+	//NSLog(@"%@",[[Quiz2 getQuestion:0] Type]);
+	NSLog(@"Hello");
+	//[lbl_Type setText:[[Quiz2 getQuestion:0] Type]];
+	[Quiz retain];
 }
 -(IBAction)ShowAlert:(id)sender {
 	//First we set all the parameters of the Alert pop-up
@@ -66,6 +78,9 @@
 -(IBAction)ExitQuestionView:(id)sender {
 	//Removing subview
 	[vew_Question removeFromSuperview];
+}
+-(IBAction)LoadObjectQuestion:(id)sender{
+	
 }
 -(IBAction)LoadArray:(id)sender {
 	ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
