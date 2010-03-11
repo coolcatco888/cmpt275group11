@@ -3,9 +3,9 @@
 		<type>PickOutNouns</type>
 		<image>image.jpg</image>
 		<sentence></sentence>
-		<answer>Cats </answer>
-		<answer>fish.</answer>
 		<point>1</point>
+		<point>0</point>
+		<point>0</point>
 		<point>2</point>
 		<choice>Cats </choice>
 		<choice>eat </choice>
@@ -17,8 +17,10 @@
 		<type>FillInBlank</type>
 		<image>image.jpg</image>
 		<sentence>I love my _unt.</sentence>
-		<answer>a</answer>
 		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
 		<choice>a</choice>
 		<choice>b</choice>
 		<choice>c</choice>

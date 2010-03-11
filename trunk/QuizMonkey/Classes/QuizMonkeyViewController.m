@@ -54,6 +54,8 @@
 	//Then we SHOW the alert... simple
 	[alr_Alert show];
 }
+
+/*
 -(IBAction)Change_Button:(id)sender {
 	if(btn_Play.currentTitle == @"Play")
 		//Change button title code
@@ -70,6 +72,9 @@
 		//Change prof Monkey's image
 		img_Monkey.image = [UIImage imageNamed:@"Pic-ProfMonkey.png"];
 }
+ */
+
+/*
 -(IBAction)NewButton:(id)sender {
 	//Must create a button object
 	btn_New = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -91,6 +96,7 @@
 	alr_Alert = [[UIAlertView alloc] initWithTitle:@"Yaaay" message:@"New was pressed" delegate:nil cancelButtonTitle:@"?Continue?" otherButtonTitles:nil];
 	[alr_Alert show];
 }
+*/
 
 ////////////////////////Question View Functions
 -(IBAction)ExitQuestionView:(id)sender {
@@ -100,6 +106,8 @@
 -(IBAction)LoadObjectQuestion:(id)sender{
 	
 }
+
+/*
 -(IBAction)LoadArray:(id)sender {
 	ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
 	//MUST use retain if you want to use the array in functions outside of this one
@@ -110,11 +118,13 @@
 	//Same way you were to change the tittle or font of the button
     [lbl_Question setText:[ThisArray objectAtIndex: [sender tag]]];
 }
+*/
 
 ////////////////////////High Scores View Functions
 -(IBAction)ExitHighScoresView:(id)sender {
 	[vew_HighScores removeFromSuperview];
 }
+
 
 -(IBAction)SetCell:(id)sender {
 /*	cel_Score1 = [tbl_HighScores dequeueReusableCellWithIdentifier:@"Score1"];

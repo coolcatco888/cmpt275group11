@@ -56,11 +56,11 @@
 -(IBAction)LoadObjectQuestion:(id)sender;
 
 -(IBAction)ShowAlert:(id)sender;
--(IBAction)NewButton:(id)sender;
--(IBAction)Change_Button:(id)sender;
--(IBAction)Change_Picture:(id)sender;
--(IBAction)LoadArray:(id)sender;
--(IBAction)SetQuestion:(id)sender;
+//-(IBAction)NewButton:(id)sender;
+//-(IBAction)Change_Button:(id)sender;
+//-(IBAction)Change_Picture:(id)sender;
+//-(IBAction)LoadArray:(id)sender;
+//-(IBAction)SetQuestion:(id)sender;
 
 @end
 
