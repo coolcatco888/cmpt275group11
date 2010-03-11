@@ -36,6 +36,12 @@
 @synthesize Choices_Points;
 @synthesize Time;
 
+-init{
+	Choices_Words = [NSMutableArray arrayWithCapacity:20];
+	Choices_Points = [NSMutableArray arrayWithCapacity:20];
+	return self;
+}
+
 -(void) addChoices_Words: (NSString*) newChoice {
 	[Choices_Words addObject:newChoice];
 }

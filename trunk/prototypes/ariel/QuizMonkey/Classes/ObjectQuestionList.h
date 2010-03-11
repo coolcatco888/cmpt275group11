@@ -16,6 +16,10 @@
 @end
 
 @implementation ObjectQuestionList
+-init{
+	Questions = [NSMutableArray arrayWithCapacity:100];
+	return self;
+}
 
 -(ObjectQuestion *)getQuestion:(NSUInteger)QuestionIndex{
 	return [Questions objectAtIndex:QuestionIndex];
