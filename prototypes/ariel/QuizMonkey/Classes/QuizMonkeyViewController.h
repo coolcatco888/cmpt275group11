@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ObjectQuestionList;
+
 @interface QuizMonkeyViewController : UIViewController {
-	//NSObject ObjectQuestion *Quest;
-	//ClassQuestionParser *Quest;
-	//ObjectQuestion *Questions;
+	ObjectQuestionList *QuestionList;
 	IBOutlet UIView *vew_MainMenu;
 	IBOutlet UIView *vew_Question;
 	IBOutlet UIView *vew_HighScores;
