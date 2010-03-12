@@ -6,11 +6,18 @@
 			4E2725CB114AE89D004CA9A2 /* QuizMonkey */,
 		);
 	};
+	28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 966}}";
+			sepNavSelRange = "{214, 0}";
+			sepNavVisRange = "{0, 880}";
+		};
+	};
 	28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1194, 3766}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1224}";
+			sepNavIntBoundsRect = "{{0, 0}, {480, 3960}}";
+			sepNavSelRange = "{667, 54}";
+			sepNavVisRange = "{423, 575}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -109,30 +116,43 @@
 	};
 	4E2725EA114AE8FC004CA9A2 /* ClassQuestionParser.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 518}}";
-			sepNavSelRange = "{760, 0}";
-			sepNavVisRange = "{32, 1852}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 628}}";
+			sepNavSelRange = "{1885, 15}";
+			sepNavVisRange = "{426, 1504}";
+		};
+	};
+	4E2725F0114AEA0F004CA9A2 /* ObjectQuestion.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 458}}";
+			sepNavSelRange = "{424, 47}";
+			sepNavVisRange = "{0, 548}";
 		};
 	};
 	B083204211457ECC005B9F8B /* ObjectQuestionList.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ObjectQuestionList.h;
+		path = /Volumes/cleyt/cmpt275group11/QuizMonkey/Classes/ObjectQuestionList.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 458}}";
-			sepNavSelRange = "{314, 39}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
+			sepNavSelRange = "{223, 14}";
 			sepNavVisRange = "{0, 574}";
 		};
 	};
 	B0842CF51145BEA7007C6A94 /* ClassQuestionParser.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 458}}";
-			sepNavSelRange = "{268, 9}";
-			sepNavVisRange = "{0, 433}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
+			sepNavSelRange = "{704, 0}";
+			sepNavVisRange = "{0, 727}";
 		};
 	};
 	DE749FC5112C835000F16594 /* ObjectQuestion.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 756}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 700}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 462}}";
+			sepNavSelRange = "{719, 0}";
+			sepNavVisRange = "{0, 727}";
 		};
 	};
 }

@@ -40,7 +40,6 @@
 		4E2725F0114AEA0F004CA9A2 /* ObjectQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectQuestion.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuizMonkey-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B082554F114598C3001B084F /* Questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions.xml; sourceTree = "<group>"; };
-		B083204211457ECC005B9F8B /* ObjectQuestionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectQuestionList.h; sourceTree = "<group>"; };
 		B0842CF51145BEA7007C6A94 /* ClassQuestionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassQuestionParser.h; sourceTree = "<group>"; };
 		DE207C2D112A44CE005AD593 /* Pic-BackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-BackGround.png"; sourceTree = "<group>"; };
 		DE207C2E112A44CE005AD593 /* Pic-Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-Title.png"; sourceTree = "<group>"; };
@@ -70,7 +69,6 @@
 				28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
 				B0842CF51145BEA7007C6A94 /* ClassQuestionParser.h */,
-				B083204211457ECC005B9F8B /* ObjectQuestionList.h */,
 				DE749FC5112C835000F16594 /* ObjectQuestion.h */,
 				4E2725EA114AE8FC004CA9A2 /* ClassQuestionParser.m */,
 				4E2725F0114AEA0F004CA9A2 /* ObjectQuestion.m */,
