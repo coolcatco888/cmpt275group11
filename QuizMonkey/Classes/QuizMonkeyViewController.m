@@ -7,7 +7,6 @@
 //
 
 #import "ObjectQuestion.h"
-//#import "ObjectQuestionList.h"
 #import "ClassQuestionParser.h"
 #import "QuizMonkeyViewController.h"
 
@@ -20,32 +19,11 @@
 }
 -(IBAction)ShowQuestionView:(id)sender {
 	ClassQuestionParser *Quiz = [ClassQuestionParser new];
-	//ObjectQuestionList *Questions = [ObjectQuestionList new];
-	//Questions = [ObjectQuestionList new];
 	QuestionList = [Quiz LoadXMLQuestions:@"Questions"];
-	ObjectQuestion *TMP_Question = [QuestionList getQuestion:0];
-	[lbl_Type setText:[TMP_Question Type]];
-	[lbl_pic_Name setText:[TMP_Question pic_Name]];
-	[lbl_Sentence setText:[TMP_Question Sentence]];
-	[lbl_Choice1_Word setText:[[TMP_Question Choices_Words] objectAtIndex:0]];
-	[lbl_Choice2_Word setText:[[TMP_Question Choices_Words] objectAtIndex:1]];
-	[lbl_Choice3_Word setText:[[TMP_Question Choices_Words] objectAtIndex:2]];
-	[lbl_Choice4_Word setText:[[TMP_Question Choices_Words] objectAtIndex:3]];
-	//NSLog(@"%@",[[TMP_Question Choices_Points] objectAtIndex:0]);
-	[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:0] stringValue]];
-	[lbl_Choice2_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:1] stringValue]];
-	//[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:2] stringValue]];
-	//[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:3] stringValue]];
-	//[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:4] stringValue]];
-	//[lbl_Choice2_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:1]];
-	//[lbl_Choice3_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:2]];
-	//[lbl_Choice4_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:3]];
-	[lbl_Time setText:@""+[TMP_Question Time]];
-	//[Questions retain];
 	[vew_MainMenu addSubview:vew_Question];
-	//NSLog(@"%@",[[Quiz2 getQuestion:0] Type]);
-	//NSLog(@"Hello");
-	//[lbl_Type setText:[[Quiz2 getQuestion:0] Type]];
+	
+	SEL selector = @selector(selectChoice:);
+	[self createButton:@"WTF" :0 :0 :200 :100 :selector];
 	[Quiz retain];
 }
 -(IBAction)ShowAlert:(id)sender {
@@ -55,50 +33,31 @@
 	[alr_Alert show];
 }
 
-/*
--(IBAction)Change_Button:(id)sender {
-	if(btn_Play.currentTitle == @"Play")
-		//Change button title code
-		[btn_Play setTitle:@"PlayChanged" forState:0];
-	else
-		//Change button title code
-		[btn_Play setTitle:@"Play" forState:0];
-}
--(IBAction)Change_Picture:(id)sender {
-	if(img_Monkey.image == [UIImage imageNamed:@"Pic-ProfMonkey.png"])
-		//Change prof Monkey's image
-		img_Monkey.image = [UIImage imageNamed:@"Pic-Title.png"];
-	else
-		//Change prof Monkey's image
-		img_Monkey.image = [UIImage imageNamed:@"Pic-ProfMonkey.png"];
-}
- */
-
-/*
--(IBAction)NewButton:(id)sender {
-	//Must create a button object
-	btn_New = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	//Just setong the frame (x,y,Width,Height)
-	btn_New.frame = CGRectMake(100,170,100,30);
-	
-	//Set the Title of the button, MUST NOT FORGET "forState"
-	[btn_New setTitle:@"New" forState:UIControlStateNormal];
-	
-	//Setting which function will be called when button pressed
-	//addTarget is not really needed and I don't know what @selector is for
-	[btn_New addTarget:self action:@selector(NewButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-	
-	//Then add the button to the current view as a subview
-	[vew_MainMenu addSubview:btn_New];
-	[btn_New retain];
-}
--(void)NewButtonPressed {
-	alr_Alert = [[UIAlertView alloc] initWithTitle:@"Yaaay" message:@"New was pressed" delegate:nil cancelButtonTitle:@"?Continue?" otherButtonTitles:nil];
-	[alr_Alert show];
-}
-*/
 
 ////////////////////////Question View Functions
+-(void) createButton:(NSString*) title :(int) x :(int) y :(int) width :(int) height :(SEL) buttonActionFunction {
+	//Must create a button object
+	IBOutlet UIButton* newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	//Just setong the frame (x,y,Width,Height)
+	newButton.frame = CGRectMake(x,y,width,height);
+	
+	//Set the Title of the button, MUST NOT FORGET "forState"
+	[newButton setTitle:title forState:UIControlStateNormal];
+	
+	//Setting which function will be called when button pressed
+	//buttonActionFunction is a SEL or selector type which is a pointer to an instance method
+	[newButton addTarget:self action:buttonActionFunction forControlEvents:UIControlEventTouchUpInside];
+	
+	//Then add the button to the current view as a subview
+	[vew_Question addSubview:newButton];
+	[newButton retain];	
+}
+
+-(void) selectChoice:(id)sender {
+	[(UIButton*)sender removeFromSuperview];
+	
+}
+
 -(IBAction)ExitQuestionView:(id)sender {
 	//Removing subview
 	[vew_Question removeFromSuperview];
@@ -107,18 +66,6 @@
 	
 }
 
-/*
--(IBAction)LoadArray:(id)sender {
-	ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
-	//MUST use retain if you want to use the array in functions outside of this one
-	[ThisArray retain];
-}
--(IBAction)SetQuestion:(id)sender {
-	//The tag is an integer that you can set as a button property in the xib
-	//Same way you were to change the tittle or font of the button
-    [lbl_Question setText:[ThisArray objectAtIndex: [sender tag]]];
-}
-*/
 
 ////////////////////////High Scores View Functions
 -(IBAction)ExitHighScoresView:(id)sender {
@@ -164,29 +111,6 @@
 	btn_New.center = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
 }
 
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
 
 
 // Override to allow orientations other than the default portrait orientation.
