@@ -7,7 +7,7 @@
 //
 
 #import "ObjectQuestion.h"
-#import "ObjectQuestionList.h"
+//#import "ObjectQuestionList.h"
 #import "ClassQuestionParser.h"
 #import "QuizMonkeyViewController.h"
 

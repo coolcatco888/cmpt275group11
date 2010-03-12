@@ -1,0 +1,138 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* QuizMonkey */ = {
+		activeExec = 0;
+		executables = (
+			4E2725CB114AE89D004CA9A2 /* QuizMonkey */,
+		);
+	};
+	28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1194, 3766}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1224}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4E2725CB114AE89D004CA9A2 /* QuizMonkey */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* QuizMonkey */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* QuizMonkey */,
+		);
+		codeSenseManager = 4E2725E2114AE8B4004CA9A2 /* Code sense */;
+		executables = (
+			4E2725CB114AE89D004CA9A2 /* QuizMonkey */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 290121919;
+			PBXWorkspaceStateSaveDate = 290121919;
+		};
+		perUserProjectItems = {
+			4E2725DC114AE8B4004CA9A2 = 4E2725DC114AE8B4004CA9A2 /* PBXBookmark */;
+			4E2725DD114AE8B4004CA9A2 = 4E2725DD114AE8B4004CA9A2 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 4E2725E1114AE8B4004CA9A2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4E2725CB114AE89D004CA9A2 /* QuizMonkey */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = QuizMonkey;
+		sourceDirectories = (
+		);
+	};
+	4E2725DC114AE8B4004CA9A2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = B083204211457ECC005B9F8B /* ObjectQuestionList.h */;
+	};
+	4E2725DD114AE8B4004CA9A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B083204211457ECC005B9F8B /* ObjectQuestionList.h */;
+		name = "ObjectQuestionList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 301;
+		vrLoc = 0;
+	};
+	4E2725E1114AE8B4004CA9A2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	4E2725E2114AE8B4004CA9A2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4E2725EA114AE8FC004CA9A2 /* ClassQuestionParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 518}}";
+			sepNavSelRange = "{760, 0}";
+			sepNavVisRange = "{32, 1852}";
+		};
+	};
+	B083204211457ECC005B9F8B /* ObjectQuestionList.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 458}}";
+			sepNavSelRange = "{314, 39}";
+			sepNavVisRange = "{0, 574}";
+		};
+	};
+	B0842CF51145BEA7007C6A94 /* ClassQuestionParser.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 458}}";
+			sepNavSelRange = "{268, 9}";
+			sepNavVisRange = "{0, 433}";
+		};
+	};
+	DE749FC5112C835000F16594 /* ObjectQuestion.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 756}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 700}";
+		};
+	};
+}

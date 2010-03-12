@@ -11,7 +11,7 @@
 @class ObjectQuestionList;
 
 @interface QuizMonkeyViewController : UIViewController {
-	ObjectQuestionList *QuestionList;
+	NSMutableArray *QuestionList;
 	IBOutlet UIView *vew_MainMenu;
 	IBOutlet UIView *vew_Question;
 	IBOutlet UIView *vew_HighScores;
