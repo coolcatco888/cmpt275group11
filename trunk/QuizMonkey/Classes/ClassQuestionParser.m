@@ -2,35 +2,42 @@
 
 @implementation ClassQuestionParser
 
-@synthesize Questions;
+@synthesize questions;
 
--(NSMutableArray *)LoadXMLQuestions:(NSString *)FileName{
-	FileName = [[NSBundle mainBundle] pathForResource:FileName ofType:@"xml"];
-	NSData *FileData = [NSData dataWithContentsOfFile:FileName];
-	NSXMLParser *QuestionParser = [[NSXMLParser alloc] init];
-	[QuestionParser initWithData:FileData];
-	[QuestionParser setDelegate:self];
-	[QuestionParser parse];
-	return Questions;
+-(NSMutableArray *)loadQuestionsFromXML:(NSString *)fileName{
+	NSString* pathToXML = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
+	NSData *fileData = [NSData dataWithContentsOfFile:pathToXML];
+	NSXMLParser *parser = [[NSXMLParser alloc] init];
+	[parser initWithData:fileData];
+	[parser setDelegate:self];
+	[parser parse];
+	return questions;
 }
 
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
-	if([elementName isEqualToString:@"questions"])	Questions = [NSMutableArray arrayWithCapacity:100];
-	if([elementName isEqualToString:@"question"])	InProgress_Question = [ObjectQuestion new];
+-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName 
+ namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName 
+   attributes:(NSDictionary *)attributeDict{
+	if([elementName isEqualToString:@"questions"])	questions = [NSMutableArray arrayWithCapacity:100];
+	if([elementName isEqualToString:@"question"])	questionInProgress = [Question new];
 }
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-	NSLog(InProgress_Text);
-	if([elementName isEqualToString:@"type"])		[InProgress_Question setType:InProgress_Text];
-	else if([elementName isEqualToString:@"image"])		[InProgress_Question setPic_Name:InProgress_Text];
-	else if([elementName isEqualToString:@"choice"])	[InProgress_Question addChoices_Words:InProgress_Text];
-	else if([elementName isEqualToString:@"point"])		[InProgress_Question addChoices_Points:[InProgress_Text intValue]];
-	else if([elementName isEqualToString:@"time"])		[InProgress_Question setTime: [InProgress_Text intValue]];
-	else if([elementName isEqualToString:@"sentence"])	[InProgress_Question setSentence:InProgress_Text];
-	else if([elementName isEqualToString:@"question"])	[Questions addObject:InProgress_Question];
-	[InProgress_Text release];
+
+
+-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName 
+ namespaceURI:(NSString *)namespaceURI 
+qualifiedName:(NSString *)qName {
+	NSLog(textInProgress);
+	if([elementName isEqualToString:@"type"])		[questionInProgress setType:textInProgress];
+	else if([elementName isEqualToString:@"image"])		[questionInProgress setImage:textInProgress];
+	else if([elementName isEqualToString:@"choice"])	[questionInProgress addChoice:textInProgress];
+	else if([elementName isEqualToString:@"point"])		[questionInProgress addPoint:[textInProgress intValue]];
+	else if([elementName isEqualToString:@"time"])		[questionInProgress setTime: [textInProgress intValue]];
+	else if([elementName isEqualToString:@"sentence"])	[questionInProgress setSentence:textInProgress];
+	else if([elementName isEqualToString:@"question"])	[questions addObject:questionInProgress];
+	[textInProgress release];
+	[elementInProgress release];
 }
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-	InProgress_Text = [string copy];
+	textInProgress = [string copy];
 }
 
 - (void)dealloc{

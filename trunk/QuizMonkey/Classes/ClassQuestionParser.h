@@ -7,22 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ObjectQuestion.h"
+#import "Question.h"
 
 
 @interface ClassQuestionParser : NSObject {
-	NSMutableArray *Questions;
-	ObjectQuestion *InProgress_Question;
-	NSString *InProgress_Element;
-	NSString *InProgress_Text;
+	NSMutableArray *questions;
+	Question *questionInProgress;
+	NSString *elementInProgress;
+	NSString *textInProgress;
 }
 
-@property (assign) NSMutableArray *Questions;
+@property (assign) NSMutableArray *questions;
 
-
-
--(NSMutableArray *)LoadXMLQuestions:(NSString *)FileName;
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
+-(NSMutableArray *)loadQuestionsFromXML:(NSString *)fileName;
+-(void)parser:(NSXMLParser *)parser didEndElement
+			 :(NSString *)elementName namespaceURI
+			 :(NSString *)namespaceURI qualifiedName
+			 :(NSString *)qName;
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;
 -(void)dealloc;
 
