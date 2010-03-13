@@ -19,10 +19,10 @@
 	IBOutlet UIButton *quitButton;
 	IBOutlet UIButton *newButton;
 	IBOutlet UIImageView *monkeyImage;
-	IBOutlet UILabel *lbl_Question;
-	IBOutlet UILabel *lbl_New;
+	//IBOutlet UILabel *lbl_Question;
+	//IBOutlet UILabel *lbl_New;
 	UIAlertView *alr_Alert;
-	NSArray *ThisArray;
+	//NSArray *ThisArray;
 	IBOutlet UIScrollView *scr_HighScores;
 	IBOutlet UITableViewCell *cel_Score1;
 	IBOutlet UITableView *tbl_HighScores;
