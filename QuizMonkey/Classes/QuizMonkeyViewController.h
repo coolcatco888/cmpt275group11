@@ -43,6 +43,7 @@
 	IBOutlet UILabel *questionTypeLabel;
 	
 	IBOutlet UIImageView *questionImage;
+	NSMutableSet* selectedChoices;
 
 }
 

@@ -273,8 +273,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>15</integer>
+									<integer>9</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -316,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Questions.xml</string>
+								<string>QuizMonkeyViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,33 +324,33 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Questions.xml</string>
+										<string>QuizMonkeyViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4E7BD64C114B42D700F366F0</string>
+										<string>4E7BD6A1114B49DE00F366F0</string>
 										<key>history</key>
 										<array>
 											<string>4E7BEA58114AF75F00CB0CE3</string>
 											<string>4E099150114B2C81001E7907</string>
 											<string>4E099151114B2C81001E7907</string>
-											<string>4E09923C114B3A1B001E7907</string>
-											<string>4E09923D114B3A1B001E7907</string>
-											<string>4E09923E114B3A1B001E7907</string>
-											<string>4E7BD60B114B3F6500F366F0</string>
 											<string>4E7BD61B114B413700F366F0</string>
-											<string>4E7BD628114B42A700F366F0</string>
-											<string>4E7BD629114B42A700F366F0</string>
 											<string>4E7BD62A114B42A700F366F0</string>
 											<string>4E7BD62B114B42A700F366F0</string>
-											<string>4E7BD62C114B42A700F366F0</string>
 											<string>4E7BD62D114B42A700F366F0</string>
-											<string>4E7BD62E114B42A700F366F0</string>
 											<string>4E7BD62F114B42A700F366F0</string>
 											<string>4E7BD630114B42A700F366F0</string>
 											<string>4E7BD631114B42A700F366F0</string>
-											<string>4E7BD632114B42A700F366F0</string>
-											<string>4E7BD633114B42A700F366F0</string>
+											<string>4E7BD674114B49DE00F366F0</string>
+											<string>4E7BD675114B49DE00F366F0</string>
+											<string>4E7BD676114B49DE00F366F0</string>
+											<string>4E7BD677114B49DE00F366F0</string>
+											<string>4E7BD678114B49DE00F366F0</string>
+											<string>4E7BD679114B49DE00F366F0</string>
+											<string>4E7BD67A114B49DE00F366F0</string>
+											<string>4E7BD67B114B49DE00F366F0</string>
+											<string>4E7BD67C114B49DE00F366F0</string>
+											<string>4E7BD67D114B49DE00F366F0</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -418,6 +418,49 @@
 											<string>4E7BD645114B42A700F366F0</string>
 											<string>4E7BD646114B42A700F366F0</string>
 											<string>4E7BD647114B42A700F366F0</string>
+											<string>4E7BD661114B46DE00F366F0</string>
+											<string>4E7BD662114B46DE00F366F0</string>
+											<string>4E7BD663114B46DE00F366F0</string>
+											<string>4E7BD664114B46DE00F366F0</string>
+											<string>4E7BD665114B46DE00F366F0</string>
+											<string>4E7BD666114B46DE00F366F0</string>
+											<string>4E7BD667114B46DE00F366F0</string>
+											<string>4E7BD668114B46DE00F366F0</string>
+											<string>4E7BD67E114B49DE00F366F0</string>
+											<string>4E7BD67F114B49DE00F366F0</string>
+											<string>4E7BD680114B49DE00F366F0</string>
+											<string>4E7BD681114B49DE00F366F0</string>
+											<string>4E7BD682114B49DE00F366F0</string>
+											<string>4E7BD683114B49DE00F366F0</string>
+											<string>4E7BD684114B49DE00F366F0</string>
+											<string>4E7BD685114B49DE00F366F0</string>
+											<string>4E7BD686114B49DE00F366F0</string>
+											<string>4E7BD687114B49DE00F366F0</string>
+											<string>4E7BD688114B49DE00F366F0</string>
+											<string>4E7BD689114B49DE00F366F0</string>
+											<string>4E7BD68A114B49DE00F366F0</string>
+											<string>4E7BD68B114B49DE00F366F0</string>
+											<string>4E7BD68C114B49DE00F366F0</string>
+											<string>4E7BD68D114B49DE00F366F0</string>
+											<string>4E7BD68E114B49DE00F366F0</string>
+											<string>4E7BD68F114B49DE00F366F0</string>
+											<string>4E7BD690114B49DE00F366F0</string>
+											<string>4E7BD691114B49DE00F366F0</string>
+											<string>4E7BD692114B49DE00F366F0</string>
+											<string>4E7BD693114B49DE00F366F0</string>
+											<string>4E7BD694114B49DE00F366F0</string>
+											<string>4E7BD695114B49DE00F366F0</string>
+											<string>4E7BD696114B49DE00F366F0</string>
+											<string>4E7BD697114B49DE00F366F0</string>
+											<string>4E7BD698114B49DE00F366F0</string>
+											<string>4E7BD699114B49DE00F366F0</string>
+											<string>4E7BD69A114B49DE00F366F0</string>
+											<string>4E7BD69B114B49DE00F366F0</string>
+											<string>4E7BD69C114B49DE00F366F0</string>
+											<string>4E7BD69D114B49DE00F366F0</string>
+											<string>4E7BD69E114B49DE00F366F0</string>
+											<string>4E7BD69F114B49DE00F366F0</string>
+											<string>4E7BD6A0114B49DE00F366F0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -640,7 +683,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>QuizMonkeyViewController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -657,6 +700,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -707,7 +752,7 @@
 			<key>WindowToolGUID</key>
 			<string>4E7BEA92114AF75F00CB0CE3</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
