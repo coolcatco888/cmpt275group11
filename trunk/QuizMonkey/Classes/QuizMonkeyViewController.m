@@ -7,7 +7,7 @@
 //
 
 #import "Question.h"
-#import "ClassQuestionParser.h"
+#import "QuestionParser.h"
 #import "QuizMonkeyViewController.h"
 
 @implementation QuizMonkeyViewController
@@ -18,13 +18,13 @@
 	[vew_MainMenu addSubview:vew_HighScores];
 }
 -(IBAction)ShowQuestionView:(id)sender {
-	ClassQuestionParser *Quiz = [ClassQuestionParser new];
-	QuestionList = [Quiz loadQuestionsFromXML:@"Questions"];
+	QuestionParser * quiz = [QuestionParser new];
+	QuestionList = [quiz loadQuestionsFromXML:@"Questions"];
 	[vew_MainMenu addSubview:vew_Question];
 	
 	SEL selector = @selector(selectChoice:);
 	[self createButton:@"WTF" :0 :0 :200 :100 :selector];
-	[Quiz retain];
+	[quiz retain];
 }
 -(IBAction)ShowAlert:(id)sender {
 	//First we set all the parameters of the Alert pop-up

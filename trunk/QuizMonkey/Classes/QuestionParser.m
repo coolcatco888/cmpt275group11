@@ -1,6 +1,6 @@
-#import "ClassQuestionParser.h"
+#import "QuestionParser.h"
 
-@implementation ClassQuestionParser
+@implementation QuestionParser
 
 @synthesize questions;
 
