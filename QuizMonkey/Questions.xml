@@ -1,6 +1,6 @@
 <questions>
 	<question>
-		<type>PickOutNouns</type>
+		<type>Pick out the nouns</type>
 		<image>image.jpg</image>
 		<sentence></sentence>
 		<point>1</point>
@@ -14,7 +14,7 @@
 		<time>20</time>
 	</question>
 	<question>
-		<type>FillInBlank</type>
+		<type>Fill in the blank</type>
 		<image>image.jpg</image>
 		<sentence>I love my _unt.</sentence>
 		<point>1</point>
