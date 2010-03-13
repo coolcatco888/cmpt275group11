@@ -6,8 +6,7 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-#import "Question.h"
-#import "QuestionParser.h"
+
 #import "QuizMonkeyViewController.h"
 
 @implementation QuizMonkeyViewController
@@ -22,8 +21,6 @@
 	QuestionList = [quiz loadQuestionsFromXML:@"Questions"];
 	[mainMenuView addSubview:questionView];
 	
-	SEL selector = @selector(selectChoice:);
-	[self createButton:@"WTF" :0 :0 :200 :100 :selector];
 	[quiz retain];
 }
 -(IBAction)ShowAlert:(id)sender {
@@ -35,23 +32,6 @@
 
 
 ////////////////////////Question View Functions
--(void) createButton:(NSString*) title :(int) x :(int) y :(int) width :(int) height :(SEL) buttonActionFunction {
-	//Must create a button object
-	IBOutlet UIButton* newButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	//Just setong the frame (x,y,Width,Height)
-	newButton.frame = CGRectMake(x,y,width,height);
-	
-	//Set the Title of the button, MUST NOT FORGET "forState"
-	[newButton setTitle:title forState:UIControlStateNormal];
-	
-	//Setting which function will be called when button pressed
-	//buttonActionFunction is a SEL or selector type which is a pointer to an instance method
-	[newButton addTarget:self action:buttonActionFunction forControlEvents:UIControlEventTouchUpInside];
-	
-	//Then add the button to the current view as a subview
-	[questionView addSubview:newButton];
-	[newButton retain];	
-}
 
 -(void) selectChoice:(id)sender {
 	[(UIButton*)sender removeFromSuperview];
