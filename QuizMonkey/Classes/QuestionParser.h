@@ -10,7 +10,7 @@
 #import "Question.h"
 
 
-@interface ClassQuestionParser : NSObject {
+@interface QuestionParser : NSObject {
 	NSMutableArray *questions;
 	Question *questionInProgress;
 	NSString *elementInProgress;
