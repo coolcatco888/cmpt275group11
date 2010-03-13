@@ -32,18 +32,19 @@
 	
 
 	//Question Window
-	IBOutlet UILabel *lbl_Type;
-	IBOutlet UILabel *lbl_pic_Name;
-	IBOutlet UILabel *lbl_Sentence;
-	IBOutlet UILabel *lbl_Choice1_Word;
-	IBOutlet UILabel *lbl_Choice2_Word;
-	IBOutlet UILabel *lbl_Choice3_Word;
-	IBOutlet UILabel *lbl_Choice4_Word;
-	IBOutlet UILabel *lbl_Choice1_Points;
-	IBOutlet UILabel *lbl_Choice2_Points;
-	IBOutlet UILabel *lbl_Choice3_Points;
-	IBOutlet UILabel *lbl_Choice4_Points;
-	IBOutlet UILabel *lbl_Time;
+	IBOutlet UIButton *questionQuitButton;
+	IBOutlet UIButton *questionNextButton;
+	IBOutlet UIButton *questionChoice1Button;
+	IBOutlet UIButton *questionChoice2Button;
+	IBOutlet UIButton *questionChoice3Button;
+	IBOutlet UIButton *questionChoice4Button;
+	
+	NSArray * questionChoiceButtons;
+	IBOutlet UILabel *questionSentenceLabel;
+	IBOutlet UILabel *questionSentenceBottomLabel;
+	IBOutlet UILabel *questionTypeLabel;
+	
+	IBOutlet UIImageView *question;
 
 }
 
