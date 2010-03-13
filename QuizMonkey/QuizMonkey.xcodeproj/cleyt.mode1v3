@@ -328,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4E09916E114B2D31001E7907</string>
+										<string>4E0991AF114B30AD001E7907</string>
 										<key>history</key>
 										<array>
 											<string>4E7BEA58114AF75F00CB0CE3</string>
@@ -344,8 +344,9 @@
 											<string>4E099151114B2C81001E7907</string>
 											<string>4E099153114B2C81001E7907</string>
 											<string>4E099154114B2C81001E7907</string>
-											<string>4E09916A114B2D31001E7907</string>
-											<string>4E09916B114B2D31001E7907</string>
+											<string>4E099184114B2FDA001E7907</string>
+											<string>4E0991AC114B30AD001E7907</string>
+											<string>4E0991AD114B30AD001E7907</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -391,6 +392,23 @@
 											<string>4E09915E114B2C81001E7907</string>
 											<string>4E09916C114B2D31001E7907</string>
 											<string>4E09916D114B2D31001E7907</string>
+											<string>4E099187114B2FDA001E7907</string>
+											<string>4E099188114B2FDA001E7907</string>
+											<string>4E099189114B2FDA001E7907</string>
+											<string>4E09918A114B2FDA001E7907</string>
+											<string>4E09918B114B2FDA001E7907</string>
+											<string>4E09918C114B2FDA001E7907</string>
+											<string>4E09918D114B2FDA001E7907</string>
+											<string>4E099192114B3018001E7907</string>
+											<string>4E099193114B3018001E7907</string>
+											<string>4E099194114B3018001E7907</string>
+											<string>4E099195114B3018001E7907</string>
+											<string>4E0991A0114B3061001E7907</string>
+											<string>4E0991A1114B3061001E7907</string>
+											<string>4E0991A2114B3061001E7907</string>
+											<string>4E0991A8114B3095001E7907</string>
+											<string>4E0991A9114B3095001E7907</string>
+											<string>4E0991AE114B30AD001E7907</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -615,7 +633,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>QuestionViewManager.m</string>
+								<string>QuizMonkeyViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -682,7 +700,7 @@
 			<key>WindowToolGUID</key>
 			<string>4E7BEA92114AF75F00CB0CE3</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

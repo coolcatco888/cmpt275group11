@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class ObjectQuestionList;
+#import "Question.h"
+#import "QuestionParser.h"
 
 @interface QuizMonkeyViewController : UIViewController {
 	NSMutableArray *QuestionList;
@@ -52,18 +52,12 @@
 -(IBAction)ExitQuestionView:(id)sender;
 -(IBAction)ShowHighScoresView:(id)sender;
 -(IBAction)ExitHighScoresView:(id)sender;
--(void) createButton:(NSString*) title :(int) x :(int) y :(int) width :(int) height :(SEL) buttonActionFunction;
 -(void)selectChoice:(id)sender;
 
 -(IBAction)SetCell:(id)sender;
 -(IBAction)LoadObjectQuestion:(id)sender;
 
 -(IBAction)ShowAlert:(id)sender;
-//-(IBAction)NewButton:(id)sender;
-//-(IBAction)Change_Button:(id)sender;
-//-(IBAction)Change_Picture:(id)sender;
-//-(IBAction)LoadArray:(id)sender;
-//-(IBAction)SetQuestion:(id)sender;
 
 @end
 
