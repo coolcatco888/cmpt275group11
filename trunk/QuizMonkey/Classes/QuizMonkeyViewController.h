@@ -20,6 +20,7 @@
 	IBOutlet UIButton *newButton;
 	IBOutlet UIImageView *monkeyImage;
 	UIAlertView *alr_Alert;
+	UIAlertView *alert;
 	IBOutlet UIScrollView *scr_HighScores;
 	IBOutlet UITableViewCell *cel_Score1;
 	IBOutlet UITableView *tbl_HighScores;
@@ -43,21 +44,26 @@
 	IBOutlet UILabel *questionTypeLabel;
 	
 	IBOutlet UIImageView *questionImage;
-	NSMutableSet* selectedChoices;
+	NSMutableArray* selectedChoices;
 	NSUInteger maxNumberOfChoiceSelections;
+	NSUInteger totalPoints;
 
 }
 
 -(IBAction)ShowQuestionView:(id)sender;
--(IBAction)ExitQuestionView:(id)sender;
+-(IBAction)exitQuestionView:(id)sender;
 -(IBAction)ShowHighScoresView:(id)sender;
 -(IBAction)ExitHighScoresView:(id)sender;
--(IBAction)selectChoice:(id)sender;
-- (NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
--(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points;
+
 -(IBAction)SetCell:(id)sender;
--(void) loadQuestionFromIndex: (NSUInteger) index;
 -(IBAction)ShowAlert:(id)sender;
+
+-(IBAction)selectChoice:(id)sender;
+-(NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
+-(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points;
+-(IBAction)nextQuestion:(id)sender;
+-(void) loadQuestionFromIndex: (NSUInteger) index;
+-(int) calculateTotalScore: (NSArray*) points;
 
 @end
 
