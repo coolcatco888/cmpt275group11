@@ -51,7 +51,7 @@
 -(IBAction)ExitQuestionView:(id)sender;
 -(IBAction)ShowHighScoresView:(id)sender;
 -(IBAction)ExitHighScoresView:(id)sender;
--(void)selectChoice:(id)sender;
+-(IBAction)selectChoice:(id)sender;
 - (NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
 -(IBAction)SetCell:(id)sender;
 -(void) loadQuestionFromIndex: (NSUInteger) index;
