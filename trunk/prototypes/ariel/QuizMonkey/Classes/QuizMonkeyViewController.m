@@ -19,37 +19,13 @@
 	[vew_MainMenu addSubview:vew_HighScores];
 }
 -(IBAction)ShowQuestionView:(id)sender {
-	//ObjectQuestionList *Questions = [ObjectQuestionList new];
-	//Questions = [ObjectQuestionList new];
-	QuestionList = [[ClassQuestionParser new] LoadXMLQuestions:@"Questions"];
-/*	ObjectQuestion *TMP_Question = [QuestionList getQuestion:0];
-	[lbl_Type setText:[TMP_Question Type]];
-	[lbl_pic_Name setText:[TMP_Question pic_Name]];
-	[lbl_Sentence setText:[TMP_Question Sentence]];
-	[lbl_Choice1_Word setText:[[TMP_Question Choices_Words] objectAtIndex:0]];
-	[lbl_Choice2_Word setText:[[TMP_Question Choices_Words] objectAtIndex:1]];
-	[lbl_Choice3_Word setText:[[TMP_Question Choices_Words] objectAtIndex:2]];
-	[lbl_Choice4_Word setText:[[TMP_Question Choices_Words] objectAtIndex:3]];
-	//NSLog(@"%@",[[TMP_Question Choices_Points] objectAtIndex:0]);
-	[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:0] stringValue]];
-	[lbl_Choice2_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:1] stringValue]];
-	//[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:2] stringValue]];
-	//[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:3] stringValue]];
-	//[lbl_Choice1_Points setText:[[[TMP_Question Choices_Points] objectAtIndex:4] stringValue]];
-	//[lbl_Choice2_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:1]];
-	//[lbl_Choice3_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:2]];
-	//[lbl_Choice4_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:3]];
-	[lbl_Time setText:@""+[TMP_Question Time]];
-*/	//[Questions retain];
 	quest_btn_ChoiceArray = [NSArray arrayWithObjects: quest_btn_Choice01, quest_btn_Choice02, quest_btn_Choice03, quest_btn_Choice04, nil];
 	[quest_btn_ChoiceArray retain];
+	
+	QuestionList = [[ClassQuestionParser new] LoadXMLQuestions:@"Questions"];
 	currentQuestionIndex = 0;
 	[self LoadQuestionToScreen:currentQuestionIndex];
 	[vew_MainMenu addSubview:vew_Question];
-	//NSLog(@"%@",[[Quiz2 getQuestion:0] Type]);
-	//NSLog(@"Hello");
-	//[lbl_Type setText:[[Quiz2 getQuestion:0] Type]];
-//	[Quiz retain];
 }
 /*
 -(IBAction)ShowAlert:(id)sender {
@@ -106,15 +82,119 @@
 	//QuestionList = [[ClassQuestionParser new] LoadXMLQuestions:@"Questions"];
 	if(QuestionIndex >= [QuestionList countQuestions])
 		QuestionIndex = 0;
+	[quest_lbl_Type setHidden:FALSE];
+	[quest_lbl_Sentence setHidden:FALSE];
+	[quest_lbl_SentenceBottom setHidden:FALSE];
+	[quest_img_Image setHidden:FALSE];
+	
 	QuestionDisplayed = [QuestionList getQuestion:QuestionIndex];
-	[quest_lbl_Type setText:[QuestionDisplayed Type]];
-	[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+	
+	NSInteger QuestionType;
+	if(![[QuestionDisplayed Type] caseInsensitiveCompare:@"Match The Picture"]){
+		QuestionType = 1;
+	}
+	if(![[QuestionDisplayed Type] caseInsensitiveCompare:@"Fill In The Blank"]){
+		QuestionType = 2;
+	}
+	if(![[QuestionDisplayed Type] caseInsensitiveCompare:@"Find the misspelled word"]){
+		QuestionType = 3;
+	}
+	if(![[QuestionDisplayed Type] caseInsensitiveCompare:@"Find the noun(s)"]){
+		QuestionType = 4;
+	}
+	if(![[QuestionDisplayed Type] caseInsensitiveCompare:@"Find the verb(s)"]){
+		QuestionType = 5;
+	}
+	if(![[QuestionDisplayed Type] caseInsensitiveCompare:@"Find the adjective(s)"]){
+		QuestionType = 6;
+	}
+	
+	BOOL QuestionHasImage = [[QuestionDisplayed pic_Name] caseInsensitiveCompare:@"\n\t\t"];
+	
+	
+	switch (QuestionType) {
+		case 1: //Match The Picture
+			[quest_lbl_Type setText:[QuestionDisplayed Type]];
+			[quest_lbl_Sentence setHidden:TRUE];
+			[quest_lbl_SentenceBottom setText:[QuestionDisplayed Sentence]];
+			[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+			break;
+
+		case 2: //Fill In The Blank
+			[quest_lbl_Type setText:[QuestionDisplayed Type]];
+			if(QuestionHasImage){
+				[quest_lbl_Sentence setHidden:TRUE];
+				[quest_lbl_SentenceBottom setText:[QuestionDisplayed Sentence]];
+				[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+			}
+			else{
+				[quest_lbl_SentenceBottom setHidden:TRUE];
+				[quest_img_Image setHidden:TRUE];
+				[quest_lbl_Sentence setText:[QuestionDisplayed Sentence]];
+			}
+			break;
+
+		case 3: //Find the misspelled word
+			[quest_lbl_Type setText:[QuestionDisplayed Type]];
+			if(QuestionHasImage){
+				[quest_lbl_Sentence setHidden:TRUE];
+				[quest_lbl_SentenceBottom setText:[QuestionDisplayed Sentence]];
+				[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+			}
+			else{
+				[quest_lbl_SentenceBottom setHidden:TRUE];
+				[quest_img_Image setHidden:TRUE];
+				[quest_lbl_Sentence setText:[QuestionDisplayed Sentence]];
+			}
+			break;
+
+		case 4: //Find the noun(s)
+			[quest_lbl_Type setText:[QuestionDisplayed Type]];
+			if(QuestionHasImage){
+				[quest_lbl_Sentence setHidden:TRUE];
+				[quest_lbl_SentenceBottom setText:[QuestionDisplayed Sentence]];
+				[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+			}
+			else{
+				[quest_lbl_SentenceBottom setHidden:TRUE];
+				[quest_img_Image setHidden:TRUE];
+				[quest_lbl_Sentence setText:[QuestionDisplayed Sentence]];
+			}
+			break;
+
+		case 5: //Find the verb(s)
+			[quest_lbl_Type setText:[QuestionDisplayed Type]];
+			if(QuestionHasImage){
+				[quest_lbl_Sentence setHidden:TRUE];
+				[quest_lbl_SentenceBottom setText:[QuestionDisplayed Sentence]];
+				[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+			}
+			else{
+				[quest_lbl_SentenceBottom setHidden:TRUE];
+				[quest_img_Image setHidden:TRUE];
+				[quest_lbl_Sentence setText:[QuestionDisplayed Sentence]];
+			}
+			break;
+
+		case 6: //Find the adjective(s)
+			[quest_lbl_Type setText:[QuestionDisplayed Type]];
+			if(QuestionHasImage){
+				[quest_lbl_Sentence setHidden:TRUE];
+				[quest_lbl_SentenceBottom setText:[QuestionDisplayed Sentence]];
+				[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+			}
+			else{
+				[quest_lbl_SentenceBottom setHidden:TRUE];
+				[quest_img_Image setHidden:TRUE];
+				[quest_lbl_Sentence setText:[QuestionDisplayed Sentence]];
+			}
+			break;
+	}
 	for(int i=0;i<[QuestionDisplayed numberOfChoices];i++){
 		[[quest_btn_ChoiceArray objectAtIndex:i] setTitle:[QuestionDisplayed getChoices_Words:i] forState:0];
 		[[quest_btn_ChoiceArray objectAtIndex:i] addTarget:self action:@selector(selectChoice:) forControlEvents:(UIControlEvents)UIControlEventTouchUpInside];
 	}
 	currentQuestionIndex=QuestionIndex;
-	
 }
 
 -(IBAction)loadNextQuestion:(id)sender{
@@ -129,7 +209,7 @@
 	NSLog(@"%d",tmp);
 	NSLog(@"%i",tmp);
 	if([tempPoints intValue] > 0)
-		[[[UIAlertView alloc] initWithTitle:@"Yaaay" message:@"You got it right" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
+		[[[UIAlertView alloc] initWithTitle:@"Correct" message:@"" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
 }
 /*
 -(IBAction)LoadArray:(id)sender {
@@ -183,7 +263,7 @@
 }
 -(void)touchesEnded: (NSSet *)touches withEvent:(UIEvent *)event {
 	TapLocation = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
-	btn_New.center = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
+//	btn_New.center = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
 }
 
 /*
@@ -283,7 +363,7 @@
 
 
 - (void)dealloc {
-	[vew_MainMenu release];
+/*	[vew_MainMenu release];
 	[vew_Question release];
 	[vew_HighScores release];
 	[btn_Play release];
@@ -294,6 +374,7 @@
 	[lbl_New release];
 	[alr_Alert release];
 	[ThisArray release];
+ */
     [super dealloc];
 }
 
