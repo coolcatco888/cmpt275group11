@@ -11,7 +11,7 @@
 #import "QuestionParser.h"
 
 @interface QuizMonkeyViewController : UIViewController {
-	NSMutableArray *QuestionList;
+	NSMutableArray *questionList;
 	IBOutlet UIView *mainMenuView;
 	IBOutlet UIView *questionView;
 	IBOutlet UIView *highScoresView;
@@ -19,19 +19,17 @@
 	IBOutlet UIButton *quitButton;
 	IBOutlet UIButton *newButton;
 	IBOutlet UIImageView *monkeyImage;
-	//IBOutlet UILabel *lbl_Question;
-	//IBOutlet UILabel *lbl_New;
 	UIAlertView *alr_Alert;
-	//NSArray *ThisArray;
 	IBOutlet UIScrollView *scr_HighScores;
 	IBOutlet UITableViewCell *cel_Score1;
 	IBOutlet UITableView *tbl_HighScores;
 	CGPoint TapLocation;
-	IBOutlet UILabel *lbl_Y;
+	IBOutlet UILabel *lbl_Y;//Will not run if this is removed but it will compile for some reason
 	NSXMLParser *QuestionParser;
 	
 
 	//Question Window
+	NSUInteger currentQuestionIndex;
 	IBOutlet UIButton *questionQuitButton;
 	IBOutlet UIButton *questionNextButton;
 	IBOutlet UIButton *questionChoice1Button;
@@ -44,7 +42,7 @@
 	IBOutlet UILabel *questionSentenceBottomLabel;
 	IBOutlet UILabel *questionTypeLabel;
 	
-	IBOutlet UIImageView *question;
+	IBOutlet UIImageView *questionImage;
 
 }
 
@@ -53,10 +51,9 @@
 -(IBAction)ShowHighScoresView:(id)sender;
 -(IBAction)ExitHighScoresView:(id)sender;
 -(void)selectChoice:(id)sender;
-
+- (NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
 -(IBAction)SetCell:(id)sender;
--(IBAction)LoadObjectQuestion:(id)sender;
-
+-(void) loadQuestionFromIndex: (NSUInteger) index;
 -(IBAction)ShowAlert:(id)sender;
 
 @end

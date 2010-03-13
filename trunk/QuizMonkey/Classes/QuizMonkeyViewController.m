@@ -18,7 +18,13 @@
 }
 -(IBAction)ShowQuestionView:(id)sender {
 	QuestionParser * quiz = [QuestionParser new];
-	QuestionList = [quiz loadQuestionsFromXML:@"Questions"];
+	NSMutableArray* questionLibrary = [quiz loadQuestionsFromXML:@"Questions"];
+	
+	//Randomly select 10 questions
+	questionList = [self select10Questions:questionLibrary];
+	currentQuestionIndex = 0;
+	[self loadQuestionFromIndex:currentQuestionIndex];
+	
 	[mainMenuView addSubview:questionView];
 	
 	[quiz retain];
@@ -32,7 +38,6 @@
 
 
 ////////////////////////Question View Functions
-
 -(void) selectChoice:(id)sender {
 	[(UIButton*)sender removeFromSuperview];
 	
@@ -42,7 +47,47 @@
 	//Removing subview
 	[questionView removeFromSuperview];
 }
--(IBAction)LoadObjectQuestion:(id)sender{
+
+	
+- (NSMutableArray*) select10Questions: (NSMutableArray*) questions {
+	NSUInteger count = [questions count];
+	for (NSUInteger i = 0; i < count; ++i) {
+		// Select a random element between i and end of array to swap with.
+		int nElements = count - i;
+		int n = (random() % nElements) + i;
+		[questions  exchangeObjectAtIndex:i withObjectAtIndex:n];
+	}
+	
+	NSUInteger size = [questions count] < 10? [questions count] : 10;
+	
+	NSMutableArray* selectedQuestions = [NSMutableArray arrayWithCapacity:size];
+	for(NSUInteger i = 0; i < size; i++) {
+		[selectedQuestions addObject:[questions objectAtIndex:i]];
+	}
+	
+	return selectedQuestions;
+	
+	
+}
+	
+-(void) loadQuestionFromIndex: (NSUInteger) index {
+	Question* question = [questionList objectAtIndex:index];
+	
+	if([question.type isEqualToString:@"Fill in the blank"]) {
+		[questionTypeLabel setText:question.type];
+		[questionSentenceLabel setText:question.sentence];
+		[questionSentenceLabel setHidden:FALSE];
+		[questionSentenceBottomLabel setHidden:TRUE];
+		[questionImage setHidden:TRUE];
+		[questionChoice1Button setTitle: [question.choices objectAtIndex:0] forState:0];
+		[questionChoice2Button setTitle: [question.choices objectAtIndex:1] forState:0];
+		[questionChoice3Button setTitle: [question.choices objectAtIndex:2] forState:0];
+		[questionChoice4Button setTitle: [question.choices objectAtIndex:3] forState:0];
+	} else if(currentQuestionIndex < [questionList count]) {
+		currentQuestionIndex++;
+		[self loadQuestionFromIndex:currentQuestionIndex];
+	}
+	
 	
 }
 
@@ -54,10 +99,7 @@
 
 
 -(IBAction)SetCell:(id)sender {
-/*	cel_Score1 = [tbl_HighScores dequeueReusableCellWithIdentifier:@"Score1"];
-	if(cel_Score1==nil)
-		cel_Score1 = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"Score1"] autorelease];
-	[cel_Score1 setText:@"Super!!!"];*/
+
 }
 
 
@@ -172,10 +214,7 @@
 	[quitButton release];
 	[newButton release];
 	[monkeyImage release];
-	//[lbl_Question release];
-	//[lbl_New release];
 	[alr_Alert release];
-	//[ThisArray release];
     [super dealloc];
 }
 
