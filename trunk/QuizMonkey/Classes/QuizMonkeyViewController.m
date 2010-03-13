@@ -19,7 +19,7 @@
 -(IBAction)ShowQuestionView:(id)sender {
 	QuestionParser * quiz = [QuestionParser new];
 	NSMutableArray* questionLibrary = [quiz loadQuestionsFromXML:@"Questions"];
-	
+	selectedChoices = [NSMutableSet setWithCapacity:4];
 	//Randomly select 10 questions
 	questionList = [self select10Questions:questionLibrary];
 	currentQuestionIndex = 0;
@@ -39,7 +39,12 @@
 
 ////////////////////////Question View Functions
 -(void) selectChoice:(id)sender {
-	[(UIButton*)sender removeFromSuperview];
+	NSString* choice = ((UIButton*) sender).titleLabel;
+	Question* question = [questionList objectAtIndex:index];
+	for(int i = 0; i < [question.choices count]; i++) {
+
+	}
+	//[(UIButton*)sender removeFromSuperview];
 	
 }
 
@@ -87,6 +92,8 @@
 		currentQuestionIndex++;
 		[self loadQuestionFromIndex:currentQuestionIndex];
 	}
+	
+	[question release];
 	
 	
 }
