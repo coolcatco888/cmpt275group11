@@ -20,6 +20,8 @@
 	QuestionParser * quiz = [QuestionParser new];
 	NSMutableArray* questionLibrary = [quiz loadQuestionsFromXML:@"Questions"];
 	selectedChoices = [NSMutableSet setWithCapacity:4];
+	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
+	[questionChoiceButtons retain];
 	//Randomly select 10 questions
 	questionList = [self select10Questions:questionLibrary];
 	currentQuestionIndex = 0;
@@ -38,14 +40,19 @@
 
 
 ////////////////////////Question View Functions
--(void) selectChoice:(id)sender {
-	NSString* choice = ((UIButton*) sender).titleLabel;
-	Question* question = [questionList objectAtIndex:index];
-	for(int i = 0; i < [question.choices count]; i++) {
-
-	}
-	//[(UIButton*)sender removeFromSuperview];
+-(IBAction) selectChoice:(id)sender {
+	UIButton* buttonPressed = (UIButton*)sender;
+	NSString* choice = buttonPressed.titleLabel.text;
+	NSLog(@"Still Guud");
+	NSLog(choice);
 	
+	for(int i = 0; i < [questionChoiceButtons count]; i++) {
+		if([choice isEqualToString:((UIButton*)[questionChoiceButtons objectAtIndex:i]).titleLabel.text]) {
+			
+		}
+	}
+	
+	//[choice release];
 }
 
 -(IBAction)ExitQuestionView:(id)sender {
