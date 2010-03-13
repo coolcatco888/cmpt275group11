@@ -12,13 +12,13 @@
 
 @interface QuizMonkeyViewController : UIViewController {
 	NSMutableArray *QuestionList;
-	IBOutlet UIView *vew_MainMenu;
-	IBOutlet UIView *vew_Question;
-	IBOutlet UIView *vew_HighScores;
-	IBOutlet UIButton *btn_Play;
-	IBOutlet UIButton *btn_Quit;
-	IBOutlet UIButton *btn_New;
-	IBOutlet UIImageView *img_Monkey;
+	IBOutlet UIView *mainMenuView;
+	IBOutlet UIView *questionView;
+	IBOutlet UIView *highScoresView;
+	IBOutlet UIButton *playButton;
+	IBOutlet UIButton *quitButton;
+	IBOutlet UIButton *newButton;
+	IBOutlet UIImageView *monkeyImage;
 	IBOutlet UILabel *lbl_Question;
 	IBOutlet UILabel *lbl_New;
 	UIAlertView *alr_Alert;

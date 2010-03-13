@@ -15,7 +15,8 @@
 }
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName 
- namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName 
+ namespaceURI:(NSString *)namespaceURI 
+qualifiedName:(NSString *)qName 
    attributes:(NSDictionary *)attributeDict{
 	if([elementName isEqualToString:@"questions"])	questions = [NSMutableArray arrayWithCapacity:100];
 	if([elementName isEqualToString:@"question"])	questionInProgress = [Question new];
