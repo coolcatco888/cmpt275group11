@@ -21,7 +21,9 @@
 	NSMutableArray* questionLibrary = [quiz loadQuestionsFromXML:@"Questions"];
 	selectedChoices = [NSMutableSet setWithCapacity:4];
 	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
+	[selectedChoices retain];
 	[questionChoiceButtons retain];
+	
 	//Randomly select 10 questions
 	questionList = [self select10Questions:questionLibrary];
 	currentQuestionIndex = 0;
@@ -43,11 +45,25 @@
 -(IBAction) selectChoice:(id)sender {
 	UIButton* buttonPressed = (UIButton*)sender;
 	NSString* choice = buttonPressed.titleLabel.text;
-	NSLog(@"Still Guud");
+	
 	NSLog(choice);
 	
 	for(int i = 0; i < [questionChoiceButtons count]; i++) {
+		//Match the selected choice with the available choices
 		if([choice isEqualToString:((UIButton*)[questionChoiceButtons objectAtIndex:i]).titleLabel.text]) {
+			//If this choice is already selected then remove it
+			NSNumber* currentSelection = [NSNumber numberWithInt:i];
+			
+			if([selectedChoices containsObject:currentSelection]) {
+				[selectedChoices removeObject:currentSelection];
+				[buttonPressed setSelected:FALSE];
+			//If the number of selections you have made is still under the amount allowable
+			//Then add this as another one of your selections.
+			} else if ([selectedChoices count] < maxNumberOfChoiceSelections) {
+				[selectedChoices addObject:currentSelection];
+				[buttonPressed setSelected:TRUE];
+				
+			}
 			
 		}
 	}
@@ -95,6 +111,10 @@
 		[questionChoice2Button setTitle: [question.choices objectAtIndex:1] forState:0];
 		[questionChoice3Button setTitle: [question.choices objectAtIndex:2] forState:0];
 		[questionChoice4Button setTitle: [question.choices objectAtIndex:3] forState:0];
+		
+		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:question.points];
+		NSLog(@"Max Points allowable is:");
+		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
 	} else if(currentQuestionIndex < [questionList count]) {
 		currentQuestionIndex++;
 		[self loadQuestionFromIndex:currentQuestionIndex];
@@ -103,6 +123,16 @@
 	[question release];
 	
 	
+}
+
+-(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points {
+	NSUInteger count = 0;
+	for(int i = 0; i < [points count]; i++) {
+		if([[points objectAtIndex:i] intValue] > 0) {
+			count++;
+		}
+	}
+	return count;
 }
 
 

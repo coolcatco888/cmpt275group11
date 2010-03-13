@@ -44,6 +44,7 @@
 	
 	IBOutlet UIImageView *questionImage;
 	NSMutableSet* selectedChoices;
+	NSUInteger maxNumberOfChoiceSelections;
 
 }
 
@@ -53,6 +54,7 @@
 -(IBAction)ExitHighScoresView:(id)sender;
 -(IBAction)selectChoice:(id)sender;
 - (NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
+-(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points;
 -(IBAction)SetCell:(id)sender;
 -(void) loadQuestionFromIndex: (NSUInteger) index;
 -(IBAction)ShowAlert:(id)sender;
