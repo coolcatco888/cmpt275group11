@@ -172,10 +172,10 @@
 	[quitButton release];
 	[newButton release];
 	[monkeyImage release];
-	[lbl_Question release];
-	[lbl_New release];
+	//[lbl_Question release];
+	//[lbl_New release];
 	[alr_Alert release];
-	[ThisArray release];
+	//[ThisArray release];
     [super dealloc];
 }
 
