@@ -19,11 +19,10 @@
 	[vew_MainMenu addSubview:vew_HighScores];
 }
 -(IBAction)ShowQuestionView:(id)sender {
-	ClassQuestionParser *Quiz = [ClassQuestionParser new];
 	//ObjectQuestionList *Questions = [ObjectQuestionList new];
 	//Questions = [ObjectQuestionList new];
-	QuestionList = [Quiz LoadXMLQuestions:@"Questions"];
-	ObjectQuestion *TMP_Question = [QuestionList getQuestion:0];
+	QuestionList = [[ClassQuestionParser new] LoadXMLQuestions:@"Questions"];
+/*	ObjectQuestion *TMP_Question = [QuestionList getQuestion:0];
 	[lbl_Type setText:[TMP_Question Type]];
 	[lbl_pic_Name setText:[TMP_Question pic_Name]];
 	[lbl_Sentence setText:[TMP_Question Sentence]];
@@ -41,13 +40,18 @@
 	//[lbl_Choice3_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:2]];
 	//[lbl_Choice4_Points setText:[[[QuestionList getQuestion:0] Choices_Points] objectAtIndex:3]];
 	[lbl_Time setText:@""+[TMP_Question Time]];
-	//[Questions retain];
+*/	//[Questions retain];
+	quest_btn_ChoiceArray = [NSArray arrayWithObjects: quest_btn_Choice01, quest_btn_Choice02, quest_btn_Choice03, quest_btn_Choice04, nil];
+	[quest_btn_ChoiceArray retain];
+	currentQuestionIndex = 0;
+	[self LoadQuestionToScreen:currentQuestionIndex];
 	[vew_MainMenu addSubview:vew_Question];
 	//NSLog(@"%@",[[Quiz2 getQuestion:0] Type]);
 	//NSLog(@"Hello");
 	//[lbl_Type setText:[[Quiz2 getQuestion:0] Type]];
-	[Quiz retain];
+//	[Quiz retain];
 }
+/*
 -(IBAction)ShowAlert:(id)sender {
 	//First we set all the parameters of the Alert pop-up
 	alr_Alert = [[UIAlertView alloc] initWithTitle:@"You win" message:@"You got 0/10" delegate:nil cancelButtonTitle:@"Continue???" otherButtonTitles:nil];
@@ -91,15 +95,43 @@
 	alr_Alert = [[UIAlertView alloc] initWithTitle:@"Yaaay" message:@"New was pressed" delegate:nil cancelButtonTitle:@"?Continue?" otherButtonTitles:nil];
 	[alr_Alert show];
 }
-
+*/
 ////////////////////////Question View Functions
 -(IBAction)ExitQuestionView:(id)sender {
 	//Removing subview
 	[vew_Question removeFromSuperview];
 }
--(IBAction)LoadObjectQuestion:(id)sender{
+-(void)LoadQuestionToScreen:(NSUInteger)QuestionIndex{
+	//[QuestionList retain];
+	//QuestionList = [[ClassQuestionParser new] LoadXMLQuestions:@"Questions"];
+	if(QuestionIndex >= [QuestionList countQuestions])
+		QuestionIndex = 0;
+	QuestionDisplayed = [QuestionList getQuestion:QuestionIndex];
+	[quest_lbl_Type setText:[QuestionDisplayed Type]];
+	[quest_img_Image setImage:[UIImage imageNamed:[QuestionDisplayed pic_Name]]];
+	for(int i=0;i<[QuestionDisplayed numberOfChoices];i++){
+		[[quest_btn_ChoiceArray objectAtIndex:i] setTitle:[QuestionDisplayed getChoices_Words:i] forState:0];
+		[[quest_btn_ChoiceArray objectAtIndex:i] addTarget:self action:@selector(selectChoice:) forControlEvents:(UIControlEvents)UIControlEventTouchUpInside];
+	}
+	currentQuestionIndex=QuestionIndex;
 	
 }
+
+-(IBAction)loadNextQuestion:(id)sender{
+	//NSLog(@"%@");
+	[self LoadQuestionToScreen:currentQuestionIndex+1];
+}
+
+-(IBAction)selectChoice:(id)sender{
+	NSString *tempPoints = [QuestionDisplayed getChoices_Points:[sender tag]];
+	NSInteger tmp=[tempPoints intValue];
+	NSLog(@"%@",tempPoints);
+	NSLog(@"%d",tmp);
+	NSLog(@"%i",tmp);
+	if([tempPoints intValue] > 0)
+		[[[UIAlertView alloc] initWithTitle:@"Yaaay" message:@"You got it right" delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil] show];
+}
+/*
 -(IBAction)LoadArray:(id)sender {
 	ThisArray = [NSArray arrayWithObjects: @"Object 1", @"Object 2", @"Object 3", @"Object 4",nil];
 	//MUST use retain if you want to use the array in functions outside of this one
@@ -110,19 +142,19 @@
 	//Same way you were to change the tittle or font of the button
     [lbl_Question setText:[ThisArray objectAtIndex: [sender tag]]];
 }
-
+*/
 ////////////////////////High Scores View Functions
 -(IBAction)ExitHighScoresView:(id)sender {
 	[vew_HighScores removeFromSuperview];
 }
-
+/*
 -(IBAction)SetCell:(id)sender {
-/*	cel_Score1 = [tbl_HighScores dequeueReusableCellWithIdentifier:@"Score1"];
+	cel_Score1 = [tbl_HighScores dequeueReusableCellWithIdentifier:@"Score1"];
 	if(cel_Score1==nil)
 		cel_Score1 = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"Score1"] autorelease];
-	[cel_Score1 setText:@"Super!!!"];*/
+	[cel_Score1 setText:@"Super!!!"];
 }
-
+*/
 
  
 
@@ -199,7 +231,7 @@
 
 
 
-
+/*
 //////////////////////////////////////BEGINING of table section
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -247,7 +279,7 @@
     return cell;
 }
 ///////////////////////////////////////END of teble section
-
+*/
 
 
 - (void)dealloc {

@@ -39,7 +39,17 @@
 -init{
 	Choices_Words = [NSMutableArray arrayWithCapacity:20];
 	Choices_Points = [NSMutableArray arrayWithCapacity:20];
+	[Choices_Words retain];
+	[Choices_Points retain];
 	return self;
+}
+
+-(NSString *)getChoices_Words:(NSUInteger)Index{
+	return [Choices_Words objectAtIndex:Index];
+}
+
+-(NSString *)getChoices_Points:(NSUInteger)Index{
+	return [Choices_Points objectAtIndex:Index];
 }
 
 -(void) addChoices_Words: (NSString*) newChoice {
@@ -48,6 +58,9 @@
 
 -(void) addChoices_Points: (NSInteger) newPoint {
 	[Choices_Points addObject:[NSNumber numberWithInteger:newPoint]];
+}
+-(NSInteger)numberOfChoices{
+	return [Choices_Words count];
 }
 
 @end
