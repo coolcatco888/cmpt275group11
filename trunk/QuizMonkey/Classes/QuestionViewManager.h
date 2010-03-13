@@ -33,4 +33,7 @@
 					:(int) height 
 					:(SEL) buttonActionFunction;
 
+-(void) loadQuestionToView: (NSUInteger) questionIndex;
+
+
 @end

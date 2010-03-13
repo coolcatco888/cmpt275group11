@@ -15,12 +15,12 @@
 
 ////////////////////////Main View Functions
 -(IBAction)ShowHighScoresView:(id)sender {
-	[vew_MainMenu addSubview:vew_HighScores];
+	[mainMenuView addSubview:highScoresView];
 }
 -(IBAction)ShowQuestionView:(id)sender {
 	QuestionParser * quiz = [QuestionParser new];
 	QuestionList = [quiz loadQuestionsFromXML:@"Questions"];
-	[vew_MainMenu addSubview:vew_Question];
+	[mainMenuView addSubview:questionView];
 	
 	SEL selector = @selector(selectChoice:);
 	[self createButton:@"WTF" :0 :0 :200 :100 :selector];
@@ -49,7 +49,7 @@
 	[newButton addTarget:self action:buttonActionFunction forControlEvents:UIControlEventTouchUpInside];
 	
 	//Then add the button to the current view as a subview
-	[vew_Question addSubview:newButton];
+	[questionView addSubview:newButton];
 	[newButton retain];	
 }
 
@@ -60,7 +60,7 @@
 
 -(IBAction)ExitQuestionView:(id)sender {
 	//Removing subview
-	[vew_Question removeFromSuperview];
+	[questionView removeFromSuperview];
 }
 -(IBAction)LoadObjectQuestion:(id)sender{
 	
@@ -69,7 +69,7 @@
 
 ////////////////////////High Scores View Functions
 -(IBAction)ExitHighScoresView:(id)sender {
-	[vew_HighScores removeFromSuperview];
+	[highScoresView removeFromSuperview];
 }
 
 
@@ -86,19 +86,19 @@
 
 
 -(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event {
-	TapLocation = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
+	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
 }
 -(void)touchesMoved: (NSSet *)touches withEvent:(UIEvent *)event {
-	CGPoint TapLocationNew = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
+	CGPoint TapLocationNew = [[[event allTouches] anyObject] locationInView:mainMenuView];
 	
 	//Applying the displacement to the center of the screen, moving it up and down
-	vew_HighScores.center = CGPointMake(vew_HighScores.center.x , vew_HighScores.center.y - (TapLocation.y - TapLocationNew.y));
+	highScoresView.center = CGPointMake(highScoresView.center.x , highScoresView.center.y - (TapLocation.y - TapLocationNew.y));
 	
 	//Seting the boundaries so the high scores can't go off the screen
-	if(vew_HighScores.center.y > 300)
-		vew_HighScores.center = CGPointMake(vew_HighScores.center.x , 300);
-	if(vew_HighScores.center.y < 0)
-		vew_HighScores.center = CGPointMake(vew_HighScores.center.x , 0);
+	if(highScoresView.center.y > 300)
+		highScoresView.center = CGPointMake(highScoresView.center.x , 300);
+	if(highScoresView.center.y < 0)
+		highScoresView.center = CGPointMake(highScoresView.center.x , 0);
 	
 	//Updating the user's tap location
 	TapLocation = TapLocationNew;
@@ -107,8 +107,8 @@
 
 }
 -(void)touchesEnded: (NSSet *)touches withEvent:(UIEvent *)event {
-	TapLocation = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
-	btn_New.center = [[[event allTouches] anyObject] locationInView:vew_MainMenu];
+	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
+	newButton.center = [[[event allTouches] anyObject] locationInView:mainMenuView];
 }
 
 
@@ -185,13 +185,13 @@
 
 
 - (void)dealloc {
-	[vew_MainMenu release];
-	[vew_Question release];
-	[vew_HighScores release];
-	[btn_Play release];
-	[btn_Quit release];
-	[btn_New release];
-	[img_Monkey release];
+	[mainMenuView release];
+	[questionView release];
+	[highScoresView release];
+	[playButton release];
+	[quitButton release];
+	[newButton release];
+	[monkeyImage release];
 	[lbl_Question release];
 	[lbl_New release];
 	[alr_Alert release];
