@@ -6,7 +6,7 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-#import "ObjectQuestion.h"
+#import "Question.h"
 #import "ClassQuestionParser.h"
 #import "QuizMonkeyViewController.h"
 
@@ -19,7 +19,7 @@
 }
 -(IBAction)ShowQuestionView:(id)sender {
 	ClassQuestionParser *Quiz = [ClassQuestionParser new];
-	QuestionList = [Quiz LoadXMLQuestions:@"Questions"];
+	QuestionList = [Quiz loadQuestionsFromXML:@"Questions"];
 	[vew_MainMenu addSubview:vew_Question];
 	
 	SEL selector = @selector(selectChoice:);
