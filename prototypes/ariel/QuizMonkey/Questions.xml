@@ -14,7 +14,143 @@
 		<time>30</time>
 	</question>
 	<question>
-		<type>PickOutNouns</type>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>su_den</sentence>
+		<choice>h</choice>
+		<choice>p</choice>
+		<choice>d</choice>
+		<choice>x</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>Augu_t</sentence>
+		<choice>s</choice>
+		<choice>e</choice>
+		<choice>n</choice>
+		<choice>w</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>_laska</sentence>
+		<choice>T</choice>
+		<choice>B</choice>
+		<choice>L</choice>
+		<choice>A</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>a_rplane</sentence>
+		<choice>y</choice>
+		<choice>i</choice>
+		<choice>b</choice>
+		<choice>u</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>m_rble</sentence>
+		<choice>t</choice>
+		<choice>f</choice>
+		<choice>e</choice>
+		<choice>a</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>do_en</sentence>
+		<choice>s</choice>
+		<choice>z</choice>
+		<choice>c</choice>
+		<choice>u</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>mo_ntain</sentence>
+		<choice>e</choice><point>0</point>
+		<choice>v</choice><point>0</point>
+		<choice>u</choice><point>10</point>
+		<choice>t</choice><point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>_ront</sentence>
+		<choice>f</choice>
+		<choice>u</choice>
+		<choice>c</choice>
+		<choice>q</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>matc_</sentence>
+		<choice>x</choice>
+		<choice>h</choice>
+		<choice>o</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill In The Blank</type>
+		<image></image>
+		<sentence>slep_</sentence>
+		<choice>c</choice>
+		<choice>y</choice>
+		<choice>p</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Find the noun(s)</type>
 		<image></image>
 		<sentence></sentence>
 		<choice>Cats</choice>
@@ -28,7 +164,7 @@
 		<time>20</time>
 	</question>
 	<question>
-		<type>FillInBlank</type>
+		<type>Fill In The Blank</type>
 		<image>image.jpg</image>
 		<sentence>I love my _unt.</sentence>
 		<choice>a</choice>
@@ -45,14 +181,14 @@
 		<type>Find the misspelled word</type>
 		<image></image>
 		<sentence></sentence>
-		<choice>Cats</choice>
-		<choice>eat</choice>
-		<choice>tasty</choice>
-		<choice>fish.</choice>
-		<point>1</point>
+		<choice>monkey</choice>
+		<choice>train</choice>
+		<choice>tasti</choice>
+		<choice>long</choice>
 		<point>0</point>
 		<point>0</point>
-		<point>2</point>
+		<point>10</point>
+		<point>0</point>
 		<time>20</time>
 	</question>
 </questions>

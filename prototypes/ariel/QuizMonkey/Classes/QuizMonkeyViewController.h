@@ -18,21 +18,23 @@
 	IBOutlet UIView *vew_Question;
 	IBOutlet UIView *vew_HighScores;
 	IBOutlet UIButton *btn_Play;
-	IBOutlet UIButton *btn_Quit;
-	IBOutlet UIButton *btn_New;
-	IBOutlet UIImageView *img_Monkey;
-	IBOutlet UILabel *lbl_Question;
-	IBOutlet UILabel *lbl_New;
-	UIAlertView *alr_Alert;
-	NSArray *ThisArray;
-	IBOutlet UIScrollView *scr_HighScores;
-	IBOutlet UITableViewCell *cel_Score1;
-	IBOutlet UITableView *tbl_HighScores;
+//	IBOutlet UIButton *btn_Quit;
+//	IBOutlet UIButton *btn_New;
+//	IBOutlet UIImageView *img_Monkey;
+//	IBOutlet UILabel *lbl_Question;
+//	IBOutlet UILabel *lbl_New;
+//	UIAlertView *alr_Alert;
+//	NSArray *ThisArray;
+//	IBOutlet UIScrollView *scr_HighScores;
+//	IBOutlet UITableViewCell *cel_Score1;
+//	IBOutlet UITableView *tbl_HighScores;
 	CGPoint TapLocation;
-	IBOutlet UILabel *lbl_Y;
-	NSXMLParser *QuestionParser;
+//	IBOutlet UILabel *lbl_Y;
+//	NSXMLParser *QuestionParser;
 	
 	IBOutlet UILabel *quest_lbl_Type;
+	IBOutlet UILabel *quest_lbl_Sentence;
+	IBOutlet UILabel *quest_lbl_SentenceBottom;
 	IBOutlet UIImageView *quest_img_Image;
 	IBOutlet UIButton *quest_btn_Choice01;
 	IBOutlet UIButton *quest_btn_Choice02;
@@ -42,7 +44,7 @@
 	NSInteger currentQuestionIndex;
 	
 	//Question Window
-	IBOutlet UILabel *lbl_Type;
+/*	IBOutlet UILabel *lbl_Type;
 	IBOutlet UILabel *lbl_pic_Name;
 	IBOutlet UILabel *lbl_Sentence;
 	IBOutlet UILabel *lbl_Choice1_Word;
@@ -54,7 +56,7 @@
 	IBOutlet UILabel *lbl_Choice3_Points;
 	IBOutlet UILabel *lbl_Choice4_Points;
 	IBOutlet UILabel *lbl_Time;
-
+*/
 }
 
 -(IBAction)ShowQuestionView:(id)sender;
