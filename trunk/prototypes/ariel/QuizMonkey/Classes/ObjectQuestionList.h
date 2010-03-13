@@ -17,10 +17,14 @@
 
 @implementation ObjectQuestionList
 -init{
-	Questions = [NSMutableArray arrayWithCapacity:100];
+	Questions = [NSMutableArray arrayWithCapacity:50];
+	[Questions retain];
 	return self;
 }
 
+-(NSInteger)countQuestions{
+	return [Questions count];
+}
 -(ObjectQuestion *)getQuestion:(NSUInteger)QuestionIndex{
 	return [Questions objectAtIndex:QuestionIndex];
 }

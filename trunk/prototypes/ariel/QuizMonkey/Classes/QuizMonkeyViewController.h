@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class ObjectQuestionList;
+@class ObjectQuestion;
 
 @interface QuizMonkeyViewController : UIViewController {
 	ObjectQuestionList *QuestionList;
+	ObjectQuestion *QuestionDisplayed;
 	IBOutlet UIView *vew_MainMenu;
 	IBOutlet UIView *vew_Question;
 	IBOutlet UIView *vew_HighScores;
@@ -30,7 +32,15 @@
 	IBOutlet UILabel *lbl_Y;
 	NSXMLParser *QuestionParser;
 	
-
+	IBOutlet UILabel *quest_lbl_Type;
+	IBOutlet UIImageView *quest_img_Image;
+	IBOutlet UIButton *quest_btn_Choice01;
+	IBOutlet UIButton *quest_btn_Choice02;
+	IBOutlet UIButton *quest_btn_Choice03;
+	IBOutlet UIButton *quest_btn_Choice04;
+	NSArray *quest_btn_ChoiceArray;
+	NSInteger currentQuestionIndex;
+	
 	//Question Window
 	IBOutlet UILabel *lbl_Type;
 	IBOutlet UILabel *lbl_pic_Name;
@@ -52,15 +62,18 @@
 -(IBAction)ShowHighScoresView:(id)sender;
 -(IBAction)ExitHighScoresView:(id)sender;
 
--(IBAction)SetCell:(id)sender;
--(IBAction)LoadObjectQuestion:(id)sender;
+-(void)LoadQuestionToScreen:(NSUInteger)QuestionIndex;
+-(IBAction)loadNextQuestion:(id)sender;
+-(IBAction)selectChoice:(id)sender;
 
+/*
+ -(IBAction)SetCell:(id)sender;
 -(IBAction)ShowAlert:(id)sender;
 -(IBAction)NewButton:(id)sender;
 -(IBAction)Change_Button:(id)sender;
 -(IBAction)Change_Picture:(id)sender;
 -(IBAction)LoadArray:(id)sender;
 -(IBAction)SetQuestion:(id)sender;
-
+*/
 @end
 

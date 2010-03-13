@@ -1,28 +1,58 @@
 <questions>
 	<question>
-		<type>PickOutNouns</type>
-		<image>image.jpg</image>
+		<type>Match The Picture</type>
+		<image>Pic-ProfMonkey.png</image>
 		<sentence></sentence>
-		<answer>Cats </answer>
-		<answer>fish.</answer>
-		<point>1</point>
-		<point>2</point>
-		<choice>Cats </choice>
-		<choice>eat </choice>
-		<choice>tasty </choice>
+		<choice>A.Fish</choice>
+		<choice>B.You</choice>
+		<choice>C.ProfMonkey</choice>
+		<choice>D.Cow</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>100</point>
+		<point>0</point>
+		<time>30</time>
+	</question>
+	<question>
+		<type>PickOutNouns</type>
+		<image></image>
+		<sentence></sentence>
+		<choice>Cats</choice>
+		<choice>eat</choice>
+		<choice>tasty</choice>
 		<choice>fish.</choice>
+		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<point>2</point>
 		<time>20</time>
 	</question>
 	<question>
 		<type>FillInBlank</type>
 		<image>image.jpg</image>
 		<sentence>I love my _unt.</sentence>
-		<answer>a</answer>
-		<point>1</point>
 		<choice>a</choice>
 		<choice>b</choice>
 		<choice>c</choice>
 		<choice>d</choice>
+		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
 		<time>10</time>
+	</question>
+	<question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence></sentence>
+		<choice>Cats</choice>
+		<choice>eat</choice>
+		<choice>tasty</choice>
+		<choice>fish.</choice>
+		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<point>2</point>
+		<time>20</time>
 	</question>
 </questions>
