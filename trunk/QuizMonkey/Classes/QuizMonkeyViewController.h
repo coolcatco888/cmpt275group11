@@ -19,6 +19,8 @@
 	IBOutlet UIButton *quitButton;
 	IBOutlet UIButton *newButton;
 	IBOutlet UIImageView *monkeyImage;
+	IBOutlet UIImageView *smallMonkeyImage;
+	IBOutlet UIProgressView* timerProgress;
 	IBOutlet UIScrollView *scr_HighScores;
 	IBOutlet UITableViewCell *cel_Score1;
 	IBOutlet UITableView *tbl_HighScores;
