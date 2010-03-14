@@ -28,10 +28,7 @@
 	
 }
 -(IBAction)ShowAlert:(id)sender {
-	//First we set all the parameters of the Alert pop-up
-	alr_Alert = [[UIAlertView alloc] initWithTitle:@"You win" message:@"You got 0/10" delegate:nil cancelButtonTitle:@"Continue???" otherButtonTitles:nil];
-	//Then we SHOW the alert... simple
-	[alr_Alert show];
+
 }
 
 
@@ -46,109 +43,8 @@
 }
 
 -(IBAction)nextQuestion:(id)sender {
-	
-	int points = 0;
-	Question* question = (Question*)[questionList objectAtIndex:currentQuestionIndex];
-	for(id index in selectedChoices) {
-		NSNumber* pointIndex = (NSNumber*)index;
-		points += [[question.points objectAtIndex:[pointIndex intValue]] intValue];
-	}
-	
-	NSString* title;
-	
-	if(points == 0) {
-		title = @"Sorry...";
-	} else {
-		title = @"Hurray!";
-	}
-	
-	NSMutableString* message = [NSMutableString stringWithCapacity:100];
-	[message appendString:@"You got "];
-	[message appendString:[[NSNumber numberWithInt:points] stringValue]];
-	[message appendString:@"/"];
-	[message appendString:[[NSNumber numberWithInt:totalPoints] stringValue]];
-	[message appendString:@"!"];
-	
-	
-	alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Go to next question." otherButtonTitles:nil];
-	//Then we SHOW the alert... simple
-	[alert show];
-	 
-	 
-	
+	[manager nextQuestion:sender];	
 }
-
--(int) calculateTotalScore: (NSArray*) points {
-	
-	int totalScore = 0;
-	for(NSNumber* point in points) {
-		totalScore += [point intValue];
-	}
-	return totalScore;
-}
-	
-- (NSMutableArray*) select10Questions: (NSMutableArray*) questions {
-	/*
-	NSUInteger count = [questions count];
-	for (NSUInteger i = 0; i < count; ++i) {
-		// Select a random element between i and end of array to swap with.
-		int nElements = count - i;
-		int n = (random() % nElements) + i;
-		[questions  exchangeObjectAtIndex:i withObjectAtIndex:n];
-	}
-	
-	NSUInteger size = [questions count] < 10? [questions count] : 10;
-	
-	NSMutableArray* selectedQuestions = [NSMutableArray arrayWithCapacity:size];
-	for(NSUInteger i = 0; i < size; i++) {
-		[selectedQuestions addObject:[questions objectAtIndex:i]];
-	}
-	
-	return selectedQuestions;
-	 */
-	
-	
-}
-	
--(void) loadQuestionFromIndex: (NSUInteger) index {
-	Question* question = [questionList objectAtIndex:index];
-	
-	if([question.type isEqualToString:@"Fill in the blank"]) {
-		[questionTypeLabel setText:question.type];
-		[questionSentenceLabel setText:question.sentence];
-		[questionSentenceLabel setHidden:FALSE];
-		[questionSentenceBottomLabel setHidden:TRUE];
-		[questionImage setHidden:TRUE];
-		
-		for(int i = 0; i < [questionChoiceButtons count]; i++) {
-			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setTitle:[question.choices objectAtIndex:i] forState:0];
-		}
-		
-		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:question.points];
-		
-		totalPoints = [self calculateTotalScore: question.points];
-		NSLog(@"Max Points allowable is:");
-		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
-	} else if(currentQuestionIndex < [questionList count]) {
-		currentQuestionIndex++;
-		[self loadQuestionFromIndex:currentQuestionIndex];
-	}
-	[questionList retain];
-	[question release];
-	
-	
-}
-
--(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points {
-	NSUInteger count = 0;
-	for(int i = 0; i < [points count]; i++) {
-		if([[points objectAtIndex:i] intValue] > 0) {
-			count++;
-		}
-	}
-	return count;
-}
-
 
 ////////////////////////High Scores View Functions
 -(IBAction)ExitHighScoresView:(id)sender {
@@ -272,7 +168,6 @@
 	[quitButton release];
 	[newButton release];
 	[monkeyImage release];
-	[alr_Alert release];
     [super dealloc];
 }
 

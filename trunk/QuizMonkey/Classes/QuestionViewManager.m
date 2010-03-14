@@ -121,7 +121,7 @@
 
 -(IBAction)nextQuestion:(id)sender {
 	int points = 0;
-	Question* question = (Question*)[questionList objectAtIndex:currentQuestionIndex];
+	
 	for(id index in selectedChoices) {
 		//NSNumber* pointIndex = (NSNumber*)index;
 		//points += [[question.points objectAtIndex:[pointIndex intValue]] intValue];
