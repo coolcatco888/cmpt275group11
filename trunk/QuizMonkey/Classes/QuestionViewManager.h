@@ -60,8 +60,10 @@
 -(IBAction)selectChoice:(id)sender;
 -(NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
 -(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points;
--(IBAction)nextQuestion:(id)sender;
+-(IBAction)nextQuestion:(id)sender;//validates the question when user presses 'Next'
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 -(void) loadQuestionFromIndex: (NSUInteger) index;
 -(int) calculateTotalScore: (NSArray*) points;
+-(void) resetAllButtons;
 
 @end

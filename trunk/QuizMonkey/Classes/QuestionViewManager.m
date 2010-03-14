@@ -126,7 +126,6 @@
 	
 	for(id index in selectedChoices) {
 		NSNumber* pointIndex = (NSNumber*)index;
-		NSLog(@"---------------------------------- Still GUD");
 		NSNumber* pointValue = (NSNumber*) [pointList objectAtIndex:[pointIndex intValue]];
 		points += [pointValue intValue];
 	}
@@ -146,14 +145,22 @@
 	[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
 	[message appendString:@"!"];
 	
-	alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Go to next question." otherButtonTitles:nil];
+	alert = [[UIAlertView alloc] initWithTitle:title 
+									   message:message 
+									  delegate:self 
+							 cancelButtonTitle:@"Continue" 
+							 otherButtonTitles:nil];
 	[alert show];
+	[alert autorelease];
 }
 
 -(void) loadQuestionFromIndex: (NSUInteger) index {
-	currentQuestion = [questionList objectAtIndex:index];
-	
+	[currentQuestion release];
+	currentQuestion = (Question*) [questionList objectAtIndex:index];
+	NSLog(@"New Question Set at Index:");
+	NSLog([[NSNumber numberWithInt:index] stringValue]);
 	if([currentQuestion.type isEqualToString:@"Fill in the blank"]) {
+		NSLog(@"Did all dat");
 		[questionTypeLabel setText:currentQuestion.type];
 		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
@@ -169,13 +176,9 @@
 		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
 		NSLog(@"Max Points allowable is:");
 		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
-	} else if(currentQuestionIndex < [questionList count]) {
-		currentQuestionIndex++;
-		[self loadQuestionFromIndex:currentQuestionIndex];
 	}
 	
 	[questionList retain];
-	[currentQuestion release];
 }
 
 -(int) calculateTotalScore: (NSArray*) points {
@@ -185,6 +188,26 @@
 		totalScore += [point intValue];
 	}
 	return totalScore;
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	switch(buttonIndex) {
+		case 0:	
+			if(currentQuestionIndex < [questionList count] - 1) {
+				NSLog(@"Next Question");
+				[selectedChoices removeAllObjects];
+				[self resetAllButtons];
+				currentQuestionIndex++;
+				[self loadQuestionFromIndex:currentQuestionIndex];
+			}
+			break;
+	}
+}
+
+-(void) resetAllButtons {
+	for(int i = 0; i < [questionChoiceButtons count]; i++) {
+		[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setSelected:FALSE];
+	}
 }
 
 @end
