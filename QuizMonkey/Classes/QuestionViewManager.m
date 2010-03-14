@@ -159,7 +159,8 @@
 	currentQuestion = (Question*) [questionList objectAtIndex:index];
 	NSLog(@"New Question Set at Index:");
 	NSLog([[NSNumber numberWithInt:index] stringValue]);
-	if([currentQuestion.type isEqualToString:@"Fill in the blank"]) {
+	if([currentQuestion.type isEqualToString:@"Fill in the blank"]
+		|| [currentQuestion.type isEqualToString:@"Pick Out the Words"]) {
 		NSLog(@"Did all dat");
 		[questionTypeLabel setText:currentQuestion.type];
 		[questionSentenceLabel setText:currentQuestion.sentence];
