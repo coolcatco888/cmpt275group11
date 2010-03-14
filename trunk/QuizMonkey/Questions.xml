@@ -110,7 +110,7 @@
 	<question>
 		<type>Fill in the blank</type>
 		<image></image>
-		<sentence>You can make fire with matc_es</sentence>
+		<sentence>You can make fire with matc_es.</sentence>
 		<choice>x</choice>
 		<choice>h</choice>
 		<choice>o</choice>
