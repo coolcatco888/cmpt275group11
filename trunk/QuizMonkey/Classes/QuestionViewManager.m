@@ -122,9 +122,13 @@
 -(IBAction)nextQuestion:(id)sender {
 	int points = 0;
 	
+	NSArray* pointList = currentQuestion.points;
+	
 	for(id index in selectedChoices) {
-		//NSNumber* pointIndex = (NSNumber*)index;
-		//points += [[question.points objectAtIndex:[pointIndex intValue]] intValue];
+		NSNumber* pointIndex = (NSNumber*)index;
+		NSLog(@"---------------------------------- Still GUD");
+		NSNumber* pointValue = (NSNumber*) [pointList objectAtIndex:[pointIndex intValue]];
+		points += [pointValue intValue];
 	}
 	
 	NSString* title;
@@ -142,9 +146,7 @@
 	[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
 	[message appendString:@"!"];
 	
-	
 	alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Go to next question." otherButtonTitles:nil];
-	//Then we SHOW the alert... simple
 	[alert show];
 }
 

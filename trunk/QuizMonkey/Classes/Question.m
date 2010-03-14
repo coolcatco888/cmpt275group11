@@ -18,10 +18,12 @@
 
 -(void) addChoice: (NSString*) newChoice {
 	[choices addObject:newChoice];
+	[choices retain];
 }
 
 -(void) addPoint: (NSInteger) newPoint {
 	[points addObject:[NSNumber numberWithInteger:newPoint]];
+	[points retain];
 }
 
 @end
