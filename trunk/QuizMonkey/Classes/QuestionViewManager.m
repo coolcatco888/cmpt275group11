@@ -296,4 +296,7 @@
 	[self resetAllButtons];
 }
 
+-(void) stopTimer {
+	[timer invalidate];
+}
 @end

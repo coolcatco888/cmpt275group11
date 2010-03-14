@@ -82,4 +82,5 @@
 -(void) resetAllButtons;//Resets buttons back to normal non-higlighted state
 -(void) updateTimer;//fired every 1 second, checks whether time is up
 -(void) quitGame;//Removes questionScreen from the mainview
+-(void) stopTimer;//Stop timer from view controller
 @end
