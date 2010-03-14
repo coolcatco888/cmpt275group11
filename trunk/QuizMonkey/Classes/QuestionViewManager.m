@@ -13,16 +13,55 @@
 
 @synthesize mainMenuScreen;
 @synthesize questionScreen;
-@synthesize questions;
-@synthesize questionChoiceButtons;
-@synthesize currentQuestionIndex;
 @synthesize questionSentenceLabel;
 @synthesize questionSentenceBottomLabel;
 @synthesize questionTypeLabel;
 @synthesize questionImage;
+@synthesize questionChoiceButtons;
+
+@synthesize questionList;
+@synthesize currentQuestionIndex;
+@synthesize currentQuestion;
 @synthesize selectedChoices;
 @synthesize maxNumberOfChoiceSelections;
-/*
+
+-(QuestionViewManager*) initQuestionViewManager:(UIView*) mainView 
+											   :(UIView*) questionView 
+											   :(UILabel*) sentenceLabel 
+											   :(UILabel*) sentenceLabelBottom 
+											   :(UILabel*) questionType
+											   :(UIImageView*) image 
+											   :(NSArray*) questionButtons {
+	self = [super init];
+	
+	//Setup from parameters
+	mainMenuScreen = mainView;
+	questionScreen = questionView;
+	questionSentenceLabel = sentenceLabel;
+	questionSentenceBottomLabel = sentenceLabelBottom;
+	questionTypeLabel = questionType;
+	questionImage = image;
+	questionChoiceButtons = questionButtons; 
+	
+	//Parse XML
+	QuestionParser * parser = [QuestionParser new];
+	NSMutableArray* questionLibrary = [parser loadQuestionsFromXML:@"Questions"];
+	
+	//Setup variables
+	selectedChoices = [NSMutableSet setWithCapacity:4];
+	
+	//Randomly select 10 questions
+	questionList = [self select10Questions:questionLibrary];
+	currentQuestionIndex = 0;
+	[self loadQuestionFromIndex:currentQuestionIndex];
+	[mainMenuScreen addSubview:questionScreen];
+
+	//Retain lists
+	[selectedChoices retain];
+	[questionChoiceButtons retain];
+	
+	return self;
+}
 
 -(IBAction) selectChoice:(id)sender {
 	UIButton* buttonPressed = (UIButton*)sender;
@@ -81,26 +120,51 @@
 }
 
 -(IBAction)nextQuestion:(id)sender {
+	int points = 0;
+	Question* question = (Question*)[questionList objectAtIndex:currentQuestionIndex];
+	for(id index in selectedChoices) {
+		//NSNumber* pointIndex = (NSNumber*)index;
+		//points += [[question.points objectAtIndex:[pointIndex intValue]] intValue];
+	}
+	
+	NSString* title;
+	
+	if(points == 0) {
+		title = @"Sorry...";
+	} else {
+		title = @"Hurray!";
+	}
+	
+	NSMutableString* message = [NSMutableString stringWithCapacity:100];
+	[message appendString:@"You got "];
+	[message appendString:[[NSNumber numberWithInt:points] stringValue]];
+	[message appendString:@"/"];
+	[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
+	[message appendString:@"!"];
 	
 	
-	
+	alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Go to next question." otherButtonTitles:nil];
+	//Then we SHOW the alert... simple
+	[alert show];
 }
 
 -(void) loadQuestionFromIndex: (NSUInteger) index {
-	Question* question = [questionList objectAtIndex:index];
+	currentQuestion = [questionList objectAtIndex:index];
 	
-	if([question.type isEqualToString:@"Fill in the blank"]) {
-		[questionTypeLabel setText:question.type];
-		[questionSentenceLabel setText:question.sentence];
+	if([currentQuestion.type isEqualToString:@"Fill in the blank"]) {
+		[questionTypeLabel setText:currentQuestion.type];
+		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
 		[questionSentenceBottomLabel setHidden:TRUE];
 		[questionImage setHidden:TRUE];
 		
 		for(int i = 0; i < [questionChoiceButtons count]; i++) {
-			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setTitle:[question.choices objectAtIndex:i] forState:0];
+			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setTitle:[currentQuestion.choices objectAtIndex:i] forState:0];
 		}
 		
-		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:question.points];
+		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:currentQuestion.points];
+		
+		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
 		NSLog(@"Max Points allowable is:");
 		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
 	} else if(currentQuestionIndex < [questionList count]) {
@@ -108,9 +172,17 @@
 		[self loadQuestionFromIndex:currentQuestionIndex];
 	}
 	
-	[question release];
-	
-	
+	[questionList retain];
+	[currentQuestion release];
 }
- */
+
+-(int) calculateTotalScore: (NSArray*) points {
+	
+	int totalScore = 0;
+	for(NSNumber* point in points) {
+		totalScore += [point intValue];
+	}
+	return totalScore;
+}
+
 @end
