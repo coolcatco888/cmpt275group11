@@ -17,9 +17,11 @@
 	//Created from constructor
 	IBOutlet UIView *mainMenuScreen;//Holds a reference to the main menu
 	IBOutlet UIView *questionScreen;//Will be set as a subview for the main menu
+	UIView* finalScoreScreen;
 	IBOutlet UILabel *questionSentenceLabel;//Reference to the sentence label
 	IBOutlet UILabel *questionSentenceBottomLabel;//Reference to the sentence label below the question image
 	IBOutlet UILabel *questionTypeLabel;//Displays the type of question
+	UILabel *finalScoreLabel;
 	IBOutlet UIImageView *questionImage;//Displays the image of the question, if any
 	IBOutlet UIImageView *monkeyImage;//Displays the image of the monkey after each question
 	IBOutlet UIProgressView *timerProgress;//Displays the time left in bar form
@@ -43,9 +45,11 @@
 
 @property (assign) IBOutlet UIView* mainMenuScreen;
 @property (assign) IBOutlet UIView* questionScreen;
+@property (assign) IBOutlet UIView* finalScoreScreen;
 @property (assign) IBOutlet UILabel *questionSentenceLabel;
 @property (assign) IBOutlet UILabel *questionSentenceBottomLabel;
 @property (assign) IBOutlet UILabel *questionTypeLabel;
+@property (assign) IBOutlet UILabel *finalScoreLabel;
 @property (assign) IBOutlet UIImageView *questionImage;
 @property (assign) IBOutlet UIProgressView *timerProgress;
 @property (assign) NSArray* questionChoiceButtons;
@@ -58,22 +62,24 @@
 
 -(QuestionViewManager*) initQuestionViewManager:(UIView*) mainView 
 											   :(UIView*) questionView 
+											   :(UIView*) finalScoreView 
 											   :(UILabel*) sentenceLabel 
 											   :(UILabel*) sentenceLabelBottom 
 											   :(UILabel*) questionType
+											   :(UILabel*) finalScore
 											   :(UIImageView*) image 
 											   :(UIImageView*) monkey
 											   :(UIProgressView*) progress
 											   :(NSArray*) questionButtons;
 
--(IBAction)selectChoice:(id)sender;
--(NSMutableArray*) select10Questions: (NSMutableArray*) questionList;
--(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points;
+-(IBAction)selectChoice:(id)sender;//Called when a choice has been selected, handles selecting/deselecting the choice
+-(NSMutableArray*) select10Questions: (NSMutableArray*) questionList;//After parsing the document, we will only select 10 random questions
+-(NSUInteger) getMaxNumberOfChoiceSelections: (NSArray*) points;//This function determines the number of choices the student can select for a given questions
 -(IBAction)nextQuestion:(id)sender;//validates the question when user presses 'Next'
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
--(void) loadQuestionFromIndex: (NSUInteger) index;
--(int) calculateTotalScore: (NSArray*) points;
--(void) resetAllButtons;
--(void) updateTimer;
--(void) quitGame;
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;//Called whenever a button is pressed on an alert window, handles loading next question and quitting the game
+-(void) loadQuestionFromIndex: (NSUInteger) index;//Loads a question from a given index
+-(int) calculateTotalScore: (NSArray*) points;//Calculates the total score for this entire quiz
+-(void) resetAllButtons;//Resets buttons back to normal non-higlighted state
+-(void) updateTimer;//fired every 1 second, checks whether time is up
+-(void) quitGame;//Removes questionScreen from the mainview
 @end

@@ -20,9 +20,11 @@
 	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
 	manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
 																  :questionView 
+																  :finalScoreView 
 																  :questionSentenceLabel 
 																  :questionSentenceBottomLabel 
 																  :questionTypeLabel 
+																  :finalScoreLabel 
 																  :questionImage 
 																  :smallMonkeyImage
 																  :timerProgress
@@ -46,6 +48,13 @@
 
 -(IBAction)nextQuestion:(id)sender {
 	[manager nextQuestion:sender];	
+}
+
+////////////////////////Final score screen functions
+-(IBAction) exitFinalScoreScreen:(id)sender {
+	[finalScoreView removeFromSuperview];
+	
+	//TODO: Add online score submission!
 }
 
 ////////////////////////High Scores View Functions

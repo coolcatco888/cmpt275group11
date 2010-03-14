@@ -42,7 +42,10 @@
 	IBOutlet UIImageView *questionImage;
 	
 	QuestionViewManager* manager;
-
+	
+	//Final Score screen
+	IBOutlet UIView *finalScoreView;
+	IBOutlet UILabel *finalScoreLabel;
 }
 
 //Main Menu Functions
@@ -58,6 +61,9 @@
 -(IBAction)exitQuestionView:(id)sender;
 -(IBAction)selectChoice:(id)sender;
 -(IBAction)nextQuestion:(id)sender;
+
+//Final Score Functions
+-(IBAction) exitFinalScoreScreen:(id)sender;
 
 @end
 
