@@ -167,7 +167,7 @@
 		[message appendString:[[NSNumber numberWithInt:points] stringValue]];
 		[message appendString:@"/"];
 		[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
-		[message appendString:@"!"];
+		[message appendString:@" points!"];
 	//Set Message if the student got all of them right
 	} else {
 		title = @"Perfect!";
