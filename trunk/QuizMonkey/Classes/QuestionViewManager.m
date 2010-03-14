@@ -49,6 +49,7 @@
 	
 	//Setup variables
 	selectedChoices = [NSMutableSet setWithCapacity:4];
+	totalPointsAcquired = 0;
 	
 	//Randomly select 10 questions
 	questionList = [self select10Questions:questionLibrary];
@@ -98,10 +99,12 @@
 	}
 	
 	NSUInteger size = [questions count] < 10? [questions count] : 10;
-	
+	totalPoints = 0;
+	totalTime = 0;
 	NSMutableArray* selectedQuestions = [NSMutableArray arrayWithCapacity:size];
 	for(NSUInteger i = 0; i < size; i++) {
 		[selectedQuestions addObject:[questions objectAtIndex:i]];
+		totalTime += ((Question*)[questions objectAtIndex:i]).time;
 	}
 	
 	return selectedQuestions;
@@ -129,21 +132,26 @@
 		NSNumber* pointValue = (NSNumber*) [pointList objectAtIndex:[pointIndex intValue]];
 		points += [pointValue intValue];
 	}
+	totalPointsAcquired = points;
 	
 	NSString* title;
-	
+	NSMutableString* message = [NSMutableString stringWithCapacity:100];
 	if(points == 0) {
 		title = @"Sorry...";
+		[message appendString:@"Your answer is completely WRONG!"];
+	} else if (points < totalPointsForCurrentQuestion) {
+		title = @"Not Bad...";
+		[message appendString:@"You got "];
+		[message appendString:[[NSNumber numberWithInt:points] stringValue]];
+		[message appendString:@"/"];
+		[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
+		[message appendString:@"!"];
 	} else {
-		title = @"Hurray!";
+		title = @"Perfect!";
+		[message appendString:@"Your answer is correct!"];
 	}
 	
-	NSMutableString* message = [NSMutableString stringWithCapacity:100];
-	[message appendString:@"You got "];
-	[message appendString:[[NSNumber numberWithInt:points] stringValue]];
-	[message appendString:@"/"];
-	[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
-	[message appendString:@"!"];
+	
 	
 	alert = [[UIAlertView alloc] initWithTitle:title 
 									   message:message 
@@ -175,6 +183,7 @@
 		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:currentQuestion.points];
 		
 		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
+		totalPoints += totalPointsForCurrentQuestion;
 		NSLog(@"Max Points allowable is:");
 		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
 	}
