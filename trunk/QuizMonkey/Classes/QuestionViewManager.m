@@ -67,6 +67,7 @@
 	timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 
 	//Retain lists
+	[questionScreen retain];
 	[selectedChoices retain];
 	[questionChoiceButtons retain];
 	
@@ -218,7 +219,9 @@
 		case 0:	
 			if(currentTimeLeft == 0) {
 				//Exit Quiz Session
-				[self quitGame];
+				[questionScreen removeFromSuperview];
+				[self resetAllButtons];
+				[timer invalidate];
 			} else if(currentQuestionIndex < [questionList count] - 1) {
 				NSLog(@"Next Question");
 				currentQuestionIndex++;
@@ -234,6 +237,7 @@
 		[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setSelected:FALSE];
 		[monkeyImage setHidden:TRUE];
 	}
+	[questionChoiceButtons retain];
 }
 -(void) updateTimer {
 	currentTimeLeft--;
