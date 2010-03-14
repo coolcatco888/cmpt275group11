@@ -40,6 +40,7 @@
 -(IBAction)exitQuestionView:(id)sender {
 	//Removing subview
 	[questionView removeFromSuperview];
+	[manager resetAllButtons];
 }
 
 -(IBAction)nextQuestion:(id)sender {

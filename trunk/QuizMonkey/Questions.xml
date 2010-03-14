@@ -27,4 +27,18 @@
 		<choice>zz</choice>
 		<time>10</time>
 	</question>
+	<question>
+		<type>Pick Out the Words</type>
+		<image></image>
+		<sentence>Which of the words below are verbs?</sentence>
+		<point>0</point>
+		<point>1</point>
+		<point>0</point>
+		<point>1</point>
+		<choice>cheese</choice>
+		<choice>run</choice>
+		<choice>cat</choice>
+		<choice>fly</choice>
+		<time>10</time>
+	</question>
 </questions>
