@@ -44,6 +44,7 @@
 -(IBAction)exitQuestionView:(id)sender {
 	//Removing subview
 	[manager quitGame];
+	[manager stopTimer];
 }
 
 -(IBAction)nextQuestion:(id)sender {
