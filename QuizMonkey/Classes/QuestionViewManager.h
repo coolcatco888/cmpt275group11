@@ -30,6 +30,9 @@
 	NSMutableSet* selectedChoices;//Holds Selected choices
 	NSUInteger maxNumberOfChoiceSelections;//Holds the max number of allowable choice selections
 	NSUInteger totalPointsForCurrentQuestion;//Holds the total points for current question
+	NSUInteger totalPoints;//Stores the total points in the quiz
+	NSUInteger totalTime;//Stores the total time of the quiz
+	NSUInteger totalPointsAcquired;//Stores the total points acquired by the student
 	
 	UIAlertView *alert;//Holds alert box for displaying score
 
