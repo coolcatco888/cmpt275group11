@@ -194,7 +194,8 @@
 	
 	//Here is where the screen objects are set from the question object
 	if([currentQuestion.type isEqualToString:@"Fill in the blank"]
-		|| [currentQuestion.type isEqualToString:@"Pick Out the Words"]) {
+		|| [currentQuestion.type isEqualToString:@"Pick out the words"]
+		|| [currentQuestion.type isEqualToString:@"Find the misspelled word"]) {
 		NSLog(@"Did all dat");
 		[questionTypeLabel setText:currentQuestion.type];
 		[questionSentenceLabel setText:currentQuestion.sentence];

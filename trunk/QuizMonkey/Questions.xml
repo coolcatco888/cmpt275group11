@@ -2,8 +2,186 @@
 	<question>
 		<type>Fill in the blank</type>
 		<image></image>
+		<sentence>A bird flew out all of a su_den.</sentence>
+		<choice>h</choice>
+		<choice>p</choice>
+		<choice>d</choice>
+		<choice>x</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>The mont that comes after July is Augu_t.</sentence>
+		<choice>s</choice>
+		<choice>e</choice>
+		<choice>n</choice>
+		<choice>w</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>The state of _laska borders Canada.</sentence>
+		<choice>T</choice>
+		<choice>B</choice>
+		<choice>L</choice>
+		<choice>A</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>A pilot flies an a_rplane.</sentence>
+		<choice>y</choice>
+		<choice>i</choice>
+		<choice>b</choice>
+		<choice>u</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Sally plays with m_rbles.</sentence>
+		<choice>t</choice>
+		<choice>f</choice>
+		<choice>e</choice>
+		<choice>a</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>One do_en birds means there are 12 birds.</sentence>
+		<choice>s</choice>
+		<choice>z</choice>
+		<choice>c</choice>
+		<choice>u</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Rudi climbed the tallest mo_ntain.</sentence>
+		<choice>e</choice><point>0</point>
+		<choice>v</choice><point>0</point>
+		<choice>u</choice><point>10</point>
+		<choice>t</choice><point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Don't run in _ront of a moving car.</sentence>
+		<choice>f</choice>
+		<choice>u</choice>
+		<choice>c</choice>
+		<choice>q</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>You can make fire with matc_es</sentence>
+		<choice>x</choice>
+		<choice>h</choice>
+		<choice>o</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Jamie slep_ with Morgan.</sentence>
+		<choice>c</choice>
+		<choice>y</choice>
+		<choice>p</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image>image.jpg</image>
 		<sentence>I love my _unt.</sentence>
+		<choice>a</choice>
+		<choice>b</choice>
+		<choice>c</choice>
+		<choice>d</choice>
 		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+	<question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: The word rhymes with pasty...</sentence>
+		<choice>monkey</choice>
+		<choice>train</choice>
+		<choice>tasti</choice>
+		<choice>long</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>20</time>
+	</question>
+	<question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words below are not people?</sentence>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>20</point>
+		<choice>beavers</choice>
+		<choice>officers</choice>
+		<choice>dentists</choice>
+		<choice>dolphins</choice>
+		<time>10</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>I love my _unt.</sentence>
+		<point>20</point>
 		<point>0</point>
 		<point>0</point>
 		<point>0</point>
@@ -18,7 +196,7 @@
 		<image></image>
 		<sentence>My friend Billy eats ch__se.</sentence>
 		<point>0</point>
-		<point>1</point>
+		<point>15</point>
 		<point>0</point>
 		<point>0</point>
 		<choice>aa</choice>
@@ -28,13 +206,13 @@
 		<time>10</time>
 	</question>
 	<question>
-		<type>Pick Out the Words</type>
+		<type>Pick out the words</type>
 		<image></image>
 		<sentence>Which of the words below are verbs?</sentence>
 		<point>0</point>
-		<point>1</point>
+		<point>10</point>
 		<point>0</point>
-		<point>1</point>
+		<point>15</point>
 		<choice>cheese</choice>
 		<choice>run</choice>
 		<choice>cat</choice>
