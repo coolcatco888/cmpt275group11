@@ -219,4 +219,32 @@
 		<choice>fly</choice>
 		<time>10</time>
 	</question>
+	<question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are animals or bugs?</sentence>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>15</point>
+		<choice>Samurai</choice>
+		<choice>pizza</choice>
+		<choice>cats</choice>
+		<choice>fly</choice>
+		<time>10</time>
+	</question>
+	<question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are vehicles?</sentence>
+		<point>0</point>
+		<point>10</point>
+		<point>10</point>
+		<point>15</point>
+		<choice>Samurai</choice>
+		<choice>Trucks</choice>
+		<choice>Cars</choice>
+		<choice>Trains</choice>
+		<time>10</time>
+	</question>
 </questions>
