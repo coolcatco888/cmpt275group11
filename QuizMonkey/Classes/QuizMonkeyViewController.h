@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Question.h"
 #import "QuestionParser.h"
+#import "QuestionViewManager.h"
 
 @interface QuizMonkeyViewController : UIViewController {
 	NSMutableArray *questionList;
@@ -47,6 +48,8 @@
 	NSMutableArray* selectedChoices;
 	NSUInteger maxNumberOfChoiceSelections;
 	NSUInteger totalPoints;
+	
+	QuestionViewManager* manager;
 
 }
 

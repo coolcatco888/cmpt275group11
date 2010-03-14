@@ -17,21 +17,15 @@
 	[mainMenuView addSubview:highScoresView];
 }
 -(IBAction)ShowQuestionView:(id)sender {
-	QuestionParser * quiz = [QuestionParser new];
-	NSMutableArray* questionLibrary = [quiz loadQuestionsFromXML:@"Questions"];
-	selectedChoices = [NSMutableSet setWithCapacity:4];
 	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
-	[selectedChoices retain];
-	[questionChoiceButtons retain];
+	manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
+																  :questionView 
+																  :questionSentenceLabel 
+																  :questionSentenceBottomLabel 
+																  :questionTypeLabel 
+																  :questionImage 
+																  :questionChoiceButtons];
 	
-	//Randomly select 10 questions
-	questionList = [self select10Questions:questionLibrary];
-	currentQuestionIndex = 0;
-	[self loadQuestionFromIndex:currentQuestionIndex];
-	
-	[mainMenuView addSubview:questionView];
-	
-	[quiz retain];
 }
 -(IBAction)ShowAlert:(id)sender {
 	//First we set all the parameters of the Alert pop-up
@@ -43,29 +37,7 @@
 
 ////////////////////////Question View Functions
 -(IBAction) selectChoice:(id)sender {
-	UIButton* buttonPressed = (UIButton*)sender;
-	NSString* choice = buttonPressed.titleLabel.text;
-	
-	NSLog(choice);
-	
-	for(int i = 0; i < [questionChoiceButtons count]; i++) {
-		//Match the selected choice with the available choices
-		if([choice isEqualToString:((UIButton*)[questionChoiceButtons objectAtIndex:i]).titleLabel.text]) {
-			//If this choice is already selected then remove it
-			NSNumber* currentSelection = [NSNumber numberWithInt:i];
-			
-			if([selectedChoices containsObject:currentSelection]) {
-				[selectedChoices removeObject:currentSelection];
-				[buttonPressed setSelected:FALSE];
-			//If the number of selections you have made is still under the amount allowable
-			//Then add this as another one of your selections.
-			} else if ([selectedChoices count] < maxNumberOfChoiceSelections) {
-				[selectedChoices addObject:currentSelection];
-				[buttonPressed setSelected:TRUE];
-			}
-		}
-	}
-	[selectedChoices retain];
+	[manager selectChoice:sender];
 }
 
 -(IBAction)exitQuestionView:(id)sender {
@@ -74,6 +46,7 @@
 }
 
 -(IBAction)nextQuestion:(id)sender {
+	
 	int points = 0;
 	Question* question = (Question*)[questionList objectAtIndex:currentQuestionIndex];
 	for(id index in selectedChoices) {
@@ -100,6 +73,8 @@
 	alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Go to next question." otherButtonTitles:nil];
 	//Then we SHOW the alert... simple
 	[alert show];
+	 
+	 
 	
 }
 
@@ -113,6 +88,7 @@
 }
 	
 - (NSMutableArray*) select10Questions: (NSMutableArray*) questions {
+	/*
 	NSUInteger count = [questions count];
 	for (NSUInteger i = 0; i < count; ++i) {
 		// Select a random element between i and end of array to swap with.
@@ -129,6 +105,7 @@
 	}
 	
 	return selectedQuestions;
+	 */
 	
 	
 }
