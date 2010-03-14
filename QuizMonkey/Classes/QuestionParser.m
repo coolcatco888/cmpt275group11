@@ -34,7 +34,8 @@ qualifiedName:(NSString *)qName {
 	else if([elementName isEqualToString:@"time"])		[questionInProgress setTime: [textInProgress intValue]];
 	else if([elementName isEqualToString:@"sentence"])	[questionInProgress setSentence:textInProgress];
 	else if([elementName isEqualToString:@"question"])	[questions addObject:questionInProgress];
-	[textInProgress release];
+	//Do not release textInProgress here
+	[questionInProgress retain];
 	[elementInProgress release];
 }
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{

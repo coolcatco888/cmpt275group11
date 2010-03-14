@@ -1,21 +1,7 @@
 <questions>
 	<question>
-		<type>Pick out the nouns</type>
-		<image>image.jpg</image>
-		<sentence></sentence>
-		<point>1</point>
-		<point>0</point>
-		<point>0</point>
-		<point>2</point>
-		<choice>Cats </choice>
-		<choice>eat </choice>
-		<choice>tasty </choice>
-		<choice>fish.</choice>
-		<time>20</time>
-	</question>
-	<question>
 		<type>Fill in the blank</type>
-		<image>image.jpg</image>
+		<image></image>
 		<sentence>I love my _unt.</sentence>
 		<point>1</point>
 		<point>0</point>
@@ -25,6 +11,20 @@
 		<choice>b</choice>
 		<choice>c</choice>
 		<choice>d</choice>
+		<time>10</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>My friend Billy eats ch__se.</sentence>
+		<point>0</point>
+		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<choice>aa</choice>
+		<choice>ee</choice>
+		<choice>cc</choice>
+		<choice>zz</choice>
 		<time>10</time>
 	</question>
 </questions>
