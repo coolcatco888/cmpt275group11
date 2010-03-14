@@ -2,7 +2,7 @@
 	<question>
 		<type>Fill in the blank</type>
 		<image></image>
-		<sentence>A bird flew out all of a su_den.</sentence>
+		<sentence>It smacked my face all of a su_den.</sentence>
 		<choice>h</choice>
 		<choice>p</choice>
 		<choice>d</choice>
@@ -16,7 +16,7 @@
 	<question>
 		<type>Fill in the blank</type>
 		<image></image>
-		<sentence>The mont that comes after July is Augu_t.</sentence>
+		<sentence>The month that comes after July is Augu_t.</sentence>
 		<choice>s</choice>
 		<choice>e</choice>
 		<choice>n</choice>
