@@ -21,6 +21,8 @@
 	IBOutlet UILabel *questionSentenceBottomLabel;//Reference to the sentence label below the question image
 	IBOutlet UILabel *questionTypeLabel;//Displays the type of question
 	IBOutlet UIImageView *questionImage;//Displays the image of the question, if any
+	IBOutlet UIImageView *monkeyImage;//Displays the image of the monkey after each question
+	IBOutlet UIProgressView *timerProgress;//Displays the time left in bar form
 	NSArray* questionChoiceButtons;//Holds all of the choice buttons
 	
 	
@@ -33,7 +35,8 @@
 	NSUInteger totalPoints;//Stores the total points in the quiz
 	NSUInteger totalTime;//Stores the total time of the quiz
 	NSUInteger totalPointsAcquired;//Stores the total points acquired by the student
-	
+	NSUInteger currentTimeLeft;
+	NSTimer* timer;
 	UIAlertView *alert;//Holds alert box for displaying score
 
 }
@@ -44,6 +47,7 @@
 @property (assign) IBOutlet UILabel *questionSentenceBottomLabel;
 @property (assign) IBOutlet UILabel *questionTypeLabel;
 @property (assign) IBOutlet UIImageView *questionImage;
+@property (assign) IBOutlet UIProgressView *timerProgress;
 @property (assign) NSArray* questionChoiceButtons;
 
 @property (assign) NSMutableArray* questionList;
@@ -58,6 +62,8 @@
 											   :(UILabel*) sentenceLabelBottom 
 											   :(UILabel*) questionType
 											   :(UIImageView*) image 
+											   :(UIImageView*) monkey
+											   :(UIProgressView*) progress
 											   :(NSArray*) questionButtons;
 
 -(IBAction)selectChoice:(id)sender;
@@ -68,5 +74,6 @@
 -(void) loadQuestionFromIndex: (NSUInteger) index;
 -(int) calculateTotalScore: (NSArray*) points;
 -(void) resetAllButtons;
-
+-(void) updateTimer;
+-(void) quitGame;
 @end

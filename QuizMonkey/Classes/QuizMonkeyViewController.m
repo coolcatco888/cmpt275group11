@@ -24,11 +24,13 @@
 																  :questionSentenceBottomLabel 
 																  :questionTypeLabel 
 																  :questionImage 
+																  :smallMonkeyImage
+																  :timerProgress
 																  :questionChoiceButtons];
 	
 }
 -(IBAction)ShowAlert:(id)sender {
-
+	exit(0);
 }
 
 
@@ -39,8 +41,7 @@
 
 -(IBAction)exitQuestionView:(id)sender {
 	//Removing subview
-	[questionView removeFromSuperview];
-	[manager resetAllButtons];
+	[manager quitGame];
 }
 
 -(IBAction)nextQuestion:(id)sender {

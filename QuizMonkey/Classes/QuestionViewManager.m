@@ -30,7 +30,9 @@
 											   :(UILabel*) sentenceLabel 
 											   :(UILabel*) sentenceLabelBottom 
 											   :(UILabel*) questionType
-											   :(UIImageView*) image 
+											   :(UIImageView*) image
+											   :(UIImageView*) monkey
+											   :(UIProgressView*) progress
 											   :(NSArray*) questionButtons {
 	self = [super init];
 	
@@ -42,6 +44,10 @@
 	questionTypeLabel = questionType;
 	questionImage = image;
 	questionChoiceButtons = questionButtons; 
+	monkeyImage = monkey;
+	timerProgress = progress;
+	
+	[timerProgress setProgress:1.0];
 	
 	//Parse XML
 	QuestionParser * parser = [QuestionParser new];
@@ -56,6 +62,9 @@
 	currentQuestionIndex = 0;
 	[self loadQuestionFromIndex:currentQuestionIndex];
 	[mainMenuScreen addSubview:questionScreen];
+	
+	//Setup Timer
+	timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 
 	//Retain lists
 	[selectedChoices retain];
@@ -106,7 +115,7 @@
 		[selectedQuestions addObject:[questions objectAtIndex:i]];
 		totalTime += ((Question*)[questions objectAtIndex:i]).time;
 	}
-	
+	currentTimeLeft = totalTime;
 	return selectedQuestions;
 	
 	
@@ -123,8 +132,9 @@
 }
 
 -(IBAction)nextQuestion:(id)sender {
+	[timer invalidate];
 	int points = 0;
-	
+	[monkeyImage setHidden:FALSE];
 	NSArray* pointList = currentQuestion.points;
 	
 	for(id index in selectedChoices) {
@@ -201,14 +211,19 @@
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	//Reset Question Screen
+	[self resetAllButtons];
+	[selectedChoices removeAllObjects];
 	switch(buttonIndex) {
 		case 0:	
-			if(currentQuestionIndex < [questionList count] - 1) {
+			if(currentTimeLeft == 0) {
+				//Exit Quiz Session
+				[self quitGame];
+			} else if(currentQuestionIndex < [questionList count] - 1) {
 				NSLog(@"Next Question");
-				[selectedChoices removeAllObjects];
-				[self resetAllButtons];
 				currentQuestionIndex++;
 				[self loadQuestionFromIndex:currentQuestionIndex];
+				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 			}
 			break;
 	}
@@ -217,7 +232,31 @@
 -(void) resetAllButtons {
 	for(int i = 0; i < [questionChoiceButtons count]; i++) {
 		[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setSelected:FALSE];
+		[monkeyImage setHidden:TRUE];
 	}
+}
+-(void) updateTimer {
+	currentTimeLeft--;
+	[timerProgress setProgress: ((float) currentTimeLeft / (float) totalTime)];
+	if (currentTimeLeft == 0) {
+		[timer invalidate];
+		[monkeyImage setHidden:FALSE];
+		
+		[alert release];
+		alert = [[UIAlertView alloc] initWithTitle:@"Oh no!!!" 
+										   message:@"You ran out of time!" 
+										  delegate:self 
+								 cancelButtonTitle:@"Quit to Main Menu" 
+								 otherButtonTitles:nil];
+		[alert show];
+		[alert autorelease];
+	}
+	
+}
+-(void) quitGame {
+	[questionScreen removeFromSuperview];
+	[self resetAllButtons];
+	[timer invalidate];
 }
 
 @end
