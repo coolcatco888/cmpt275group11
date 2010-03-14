@@ -219,9 +219,7 @@
 		case 0:	
 			if(currentTimeLeft == 0) {
 				//Exit Quiz Session
-				[questionScreen removeFromSuperview];
-				[self resetAllButtons];
-				[timer invalidate];
+				[self quitGame];
 			} else if(currentQuestionIndex < [questionList count] - 1) {
 				NSLog(@"Next Question");
 				currentQuestionIndex++;
@@ -246,7 +244,6 @@
 		[timer invalidate];
 		[monkeyImage setHidden:FALSE];
 		
-		[alert release];
 		alert = [[UIAlertView alloc] initWithTitle:@"Oh no!!!" 
 										   message:@"You ran out of time!" 
 										  delegate:self 
@@ -260,7 +257,6 @@
 -(void) quitGame {
 	[questionScreen removeFromSuperview];
 	[self resetAllButtons];
-	[timer invalidate];
 }
 
 @end
