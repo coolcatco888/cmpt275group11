@@ -228,8 +228,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -284,7 +282,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 49}, {186, 673}}</string>
+							<string>{{0, 0}, {186, 673}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,6 +312,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -331,18 +331,20 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D7D0716114DD76B003B550F</string>
+										<string>1D7D0750114DDECA003B550F</string>
 										<key>history</key>
 										<array>
-											<string>1D7D06AD114DD21B003B550F</string>
 											<string>1D7D06C3114DD59F003B550F</string>
 											<string>1D7D06C4114DD59F003B550F</string>
 											<string>1D7D06C5114DD59F003B550F</string>
-											<string>1D7D06F3114DD6C9003B550F</string>
 											<string>1D7D070B114DD76B003B550F</string>
 											<string>1D7D070C114DD76B003B550F</string>
 											<string>1D7D070D114DD76B003B550F</string>
-											<string>1D7D070E114DD76B003B550F</string>
+											<string>1D7D071D114DD943003B550F</string>
+											<string>1D7D071E114DD943003B550F</string>
+											<string>1D7D073A114DDC90003B550F</string>
+											<string>1D7D073B114DDC90003B550F</string>
+											<string>1D7D073C114DDC90003B550F</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -432,6 +434,17 @@
 											<string>1D7D0713114DD76B003B550F</string>
 											<string>1D7D0714114DD76B003B550F</string>
 											<string>1D7D0715114DD76B003B550F</string>
+											<string>1D7D0720114DD943003B550F</string>
+											<string>1D7D0721114DD943003B550F</string>
+											<string>1D7D0722114DD943003B550F</string>
+											<string>1D7D073D114DDC90003B550F</string>
+											<string>1D7D073E114DDC90003B550F</string>
+											<string>1D7D073F114DDC90003B550F</string>
+											<string>1D7D0740114DDC90003B550F</string>
+											<string>1D7D0741114DDC90003B550F</string>
+											<string>1D7D0742114DDC90003B550F</string>
+											<string>1D7D0743114DDC90003B550F</string>
+											<string>1D7D0744114DDC90003B550F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -625,7 +638,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1D7D0717114DD76B003B550F</string>
 		<string>1D7D0697114DCFDC003B550F</string>
 		<string>1D7D0698114DCFDC003B550F</string>
 		<string>1C78EAAD065D492600B07095</string>

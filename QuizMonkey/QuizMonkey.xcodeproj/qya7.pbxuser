@@ -13,7 +13,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -55,9 +55,9 @@
 	};
 	1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 742}}";
-			sepNavSelRange = "{1024, 0}";
-			sepNavVisRange = "{0, 1050}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 1176}}";
+			sepNavSelRange = "{2478, 0}";
+			sepNavVisRange = "{43, 1118}";
 		};
 	};
 	1D7D0653114DCD7B003B550F /* testQuestions1.xml */ = {
@@ -332,8 +332,8 @@
 		isa = PBXTextBookmark;
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 27";
-		rLen = 17;
-		rLoc = 1337;
+		rLen = 0;
+		rLoc = 1335;
 		rType = 0;
 		vrLen = 396;
 		vrLoc = 381;
@@ -437,7 +437,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 34";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 2495;
 		rType = 0;
 		vrLen = 301;
 		vrLoc = 83;
@@ -462,8 +462,8 @@
 		isa = PBXTextBookmark;
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 32";
-		rLen = 58;
-		rLoc = 1501;
+		rLen = 1010;
+		rLoc = 1481;
 		rType = 0;
 		vrLen = 403;
 		vrLoc = 366;
@@ -523,7 +523,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 28";
 		rLen = 0;
-		rLoc = 1356;
+		rLoc = 1335;
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 297;
@@ -583,7 +583,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 31";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1531;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 316;
@@ -603,7 +603,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 31";
 		rLen = 0;
-		rLoc = 1551;
+		rLoc = 1531;
 		rType = 0;
 		vrLen = 441;
 		vrLoc = 316;
@@ -623,7 +623,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 28";
 		rLen = 0;
-		rLoc = 1356;
+		rLoc = 1335;
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 297;
@@ -643,7 +643,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 28";
 		rLen = 0;
-		rLoc = 1429;
+		rLoc = 1409;
 		rType = 0;
 		vrLen = 462;
 		vrLoc = 316;
@@ -653,7 +653,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 30";
 		rLen = 0;
-		rLoc = 1498;
+		rLoc = 1478;
 		rType = 0;
 		vrLen = 476;
 		vrLoc = 316;
@@ -718,7 +718,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 34";
 		rLen = 0;
-		rLoc = 1563;
+		rLoc = 2495;
 		rType = 0;
 		vrLen = 457;
 		vrLoc = 316;
@@ -1348,6 +1348,316 @@
 		vrLen = 1050;
 		vrLoc = 0;
 	};
+	1D7D071D114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDC7114B0FC800F766B8 /* QuestionParser.h */;
+		name = "QuestionParser.h: 2";
+		rLen = 0;
+		rLoc = 28;
+		rType = 0;
+		vrLen = 762;
+		vrLoc = 0;
+	};
+	1D7D071E114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */;
+		name = "QuestionViewManager.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 953;
+		vrLoc = 0;
+	};
+	1D7D071F114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 51";
+		rLen = 0;
+		rLoc = 2490;
+		rType = 0;
+		vrLen = 795;
+		vrLoc = 777;
+	};
+	1D7D0720114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 51";
+		rLen = 0;
+		rLoc = 2490;
+		rType = 0;
+		vrLen = 795;
+		vrLoc = 777;
+	};
+	1D7D0721114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDC7114B0FC800F766B8 /* QuestionParser.h */;
+		name = "QuestionParser.h: 2";
+		rLen = 0;
+		rLoc = 28;
+		rType = 0;
+		vrLen = 762;
+		vrLoc = 0;
+	};
+	1D7D0722114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */;
+		name = "QuestionViewManager.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 953;
+		vrLoc = 0;
+	};
+	1D7D0723114DD943003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 51";
+		rLen = 0;
+		rLoc = 2490;
+		rType = 0;
+		vrLen = 1102;
+		vrLoc = 453;
+	};
+	1D7D0725114DD954003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 47";
+		rLen = 0;
+		rLoc = 1409;
+		rType = 0;
+		vrLen = 1089;
+		vrLoc = 453;
+	};
+	1D7D072B114DDA18003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 53";
+		rLen = 0;
+		rLoc = 1639;
+		rType = 0;
+		vrLen = 874;
+		vrLoc = 906;
+	};
+	1D7D072E114DDA7F003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 53";
+		rLen = 0;
+		rLoc = 1564;
+		rType = 0;
+		vrLen = 868;
+		vrLoc = 906;
+	};
+	1D7D0730114DDA9B003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 53";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 856;
+		vrLoc = 860;
+	};
+	1D7D0732114DDAD0003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 52";
+		rLen = 0;
+		rLoc = 1537;
+		rType = 0;
+		vrLen = 816;
+		vrLoc = 860;
+	};
+	1D7D0734114DDAFB003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 47";
+		rLen = 0;
+		rLoc = 1380;
+		rType = 0;
+		vrLen = 829;
+		vrLoc = 970;
+	};
+	1D7D0736114DDB1E003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 47";
+		rLen = 0;
+		rLoc = 1409;
+		rType = 0;
+		vrLen = 801;
+		vrLoc = 970;
+	};
+	1D7D0738114DDB37003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 53";
+		rLen = 0;
+		rLoc = 1592;
+		rType = 0;
+		vrLen = 805;
+		vrLoc = 970;
+	};
+	1D7D073A114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB0114B09B800F766B8 /* Question.h */;
+		name = "Question.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 0;
+	};
+	1D7D073B114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB1114B09B800F766B8 /* Question.m */;
+		name = "Question.m: 15";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 0;
+	};
+	1D7D073C114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 61";
+		rLen = 0;
+		rLoc = 2086;
+		rType = 0;
+		vrLen = 1132;
+		vrLoc = 178;
+	};
+	1D7D073D114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 59";
+		rLen = 0;
+		rLoc = 2032;
+		rType = 0;
+		vrLen = 957;
+		vrLoc = 1050;
+	};
+	1D7D073E114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB1114B09B800F766B8 /* Question.m */;
+		name = "Question.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 0;
+	};
+	1D7D073F114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB0114B09B800F766B8 /* Question.h */;
+		name = "Question.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 0;
+	};
+	1D7D0740114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB1114B09B800F766B8 /* Question.m */;
+		name = "Question.m: 15";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 0;
+	};
+	1D7D0741114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 61";
+		rLen = 0;
+		rLoc = 2086;
+		rType = 0;
+		vrLen = 1132;
+		vrLoc = 178;
+	};
+	1D7D0742114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB1114B09B800F766B8 /* Question.m */;
+		name = "Question.m: 15";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 0;
+	};
+	1D7D0743114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB0114B09B800F766B8 /* Question.h */;
+		name = "Question.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 671;
+		vrLoc = 0;
+	};
+	1D7D0744114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4E47DDB1114B09B800F766B8 /* Question.m */;
+		name = "Question.m: 15";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 513;
+		vrLoc = 0;
+	};
+	1D7D0745114DDC90003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 61";
+		rLen = 0;
+		rLoc = 2028;
+		rType = 0;
+		vrLen = 944;
+		vrLoc = 1081;
+	};
+	1D7D0747114DDD75003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 60";
+		rLen = 0;
+		rLoc = 1868;
+		rType = 0;
+		vrLen = 951;
+		vrLoc = 1253;
+	};
+	1D7D074A114DDD95003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 59";
+		rLen = 0;
+		rLoc = 1846;
+		rType = 0;
+		vrLen = 1074;
+		vrLoc = 1121;
+	};
+	1D7D074C114DDE48003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 74";
+		rLen = 0;
+		rLoc = 2478;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 1563;
+	};
+	1D7D0750114DDECA003B550F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 73";
+		rLen = 0;
+		rLoc = 2478;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 43;
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 1D7D05DA114DC26A003B550F /* QuizMonkey */;
@@ -1551,16 +1861,61 @@
 			1D7D0714114DD76B003B550F /* PBXTextBookmark */ = 1D7D0714114DD76B003B550F /* PBXTextBookmark */;
 			1D7D0715114DD76B003B550F /* PBXTextBookmark */ = 1D7D0715114DD76B003B550F /* PBXTextBookmark */;
 			1D7D0716114DD76B003B550F /* PBXTextBookmark */ = 1D7D0716114DD76B003B550F /* PBXTextBookmark */;
+			1D7D071D114DD943003B550F /* PBXTextBookmark */ = 1D7D071D114DD943003B550F /* PBXTextBookmark */;
+			1D7D071E114DD943003B550F /* PBXTextBookmark */ = 1D7D071E114DD943003B550F /* PBXTextBookmark */;
+			1D7D071F114DD943003B550F /* PBXTextBookmark */ = 1D7D071F114DD943003B550F /* PBXTextBookmark */;
+			1D7D0720114DD943003B550F /* PBXTextBookmark */ = 1D7D0720114DD943003B550F /* PBXTextBookmark */;
+			1D7D0721114DD943003B550F /* PBXTextBookmark */ = 1D7D0721114DD943003B550F /* PBXTextBookmark */;
+			1D7D0722114DD943003B550F /* PBXTextBookmark */ = 1D7D0722114DD943003B550F /* PBXTextBookmark */;
+			1D7D0723114DD943003B550F /* PBXTextBookmark */ = 1D7D0723114DD943003B550F /* PBXTextBookmark */;
+			1D7D0725114DD954003B550F /* PBXTextBookmark */ = 1D7D0725114DD954003B550F /* PBXTextBookmark */;
+			1D7D072B114DDA18003B550F /* PBXTextBookmark */ = 1D7D072B114DDA18003B550F /* PBXTextBookmark */;
+			1D7D072E114DDA7F003B550F /* PBXTextBookmark */ = 1D7D072E114DDA7F003B550F /* PBXTextBookmark */;
+			1D7D0730114DDA9B003B550F /* PBXTextBookmark */ = 1D7D0730114DDA9B003B550F /* PBXTextBookmark */;
+			1D7D0732114DDAD0003B550F /* PBXTextBookmark */ = 1D7D0732114DDAD0003B550F /* PBXTextBookmark */;
+			1D7D0734114DDAFB003B550F /* PBXTextBookmark */ = 1D7D0734114DDAFB003B550F /* PBXTextBookmark */;
+			1D7D0736114DDB1E003B550F /* PBXTextBookmark */ = 1D7D0736114DDB1E003B550F /* PBXTextBookmark */;
+			1D7D0738114DDB37003B550F /* PBXTextBookmark */ = 1D7D0738114DDB37003B550F /* PBXTextBookmark */;
+			1D7D073A114DDC90003B550F /* PBXTextBookmark */ = 1D7D073A114DDC90003B550F /* PBXTextBookmark */;
+			1D7D073B114DDC90003B550F /* PBXTextBookmark */ = 1D7D073B114DDC90003B550F /* PBXTextBookmark */;
+			1D7D073C114DDC90003B550F /* PBXTextBookmark */ = 1D7D073C114DDC90003B550F /* PBXTextBookmark */;
+			1D7D073D114DDC90003B550F /* PBXTextBookmark */ = 1D7D073D114DDC90003B550F /* PBXTextBookmark */;
+			1D7D073E114DDC90003B550F /* PBXTextBookmark */ = 1D7D073E114DDC90003B550F /* PBXTextBookmark */;
+			1D7D073F114DDC90003B550F /* PBXTextBookmark */ = 1D7D073F114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0740114DDC90003B550F /* PBXTextBookmark */ = 1D7D0740114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0741114DDC90003B550F /* PBXTextBookmark */ = 1D7D0741114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0742114DDC90003B550F /* PBXTextBookmark */ = 1D7D0742114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0743114DDC90003B550F /* PBXTextBookmark */ = 1D7D0743114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0744114DDC90003B550F /* PBXTextBookmark */ = 1D7D0744114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0745114DDC90003B550F /* PBXTextBookmark */ = 1D7D0745114DDC90003B550F /* PBXTextBookmark */;
+			1D7D0747114DDD75003B550F /* PBXTextBookmark */ = 1D7D0747114DDD75003B550F /* PBXTextBookmark */;
+			1D7D074A114DDD95003B550F /* PBXTextBookmark */ = 1D7D074A114DDD95003B550F /* PBXTextBookmark */;
+			1D7D074C114DDE48003B550F /* PBXTextBookmark */ = 1D7D074C114DDE48003B550F /* PBXTextBookmark */;
+			1D7D0750114DDECA003B550F /* PBXTextBookmark */ = 1D7D0750114DDECA003B550F /* PBXTextBookmark */;
 		};
 		sourceControlManager = 1D7D05E8114DC28F003B550F /* Source Control */;
 		userBuildSettings = {
 		};
 	};
+	4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 4270}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 953}";
+		};
+	};
+	4E47DDB0114B09B800F766B8 /* Question.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 671}";
+		};
+	};
 	4E47DDB1114B09B800F766B8 /* Question.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {519, 406}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 334}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
+			sepNavSelRange = "{236, 0}";
+			sepNavVisRange = "{0, 513}";
 		};
 	};
 	4E47DDC6114B0FC800F766B8 /* QuestionParser.m */ = {
@@ -1573,7 +1928,7 @@
 	4E47DDC7114B0FC800F766B8 /* QuestionParser.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
-			sepNavSelRange = "{240, 28}";
+			sepNavSelRange = "{28, 0}";
 			sepNavVisRange = "{0, 762}";
 		};
 	};

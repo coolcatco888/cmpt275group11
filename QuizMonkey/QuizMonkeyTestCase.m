@@ -40,15 +40,42 @@
 	Question *q1 =[questions objectAtIndex:0];
 	STAssertEquals(q1.time,
                    5, 
-                   @"FAILURE: type of Question 1.");
+                   @"FAILURE: time of Question 1.");
 	
-	/*
-    NSString *Q1type = @"Fill in the blank";
-	NSComparisonResult doesTypeMatch = [Q1type compare:@"Fill in the blank"];
+	
+    //Check Question Type
+	NSComparisonResult doesTypeMatch = [q1.type compare:@"Fill in the blank"];
     STAssertEquals(doesTypeMatch,
                    NSOrderedSame, 
                    @"FAILURE: type of Question 1.");
-	 */
+	
+	//Check Question Sentence
+	doesTypeMatch = [q1.sentence compare:@"It smacked my face all of a su_den."];
+    STAssertEquals(doesTypeMatch,
+                   NSOrderedSame, 
+                   @"FAILURE: sentence of Question 1.");
+	
+	//Setup test arrays
+	NSArray* choices = [NSArray arrayWithObjects:@"h", @"p", @"d", @"x", nil];
+	NSArray* points = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:0],[NSNumber numberWithInt:10],[NSNumber numberWithInt:0],nil];
+	
+	
+	
+	//Check to see if the points and choices are correct
+	for (int i = 0; i < [q1.choices count]; i++) {
+		doesTypeMatch = [[q1.choices objectAtIndex:i] compare:[choices objectAtIndex:i]];
+		STAssertEquals(doesTypeMatch,
+					   NSOrderedSame, 
+					   @"FAILURE: choice of Question 1.");
+		
+		STAssertEquals([[points objectAtIndex:i] intValue],
+					   [[q1.points objectAtIndex:i] intValue],
+					   @"FAILURE: points of question 1 don't match");
+	}
+	
+	
+	 
+	
 	
 	
 
