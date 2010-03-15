@@ -21,10 +21,13 @@
 
 @synthesize mainMenuScreen;
 @synthesize questionScreen;
+@synthesize finalScoreScreen;
 @synthesize questionSentenceLabel;
 @synthesize questionSentenceBottomLabel;
 @synthesize questionTypeLabel;
+@synthesize finalScoreLabel;
 @synthesize questionImage;
+@synthesize timerProgress;
 @synthesize questionChoiceButtons;
 
 @synthesize questionList;

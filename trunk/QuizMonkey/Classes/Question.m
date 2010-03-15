@@ -26,19 +26,23 @@
 
 
 -init{
+	//Sets up the two arrays that the question object uses
 	choices = [NSMutableArray arrayWithCapacity:20];
 	points = [NSMutableArray arrayWithCapacity:20];
+	//Then retains them both
+	[choices retain];
+	[points retain];
 	return self;
 }
 
 -(void) addChoice: (NSString*) newChoice {
+	//Adding a new object you the choices array
 	[choices addObject:newChoice];
-	[choices retain];
 }
 
 -(void) addPoint: (NSInteger) newPoint {
+	//Adding a new object to the points array
 	[points addObject:[NSNumber numberWithInteger:newPoint]];
-	[points retain];
 }
 
 @end

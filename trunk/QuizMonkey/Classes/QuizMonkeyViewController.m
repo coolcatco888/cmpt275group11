@@ -22,7 +22,10 @@
 
 ////////////////////////Main View Functions
 -(IBAction)loadQuestionView:(id)sender {
+	//Set up the array of the four buttons in the question view
 	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
+	
+	//Initiates the question manager and in the initiation it passes all the references of all the question view objects
 	manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
 																  :questionView 
 																  :finalScoreView 
@@ -37,41 +40,45 @@
 	
 }
 -(IBAction)loadHighScoresView:(id)sender {
+	//Shows the high scores view
 	[mainMenuView addSubview:highScoresView];
 }
 -(IBAction)exitApplication:(id)sender {
+	//Exits the appliction
 	exit(0);
 }
 
 
 ////////////////////////Question View Functions
+-(IBAction) selectChoice:(id)sender {
+	//Passes the id of the button which called this function to the selectChoice function in the question manager
+	//So that the manager knows which button was pressed
+	[manager selectChoice:sender];
+}
+
+-(IBAction)nextQuestion:(id)sender {
+	//Calls the next question function to display the next question
+	[manager nextQuestion:sender];	
+}
 -(IBAction)exitQuestionView:(id)sender {
 	//Removing subview
 	[manager quitGame];
 	[manager stopTimer];
 }
 
--(IBAction) selectChoice:(id)sender {
-	[manager selectChoice:sender];
-}
-
--(IBAction)nextQuestion:(id)sender {
-	[manager nextQuestion:sender];	
-}
-
 
 ////////////////////////High Scores View Functions
--(IBAction)exitHighScoresView:(id)sender {
-	[highScoresView removeFromSuperview];
-}
-
 -(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event {
+	//This function is called when the user taps a location on the screen
+	//The function then stores the location in the Taplocation object for later use
 	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
 }
 -(void)touchesMoved: (NSSet *)touches withEvent:(UIEvent *)event {
+	//This function is called when the user moves a finger along the screen
+	//A new tap location object is created to store the new location that the user moved the finger to
 	CGPoint TapLocationNew = [[[event allTouches] anyObject] locationInView:mainMenuView];
 	
-	//Applying the displacement to the center of the screen, moving it up and down
+	//Applying the Y coordinate displacement to the center of high scores view, moving it up and down
 	highScoresView.center = CGPointMake(highScoresView.center.x , highScoresView.center.y - (TapLocation.y - TapLocationNew.y));
 	
 	//Seting the boundaries so the high scores can't go off the screen
@@ -82,17 +89,15 @@
 	
 	//Updating the user's tap location
 	TapLocation = TapLocationNew;
-	
-	//NSLog(@"Y: %f", TapLocationNew.y);
-
 }
--(void)touchesEnded: (NSSet *)touches withEvent:(UIEvent *)event {
-//	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
-//	newButton.center = [[[event allTouches] anyObject] locationInView:mainMenuView];
+-(IBAction)exitHighScoresView:(id)sender {
+	//Hides the high scores view
+	[highScoresView removeFromSuperview];
 }
 
 ////////////////////////Final Score View Functions
 -(IBAction) exitFinalScoreView:(id)sender {
+	//Hides the final view
 	[finalScoreView removeFromSuperview];
 	
 	//TODO: Add online score submission!
@@ -120,6 +125,7 @@
 }
 
 - (void)dealloc {
+	//View Outlets
 	[mainMenuView release];
 	[questionView release];
 	[highScoresView release];
@@ -144,8 +150,9 @@
 	[manager release];
 	
 	//High Scores View Outlets
+	//(None)
 	
-	//Final Score screen
+	//Final Score View Outlets
 	[finalScoreLabel release];
 
 	[super dealloc];
