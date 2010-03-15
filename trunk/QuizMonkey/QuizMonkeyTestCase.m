@@ -2,6 +2,11 @@
 //  QuizMonkeyTestCase.m
 //  QuizMonkey
 //
+//	This is implement file of XML parser testing. At first, parser decode a String,
+//	which contains XML documents, and then it produce a question object. After that,
+//	this test will check every attribute of the question, and it will show up message(s)
+//	if test is failed.
+//
 //  Created by Tony Yang on 3/14/10.
 //
 //  Worked on by Cley, Ariel, Tony, Meiko, Daniel
@@ -18,6 +23,7 @@
 @implementation QuizMonkeyTestCase
 
 - (void)testTestFramework {
+	//creating XML document
 	NSMutableString* testXML = [NSMutableString stringWithCapacity:9000];
 	[testXML appendString:@"<questions>"];
 	
@@ -36,7 +42,7 @@
 	NSData* xml =[testXML dataUsingEncoding:NSUTF8StringEncoding];
 	
 	//Initialize Parser
-	parser = [QuestionParser new];
+	QuestionParser* parser = [QuestionParser new];
 	[parser parseData:xml];
 	
 	//Get the list of questions
@@ -44,20 +50,20 @@
 	
 	//Test Question Parser
 	//Question 1
-	Question *q1 =[questions objectAtIndex:0];
-	STAssertEquals(q1.time,
+	Question *testQuestion1 =[questions objectAtIndex:0];
+	STAssertEquals(testQuestion1.time,
                    5, 
                    @"FAILURE: time of Question 1.");
 	
 	
     //Check Question Type
-	NSComparisonResult doesTypeMatch = [q1.type compare:@"Fill in the blank"];
+	NSComparisonResult doesTypeMatch = [testQuestion1.type compare:@"Fill in the blank"];
     STAssertEquals(doesTypeMatch,
                    NSOrderedSame, 
                    @"FAILURE: type of Question 1.");
 	
 	//Check Question Sentence
-	doesTypeMatch = [q1.sentence compare:@"It smacked my face all of a su_den."];
+	doesTypeMatch = [testQuestion1.sentence compare:@"It smacked my face all of a su_den."];
     STAssertEquals(doesTypeMatch,
                    NSOrderedSame, 
                    @"FAILURE: sentence of Question 1.");
@@ -69,14 +75,14 @@
 	
 	
 	//Check to see if the points and choices are correct
-	for (int i = 0; i < [q1.choices count]; i++) {
-		doesTypeMatch = [[q1.choices objectAtIndex:i] compare:[choices objectAtIndex:i]];
+	for (int i = 0; i < [testQuestion1.choices count]; i++) {
+		doesTypeMatch = [[testQuestion1.choices objectAtIndex:i] compare:[choices objectAtIndex:i]];
 		STAssertEquals(doesTypeMatch,
 					   NSOrderedSame, 
 					   @"FAILURE: choice of Question 1.");
 		
 		STAssertEquals([[points objectAtIndex:i] intValue],
-					   [[q1.points objectAtIndex:i] intValue],
+					   [[testQuestion1.points objectAtIndex:i] intValue],
 					   @"FAILURE: points of question 1 don't match");
 	}
 	
