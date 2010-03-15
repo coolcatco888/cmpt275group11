@@ -89,8 +89,8 @@
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
 				4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */,
 				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
-				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
 				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
+				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
 				4E47DDB0114B09B800F766B8 /* Question.h */,
 				4E47DDB1114B09B800F766B8 /* Question.m */,
 			);
@@ -112,11 +112,10 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				DE9DF177114EEEC50078EA6B /* Tests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */,
-				1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */,
-				1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -153,6 +152,15 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE9DF177114EEEC50078EA6B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */,
+				1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

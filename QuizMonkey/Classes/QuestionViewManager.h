@@ -25,11 +25,11 @@
 	//Created from constructor
 	IBOutlet UIView *mainMenuScreen;//Holds a reference to the main menu
 	IBOutlet UIView *questionScreen;//Will be set as a subview for the main menu
-	UIView* finalScoreScreen;//This holds a reference to the screen that displays the student's final score at the end of the game
+	IBOutlet UIView* finalScoreScreen;//This holds a reference to the screen that displays the student's final score at the end of the game
 	IBOutlet UILabel *questionSentenceLabel;//Reference to the sentence label
 	IBOutlet UILabel *questionSentenceBottomLabel;//Reference to the sentence label below the question image
 	IBOutlet UILabel *questionTypeLabel;//Displays the type of question
-	UILabel *finalScoreLabel;
+	IBOutlet UILabel *finalScoreLabel;
 	IBOutlet UIImageView *questionImage;//Displays the image of the question, if any
 	IBOutlet UIImageView *monkeyImage;//Displays the image of the monkey after each question
 	IBOutlet UIProgressView *timerProgress;//Displays the time left in bar form
