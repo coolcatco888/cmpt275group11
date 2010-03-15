@@ -15,55 +15,53 @@
 	IBOutlet UIView *mainMenuView;
 	IBOutlet UIView *questionView;
 	IBOutlet UIView *highScoresView;
-	IBOutlet UIButton *playButton;
-	IBOutlet UIButton *quitButton;
-	IBOutlet UIButton *newButton;
-	IBOutlet UIImageView *monkeyImage;
-	IBOutlet UIImageView *smallMonkeyImage;
-	IBOutlet UIProgressView* timerProgress;
-	IBOutlet UIScrollView *scr_HighScores;
-	IBOutlet UITableViewCell *cel_Score1;
-	IBOutlet UITableView *tbl_HighScores;
-	CGPoint TapLocation;
-	IBOutlet UILabel *lbl_Y;//Will not run if this is removed but it will compile for some reason
-	NSXMLParser *QuestionParser;
+	IBOutlet UIView *finalScoreView;
+
+	//Main Menu View Outlets
 	
-	//Question Window Attributes (Passed on to QuestionViewManager)
+	//Question View Outlets (Passed on to QuestionViewManager)
 	IBOutlet UIButton *questionQuitButton;
 	IBOutlet UIButton *questionNextButton;
-	IBOutlet UIButton *questionChoice1Button;
-	IBOutlet UIButton *questionChoice2Button;
-	IBOutlet UIButton *questionChoice3Button;
-	IBOutlet UIButton *questionChoice4Button;
-	NSArray * questionChoiceButtons;
 	IBOutlet UILabel *questionSentenceLabel;
 	IBOutlet UILabel *questionSentenceBottomLabel;
 	IBOutlet UILabel *questionTypeLabel;
 	IBOutlet UIImageView *questionImage;
+	IBOutlet UIImageView *smallMonkeyImage;
+	IBOutlet UIProgressView *timerProgress;
+	IBOutlet UIButton *questionChoice1Button;
+	IBOutlet UIButton *questionChoice2Button;
+	IBOutlet UIButton *questionChoice3Button;
+	IBOutlet UIButton *questionChoice4Button;
+	NSArray *questionChoiceButtons;
+	QuestionViewManager *manager;
 	
-	QuestionViewManager* manager;
+	//High Scores View Outlets
+	CGPoint TapLocation;
 	
-	//Final Score screen
-	IBOutlet UIView *finalScoreView;
+	//Final Score View Outlet
 	IBOutlet UILabel *finalScoreLabel;
 }
 
-//Main Menu Functions
--(IBAction)ShowQuestionView:(id)sender;
--(IBAction)ShowHighScoresView:(id)sender;
--(IBAction)ExitHighScoresView:(id)sender;
-
-//Main Menu Test Functions
--(IBAction)SetCell:(id)sender;
--(IBAction)ShowAlert:(id)sender;
+//Main Menu View Functions
+-(IBAction)loadQuestionView:(id)sender;
+-(IBAction)loadHighScoresView:(id)sender;
+-(IBAction)exitApplication:(id)sender;
 
 //Question View Functions
 -(IBAction)exitQuestionView:(id)sender;
 -(IBAction)selectChoice:(id)sender;
 -(IBAction)nextQuestion:(id)sender;
 
+//High Scores View Funtions
+-(IBAction)exitHighScoresView:(id)sender;
+
+//Final Score View Functions
+-(IBAction)exitFinalScoreView:(id)sender;
+
+//Main Menu Test Functions
+
+
 //Final Score Functions
--(IBAction) exitFinalScoreScreen:(id)sender;
 
 @end
 

@@ -67,16 +67,16 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
-				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
-				4E47DDB0114B09B800F766B8 /* Question.h */,
-				4E47DDB1114B09B800F766B8 /* Question.m */,
 				1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */,
 				1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
 				4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */,
 				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
+				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
+				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
+				4E47DDB0114B09B800F766B8 /* Question.h */,
+				4E47DDB1114B09B800F766B8 /* Question.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

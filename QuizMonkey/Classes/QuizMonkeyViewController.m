@@ -13,10 +13,7 @@
 
 
 ////////////////////////Main View Functions
--(IBAction)ShowHighScoresView:(id)sender {
-	[mainMenuView addSubview:highScoresView];
-}
--(IBAction)ShowQuestionView:(id)sender {
+-(IBAction)loadQuestionView:(id)sender {
 	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
 	manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
 																  :questionView 
@@ -31,47 +28,34 @@
 																  :questionChoiceButtons];
 	
 }
--(IBAction)ShowAlert:(id)sender {
+-(IBAction)loadHighScoresView:(id)sender {
+	[mainMenuView addSubview:highScoresView];
+}
+-(IBAction)exitApplication:(id)sender {
 	exit(0);
 }
 
 
 ////////////////////////Question View Functions
--(IBAction) selectChoice:(id)sender {
-	[manager selectChoice:sender];
-}
-
 -(IBAction)exitQuestionView:(id)sender {
 	//Removing subview
 	[manager quitGame];
 	[manager stopTimer];
 }
 
+-(IBAction) selectChoice:(id)sender {
+	[manager selectChoice:sender];
+}
+
 -(IBAction)nextQuestion:(id)sender {
 	[manager nextQuestion:sender];	
 }
 
-////////////////////////Final score screen functions
--(IBAction) exitFinalScoreScreen:(id)sender {
-	[finalScoreView removeFromSuperview];
-	
-	//TODO: Add online score submission!
-}
 
 ////////////////////////High Scores View Functions
--(IBAction)ExitHighScoresView:(id)sender {
+-(IBAction)exitHighScoresView:(id)sender {
 	[highScoresView removeFromSuperview];
 }
-
-
--(IBAction)SetCell:(id)sender {
-
-}
-
-
- 
-
-
 
 -(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event {
 	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
@@ -95,9 +79,17 @@
 
 }
 -(void)touchesEnded: (NSSet *)touches withEvent:(UIEvent *)event {
-	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
-	newButton.center = [[[event allTouches] anyObject] locationInView:mainMenuView];
+//	TapLocation = [[[event allTouches] anyObject] locationInView:mainMenuView];
+//	newButton.center = [[[event allTouches] anyObject] locationInView:mainMenuView];
 }
+
+////////////////////////Final Score View Functions
+-(IBAction) exitFinalScoreView:(id)sender {
+	[finalScoreView removeFromSuperview];
+	
+	//TODO: Add online score submission!
+}
+
 
 
 
@@ -119,68 +111,36 @@
 	// e.g. self.myOutlet = nil;
 }
 
-
-
-
-//////////////////////////////////////BEGINING of table section
-// Customize the number of rows in the table view.
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
-}
-
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-	
-	//[cell setTextLabel:[[UILabel alloc] initWithFrame:CGRectZero];
-	//[cell setText:@"What"];
-
-	//Must create a button object
-	UIButton *btn_Temp;
-	btn_Temp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-
-	//Just setong the frame (x,y,Width,Height)
-	btn_Temp.frame = CGRectMake(0,0,480,43);
-	
-	//Set the Title of the button, MUST NOT FORGET "forState"
-	[btn_Temp setTitle:@"Student Name...................................................................................................................Score, 40/60" forState:UIControlStateNormal];
-	
-	//Maximum length of text that can fit in the IPhone's 480 wide button:
-	//...................................................................................................................
-	
-	//Setting which function will be called when button pressed
-	//addTarget is not really needed and I don't know what @selector is for
-	//[btn_New addTarget:self action:@selector(NewButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-	
-	//Then add the button to the current view as a subview
-	[cell addSubview:btn_Temp];
-	[btn_Temp retain];
-	
-//	cell.text = @"What.................................................................................................40/60";
-	
-    return cell;
-}
-///////////////////////////////////////END of teble section
-
-
-
 - (void)dealloc {
 	[mainMenuView release];
 	[questionView release];
 	[highScoresView release];
-	[playButton release];
-	[quitButton release];
-	[newButton release];
-	[monkeyImage release];
-    [super dealloc];
+	[finalScoreView release];
+	
+	//Main Menu View Outlets
+	
+	//Question View Outlets (Passed on to QuestionViewManager)
+	[questionQuitButton release];
+	[questionNextButton release];
+	[questionSentenceLabel release];
+	[questionSentenceBottomLabel release];
+	[questionTypeLabel release];
+	[questionImage release];
+	[smallMonkeyImage release];
+	[timerProgress release];
+	[questionChoice1Button release];
+	[questionChoice2Button release];
+	[questionChoice3Button release];
+	[questionChoice4Button release];
+	[questionChoiceButtons release];
+	[manager release];
+	
+	//High Scores View Outlets
+	
+	//Final Score screen
+	[finalScoreLabel release];
+
+	[super dealloc];
 }
 
 @end
