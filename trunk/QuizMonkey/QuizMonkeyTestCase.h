@@ -3,7 +3,15 @@
 //  QuizMonkey
 //
 //  Created by Tony Yang on 3/14/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: none
+//
+//  Changes:
+//   - 1.0 - Implemented
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>

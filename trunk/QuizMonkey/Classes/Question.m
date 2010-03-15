@@ -1,3 +1,18 @@
+//
+//  Question.m
+//  QuizMonkey
+//
+//  Created by Cley Tang on 3/12/10.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: See the header file
+//
+//  Changes: See the header file
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
+//
+
 #import "Question.h"
 
 @implementation Question

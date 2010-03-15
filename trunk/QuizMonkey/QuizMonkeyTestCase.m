@@ -3,7 +3,14 @@
 //  QuizMonkey
 //
 //  Created by Tony Yang on 3/14/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: See the header file
+//
+//  Changes: See the header file
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import "QuizMonkeyTestCase.h"

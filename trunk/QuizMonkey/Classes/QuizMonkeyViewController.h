@@ -3,7 +3,15 @@
 //  QuizMonkey
 //
 //  Created by Ariel Lorenzo-Luaces on 2/15/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: none
+//
+//  Changes:
+//   - 1.0 - Implemented
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
