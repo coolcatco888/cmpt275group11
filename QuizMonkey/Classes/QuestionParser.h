@@ -26,6 +26,7 @@
 			 :(NSString *)qName;
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;
 -(void)dealloc;
+- (BOOL)parseData:(NSData *)fileData;
 
 @end
 

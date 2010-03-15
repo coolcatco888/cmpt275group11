@@ -10,6 +10,10 @@
 		1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1D7D05F0114DC337003B550F /* QuizMonkeyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */; };
+		1D7D0654114DCD7B003B550F /* testQuestions1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D0653114DCD7B003B550F /* testQuestions1.xml */; };
+		1D7D069D114DD138003B550F /* QuestionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDC6114B0FC800F766B8 /* QuestionParser.m */; };
+		1D7D069F114DD147003B550F /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDB1114B09B800F766B8 /* Question.m */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* QuizMonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */; };
@@ -29,6 +33,11 @@
 		1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* QuizMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizMonkeyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuizMonkeyTests-Info.plist"; sourceTree = "<group>"; };
+		1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyTestCase.h; sourceTree = "<group>"; };
+		1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyTestCase.m; sourceTree = "<group>"; };
+		1D7D0653114DCD7B003B550F /* testQuestions1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = testQuestions1.xml; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizMonkeyViewController.xib; sourceTree = "<group>"; };
@@ -61,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D7D05E0114DC28E003B550F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* QuizMonkey.app */,
+				1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +114,9 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */,
+				1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */,
+				1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -113,6 +133,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D7D0653114DCD7B003B550F /* testQuestions1.xml */,
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
 				DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */,
@@ -154,6 +175,24 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* QuizMonkey.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1D7D05E2114DC28E003B550F /* QuizMonkeyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D7D05E7114DC28F003B550F /* Build configuration list for PBXNativeTarget "QuizMonkeyTests" */;
+			buildPhases = (
+				1D7D05DE114DC28E003B550F /* Resources */,
+				1D7D05DF114DC28E003B550F /* Sources */,
+				1D7D05E0114DC28E003B550F /* Frameworks */,
+				1D7D05E1114DC28E003B550F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuizMonkeyTests;
+			productName = QuizMonkeyTests;
+			productReference = 1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* QuizMonkey */,
+				1D7D05E2114DC28E003B550F /* QuizMonkeyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,7 +225,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D7D05DE114DC28E003B550F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7D0654114DCD7B003B550F /* testQuestions1.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D7D05E1114DC28E003B550F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -198,6 +262,16 @@
 				4E47DDA4114B033B00F766B8 /* QuestionViewManager.m in Sources */,
 				4E47DDB2114B09B800F766B8 /* Question.m in Sources */,
 				4E47DDC8114B0FC800F766B8 /* QuestionParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7D05DF114DC28E003B550F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7D05F0114DC337003B550F /* QuizMonkeyTestCase.m in Sources */,
+				1D7D069D114DD138003B550F /* QuestionParser.m in Sources */,
+				1D7D069F114DD147003B550F /* Question.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +301,60 @@
 				GCC_PREFIX_HEADER = QuizMonkey_Prefix.pch;
 				INFOPLIST_FILE = "QuizMonkey-Info.plist";
 				PRODUCT_NAME = QuizMonkey;
+			};
+			name = Release;
+		};
+		1D7D05E5114DC28F003B550F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "QuizMonkeyTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = QuizMonkeyTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1D7D05E6114DC28F003B550F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "QuizMonkeyTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = QuizMonkeyTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -264,6 +392,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D7D05E7114DC28F003B550F /* Build configuration list for PBXNativeTarget "QuizMonkeyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D7D05E5114DC28F003B550F /* Debug */,
+				1D7D05E6114DC28F003B550F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
