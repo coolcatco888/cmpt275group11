@@ -7,12 +7,18 @@
 -(NSMutableArray *)loadQuestionsFromXML:(NSString *)fileName{
 	NSString* pathToXML = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
 	NSData *fileData = [NSData dataWithContentsOfFile:pathToXML];
+	[self parseData: fileData];
+	return questions;
+}
+
+- (BOOL)parseData:(NSData *)fileData {
 	NSXMLParser *parser = [[NSXMLParser alloc] init];
 	[parser initWithData:fileData];
 	[parser setDelegate:self];
 	[parser parse];
-	return questions;
+    return YES;
 }
+
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName 
  namespaceURI:(NSString *)namespaceURI 
