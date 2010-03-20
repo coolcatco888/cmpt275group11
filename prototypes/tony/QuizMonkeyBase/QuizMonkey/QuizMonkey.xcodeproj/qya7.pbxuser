@@ -55,9 +55,9 @@
 	};
 	1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 1176}}";
-			sepNavSelRange = "{2478, 0}";
-			sepNavVisRange = "{0, 1081}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 1358}}";
+			sepNavSelRange = "{2044, 88}";
+			sepNavVisRange = "{1293, 1227}";
 		};
 	};
 	1D7D0653114DCD7B003B550F /* testQuestions1.xml */ = {
@@ -1219,8 +1219,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 290316351;
-			PBXWorkspaceStateSaveDate = 290316351;
+			PBXPerProjectTemplateStateSaveDate = 290736671;
+			PBXWorkspaceStateSaveDate = 290736671;
 		};
 		perUserProjectItems = {
 			1D7D0672114DCFDC003B550F = 1D7D0672114DCFDC003B550F /* PBXTextBookmark */;
@@ -1337,11 +1337,18 @@
 		userBuildSettings = {
 		};
 	};
+	4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 1526}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1373}";
+		};
+	};
 	4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 4270}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 4564}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 953}";
+			sepNavVisRange = "{0, 746}";
 		};
 	};
 	4E47DDB0114B09B800F766B8 /* Question.h */ = {
@@ -1367,9 +1374,9 @@
 	};
 	4E47DDC7114B0FC800F766B8 /* QuestionParser.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 546}}";
 			sepNavSelRange = "{28, 0}";
-			sepNavVisRange = "{0, 762}";
+			sepNavVisRange = "{0, 1313}";
 		};
 	};
 	B082554F114598C3001B084F /* Questions.xml */ = {
