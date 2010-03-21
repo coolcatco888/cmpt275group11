@@ -42,6 +42,7 @@
 	NSArray* questionChoiceButtons;//Holds all of the choice buttons
 	NSMutableArray* questionWords;//a list of word buttons (for find the verb/nouns/adj.)
 	UIView* buttonWordsView; 
+	NSUInteger selectedWords;
 
 	
 	NSMutableArray* questionList;//Holds the list of questions

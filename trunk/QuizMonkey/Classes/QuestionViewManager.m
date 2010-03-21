@@ -243,6 +243,8 @@
 		[questionSentenceBottomLabel setHidden:TRUE];
 		[questionImage setHidden:TRUE];
 		
+		selectedWords=0;
+		maxNumberOfChoiceSelections =[currentQuestion.points count];
 		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
 		totalPoints += totalPointsForCurrentQuestion;
 		//disable all of the choice buttons
@@ -316,7 +318,7 @@
 		
 			//removeObject:currentSelection];
 		[currentWord setSelected:FALSE];
-		
+		selectedWords--;
 		for(int i = 0; i < [currentQuestion.choices count]; i++) 
 		{
 			NSString* choiceText=[currentQuestion.choices objectAtIndex:i];
@@ -324,13 +326,14 @@
 			{
 				NSNumber* currentSelection = [NSNumber numberWithInt:i];
 				[selectedChoices removeObject:currentSelection];
+				
 			}
 		}
 	}
-	else
+	else if (selectedWords < maxNumberOfChoiceSelections) 
 	{
-		//[selectedChoices addObject:currentSelection];
 		[currentWord setSelected:TRUE];
+		selectedWords++;
 		for(int i = 0; i < [currentQuestion.choices count]; i++) 
 		{
 			NSString* choiceText=[currentQuestion.choices objectAtIndex:i];
@@ -338,34 +341,11 @@
 			{
 				NSNumber* currentSelection = [NSNumber numberWithInt:i];
 				[selectedChoices addObject:currentSelection];
+				
 			}
 		}
 	}
 	
-	/*UIButton* buttonPressed = (UIButton*)sender;
-	NSString* choice = buttonPressed.titleLabel.text;
-	
-	NSLog(choice);
-	
-	for(int i = 0; i < [questionWords count]; i++) {
-		//Match the selected choice with the available choices
-		if([choice isEqualToString:((UIButton*)[questionWords objectAtIndex:i]).titleLabel.text]) {
-			
-			//If this choice is already selected then remove it
-			NSNumber* currentSelection = [NSNumber numberWithInt:i];
-			if([selectedChoices containsObject:currentSelection]) {
-				[selectedChoices removeObject:currentSelection];
-				[buttonPressed setSelected:FALSE];
-				//If the number of selections you have made is still under the amount allowable
-				//Then add this as another one of your selections.
-			}
-			else 
-			{
-				[selectedChoices addObject:currentSelection];
-				[buttonPressed setSelected:TRUE];
-			}
-		}
-	}*/
 	
 }
 -(int) calculateTotalScore: (NSArray*) points {
