@@ -29,6 +29,8 @@
 @synthesize questionImage;
 @synthesize timerProgress;
 @synthesize questionChoiceButtons;
+@synthesize questionWords;
+@synthesize buttonWordsView;
 
 @synthesize questionList;
 @synthesize currentQuestionIndex;
@@ -71,6 +73,8 @@
 	//Setup variables
 	selectedChoices = [NSMutableSet setWithCapacity:4];
 	totalPointsAcquired = 0;
+	
+	questionWords = [NSMutableSet setWithCapacity:50];
 	
 	//Randomly select 10 questions and Display the questionScreen
 	questionList = [self select10Questions:questionLibrary];
@@ -206,13 +210,16 @@
 	//Here is where the screen objects are set from the question object
 	if([currentQuestion.type isEqualToString:@"Fill in the blank"]
 		|| [currentQuestion.type isEqualToString:@"Pick out the words"]
-		|| [currentQuestion.type isEqualToString:@"Find the misspelled word"]) {
+		|| [currentQuestion.type isEqualToString:@"Find the misspelled word"]){
 		NSLog(@"Did all dat");
 		[questionTypeLabel setText:currentQuestion.type];
 		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
 		[questionSentenceBottomLabel setHidden:TRUE];
 		[questionImage setHidden:TRUE];
+		for(int i = 0; i < [questionChoiceButtons count]; i++) {
+			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setHidden:FALSE];
+		}
 		
 		//Set all of the text for the choice buttons
 		for(int i = 0; i < [questionChoiceButtons count]; i++) {
@@ -225,11 +232,142 @@
 		totalPoints += totalPointsForCurrentQuestion;
 		NSLog(@"Max Points allowable is:");
 		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
+				
+
 	}
+	else 
+	{
+		//currentQuestion.sentence=@"To get a user’s answer out a given number of choices, the tap screen will be used. The application will use “.jpg” files for displaying graphical aspects of the application";//just for testing
+		[questionTypeLabel setText:currentQuestion.type];
+		[questionSentenceLabel setHidden:TRUE];
+		[questionSentenceBottomLabel setHidden:TRUE];
+		[questionImage setHidden:TRUE];
+		
+		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
+		totalPoints += totalPointsForCurrentQuestion;
+		//disable all of the choice buttons
+		for(int i = 0; i < [questionChoiceButtons count]; i++) {
+			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setHidden:TRUE];
+		}
+		
+		buttonWordsView=[[UIView alloc] initWithFrame:CGRectMake(40, 85, 400, 160)]; 
+		[questionScreen addSubview: buttonWordsView];
+		[buttonWordsView retain];
+		[questionSentenceLabel setText:currentQuestion.sentence];
+		
+		NSUInteger letterCounter=1;
+		NSString* word;
+		for(NSUInteger wordIndex=0;wordIndex<[[currentQuestion.sentence componentsSeparatedByString:@" "] count];wordIndex++)
+		{
+			word=[[currentQuestion.sentence componentsSeparatedByString:@" "] objectAtIndex:wordIndex];
+			
+			
+			int ix= letterCounter % ( 400 / WORD_BUTTON_UNIT_WEIGHT );
+			int iy= letterCounter / ( 400 / WORD_BUTTON_UNIT_WEIGHT );
+			if (ix+[word length]>( 400 / WORD_BUTTON_UNIT_WEIGHT ))
+			{
+				ix=0;
+				letterCounter=(iy+1)*( 400 / WORD_BUTTON_UNIT_WEIGHT );
+				iy++;
+			}
+			
+			
+			[questionWords addObject:[self buttonCreator: [NSString stringWithFormat:@"%@", word]  buttonX:(CGFloat)ix buttonY: (CGFloat)iy]];
+			letterCounter=letterCounter+([word length]);
+		}
+		//[questionWords count];
+		
+		
+		[questionWords removeAllObjects];
+		
+		[questionWords retain];
+		
+	}
+
 	
 	[questionList retain];
 }
-
+-(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)CustomizeX buttonY:(CGFloat)CustomizeY{
+	
+	CGFloat buttonWidth=(WORD_BUTTON_UNIT_WEIGHT)*([text length]);
+	UIButton *wordButton;
+	//wordButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+	wordButton=[UIButton buttonWithType:UIButtonTypeCustom];
+	[wordButton setFrame: CGRectMake((CustomizeX*WORD_BUTTON_UNIT_WEIGHT), (CustomizeY*WORD_BUTTON_UNIT_HEIGHT),buttonWidth ,WORD_BUTTON_UNIT_HEIGHT)];
+	[wordButton setTitle:text forState:UIControlStateNormal];
+	[wordButton setTitleColor:[UIColor yellowColor] forState:UIControlStateSelected];
+	//[wordButton.titleLabel setTextColor:[UIColor yellowColor]];
+	wordButton.titleLabel.font=[UIFont boldSystemFontOfSize:WORD_BUTTON_FONT_SIZE];
+	
+	//[wordButton.titleLabel adjustsFontSizeToFitWidth];
+	[wordButton addTarget:self action:@selector(selectword:) forControlEvents:UIControlEventTouchUpInside];
+	[buttonWordsView addSubview:wordButton];
+	[wordButton setShowsTouchWhenHighlighted:TRUE];
+	//[wordButton retain];
+	return wordButton;
+}
+-(void)selectword:(id)sender
+{
+	//[sender.titleLabel setTextColor:[UIColor yellowColor]];
+	//[sender setHighlighted:TRUE];
+	UIButton* currentWord=sender;
+	if(currentWord.selected==TRUE) 
+	{
+		
+			//removeObject:currentSelection];
+		[currentWord setSelected:FALSE];
+		
+		for(int i = 0; i < [currentQuestion.choices count]; i++) 
+		{
+			NSString* choiceText=[currentQuestion.choices objectAtIndex:i];
+			if ([choiceText compare:currentWord.titleLabel.text]==NSOrderedSame)
+			{
+				NSNumber* currentSelection = [NSNumber numberWithInt:i];
+				[selectedChoices removeObject:currentSelection];
+			}
+		}
+	}
+	else
+	{
+		//[selectedChoices addObject:currentSelection];
+		[currentWord setSelected:TRUE];
+		for(int i = 0; i < [currentQuestion.choices count]; i++) 
+		{
+			NSString* choiceText=[currentQuestion.choices objectAtIndex:i];
+			if ([choiceText compare:currentWord.titleLabel.text]==NSOrderedSame)
+			{
+				NSNumber* currentSelection = [NSNumber numberWithInt:i];
+				[selectedChoices addObject:currentSelection];
+			}
+		}
+	}
+	
+	/*UIButton* buttonPressed = (UIButton*)sender;
+	NSString* choice = buttonPressed.titleLabel.text;
+	
+	NSLog(choice);
+	
+	for(int i = 0; i < [questionWords count]; i++) {
+		//Match the selected choice with the available choices
+		if([choice isEqualToString:((UIButton*)[questionWords objectAtIndex:i]).titleLabel.text]) {
+			
+			//If this choice is already selected then remove it
+			NSNumber* currentSelection = [NSNumber numberWithInt:i];
+			if([selectedChoices containsObject:currentSelection]) {
+				[selectedChoices removeObject:currentSelection];
+				[buttonPressed setSelected:FALSE];
+				//If the number of selections you have made is still under the amount allowable
+				//Then add this as another one of your selections.
+			}
+			else 
+			{
+				[selectedChoices addObject:currentSelection];
+				[buttonPressed setSelected:TRUE];
+			}
+		}
+	}*/
+	
+}
 -(int) calculateTotalScore: (NSArray*) points {
 	
 	int totalScore = 0;
@@ -278,9 +416,13 @@
 	for(int i = 0; i < [questionChoiceButtons count]; i++) {
 		//Set state back to normal
 		[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setSelected:FALSE];
-		[monkeyImage setHidden:TRUE];
 	}
+	[monkeyImage setHidden:TRUE];
 	[questionChoiceButtons retain];
+	
+	[buttonWordsView removeFromSuperview];
+	
+
 }
 -(void) updateTimer {
 	//Decrement by one second at a time
@@ -304,6 +446,7 @@
 }
 -(void) quitGame {
 	[questionScreen removeFromSuperview];
+	//[buttonWordsView release];
 	[self resetAllButtons];
 }
 
