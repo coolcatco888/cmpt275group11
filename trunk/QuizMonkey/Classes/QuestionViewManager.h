@@ -21,6 +21,12 @@
 #import "Question.h"
 #import "QuestionParser.h"
 
+//word buttons' setting
+#define WORD_BUTTON_FONT_SIZE 20
+#define WORD_BUTTON_UNIT_HEIGHT 30
+#define WORD_BUTTON_UNIT_WEIGHT  ((12*WORD_BUTTON_FONT_SIZE)/16)
+
+
 @interface QuestionViewManager : NSObject {
 	//Created from constructor
 	IBOutlet UIView *mainMenuScreen;//Holds a reference to the main menu
@@ -34,7 +40,9 @@
 	IBOutlet UIImageView *monkeyImage;//Displays the image of the monkey after each question
 	IBOutlet UIProgressView *timerProgress;//Displays the time left in bar form
 	NSArray* questionChoiceButtons;//Holds all of the choice buttons
-	
+	NSMutableArray* questionWords;//a list of word buttons (for find the verb/nouns/adj.)
+	UIView* buttonWordsView; 
+
 	
 	NSMutableArray* questionList;//Holds the list of questions
 	NSUInteger currentQuestionIndex;//Holds the index of the current queestion
@@ -61,6 +69,8 @@
 @property (assign) IBOutlet UIImageView *questionImage;
 @property (assign) IBOutlet UIProgressView *timerProgress;
 @property (assign) NSArray* questionChoiceButtons;
+@property (assign) NSMutableArray* questionWords;
+@property (assign) UIView* buttonWordsView; 
 
 @property (assign) NSMutableArray* questionList;
 @property (assign) NSUInteger currentQuestionIndex;
@@ -92,4 +102,6 @@
 -(void)updateTimer;//fired every 1 second, checks whether time is up
 -(void)quitGame;//Removes questionScreen from the mainview
 -(void)stopTimer;//Stop timer from view controller
+-(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)ix buttonY:(CGFloat)iy;
+-(void)selectword:(id)sender;
 @end
