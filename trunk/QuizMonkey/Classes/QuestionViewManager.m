@@ -217,6 +217,7 @@
 		[questionSentenceLabel setHidden:FALSE];
 		[questionSentenceBottomLabel setHidden:TRUE];
 		[questionImage setHidden:TRUE];
+				
 		for(int i = 0; i < [questionChoiceButtons count]; i++) {
 			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setHidden:FALSE];
 		}
@@ -234,6 +235,40 @@
 		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
 				
 
+	}
+	else if ([currentQuestion.type isEqualToString:@"Match the picture"])
+	{
+		[questionTypeLabel setText:currentQuestion.type];
+		[questionSentenceLabel setHidden:TRUE];
+		[questionSentenceBottomLabel setText:currentQuestion.sentence];
+		[questionSentenceBottomLabel setHidden:FALSE];
+		
+		// resize the current image to new image
+		UIImage* currImage = [UIImage imageNamed:currentQuestion.image];
+		CGSize imageSize = CGSizeMake(150, 150);
+		UIGraphicsBeginImageContext(imageSize);
+		[currImage drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+		UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		[questionImage setImage:newImage];
+		[questionImage setHidden:FALSE];
+		
+		for(int i = 0; i < [questionChoiceButtons count]; i++) {
+			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setHidden:FALSE];
+		}
+		 
+		//Set all of the text for the choice buttons
+		for(int i = 0; i < [questionChoiceButtons count]; i++) {
+			[((UIButton*)[questionChoiceButtons objectAtIndex:i]) setTitle:[currentQuestion.choices objectAtIndex:i] forState:0];
+		}
+		
+		//Calculate Question Totals
+		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:currentQuestion.points];
+		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
+		totalPoints += totalPointsForCurrentQuestion;
+		NSLog(@"Max Points allowable is:");
+		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
 	}
 	else 
 	{
