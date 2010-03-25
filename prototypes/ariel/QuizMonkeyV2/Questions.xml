@@ -1,0 +1,31 @@
+<questions>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>It smacked my face all of a su_den.</sentence>
+		<choice>h</choice>
+		<choice>p</choice>
+		<choice>d</choice>
+		<choice>x</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+
+	<question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>It smacked my face all of a sudden.</sentence>
+		<choice>It</choice>
+		<choice>my</choice>
+		<choice>face</choice>
+		<choice>all</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<time>50</time>
+	</question>
+</questions>
