@@ -66,9 +66,26 @@ qualifiedName:(NSString *)qName{
 	else if([elementName isEqualToString:@"point"])		[questionInProgress addPoint:[textInProgress intValue]];
 	else if([elementName isEqualToString:@"time"])		[questionInProgress setTime: [textInProgress intValue]];
 	else if([elementName isEqualToString:@"sentence"])	[questionInProgress setSentence:textInProgress];
-	else if([elementName isEqualToString:@"question"])	[questions addObject:questionInProgress];
+	else if([elementName isEqualToString:@"question"])	{
+		BOOL isQuestionValid = [self isQuestionValid: questionInProgress];
+		if (isQuestionValid) {
+			[questions addObject:questionInProgress];
+		}//May want to put else { /* dealloc question */ } 
+		
+	}
 	[questionInProgress retain];
 }
+
+-(BOOL)isQuestionValid:(Question*) question {
+	BOOL isValid = TRUE;
+	
+	//Check whether question is valid, set isValid to false if not
+	
+	
+	return isValid;
+	
+}
+
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
 	//Copying the new found string to textInProgress for later use
 	textInProgress = [string copy];
