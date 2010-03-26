@@ -19,25 +19,28 @@
 
 @implementation QuizMonkeyViewController
 
+@synthesize questionViewController;
 
 ////////////////////////Main View Functions
 -(IBAction)loadQuestionView:(id)sender {
+	questionViewController = [questionViewController init];
+	[mainMenuView addSubview:questionView];
 	//Set up the array of the four buttons in the question view
-	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
-	
-	//Initiates the question manager and in the initiation it passes all the references of all the question view objects
-	manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
-																  :questionView 
-																  :finalScoreView 
-																  :questionSentenceLabel 
-																  :questionSentenceBottomLabel 
-																  :questionTypeLabel 
-																  :finalScoreLabel 
-																  :questionImage 
-																  :smallMonkeyImage
-																  :timerProgress
-																  :questionChoiceButtons];
-	
+	//	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
+	/*
+	 //Initiates the question manager and in the initiation it passes all the references of all the question view objects
+	 manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
+	 :questionView 
+	 :finalScoreView 
+	 :questionSentenceLabel 
+	 :questionSentenceBottomLabel 
+	 :questionTypeLabel 
+	 :finalScoreLabel 
+	 :questionImage 
+	 :smallMonkeyImage
+	 :timerProgress
+	 :questionChoiceButtons];
+	 */
 }
 -(IBAction)loadHighScoresView:(id)sender {
 	//Shows the high scores view
@@ -50,22 +53,22 @@
 
 
 ////////////////////////Question View Functions
--(IBAction) selectChoice:(id)sender {
-	//Passes the id of the button which called this function to the selectChoice function in the question manager
-	//So that the manager knows which button was pressed
-	[manager selectChoice:sender];
-}
-
--(IBAction)nextQuestion:(id)sender {
-	//Calls the next question function to display the next question
-	[manager nextQuestion:sender];	
-}
--(IBAction)exitQuestionView:(id)sender {
-	//Removing subview
-	[manager quitGame];
-	[manager stopTimer];
-}
-
+/*-(IBAction) selectChoice:(id)sender {
+ //Passes the id of the button which called this function to the selectChoice function in the question manager
+ //So that the manager knows which button was pressed
+ [manager selectChoice:sender];
+ }
+ 
+ -(IBAction)nextQuestion:(id)sender {
+ //Calls the next question function to display the next question
+ [manager nextQuestion:sender];	
+ }
+ -(IBAction)exitQuestionView:(id)sender {
+ //Removing subview
+ [manager quitGame];
+ [manager stopTimer];
+ }
+ */
 
 ////////////////////////High Scores View Functions
 -(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event {
@@ -98,6 +101,7 @@
 ////////////////////////Final Score View Functions
 -(IBAction) exitFinalScoreView:(id)sender {
 	//Hides the final view
+	//	NSLog(@"%i",[manager totalPointsAcquired]);
 	[finalScoreView removeFromSuperview];
 	
 	//TODO: Add online score submission!
@@ -134,27 +138,28 @@
 	//Main Menu View Outlets
 	
 	//Question View Outlets (Passed on to QuestionViewManager)
-	[questionQuitButton release];
-	[questionNextButton release];
-	[questionSentenceLabel release];
-	[questionSentenceBottomLabel release];
-	[questionTypeLabel release];
-	[questionImage release];
-	[smallMonkeyImage release];
-	[timerProgress release];
-	[questionChoice1Button release];
-	[questionChoice2Button release];
-	[questionChoice3Button release];
-	[questionChoice4Button release];
-	[questionChoiceButtons release];
-	[manager release];
+	/*	[questionQuitButton release];
+	 [questionNextButton release];
+	 [questionSentenceLabel release];
+	 [questionSentenceBottomLabel release];
+	 [questionTypeLabel release];
+	 [questionImage release];
+	 [smallMonkeyImage release];
+	 [timerProgress release];
+	 [questionChoice1Button release];
+	 [questionChoice2Button release];
+	 [questionChoice3Button release];
+	 [questionChoice4Button release];
+	 [questionChoiceButtons release];
+	 [manager release];
+	 */
 	
 	//High Scores View Outlets
 	//(None)
 	
 	//Final Score View Outlets
 	[finalScoreLabel release];
-
+	
 	[super dealloc];
 }
 
