@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		116FB21A115ACE9F00962BD6 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 116FB219115ACE9F00962BD6 /* car.jpg */; };
-		11E53EC3115ABFC3003934B1 /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11E53EC2115ABFC3003934B1 /* banana.jpg */; };
-		11E53ECD115AC4AF003934B1 /* mukmuk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11E53ECC115AC4AF003934B1 /* mukmuk.jpg */; };
+		11EF8E5F115D6D19001FCEE1 /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E5E115D6D19001FCEE1 /* banana.jpg */; };
+		11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E60115D6D2C001FCEE1 /* car.jpg */; };
+		11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */; };
 		1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -31,9 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		116FB219115ACE9F00962BD6 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = car.jpg; path = ../../car.jpg; sourceTree = SOURCE_ROOT; };
-		11E53EC2115ABFC3003934B1 /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banana.jpg; path = ../../banana.jpg; sourceTree = SOURCE_ROOT; };
-		11E53ECC115AC4AF003934B1 /* mukmuk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mukmuk.jpg; path = ../../mukmuk.jpg; sourceTree = SOURCE_ROOT; };
+		11EF8E5E115D6D19001FCEE1 /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana.jpg; sourceTree = "<group>"; };
+		11EF8E60115D6D2C001FCEE1 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
+		11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mukmuk.jpg; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyAppDelegate.m; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				116FB219115ACE9F00962BD6 /* car.jpg */,
-				11E53ECC115AC4AF003934B1 /* mukmuk.jpg */,
-				11E53EC2115ABFC3003934B1 /* banana.jpg */,
+				11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */,
+				11EF8E60115D6D2C001FCEE1 /* car.jpg */,
+				11EF8E5E115D6D19001FCEE1 /* banana.jpg */,
 				1D7D0653114DCD7B003B550F /* Questions.xml */,
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
@@ -236,9 +236,9 @@
 				DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */,
 				DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */,
 				EA8C413E115566B300F15609 /* Questions.xml in Resources */,
-				11E53EC3115ABFC3003934B1 /* banana.jpg in Resources */,
-				11E53ECD115AC4AF003934B1 /* mukmuk.jpg in Resources */,
-				116FB21A115ACE9F00962BD6 /* car.jpg in Resources */,
+				11EF8E5F115D6D19001FCEE1 /* banana.jpg in Resources */,
+				11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */,
+				11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
