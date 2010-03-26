@@ -30,3 +30,4 @@ Activities done during meeting time, meeting content, and attendance are recorde
 ||Mar. 10, 2010 <br> 3:30PM - 7:00PM|| AQ Lab, WMC Lab || Meiko, Tony, Daniel, Cley||-worked on the XML parser<br>-worked on question builder <br>-started work on screen builder<br>-started preparing the presentation||
 ||Mar. 12. 2010 <br> 3:30PM - 8:00PM|| WMC Lab, Library|| Whole Team|| -completed work on question builder <br>-completed work on the XML parser<br>-continued work on the screen builder<br>-continued preparing the presentation<br>-started updating the documents for re-submission||
 ||Mar. 14, 2010 <br> 3:30PM - 8:00PM|| Library || Whole Team || -completed work on the game engine <br>-continued work on unit testing <br>-finished assignment 3 presentation powerpoint <br>-continued updating documents for resubmission||
+||Mar. 26, 2010 <br> 3:30PM - 8:00PM|| Library || Whole Team || -
