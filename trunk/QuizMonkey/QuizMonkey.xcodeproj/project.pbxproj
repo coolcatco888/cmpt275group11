@@ -27,6 +27,7 @@
 		DE207C30112A44CE005AD593 /* Pic-BackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2D112A44CE005AD593 /* Pic-BackGround.png */; };
 		DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2E112A44CE005AD593 /* Pic-Title.png */; };
 		DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */; };
+		DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5D287115D7E51006B3A5D /* QuestionViewController.m */; };
 		EA8C413E115566B300F15609 /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D0653114DCD7B003B550F /* Questions.xml */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		DE207C2D112A44CE005AD593 /* Pic-BackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-BackGround.png"; sourceTree = "<group>"; };
 		DE207C2E112A44CE005AD593 /* Pic-Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-Title.png"; sourceTree = "<group>"; };
 		DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-ProfMonkey.png"; sourceTree = "<group>"; };
+		DED5D287115D7E51006B3A5D /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		DED5D288115D7E51006B3A5D /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
+				DED5D287115D7E51006B3A5D /* QuestionViewController.m */,
+				DED5D288115D7E51006B3A5D /* QuestionViewController.h */,
 				4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */,
 				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
 				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
@@ -278,6 +283,7 @@
 				4E47DDA4114B033B00F766B8 /* QuestionViewManager.m in Sources */,
 				4E47DDB2114B09B800F766B8 /* Question.m in Sources */,
 				4E47DDC8114B0FC800F766B8 /* QuestionParser.m in Sources */,
+				DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
