@@ -44,7 +44,6 @@
 
 
 - init {
-	NSLog(@"GotHere");
 	questionChoiceButtonArray = [NSArray arrayWithObjects:questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil];
 	
 	[questionTimerProgress setProgress:1.0];
@@ -91,9 +90,9 @@
 		int n = (random() % nElements) + i;
 		[questionListOfXML  exchangeObjectAtIndex:i withObjectAtIndex:n];
 		[questionListOfQuiz addObject:[questionListOfXML objectAtIndex:i]];
-		totalQuizTime += [[questionListOfQuiz objectAtIndex:i] time];
+		totalTime += [[questionListOfQuiz objectAtIndex:i] time];
 	}
-	totalTimeLeft = totalQuizTime;
+	totalTimeLeft = totalTime;
 	[questionListOfQuiz retain];
 }
 - (void)loadNextQuestionToView {
@@ -255,11 +254,23 @@
 	//Here is where the screen objects are set from the question object
 	if([currentQuestion.type isEqualToString:@"Fill in the blank"]
 	   || [currentQuestion.type isEqualToString:@"Pick out the words"]
-	   || [currentQuestion.type isEqualToString:@"Find the misspelled word"]){
+	   || [currentQuestion.type isEqualToString:@"Find the misspelled word"]
+		|| [currentQuestion.type isEqualToString:@"Match the picture"]){
 		NSLog(@"Did all dat");
 		[questionTitleLabel setText:currentQuestion.type];
 		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
+
+		UIImage* currImage = [UIImage imageNamed:currentQuestion.image];
+		CGSize imageSize = CGSizeMake(150, 150);
+		UIGraphicsBeginImageContext(imageSize);
+		[currImage drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+		UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		[questionImage setImage:newImage];
+		[questionImage setHidden:FALSE];
+		
 		//Set all of the text for the choice buttons
 		for(int i = 0; i < [questionChoiceButtonArray count]; i++) {
 			[[questionChoiceButtonArray objectAtIndex:i] setTitle:[currentQuestion.choices objectAtIndex:i] forState:0];
@@ -434,6 +445,7 @@
 	[buttonWordsView removeFromSuperview];
 }
 - (void)updateTimer {
+	NSLog(@"Time:%i, TOTALTime:%i",totalTimeLeft,totalTime);
 	//Decrement by one second at a time
 	totalTimeLeft--;
 	//Update timer bar
@@ -445,7 +457,7 @@
 		
 		alert = [[UIAlertView alloc] initWithTitle:@"Oh no!!!" 
 										   message:@"You ran out of time!" 
-										  delegate:self 
+										  delegate:self
 								 cancelButtonTitle:@"Quit to Main Menu" 
 								 otherButtonTitles:nil];
 		[alert show];

@@ -24,6 +24,7 @@
 		4E47DDA4114B033B00F766B8 /* QuestionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */; };
 		4E47DDB2114B09B800F766B8 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDB1114B09B800F766B8 /* Question.m */; };
 		4E47DDC8114B0FC800F766B8 /* QuestionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDC6114B0FC800F766B8 /* QuestionParser.m */; };
+		DE101893115D93AD004D378B /* Questions2.xml in Resources */ = {isa = PBXBuildFile; fileRef = DE101892115D93AD004D378B /* Questions2.xml */; };
 		DE207C30112A44CE005AD593 /* Pic-BackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2D112A44CE005AD593 /* Pic-BackGround.png */; };
 		DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2E112A44CE005AD593 /* Pic-Title.png */; };
 		DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */; };
@@ -59,6 +60,7 @@
 		4E47DDC6114B0FC800F766B8 /* QuestionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionParser.m; sourceTree = "<group>"; };
 		4E47DDC7114B0FC800F766B8 /* QuestionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionParser.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* QuizMonkey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QuizMonkey-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DE101892115D93AD004D378B /* Questions2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions2.xml; sourceTree = "<group>"; };
 		DE207C2D112A44CE005AD593 /* Pic-BackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-BackGround.png"; sourceTree = "<group>"; };
 		DE207C2E112A44CE005AD593 /* Pic-Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-Title.png"; sourceTree = "<group>"; };
 		DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-ProfMonkey.png"; sourceTree = "<group>"; };
@@ -94,8 +96,8 @@
 				1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
-				DED5D287115D7E51006B3A5D /* QuestionViewController.m */,
 				DED5D288115D7E51006B3A5D /* QuestionViewController.h */,
+				DED5D287115D7E51006B3A5D /* QuestionViewController.m */,
 				4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */,
 				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
 				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
@@ -141,10 +143,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D7D0653114DCD7B003B550F /* Questions.xml */,
+				DE101892115D93AD004D378B /* Questions2.xml */,
 				11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */,
 				11EF8E60115D6D2C001FCEE1 /* car.jpg */,
 				11EF8E5E115D6D19001FCEE1 /* banana.jpg */,
-				1D7D0653114DCD7B003B550F /* Questions.xml */,
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
 				DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */,
@@ -244,6 +247,7 @@
 				11EF8E5F115D6D19001FCEE1 /* banana.jpg in Resources */,
 				11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */,
 				11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */,
+				DE101893115D93AD004D378B /* Questions2.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
