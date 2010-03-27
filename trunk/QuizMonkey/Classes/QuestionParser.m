@@ -73,7 +73,14 @@ qualifiedName:(NSString *)qName{
 		}//May want to put else { /* dealloc question */ } 
 		
 	}
-	[questionInProgress retain];
+	
+	if (isQuestionValid) 
+		[questionInProgress retain];
+	else
+		[questionInProgress release];
+
+	
+
 }
 
 -(BOOL)isQuestionValid:(Question*) question {
