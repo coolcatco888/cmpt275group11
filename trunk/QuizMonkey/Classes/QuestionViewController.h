@@ -160,5 +160,5 @@
 -(void)stopTimer;//Stop timer from view controller
 -(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)ix buttonY:(CGFloat)iy;
 -(void)selectword:(id)sender;
-
+- (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2;
 @end

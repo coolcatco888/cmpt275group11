@@ -261,7 +261,7 @@
 					<object class="IBUIImageView" id="423017136">
 						<reference key="NSNextResponder" ref="908564596"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{120, 68}, {240, 128}}</string>
+						<string key="NSFrame">{{90, 65}, {300, 150}}</string>
 						<reference key="NSSuperview" ref="908564596"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -2062,7 +2062,7 @@
 					<string>QuestionViewController</string>
 					<string>{{0, 365}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{270, 186}, {480, 300}}</string>
+					<string>{{343, 329}, {480, 300}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{562, 313}, {480, 320}}</string>
