@@ -247,8 +247,12 @@
 	NSLog(@"New Question Set at Index:");
 	NSLog([[NSNumber numberWithInt:index] stringValue]);
 	
-	if([self questionHasImage])
+	if([self questionHasImage]) {
 		questionSentenceLabel.frame = CGRectMake(SENTENCE_RECT_WHEN_IMAGE_X, SENTENCE_RECT_WHEN_IMAGE_Y, SENTENCE_RECT_WHEN_IMAGE_W, SENTENCE_RECT_WHEN_IMAGE_H);
+		[questionImage setImage:[UIImage imageNamed:currentQuestion.image]];
+		[questionImage setHidden:FALSE];
+
+	}
 	
 	
 	//Here is where the screen objects are set from the question object
@@ -261,15 +265,6 @@
 		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
 
-		UIImage* currImage = [UIImage imageNamed:currentQuestion.image];
-		CGSize imageSize = CGSizeMake(150, 150);
-		UIGraphicsBeginImageContext(imageSize);
-		[currImage drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
-		UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
-		UIGraphicsEndImageContext();
-		
-		[questionImage setImage:newImage];
-		[questionImage setHidden:FALSE];
 		
 		//Set all of the text for the choice buttons
 		for(int i = 0; i < [questionChoiceButtonArray count]; i++) {
@@ -363,7 +358,7 @@
 		for(int i = 0; i < [currentQuestion.choices count]; i++) 
 		{
 			NSString* choiceText=[currentQuestion.choices objectAtIndex:i];
-			if ([choiceText compare:currentWord.titleLabel.text]==NSOrderedSame)
+			if([self roughCompare:choiceText otherString:currentWord.titleLabel.text])
 			{
 				NSNumber* currentSelection = [NSNumber numberWithInt:i];
 				[selectedChoices removeObject:currentSelection];
@@ -378,7 +373,7 @@
 		for(int i = 0; i < [currentQuestion.choices count]; i++) 
 		{
 			NSString* choiceText=[currentQuestion.choices objectAtIndex:i];
-			if ([choiceText compare:currentWord.titleLabel.text]==NSOrderedSame)
+			if([self roughCompare:choiceText otherString:currentWord.titleLabel.text])
 			{
 				NSNumber* currentSelection = [NSNumber numberWithInt:i];
 				[selectedChoices addObject:currentSelection];
@@ -387,6 +382,32 @@
 		}
 	}
 	
+	
+}
+
+- (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2{
+	str1 = [str1 lowercaseString];
+	str1 = [str1 stringByReplacingOccurrencesOfString:@"," withString:@""];
+	str1 = [str1 stringByReplacingOccurrencesOfString:@"." withString:@""];
+	str1 = [str1 stringByReplacingOccurrencesOfString:@"!" withString:@""];
+	str1 = [str1 stringByReplacingOccurrencesOfString:@"(" withString:@""];
+	str1 = [str1 stringByReplacingOccurrencesOfString:@")" withString:@""];
+	
+	str2 = [str2 lowercaseString];
+	str2 = [str2 stringByReplacingOccurrencesOfString:@"," withString:@""];
+	str2 = [str2 stringByReplacingOccurrencesOfString:@"." withString:@""];
+	str2 = [str2 stringByReplacingOccurrencesOfString:@"!" withString:@""];
+	str2 = [str2 stringByReplacingOccurrencesOfString:@"(" withString:@""];
+	str2 = [str2 stringByReplacingOccurrencesOfString:@")" withString:@""];
+	
+	if ([str2 compare:str1]==NSOrderedSame)
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	}
 	
 }
 - (int)calculateTotalScore:(NSArray*)points {
