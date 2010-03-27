@@ -6,7 +6,71 @@
         Defines the general styling for Online Score View
 */
 
+/* Global Styles */
 root { 
     display: block;
 }
 
+body {
+    margin: 0;
+    padding: 0px;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color:#296894;
+}
+
+div.display, a {
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    padding: 5px;
+    margin: 5px;
+    border:1px solid transparent;
+    border-color:#296894;
+}
+
+#content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 140%;
+}
+
+table {
+    border: none;
+}
+
+td {
+    padding: 5px;
+}
+
+a {
+    color:#296894;
+    text-decoration: none;
+}
+a:hover {
+    color:#FFFFFF;
+    background-color:#296894;
+
+}
+
+/* Index Page */
+#loginbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 200px;
+}
+
+#logintable {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
