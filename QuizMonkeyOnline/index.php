@@ -1,14 +1,10 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
         <?php
         include_once('includes/head.inc');
         ?>
-        <title></title>
+        <title>Quiz Monkey - Teacher Login</title>
     </head>
     <body>
         <div id='content'>
