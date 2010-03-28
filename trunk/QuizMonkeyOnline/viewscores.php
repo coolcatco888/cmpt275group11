@@ -1,16 +1,17 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <?php
+        include_once('includes/head.inc');
+        ?>
+        <title>Quiz Monkey - Student Scores</title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <div id='content'>
+            <img src="images/banner.png" alt="Quiz Monkey Student Progress Monitoring System"/>
+            <h1>Student Scores</h1>
+            <div id='loginbox' class='display'>
+            </div>
+        </div>
     </body>
 </html>

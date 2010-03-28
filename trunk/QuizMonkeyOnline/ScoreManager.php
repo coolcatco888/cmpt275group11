@@ -11,10 +11,7 @@ class ScoreManager {
 	var $db_user='quizmonkey';
 	var $db_pass='teamawesome';//Don't hack our database!
 
-    function ScoreManager() {
-
-    }
-
+    //Executes sql queries on the database
     protected function execute_query($sql) {
         $row = '';
 
@@ -38,6 +35,7 @@ class ScoreManager {
         return $result;
     }
 
+    //Authenticates login, returns true if login is a success, false if not
     function login($username, $password) {
         $login_success = false;
 
@@ -52,6 +50,7 @@ class ScoreManager {
 
     }
 
+    //Uniquely generates score id
     function generate_scoreid($username) {
         $scoreid = '';
 
@@ -62,10 +61,14 @@ class ScoreManager {
         return $scoreid;
     }
 
-
+    //Inserts a score entry into the database
     function insert_score($username, $scoreid, $timeleft, $points, $maxpoints) {
         $this->execute_query("INSERT INTO `quizmonkey`.`scores` (`userid` ,`scoreid` ,`timeleft` ,`date` ,`points` ,`maxpoints`) "
             ."VALUES ('$username', '$scoreid', '$timeleft', CURDATE( ) , '$points', '$maxpoints');");
+    }
+
+    function retrieve_all_scores() {
+        
     }
 
 
