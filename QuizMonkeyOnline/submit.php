@@ -15,7 +15,7 @@ $points = $_GET['points'];
 $maxpoints = $_GET['maxpoints'];
 
 $allnumerical = false;
-if(is_int($timeleft) && is_int($points) && is_int($maxpoints)) {
+if(is_numeric($timeleft) && is_numeric($points) && is_numeric($maxpoints)) {
     $allnumerical = true;
 }
 
