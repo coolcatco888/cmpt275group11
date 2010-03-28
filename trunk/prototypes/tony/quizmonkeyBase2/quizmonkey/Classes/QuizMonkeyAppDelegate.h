@@ -2,8 +2,16 @@
 //  QuizMonkeyAppDelegate.h
 //  QuizMonkey
 //
-//  Created by yang qiong on 2/13/10.
-//  Copyright sfu 2010. All rights reserved.
+//  Created by Ariel Lorenzo-Luaces on 2/15/10.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: none
+//
+//  Changes:
+//   - 1.0 - Implemented
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
