@@ -18,20 +18,14 @@
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>It smacked my face all of a sudden.</sentence>
-		<choice>It</choice>
-		<choice>my</choice>
-		<choice>face</choice>
 		<choice>all</choice>
-		<point>10</point>
-		<point>10</point>
-		<point>10</point>
 		<point>10</point>
 		<time>50</time>
 	</question>
 	
 	<question>
 		<type>Match the picture</type>
-		<image>banana.jpg</image>
+		<image>banana.png</image>
 		<sentence>What's this?</sentence>
 		<choice>apple</choice>
 		<choice>banana</choice>
@@ -46,7 +40,7 @@
 	
 	<question>
 		<type>Match the picture</type>
-		<image>mukmuk.jpg</image>
+		<image>mukmuk.png</image>
 		<sentence>Who's he?</sentence>
 		<choice>monkey</choice>
 		<choice>bird</choice>
@@ -74,7 +68,7 @@
 	
 	<question>
 		<type>Match the picture</type>
-		<image>car.jpg</image>
+		<image>car.png</image>
 		<sentence>What's that?</sentence>
 		<choice>apple</choice>
 		<choice>banana</choice>
@@ -275,6 +269,52 @@
 		<point>0</point>
 		<time>5</time>
 	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>We watched the birds eat seeds and fly away.</sentence>
+		<choice>watched</choice>
+        <choice>eat</choice>
+        <choice>fly</choice>
+        <point>10</point>
+        <point>10</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>A new baby zebra was born at the zoo last month.</sentence>
+		<choice>born</choice>
+		<point>10</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Two cute iguanas live in a cage in our classroom.</sentence>
+		<choice>iguanas</choice>
+        <choice>cage</choice>
+        <choice>classroom</choice>
+        <point>15</point>
+        <point>10</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>We wanted to skate last Friday.</sentence>
+		<choice>wanted</choice>
+        <choice>skate</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
 	
 	<question>
 		<type>Fill in the blank</type>
@@ -304,6 +344,21 @@
 		<point>0</point>
 		<point>0</point>
 		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>grapes.png</image>
+		<sentence>What're the colors of the grapes?</sentence>
+		<choice>red</choice>
+		<choice>black</choice>
+		<choice>orange</choice>
+		<choice>green</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
 	</question>
 	
 	<question>
@@ -349,5 +404,455 @@
 		<point>10</point>
 		<point>0</point>
 		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: The drinks have a lot of caffeine and adults like to drink</sentence>
+		<choice>kofe</choice>
+		<choice>water</choice>
+		<choice>sandwich</choice>
+		<choice>tae</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: Soft footwear that is worn indoors</sentence>
+		<choice>shoes</choice>
+		<choice>sliper</choice>
+		<choice>slipper</choice>
+		<choice>hat</choice>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Penguins are birds that cannot fly.</sentence>
+		<choice>fly</choice>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>The fat, dirty pig is playing in the mud.</sentence>
+		<choice>fat</choice>
+        <choice>dirty</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>penguin.png</image>
+		<sentence>What's this?</sentence>
+		<choice>bird</choice>
+		<choice>chicken</choice>
+		<choice>cat</choice>
+		<choice>penguin</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Michael and Alex played a game after they finished their homework.</sentence>
+		<choice>Michael</choice>
+        <choice>Alex</choice>
+        <choice>game</choice>
+        <choice>homework</choice>
+        <point>15</point>
+        <point>15</point>
+        <point>10</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>surfing.png</image>
+		<sentence>What's he doing?</sentence>
+		<choice>running</choice>
+		<choice>dancing</choice>
+		<choice>surfing</choice>
+		<choice>skiing</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>The sun rises in the east and sets in the west.</sentence>
+		<choice>sun</choice>
+        <choice>east</choice>
+        <choice>west</choice>
+        <point>10</point>
+        <point>10</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Penguins are birds that cannot fly.</sentence>
+		<choice>Penguins</choice>
+        <choice>birds</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>The sun rises in the east and sets in the west.</sentence>
+		<choice>rises</choice>
+        <choice>sets</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Michael and Alex played a game after they finished their homework.</sentence>
+		<choice>played</choice>
+        <choice>finished</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Alen and Sammy are playing football in the playground.</sentence>
+		<choice>Alen</choice>
+        <choice>Sammy</choice>
+        <choice>football</choice>
+        <choice>playground</choice>
+        <point>10</point>
+        <point>10</point>
+        <point>10</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>We saw a beautiful bird in the woods.</sentence>
+		<choice>bird</choice>
+        <choice>woods</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Armando lives in Mexico.</sentence>
+		<choice>Armando</choice>
+        <choice>Mexico</choice>
+        <point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>The early bird catches the worm.</sentence>
+		<choice>early</choice>
+		<point>10</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>The little boy is carrying a big, round watermelon.</sentence>
+		<choice>little</choice>
+        <choice>big</choice>
+        <choice>round</choice>
+        <point>10</point>
+        <point>10</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>Jan is a clever girl.</sentence>
+		<choice>clever</choice>
+		<point>10</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>When I was young, my elder sister often bought me a delicious ice-cream.</sentence>
+		<choice>young</choice>
+        <choice>elder</choice>
+        <choice>delicious</choice>
+        <point>10</point>
+        <point>10</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>Cats are smarter than dogs.</sentence>
+		<choice>smarter</choice>
+		<point>10</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are vegetables?</sentence>
+		<choice>cabbage</choice>
+		<choice>cucumber</choice>
+		<choice>potato</choice>
+		<choice>carrot</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are jobs?</sentence>
+		<choice>father</choice>
+		<choice>teacher</choice>
+		<choice>dentist</choice>
+		<choice>woman</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words describe the weather?</sentence>
+		<choice>happy</choice>
+		<choice>snowy</choice>
+		<choice>quick</choice>
+		<choice>low</choice>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words do not belong to days of the week?</sentence>
+		<choice>Birthday</choice>
+		<choice>Monday</choice>
+		<choice>Friday</choice>
+		<choice>June</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>15</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: The word(s) describes a person's age/appearance</sentence>
+		<choice>yung</choice>
+		<choice>qute</choice>
+		<choice>black</choice>
+		<choice>terrible</choice>
+		<point>10</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: Food name(s)</sentence>
+		<choice>potatos</choice>
+		<choice>tomatos</choice>
+		<choice>photos</choice>
+		<choice>sandwichs</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: A set of printed sheets of paper contains daily or weekly news.</sentence>
+		<choice>magazine</choice>
+		<choice>radio</choice>
+		<choice>newpaper</choice>
+		<choice>television</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: Country name(s)</sentence>
+		<choice>Jepanese</choice>
+		<choice>Vancouver</choice>
+		<choice>China</choice>
+		<choice>Gemany</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>15</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: only one word is misspelled</sentence>
+		<choice>docter</choice>
+		<choice>sailor</choice>
+		<choice>soldier</choice>
+		<choice>driver</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>panada.png</image>
+		<sentence>What animal is it?</sentence>
+		<choice>cat</choice>
+		<choice>panda</choice>
+		<choice>dog</choice>
+		<choice>mouse</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>canada_flag.png</image>
+		<sentence>What country is it?</sentence>
+		<choice>United States</choice>
+		<choice>China</choice>
+		<choice>Japan</choice>
+		<choice>Canada</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>He swept the leaves up into a pile.</sentence>
+		<choice>swept</choice>
+		<point>10</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>firefighter.png</image>
+		<sentence>What's his job?</sentence>
+		<choice>firefighter</choice>
+		<choice>teacher</choice>
+		<choice>farmer</choice>
+		<choice>sailor</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>police_officer.png</image>
+		<sentence>What's his job?</sentence>
+		<choice>firefighter</choice>
+		<choice>police officer</choice>
+		<choice>waiter</choice>
+		<choice>nurse</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>post_office.png</image>
+		<sentence>Where is it?</sentence>
+		<choice>hospital</choice>
+		<choice>school</choice>
+		<choice>post office</choice>
+		<choice>bus station</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
 	</question>
 </questions>
