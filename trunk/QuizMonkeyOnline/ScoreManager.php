@@ -1,11 +1,7 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
- * Description of ScoreManager
+ * Description of Handles storing and retrieval of QuizMonkey scores
  *
  * @author cley
  */
@@ -54,6 +50,22 @@ class ScoreManager {
 
         return $login_success;
 
+    }
+
+    function generate_scoreid($username) {
+        $scoreid = '';
+
+        $result = $this->execute_query("SELECT * FROM `scores` WHERE userid='$username';");
+
+        $scoreid = mysql_num_rows($result);
+
+        return $scoreid;
+    }
+
+
+    function insert_score($username, $scoreid, $timeleft, $points, $maxpoints) {
+        $this->execute_query("INSERT INTO `quizmonkey`.`scores` (`userid` ,`scoreid` ,`timeleft` ,`date` ,`points` ,`maxpoints`) "
+            ."VALUES ('$username', '$scoreid', '$timeleft', CURDATE( ) , '$points', '$maxpoints');");
     }
 
 
