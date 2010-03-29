@@ -82,7 +82,7 @@
 	
 	//Created from constructor
 	//	NSArray* questionChoiceButtons;//Holds all of the choice buttons
-	NSMutableArray* questionWords;//a list of word buttons (for find the verb/nouns/adj.)
+	//NSMutableArray* questionWords;//a list of word buttons (for find the verb/nouns/adj.)
 	UIView* buttonWordsView; 
 	NSUInteger selectedWords;
 	
@@ -115,7 +115,7 @@
 @property (assign) IBOutlet UIImageView *questionImage;
 @property (assign) IBOutlet UIProgressView *questionTimerProgress;
 //@property (assign) NSArray* questionChoiceButtons;
-@property (assign) NSMutableArray* questionWords;
+//@property (assign) NSMutableArray* questionWords;
 @property (assign) UIView* buttonWordsView; 
 
 @property (assign) NSUInteger currentQuestionIndex;

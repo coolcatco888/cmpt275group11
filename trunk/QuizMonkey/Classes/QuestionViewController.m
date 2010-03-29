@@ -32,7 +32,7 @@
 @synthesize questionImage;
 @synthesize questionTimerProgress;
 //@synthesize questionChoiceButtons;
-@synthesize questionWords;
+//@synthesize questionWords;
 @synthesize buttonWordsView;
 
 //@synthesize questionList;
@@ -54,7 +54,7 @@
 	//Setup variables
 	selectedChoices = [NSMutableSet setWithCapacity:4];
 	totalPointsAcquired = 0;
-	questionWords = [NSMutableSet setWithCapacity:50];
+	//questionWords = [NSMutableSet setWithCapacity:50];
 	
 	//Parse XML
 	[self loadQuestionsFromXML];
@@ -333,15 +333,16 @@
 			}
 			
 			
-			[questionWords addObject:[self buttonCreator:word  buttonX:(CGFloat)ix buttonY: (CGFloat)iy]];
+			//[questionWords addObject:[self buttonCreator:word  buttonX:(CGFloat)ix buttonY: (CGFloat)iy]];
+			[self buttonCreator:word  buttonX:(CGFloat)ix buttonY: (CGFloat)iy];
 			letterCounter=letterCounter+([word length]);
 		}
 		//[questionWords count];
 		
 		
-		[questionWords removeAllObjects];
+		//[questionWords removeAllObjects];
 		
-		[questionWords retain];
+		//[questionWords retain];
 		
 	}
 }
