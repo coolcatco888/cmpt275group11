@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2010 at 02:01 PM
+-- Generation Time: Mar 28, 2010 at 05:48 PM
 -- Server version: 5.1.37
 -- PHP Version: 5.2.10-2ubuntu6.4
 
@@ -34,6 +34,13 @@ CREATE TABLE IF NOT EXISTS `scores` (
 -- Dumping data for table `scores`
 --
 
+INSERT INTO `scores` (`userid`, `scoreid`, `timeleft`, `date`, `points`, `maxpoints`) VALUES
+('im2bz2cup', 0, 2, '2010-03-28 00:00:00', 100, 120),
+('im2bz2cup', 1, 2, '2010-03-28 00:00:00', 100, 120),
+('im2bz2cup', 2, 2, '2010-03-28 00:00:00', 100, 120),
+('im2bz2cup', 3, 2, '2010-03-28 00:00:00', 100, 120),
+('im2bz2cup', 4, 2, '2010-03-28 00:00:00', 100, 120),
+('lestermoe', 0, 2, '2010-03-28 00:00:00', 100, 120);
 
 -- --------------------------------------------------------
 
@@ -58,5 +65,5 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`userid`, `firstname`, `lastname`, `password`, `email`, `type`) VALUES
 ('im2bz2cup', 'Mike', 'Hawke', 'yourmom', 'coolcatco888@hotmail.com', 0),
-('ednakrabappel', 'Edna', 'Krabappel', 'yourmom', 'coolcatco888@hotmail.com', 1);
-
+('ednakrabappel', 'Edna', 'Krabappel', 'yourmom', 'coolcatco888@hotmail.com', 1),
+('lestermoe', 'Moe', 'Lester', 'yourmom', 'coolcatco888@hotmail.com', 0);
