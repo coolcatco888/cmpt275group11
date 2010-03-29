@@ -19,6 +19,8 @@
 #import <UIKit/UIKit.h>
 #import "Question.h"
 #import "QuestionParser.h"
+#import "Score.h"
+
 
 //word buttons' setting
 #define WORD_BUTTON_FONT_SIZE 20
@@ -95,6 +97,7 @@
 	NSUInteger totalPointsAcquired;//Stores the total points acquired by the student
 	NSTimer* timer;
 	UIAlertView *alert;//Holds alert box for displaying score
+	Score* finalScore;
 }
 
 @property (assign) IBOutlet UIView *mainMenuView;
@@ -120,6 +123,7 @@
 @property (assign) NSMutableSet* selectedChoices;
 @property (assign) NSUInteger maxNumberOfChoiceSelections;
 @property (assign) NSUInteger totalPointsAcquired;
+@property (assign) Score* finalScore;
 
 /*
  - (int)getTotalScore;

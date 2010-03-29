@@ -42,6 +42,8 @@
 @synthesize maxNumberOfChoiceSelections;
 @synthesize totalPointsAcquired;
 
+@synthesize finalScore;
+
 
 - init {
 	questionChoiceButtonArray = [NSArray arrayWithObjects:questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil];
@@ -463,6 +465,14 @@
 				[score appendString:[[NSNumber numberWithInt:totalPoints] stringValue]];
 				[score appendString:@" banana points!"];
 				[finalScoreLabel setText:score];
+				
+				//Set Score Object
+				finalScore = [Score new];
+				[finalScore setPoints:totalPointsAcquired];
+				[finalScore setMaxPoints:totalPoints];
+				[finalScore setTimeLeft:totalTimeLeft];
+
+				
 //				[self release];
 
 			}

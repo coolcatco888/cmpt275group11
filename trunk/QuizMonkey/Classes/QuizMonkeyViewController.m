@@ -103,6 +103,8 @@
 -(IBAction) exitFinalScoreView:(id)sender {
 	//Hides the final view
 	//	NSLog(@"%i",[manager totalPointsAcquired]);
+	Score* score = [questionViewController finalScore];
+	[submissionViewController setSubmissionScore:score];
 	[finalScoreView removeFromSuperview];
 	[mainMenuView addSubview:submitView];
 	

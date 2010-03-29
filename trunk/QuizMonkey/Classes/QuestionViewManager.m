@@ -272,7 +272,7 @@
 	}
 	else 
 	{
-		//currentQuestion.sentence=@"To get a user’s answer out a given number of choices, the tap screen will be used. The application will use “.jpg” files for displaying graphical aspects of the application";//just for testing
+		currentQuestion.sentence=@"To get a user’s answer out a given number of choices, the tap screen will be used. The application will use “.jpg” files for displaying graphical aspects of the application";//just for testing
 		[questionTypeLabel setText:currentQuestion.type];
 		[questionSentenceLabel setHidden:TRUE];
 		[questionSentenceBottomLabel setHidden:TRUE];
