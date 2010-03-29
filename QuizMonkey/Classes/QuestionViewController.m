@@ -83,14 +83,20 @@
 	totalNumberOfQuizQuestions = 10;
 	totalMaxPoints = 0;
 	totalQuizTime = 0;
+	totalTime = 0;
 	questionListOfQuiz = [NSMutableArray arrayWithCapacity:totalNumberOfQuizQuestions];
+	NSUInteger selectedIndex;
 	for(NSUInteger i=0; i<count & i<10; i++) {
 		// Select a random element between i and end of array to swap with.
-		int nElements = count - i;
+		selectedIndex = (random() % [questionListOfXML count]);
+		[questionListOfQuiz addObject:[questionListOfXML objectAtIndex:selectedIndex]];
+		[questionListOfXML removeObjectAtIndex:selectedIndex];
+		
+/*		int nElements = count - i;
 		int n = (random() % nElements) + i;
 		[questionListOfXML  exchangeObjectAtIndex:i withObjectAtIndex:n];
 		[questionListOfQuiz addObject:[questionListOfXML objectAtIndex:i]];
-		totalTime += [[questionListOfQuiz objectAtIndex:i] time];
+*/		totalTime += [[questionListOfQuiz objectAtIndex:i] time];
 	}
 	totalTimeLeft = totalTime;
 	[questionListOfQuiz retain];
@@ -488,10 +494,46 @@
 }
 - (void)quitGame {
 	[questionView removeFromSuperview];
-	//[buttonWordsView release];
-	[self resetQuestionView];
+	[self release];
 }
 - (void)stopTimer {
 	[timer invalidate];
+}
+- (void)dealloc {
+	[mainMenuView release];
+	[questionView release];
+	[highScoresView release];
+	[finalScoreView release];
+
+	[questionTitleLabel release];
+	[questionSentenceLabel release];
+	[questionTimeLabel release];
+	[finalScoreLabel release];
+	
+	[questionImage release];
+	[questionProfMonkeyImage release];
+	[questionTimerProgress release];
+	[questionQuitButton release];
+	[questionNextButton release];
+	[questionChoiceButtonArray release];
+	[questionChoice1Button release];
+	[questionChoice2Button release];
+	[questionChoice3Button release];
+	[questionChoice4Button release];
+	
+	[questionListOfXML release];
+	[questionListOfQuiz release];
+	
+	[currentWordsArray release];
+	[currentPointsArray release];
+	[currentQuestion release];
+	
+	[questionWords release];
+	[buttonWordsView release];
+	
+	[selectedChoices release];
+	[timer release];
+	[alert release];
+	[super dealloc];
 }
 @end
