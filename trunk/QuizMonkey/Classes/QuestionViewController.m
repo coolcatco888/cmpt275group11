@@ -119,16 +119,16 @@
 			[[questionChoiceButtonArray objectAtIndex:i] setHidden:FALSE];
 		}
 		
-		currentQuestionMaxPoints=0;
-		currentQuestionMaxSelections=0;
+		currentMaxPoints=0;
+		currentMaxSelections=0;
 		
 		for(int i=0;i<[[currentQuestion points] count];i++){
-			currentQuestionMaxPoints = [[currentQuestion.points objectAtIndex:i] intValue];
+			currentMaxPoints = [[currentQuestion.points objectAtIndex:i] intValue];
 			if([currentQuestion.points objectAtIndex:i]>0)
-				currentQuestionMaxSelections++;
+				currentMaxSelections++;
 		}
 		
-		totalMaxPoints += currentQuestionMaxPoints;
+		totalMaxPoints += currentMaxPoints;
 	}
 	else {
 		
@@ -138,6 +138,20 @@
 }
 
 - (IBAction)selectChoice:(id)sender {
+/*	if(![sender isSelected]) {
+		if(currentNumberOfSelections < currentMaxSelections) {
+			[sender setSelected:TRUE];
+			currentNumberOfSelections++;
+		}
+	}
+	else {
+		if(currentNumberOfSelections > 0) {
+			[sender setSelected:FALSE];
+			currentNumberOfSelections--;
+		}
+	}
+	
+*/
 	UIButton* buttonPressed = (UIButton*)sender;
 	NSString* choice = buttonPressed.titleLabel.text;
 	
@@ -250,8 +264,8 @@
 	currentQuestion = [questionListOfQuiz objectAtIndex:index];
 	[self resetQuestionView];
 	
-	NSLog(@"New Question Set at Index:");
-	NSLog([[NSNumber numberWithInt:index] stringValue]);
+	NSLog(@"New Question Set at Index:%i",index);
+//	NSLog([[NSNumber numberWithInt:index] stringValue]);
 	
 	if([self questionHasImage]) {
 		questionSentenceLabel.frame = CGRectMake(SENTENCE_RECT_WHEN_IMAGE_X, SENTENCE_RECT_WHEN_IMAGE_Y, SENTENCE_RECT_WHEN_IMAGE_W, SENTENCE_RECT_WHEN_IMAGE_H);
@@ -266,11 +280,11 @@
 	   || [currentQuestion.type isEqualToString:@"Pick out the words"]
 	   || [currentQuestion.type isEqualToString:@"Find the misspelled word"]
 		|| [currentQuestion.type isEqualToString:@"Match the picture"]){
-		NSLog(@"Did all dat");
 		[questionTitleLabel setText:currentQuestion.type];
 		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
 
+		
 		
 		//Set all of the text for the choice buttons
 		for(int i = 0; i < [questionChoiceButtonArray count]; i++) {
@@ -282,8 +296,7 @@
 		maxNumberOfChoiceSelections = [self getMaxNumberOfChoiceSelections:currentQuestion.points];
 		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
 		totalPoints += totalPointsForCurrentQuestion;
-		NSLog(@"Max Points allowable is:");
-		NSLog([[NSNumber numberWithInt:maxNumberOfChoiceSelections] stringValue]);
+		NSLog(@"Max number od choices:%i",maxNumberOfChoiceSelections);
 	}
 	else 
 	{
@@ -302,9 +315,10 @@
 		
 		NSUInteger letterCounter=1;
 		NSString* word;
-		for(NSUInteger wordIndex=0;wordIndex<[[currentQuestion.sentence componentsSeparatedByString:@" "] count];wordIndex++)
+		NSArray *sentenceArray = [currentQuestion.sentence componentsSeparatedByString:@" "];
+		for(NSUInteger wordIndex=0;wordIndex<[sentenceArray count];wordIndex++)
 		{
-			word=[[currentQuestion.sentence componentsSeparatedByString:@" "] objectAtIndex:wordIndex];
+			word=[sentenceArray objectAtIndex:wordIndex];
 			
 			
 			int ix= letterCounter % ( 400 / WORD_BUTTON_UNIT_WEIGHT );
@@ -317,7 +331,7 @@
 			}
 			
 			
-			[questionWords addObject:[self buttonCreator: [NSString stringWithFormat:@"%@", word]  buttonX:(CGFloat)ix buttonY: (CGFloat)iy]];
+			[questionWords addObject:[self buttonCreator:word  buttonX:(CGFloat)ix buttonY: (CGFloat)iy]];
 			letterCounter=letterCounter+([word length]);
 		}
 		//[questionWords count];
@@ -328,9 +342,6 @@
 		[questionWords retain];
 		
 	}
-	
-	
-	[questionListOfQuiz retain];
 }
 - (UIButton *)buttonCreator:(NSString*) text buttonX:(CGFloat)CustomizeX buttonY:(CGFloat)CustomizeY {
 	
@@ -427,7 +438,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	//Reset Question Screen
 	[self resetQuestionView];
-	[selectedChoices removeAllObjects];
+//	[selectedChoices removeAllObjects];
 	switch(buttonIndex) {
 		case 0:	
 			if(totalTimeLeft == 0) {
@@ -435,7 +446,6 @@
 				[self quitGame];
 				//Load Next Question if the index is less than the number of questions - 1 (since it is zero indexed)
 			} else if(currentQuestionIndex < [questionListOfQuiz count] - 1) {
-				NSLog(@"Next Question");
 				currentQuestionIndex++;
 				[self loadQuestionFromIndex:currentQuestionIndex];
 				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
@@ -453,7 +463,8 @@
 				[score appendString:[[NSNumber numberWithInt:totalPoints] stringValue]];
 				[score appendString:@" banana points!"];
 				[finalScoreLabel setText:score];
-				
+//				[self release];
+
 			}
 			break;
 	}
@@ -494,46 +505,35 @@
 }
 - (void)quitGame {
 	[questionView removeFromSuperview];
-	[self release];
-}
-- (void)stopTimer {
-	[timer invalidate];
-}
-- (void)dealloc {
-	[mainMenuView release];
-	[questionView release];
-	[highScoresView release];
-	[finalScoreView release];
-
-	[questionTitleLabel release];
-	[questionSentenceLabel release];
-	[questionTimeLabel release];
-	[finalScoreLabel release];
-	
-	[questionImage release];
-	[questionProfMonkeyImage release];
-	[questionTimerProgress release];
-	[questionQuitButton release];
-	[questionNextButton release];
-	[questionChoiceButtonArray release];
-	[questionChoice1Button release];
-	[questionChoice2Button release];
-	[questionChoice3Button release];
-	[questionChoice4Button release];
+/*	[questionChoiceButtonArray release];
 	
 	[questionListOfXML release];
 	[questionListOfQuiz release];
 	
-	[currentWordsArray release];
-	[currentPointsArray release];
 	[currentQuestion release];
 	
 	[questionWords release];
 	[buttonWordsView release];
 	
 	[selectedChoices release];
-	[timer release];
-	[alert release];
-	[super dealloc];
+
+
+
+
+	
+	[currentQuestion release];
+	
+	[questionWords release];
+	[buttonWordsView release];
+
+
+*/
+	
+	
+
+
+}
+- (void)stopTimer {
+	[timer invalidate];
 }
 @end

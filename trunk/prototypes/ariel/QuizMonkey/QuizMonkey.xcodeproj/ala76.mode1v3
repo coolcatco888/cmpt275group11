@@ -211,6 +211,7 @@
 				<string>active-combo-popup</string>
 				<string>action</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>servicesModuledebug</string>
 				<string>build-and-go</string>
 				<string>com.apple.ide.PBXToolbarStopButton</string>
 				<string>get-info</string>
@@ -274,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>12</integer>
+									<integer>5</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -329,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DED79517114C54940019A058</string>
+										<string>DE63BC8811605E3900000E41</string>
 										<key>history</key>
 										<array>
 											<string>DE9FB144112CAE0500C92017</string>
@@ -384,15 +385,15 @@
 											<string>DE8E183B114C2BDA001F7D3A</string>
 											<string>DE8E183C114C2BDA001F7D3A</string>
 											<string>DE8E1870114C3E0F001F7D3A</string>
-											<string>DE8E1871114C3E0F001F7D3A</string>
 											<string>DE8E1912114C46C1001F7D3A</string>
 											<string>DE8E1914114C46C1001F7D3A</string>
 											<string>DE8E1916114C46C1001F7D3A</string>
 											<string>DE8E1918114C46C1001F7D3A</string>
-											<string>DED79503114C54940019A058</string>
 											<string>DED79504114C54940019A058</string>
 											<string>DED79505114C54940019A058</string>
-											<string>DED79506114C54940019A058</string>
+											<string>DE63BC591160584A00000E41</string>
+											<string>DE63BC5A1160584A00000E41</string>
+											<string>DE63BC5B1160584A00000E41</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -457,22 +458,9 @@
 											<string>DE8E191D114C46C1001F7D3A</string>
 											<string>DE8E191F114C46C1001F7D3A</string>
 											<string>DE8E1921114C46C1001F7D3A</string>
-											<string>DED79507114C54940019A058</string>
-											<string>DED79508114C54940019A058</string>
-											<string>DED79509114C54940019A058</string>
-											<string>DED7950A114C54940019A058</string>
-											<string>DED7950B114C54940019A058</string>
-											<string>DED7950C114C54940019A058</string>
-											<string>DED7950D114C54940019A058</string>
-											<string>DED7950E114C54940019A058</string>
-											<string>DED7950F114C54940019A058</string>
-											<string>DED79510114C54940019A058</string>
-											<string>DED79511114C54940019A058</string>
-											<string>DED79512114C54940019A058</string>
-											<string>DED79513114C54940019A058</string>
-											<string>DED79514114C54940019A058</string>
-											<string>DED79515114C54940019A058</string>
-											<string>DED79516114C54940019A058</string>
+											<string>DE63BC5C1160584A00000E41</string>
+											<string>DE63BC5D1160584A00000E41</string>
+											<string>DE63BC5E1160584A00000E41</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -530,9 +518,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>DED79518114C54940019A058</string>
+				<string>DE63BC601160584A00000E41</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>DED79519114C54940019A058</string>
+				<string>DE63BC611160584A00000E41</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -666,9 +654,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>DE207C4A112A473D005AD593</string>
 		<string>/Volumes/ala76/CMPT_275/Project/cmpt275group11/prototypes/ariel/QuizMonkey/QuizMonkey.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
