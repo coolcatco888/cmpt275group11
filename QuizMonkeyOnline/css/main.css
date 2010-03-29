@@ -20,7 +20,7 @@ body {
     color:#296894;
 }
 
-div.display, a {
+div.display, a input.formbuttons {
     -moz-border-radius-bottomleft: 5px;
     -moz-border-radius-bottomright: 5px;
     -moz-border-radius-topleft: 5px;
@@ -51,11 +51,11 @@ td {
     padding: 5px;
 }
 
-a {
+a, input.formbuttons {
     color:#296894;
     text-decoration: none;
 }
-a:hover {
+a:hover, input.formbuttons:hover {
     color:#FFFFFF;
     background-color:#296894;
 
@@ -73,4 +73,15 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     text-align: right;
+}
+
+#authenticated, #error {
+    text-align: center;
+}
+
+/* View Scores Page*/
+#loginbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
 }

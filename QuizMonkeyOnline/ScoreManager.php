@@ -37,9 +37,29 @@ class ScoreManager {
 
     //Authenticates login, returns true if login is a success, false if not
     function login($username, $password) {
+        return $this->login_with_type($username, $password, 'any');
+    }
+
+    function login_as_teacher($username, $password) {
+        return $this->login_with_type($username, $password, 'teacher');
+    }
+
+    protected function login_with_type($username, $password, $usertype) {
         $login_success = false;
 
-        $result = $this->execute_query("SELECT * FROM `user` WHERE userid='$username' AND password='$password';");
+        $withtype = '';
+        switch($usertype) {
+            case 'student':
+                $withtype = " AND type=0";
+                break;
+            case 'teacher':
+                $withtype = " AND type=1";
+                break;
+        }
+
+        $sql = "SELECT * FROM `user` WHERE userid='$username' AND password='$password'$withtype;";
+
+        $result = $this->execute_query($sql);
 
         while($row = mysql_fetch_array($result)) {
             $login_success = true;
@@ -68,7 +88,18 @@ class ScoreManager {
     }
 
     function retrieve_all_scores() {
-        
+        $result = $this->execute_query("SELECT * FROM `user` "
+            ."INNER JOIN `scores` "
+            ."ON user.userid=scores.userid "
+            ."ORDER BY user.userid;");
+
+        return $result;
+    }
+
+    function generate_score_table() {
+        $html = '';
+
+        return $html;
     }
 
 

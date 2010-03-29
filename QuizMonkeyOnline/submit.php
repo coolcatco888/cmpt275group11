@@ -18,9 +18,10 @@ $allnumerical = false;
 if(is_numeric($timeleft) && is_numeric($points) && is_numeric($maxpoints)) {
     $allnumerical = true;
 }
+$loginsuccess = $manager->login($username, $password);
 
 //If login is a success, submit score
-if($manager->login($username, $password) && $allnumerical) {
+if($loginsuccess && $allnumerical) {
     $scoreid = $manager->generate_scoreid($username);
     $manager->insert_score($username, $scoreid, $timeleft, $points, $maxpoints);
 } else {
