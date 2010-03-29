@@ -44,6 +44,44 @@
 	 */
 }
 -(IBAction)loadHighScoresView:(id)sender {
+	NSData *highScoresData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://quizmonkey.x10hosting.com/viewxml.php"]];
+	ScoreParser *scoreParser = [ScoreParser new];
+	NSMutableArray *highScoresArray = [scoreParser parseScoresFromData:highScoresData];
+//	NSLog(@"%@",[[highScoresArray objectAtIndex:0] studentID]);
+	UIView *highScoresSubView = [UIView new];
+	[highScoresSubView setFrame:CGRectMake(HIGHSCORES_ORIGN_X, HIGHSCORES_ORIGN_Y, HIGHSCORES_ORIGN_W, HIGHSCORES_ORIGN_H)];
+	
+	for(int i = 0; i < 17; i++) {
+		Score *currentScore = [highScoresArray objectAtIndex:i];
+		
+		UIButton *newScore = [UIButton buttonWithType:UIButtonTypeCustom];
+		[newScore setEnabled:FALSE];
+		[newScore setTitle:[currentScore studentID] forState:0];
+		[newScore setFrame:CGRectMake(0, i*HIGHSCORES_SCORE_H, 110, 21)];
+		[newScore setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+		[highScoresSubView addSubview:newScore];
+		
+		newScore = [UIButton buttonWithType:UIButtonTypeCustom];
+		[newScore setEnabled:FALSE];
+		[newScore setTitle:[[NSNumber numberWithInt:[currentScore timeLeft]] stringValue] forState:0];
+		[newScore setFrame:CGRectMake(110, i*HIGHSCORES_SCORE_H, 110, 21)];
+		[highScoresSubView addSubview:newScore];
+
+		newScore = [UIButton buttonWithType:UIButtonTypeCustom];
+		[newScore setEnabled:FALSE];
+		[newScore setTitle:[[NSNumber numberWithInt:[currentScore points]] stringValue] forState:0];
+		[newScore setFrame:CGRectMake(220, i*HIGHSCORES_SCORE_H, 110, 21)];
+		[highScoresSubView addSubview:newScore];
+
+		newScore = [UIButton buttonWithType:UIButtonTypeCustom];
+		[newScore setEnabled:FALSE];
+		[newScore setTitle:[[NSNumber numberWithInt:[currentScore maxPoints]] stringValue] forState:0];
+		[newScore setFrame:CGRectMake(330, i*HIGHSCORES_SCORE_H, 110, 21)];
+		[newScore setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
+		[highScoresSubView addSubview:newScore];
+	}
+	
+	[highScoresView addSubview:highScoresSubView];
 	//Shows the high scores view
 	[mainMenuView addSubview:highScoresView];
 }

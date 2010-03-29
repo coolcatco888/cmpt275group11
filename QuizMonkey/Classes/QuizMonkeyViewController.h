@@ -21,12 +21,20 @@
 #import <UIKit/UIKit.h>
 #import "Question.h"
 #import "QuestionParser.h"
+#import "ScoreParser.h"
 //#import "QuestionViewManager.h"
 #import "QuestionViewController.h"
 #import "SubmissionViewController.h"
 
-@class QuestionViewController;
+#define HIGHSCORES_ORIGN_X 20
+#define HIGHSCORES_ORIGN_Y 95
+#define HIGHSCORES_ORIGN_W 440
+#define HIGHSCORES_ORIGN_H 514
 
+#define HIGHSCORES_SCORE_H 29
+
+
+@class QuestionViewController;
 @class SubmissionViewController;
 
 @interface QuizMonkeyViewController : UIViewController {
@@ -38,6 +46,8 @@
 	IBOutlet UIView *highScoresView;//A reference to the high scores view
 	IBOutlet UIView *finalScoreView;//A reference to the final score view
 	IBOutlet UIView *submitView;//A reference to the submit score view
+	
+	IBOutlet UILabel *labelTemplate;
 	
 	//Main Menu View Outlets
 	
