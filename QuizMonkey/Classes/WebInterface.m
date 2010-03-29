@@ -11,8 +11,16 @@
 
 @implementation WebInterface
 
+@synthesize score;
 //@synthesize url;
 //@synthesize serverVariables;
+
+- init {
+	url = @"http://quizmonkey.x10hosting.com/submit.php?";
+	serverVariables = [NSArray arrayWithObjects:@"username",@"password",@"timeleft",@"points",@"maxpoints",nil];
+	submitionString = [NSMutableString stringWithCapacity:500];
+	return self;
+}
 
 - (WebInterface*)initWithURL:(NSString*)newUrl serverVariables:(NSArray*)newServerVariables {
 	self = [super init];
@@ -22,19 +30,31 @@
 }
 
 - (void)submitHighScores {
+	NSLog(@"here2");
+	
 	[submitionString appendString:url];
 	
 	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:0] value:[score studentID]];
-	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:1] value:[score firstName]];
-	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:2] value:[score lastName]];
-	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:3] value:[score email]];
-	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:4] value:[score scoreID]];
-	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:5] value:[score points]];
-	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:6] value:[score date]];
+	[submitionString appendString:@"&"];
+//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:1] value:[score firstName]];
+//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:2] value:[score lastName]];
+//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:3] value:[score email]];
+//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:4] value:[score scoreID]];
+	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:1] value:[score password]];
+	[submitionString appendString:@"&"];
 	
 	
-	NSURL *submitionURL;
-	[submitionURL initWithString:submitionString];
+	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:2] value:[[NSNumber numberWithInt:[score timeLeft]] stringValue]];
+	[submitionString appendString:@"&"];
+	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:3] value:[[NSNumber numberWithInt:[score points]] stringValue]];
+	[submitionString appendString:@"&"];
+	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:4] value:[[NSNumber numberWithInt:[score maxPoints]]  stringValue]];
+	
+	NSLog(submitionString);
+	
+	
+	
+	[NSData dataWithContentsOfURL:[NSURL URLWithString:submitionString]];
 }
 
 - (void)appendVariableToSubmitionString:(NSString*)variable value:(NSString*)value {

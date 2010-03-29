@@ -70,9 +70,9 @@
 	NSUInteger totalQuizTime;
 	NSUInteger totalMaxPoints;
 	NSUInteger totalTimeLeft;
-	NSUInteger currentQuestionMaxPoints;
-	NSUInteger currentQuestionMaxSelections;
-	NSUInteger currentQuestionScore;
+	NSUInteger currentMaxPoints;
+	NSUInteger currentMaxSelections;
+	NSUInteger currentScore;
 	NSUInteger currentNumberOfSelections;
 	
 	

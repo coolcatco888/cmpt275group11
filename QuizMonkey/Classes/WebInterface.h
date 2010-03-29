@@ -18,12 +18,15 @@
 
 }
 
+@property (assign) Score *score;
+
 //@property (assign) NSString* url;
 //@property (assign) NSDictionary* serverVariables;
 
 - (WebInterface*)initWithURL:(NSString*)newUrl serverVariables:(NSArray*)newServerVariables;
 
 - (void)appendVariableToSubmitionString:(NSString*)variable value:(NSString*)value;
+- (void)submitScore:(Score*)submitionScore;
 - (void)submitHighScores;
 - (void)retrievePersonalHighScores;
 - (void)retrieveGlobalHighScores;
