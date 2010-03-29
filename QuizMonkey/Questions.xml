@@ -17,15 +17,19 @@
 	<question>
 		<type>Find the adjectives</type>
 		<image></image>
-		<sentence>It smacked my face all of a sudden.</sentence>
-		<choice>It</choice>
-		<choice>my</choice>
-		<choice>face</choice>
-		<choice>all</choice>
-		<point>10</point>
-		<point>10</point>
-		<point>10</point>
-		<point>10</point>
+		<sentence>Billy is a very special person.</sentence>
+		<choice>Billy</choice>
+		<choice>is</choice>
+		<choice>a</choice>
+		<choice>very</choice>
+		<choice>special</choice>
+		<choice>person</choice>
+		<point>-2</point>
+		<point>-2</point>
+		<point>-2</point>
+		<point>15</point>
+		<point>15</point>
+		<point>-2</point>
 		<time>50</time>
 	</question>
 	
@@ -63,13 +67,23 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Last week, I lost my cellphone on the bus.</sentence>
-		<choice>I</choice>
+		<choice>Last</choice>
 		<choice>week</choice>
+		<choice>I</choice>
+		<choice>lost</choice>
+		<choice>my</choice>
 		<choice>cellphone</choice>
+		<choice>on</choice>
+		<choice>the</choice>
 		<choice>bus</choice>
+		<point>-2</point>
 		<point>10</point>
 		<point>15</point>
+		<point>-2</point>
+		<point>-2</point>
 		<point>10</point>
+		<point>-2</point>
+		<point>-2</point>
 		<point>10</point>
 		<time>50</time>
 	</question>

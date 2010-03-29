@@ -52,7 +52,7 @@
 	
 	
 	//Setup variables
-	selectedChoices = [NSMutableSet setWithCapacity:4];
+	selectedChoices = [NSMutableSet setWithCapacity:20];//Used to be 4 but not sure if picking out words questions have more than 4 choices
 	totalPointsAcquired = 0;
 	//questionWords = [NSMutableSet setWithCapacity:50];
 	
@@ -220,7 +220,7 @@
 	for(id index in selectedChoices) {
 		NSNumber* pointIndex = (NSNumber*)index;
 		NSNumber* pointValue = (NSNumber*) [pointList objectAtIndex:[pointIndex intValue]];
-		points += [pointValue intValue];
+		points += [pointValue intValue] < 0? 0 : [pointValue intValue];//Because of the Find the word questions, some choices have negative point values
 	}
 	totalPointsAcquired += points;
 	
@@ -441,7 +441,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	//Reset Question Screen
 	[self resetQuestionView];
-//	[selectedChoices removeAllObjects];
+	[selectedChoices removeAllObjects];
 	switch(buttonIndex) {
 		case 0:	
 			if(totalTimeLeft == 0) {
@@ -546,5 +546,9 @@
 }
 - (void)stopTimer {
 	[timer invalidate];
+}
+
+-(IBAction)quitButtonPressed:(id)sender {
+	[self quitGame];
 }
 @end
