@@ -7,7 +7,7 @@
  */
 class ScoreManager {
     var $mysql_host='localhost';
-	var $db_name='quizmonkey';
+	var $db_name='quizmonk_data';
 	var $db_user='quizmonkey';
 	var $db_pass='teamawesome';//Don't hack our database!
 
