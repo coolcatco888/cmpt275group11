@@ -83,16 +83,8 @@ class ScoreManager {
 
     //Inserts a score entry into the database
     function insert_score($username, $scoreid, $timeleft, $points, $maxpoints) {
-        $this->execute_query("INSERT INTO `quizmonk_data`.`scores` (
-`userid` ,
-`scoreid` ,
-`timeleft` ,
-`date` ,
-`points` ,
-`maxpoints`
-)
-VALUES (
-'$username', '$scoreid', '$timeleft', CURDATE(), '$points', '$maxpoints');");
+        $this->execute_query("INSERT INTO `quizmonk_data`.`scores` (`userid` ,`scoreid` ,`timeleft` ,`date` ,`points` ,`maxpoints`) "
+            ."VALUES ('$username', '$scoreid', '$timeleft', CURDATE(), '$points', '$maxpoints');");
     }
 
     function retrieve_all_scores() {
