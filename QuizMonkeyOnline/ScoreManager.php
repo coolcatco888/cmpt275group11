@@ -97,7 +97,35 @@ class ScoreManager {
     }
 
     function generate_score_table() {
-        $html = '';
+        $html = '<table>';
+        
+        $scores = $this->retrieve_all_scores();
+
+        $currentuser = '';
+        while($row = mysql_fetch_array($scores))
+        {
+            if($row['userid'] != $currentuser) {
+                $html .= "<tr><td colspan='5'>Student ID: ".$row['userid']." | Name: ".$row['firstname']." ".$row['lastname']."</td></tr>";
+                $currentuser = $row['userid'];
+                $html .= "<tr>"
+                ."<th>Score ID</th>"
+                ."<th>Time Left</th>"
+                ."<th>Date</th>"
+                ."<th>Points</th>"
+                ."<th>Max Points</th>"
+                ."</tr>";
+            }
+
+            $html .= "<tr>"
+                ."<td>".$row['scoreid']."</td>"
+                ."<td>".$row['timeleft']."</td>"
+                ."<td>".$row['date']."</td>"
+                ."<td>".$row['points']."</td>"
+                ."<td>".$row['maxpoints']."</td>"
+                ."</tr>";
+        }
+
+        $html .= '</table>';
 
         return $html;
     }
