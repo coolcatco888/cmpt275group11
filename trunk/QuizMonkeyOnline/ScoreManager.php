@@ -130,6 +130,32 @@ class ScoreManager {
         return $html;
     }
 
+    //Generates an xml representation of the high scores
+    function generate_score_xml() {
+        $html = '<scores>';
+        
+        $scores = $this->retrieve_all_scores();
+
+        while($row = mysql_fetch_array($scores))
+        {
+            $html .= "<score>"
+		."<userid>".$row['userid']."</userid>"
+		."<firstname>".$row['firstname']."</firstname>"
+		."<lastname>".$row['lastname']."</lastname>"
+		."<email>".$row['email']."</email>"
+                ."<scoreid>".$row['scoreid']."</scoreid>"
+                ."<timeleft>".$row['timeleft']."</timeleft>"
+                ."<date>".$row['date']."</date>"
+                ."<points>".$row['points']."</points>"
+                ."<maxpoints>".$row['maxpoints']."</maxpoints>"
+                ."</score>";
+        }
+
+        $html .= '</scores>';
+
+        return $html;
+    }
+
 
 }
 ?>
