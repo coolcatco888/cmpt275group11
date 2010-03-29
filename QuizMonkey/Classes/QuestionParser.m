@@ -86,31 +86,36 @@ qualifiedName:(NSString *)qName{
 -(BOOL)isQuestionValid:(Question*) question {
 	BOOL isValid = TRUE;
 	
-	if(!([question.type isEqualToString:@"Match the picture"] || 
+	if(!([question.type isEqualToString:@"Match the picture"] ||		//checks if the listed type matches a known acceptable type
 		 [question.type isEqualToString:@"Find the nouns"] ||
 		 [question.type isEqualToString:@"Find the adjectives"] ||
 		 [question.type isEqualToString:@"Fill in the blank"]))
 		isValid = FALSE;
 	
-	if(([question.choices count] != 4) || ([question.points count] != 4))
+	if(([question.choices count] != 4) || ([question.points count] != 4))//checks if the question has both 4 choices and point values
 		isValid = FALSE;
 	
-	//if([self isImageValid question.image]
-	
+	if([question.type isEqualToString:@"Match the picture"]) {			//checks if the given string is capable of loading an image, but only if 
+		if(![self isImageValid: question.image])						//	the question type requires one
+			isValid = FALSE;
+	}
 	
 	return isValid;
-	
 }
 
-/*
--(BOOL)isImageValid:(NSString *)image {
+
+-(BOOL)isImageValid:(NSString *)imageName {
+	BOOL imageValidity = TRUE; 
+	UIImage* image = [UIImage imageNamed: imageName];
+		
+	if(image == nil)
+		imageValidity = FALSE;
 	
- BOOL imageValidity = TRUE;
- 
- return imageValidity;
- 
- }
-*/
+	[image release];
+	
+	return imageValidity;
+}
+
 		
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
 	//Copying the new found string to textInProgress for later use
