@@ -36,6 +36,7 @@
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;//The xml parser calls this function when it reaches the end of a string inside any given xml element
 -(void)dealloc;//dealocating the question parser object
 -(BOOL)isQuestionValid:(Question*) question;//Validates whether a parsed question is correct/valid
+//-(BOOL)isImageValid:(NSString *)image //validates whether or not the image can be loaded
 
 @end
 

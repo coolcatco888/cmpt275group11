@@ -72,34 +72,53 @@ qualifiedName:(NSString *)qName{
 			[questions addObject:questionInProgress];
 		}//May want to put else { /* dealloc question */ } 
 		
-	}
 	
-	if (isQuestionValid) 
+	if (isQuestionValid) {
 		[questionInProgress retain];
-	else
+	}else {
 		[questionInProgress release];
+	}	
 
-	
-
+		
+	}
 }
 
 -(BOOL)isQuestionValid:(Question*) question {
 	BOOL isValid = TRUE;
 	
-	//Check whether question is valid, set isValid to false if not
+	if(!([question.type isEqualToString:@"Match the picture"] || 
+		 [question.type isEqualToString:@"Find the nouns"] ||
+		 [question.type isEqualToString:@"Find the adjectives"] ||
+		 [question.type isEqualToString:@"Fill in the blank"]))
+		isValid = FALSE;
+	
+	if(([question.choices count] != 4) || ([question.points count] != 4))
+		isValid = FALSE;
+	
+	//if([self isImageValid question.image]
 	
 	
 	return isValid;
 	
 }
 
+/*
+-(BOOL)isImageValid:(NSString *)image {
+	
+ BOOL imageValidity = TRUE;
+ 
+ return imageValidity;
+ 
+ }
+*/
+		
 -(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
 	//Copying the new found string to textInProgress for later use
 	textInProgress = [string copy];
 }
 
 - (void)dealloc{
-	//Releasing the unessesary objects
+	//Releasing the unnecessary objects
 	//The questions array object is not released because it is used by super classes long after the parser finishes
 	[questionInProgress release];
 	[textInProgress release];
