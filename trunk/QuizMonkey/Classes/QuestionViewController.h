@@ -8,7 +8,8 @@
 //
 //  Worked on by Cley, Ariel, Tony, Meiko, Daniel
 //
-//  Known Bugs: none
+//  Known Bugs: 
+//   - "Find the words" questions allow you to select all of the words giving the user no penalty for incorrect selections
 //
 //  Changes:
 //   - 1.0 - Implemented
