@@ -23,17 +23,21 @@
 #import "QuestionParser.h"
 //#import "QuestionViewManager.h"
 #import "QuestionViewController.h"
+#import "SubmissionViewController.h"
 
 @class QuestionViewController;
 
+@class SubmissionViewController;
+
 @interface QuizMonkeyViewController : UIViewController {
 	QuestionViewController *questionViewController;
-	
+	SubmissionViewController *submissionViewController;
 	//View Outlets
 	IBOutlet UIView *mainMenuView;//A reference to the main menu view
 	IBOutlet UIView *questionView;//A reference to the question view
 	IBOutlet UIView *highScoresView;//A reference to the high scores view
 	IBOutlet UIView *finalScoreView;//A reference to the final score view
+	IBOutlet UIView *submitView;//A reference to the submit score view
 	
 	//Main Menu View Outlets
 	
@@ -61,7 +65,8 @@
 }
 
 @property (nonatomic, retain) IBOutlet QuestionViewController *questionViewController;
-
+@property (nonatomic, retain) IBOutlet SubmissionViewController *submissionViewController;
+@property (assign) IBOutlet UIView *submitView;
 //Main Menu View Functions
 -(IBAction)loadQuestionView:(id)sender;//Loads the question view
 -(IBAction)loadHighScoresView:(id)sender;//Loads the high scores view

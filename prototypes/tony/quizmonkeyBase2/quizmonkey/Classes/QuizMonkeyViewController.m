@@ -20,7 +20,8 @@
 @implementation QuizMonkeyViewController
 
 @synthesize questionViewController;
-
+@synthesize submissionViewController;
+@synthesize submitView;
 ////////////////////////Main View Functions
 -(IBAction)loadQuestionView:(id)sender {
 	questionViewController = [questionViewController init];
@@ -103,6 +104,7 @@
 	//Hides the final view
 	//	NSLog(@"%i",[manager totalPointsAcquired]);
 	[finalScoreView removeFromSuperview];
+	[mainMenuView addSubview:submitView];
 	
 	//TODO: Add online score submission!
 }

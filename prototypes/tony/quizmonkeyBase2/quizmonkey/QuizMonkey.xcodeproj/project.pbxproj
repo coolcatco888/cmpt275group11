@@ -16,6 +16,7 @@
 		1D7D05F0114DC337003B550F /* QuizMonkeyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */; };
 		1D7D069D114DD138003B550F /* QuestionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDC6114B0FC800F766B8 /* QuestionParser.m */; };
 		1D7D069F114DD147003B550F /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDB1114B09B800F766B8 /* Question.m */; };
+		1DE2F6D711600AE1003B36AF /* SubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE2F6D611600AE1003B36AF /* SubmissionViewController.m */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* QuizMonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */; };
@@ -47,6 +48,8 @@
 		1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyTestCase.h; sourceTree = "<group>"; };
 		1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyTestCase.m; sourceTree = "<group>"; };
 		1D7D0653114DCD7B003B550F /* Questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions.xml; sourceTree = "<group>"; };
+		1DE2F6D511600AE1003B36AF /* SubmissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionViewController.h; sourceTree = "<group>"; };
+		1DE2F6D611600AE1003B36AF /* SubmissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionViewController.m; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizMonkeyViewController.xib; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				DE09920C115D9FCD00507FBD /* WebInterface.m */,
 				DE09921C115DA46100507FBD /* Score.h */,
 				DE09921D115DA46100507FBD /* Score.m */,
+				1DE2F6D511600AE1003B36AF /* SubmissionViewController.h */,
+				1DE2F6D611600AE1003B36AF /* SubmissionViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */,
 				DE09920D115D9FCD00507FBD /* WebInterface.m in Sources */,
 				DE09921E115DA46100507FBD /* Score.m in Sources */,
+				1DE2F6D711600AE1003B36AF /* SubmissionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
