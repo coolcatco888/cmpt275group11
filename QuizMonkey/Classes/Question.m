@@ -45,4 +45,12 @@
 	[points addObject:[NSNumber numberWithInteger:newPoint]];
 }
 
+- (void)dealloc {
+	[type release];
+	[image release];
+	[sentence release];
+	[choices release];
+	[points release];
+	[super dealloc];
+}
 @end
