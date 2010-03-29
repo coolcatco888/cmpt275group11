@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if(!$_SESSION['authenticated']) {
+    header('Location: '.'index.php');
+}
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
     <head>
@@ -10,7 +17,7 @@
         <div id='content'>
             <img src="images/banner.png" alt="Quiz Monkey Student Progress Monitoring System"/>
             <h1>Student Scores</h1>
-            <div id='loginbox' class='display'>
+            <div id='scorebox' class='display'>
             </div>
         </div>
     </body>
