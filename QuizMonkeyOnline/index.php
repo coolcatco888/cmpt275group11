@@ -30,11 +30,12 @@ $_SESSION['authenticated'] = false;
                                 if(msg == 'OK'){
                                     $("#authenticated").show();
                                     $("#logintable").hide();
+                                    $("#error").hide();
                                     window.location = "viewscores.php";
                                 } else {
                                     $("#error").show();
+                                    result = msg;
                                 }
-                                $(this).html(result);
                             });
                         }
                     });
