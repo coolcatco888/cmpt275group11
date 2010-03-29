@@ -31,6 +31,7 @@
 		DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2E112A44CE005AD593 /* Pic-Title.png */; };
 		DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */ = {isa = PBXBuildFile; fileRef = DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */; };
 		DE63BCA611605EB200000E41 /* SubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE63BCA411605EB200000E41 /* SubmissionViewController.m */; };
+		DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6EF81A116155E500C5391E /* ScoreParser.m */; };
 		DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5D287115D7E51006B3A5D /* QuestionViewController.m */; };
 		EA8C413E115566B300F15609 /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D0653114DCD7B003B550F /* Questions.xml */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,8 @@
 		DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pic-ProfMonkey.png"; sourceTree = "<group>"; };
 		DE63BCA411605EB200000E41 /* SubmissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmissionViewController.m; sourceTree = "<group>"; };
 		DE63BCA511605EB200000E41 /* SubmissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmissionViewController.h; sourceTree = "<group>"; };
+		DE6EF819116155E500C5391E /* ScoreParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreParser.h; sourceTree = "<group>"; };
+		DE6EF81A116155E500C5391E /* ScoreParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreParser.m; sourceTree = "<group>"; };
 		DED5D287115D7E51006B3A5D /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		DED5D288115D7E51006B3A5D /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +120,8 @@
 				DE63BCA411605EB200000E41 /* SubmissionViewController.m */,
 				DE09920B115D9FCD00507FBD /* WebInterface.h */,
 				DE09920C115D9FCD00507FBD /* WebInterface.m */,
+				DE6EF819116155E500C5391E /* ScoreParser.h */,
+				DE6EF81A116155E500C5391E /* ScoreParser.m */,
 				DE09921C115DA46100507FBD /* Score.h */,
 				DE09921D115DA46100507FBD /* Score.m */,
 			);
@@ -306,6 +311,7 @@
 				DE09920D115D9FCD00507FBD /* WebInterface.m in Sources */,
 				DE09921E115DA46100507FBD /* Score.m in Sources */,
 				DE63BCA611605EB200000E41 /* SubmissionViewController.m in Sources */,
+				DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
