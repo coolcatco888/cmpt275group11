@@ -68,37 +68,36 @@ qualifiedName:(NSString *)qName{
 	else if([elementName isEqualToString:@"sentence"])	[questionInProgress setSentence:textInProgress];
 	else if([elementName isEqualToString:@"question"])	{
 		BOOL isQuestionValid = [self isQuestionValid: questionInProgress];
-		if (isQuestionValid) {
+		if (isQuestionValid)
 			[questions addObject:questionInProgress];
-		}//May want to put else { /* dealloc question */ } 
 		
-	
-	if (isQuestionValid) {
-		[questionInProgress retain];
-	}else {
 		[questionInProgress release];
-	}	
 
-		
 	}
 }
 
 -(BOOL)isQuestionValid:(Question*) question {
 	BOOL isValid = TRUE;
 	
-	if(!([question.type isEqualToString:@"Match the picture"] ||		//checks if the listed type matches a known acceptable type
+	if(!([question.type isEqualToString:@"Match the picture"] ||		//checks if the listed type matches a known type
 		 [question.type isEqualToString:@"Find the nouns"] ||
 		 [question.type isEqualToString:@"Find the adjectives"] ||
 		 [question.type isEqualToString:@"Fill in the blank"]))
 		isValid = FALSE;
 	
-	if(([question.choices count] != 4) || ([question.points count] != 4))//checks if the question has both 4 choices and point values
+	if(([question.choices count] != 4) || ([question.points count] != 4))//checks if the question has 4 choices and point values
 		isValid = FALSE;
 	
-	if([question.type isEqualToString:@"Match the picture"]) {			//checks if the given string is capable of loading an image, but only if 
+	if([question.type isEqualToString:@"Match the picture"]) 			//checks if the given string is capable of loading an image, but only if 
 		if(![self isImageValid: question.image])						//	the question type requires one
 			isValid = FALSE;
-	}
+	
+	if(question.time <= 0)												//question is thrown out if time alotted is 0, negative, or not specified
+		isValid = FALSE;
+	
+	if([[question.points objectAtIndex:0] intValue] + [[question.points objectAtIndex:1] intValue] + //throws out a question if it doesn't award any points
+	   [[question.points objectAtIndex:2] intValue] + [[question.points objectAtIndex:3] intValue] == 0)
+		isValid = FALSE;
 	
 	return isValid;
 }
