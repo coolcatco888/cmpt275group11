@@ -19,7 +19,7 @@
 	IBOutlet UITextField *studentID_tf;
 	IBOutlet UITextField *password_tf;
 	
-	Score *submitScore;
+	Score *submissionScore;
 	WebInterface *webInterface;
 
 	
@@ -30,7 +30,7 @@
 @property (assign) IBOutlet UIButton *continueButton;
 @property (assign) IBOutlet UITextField *studentID_tf;
 @property (assign) IBOutlet UITextField *password_tf;
-//@property (assign) Score *submitScore;
+@property (assign) Score *submissionScore;
 
 -(IBAction)loadSubmissionView:(id)sender;
 -(IBAction) submitScore;

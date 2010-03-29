@@ -15,7 +15,7 @@
 @synthesize continueButton;
 @synthesize studentID_tf;
 @synthesize password_tf;
-//@synthesize submitScore;
+@synthesize submissionScore;
 
 
 /*
@@ -54,25 +54,19 @@
 
 - (IBAction)submitScore {
 	
-	submitScore = [Score new];
 	[studentID_tf resignFirstResponder];
 	[password_tf resignFirstResponder];
 
-	[submitScore setStudentID:[studentID_tf text]];
-	[submitScore setPassword:[password_tf text]];
-//	[submitScore setDate:[NSDate date]];
-	
-	[submitScore setTimeLeft:3];
-	[submitScore setPoints:6500];
-	[submitScore setMaxPoints:6547];
-	
-	NSArray *newArray = [NSArray arrayWithObjects:@"username",@"password",@"timeleft",@"points",@"maxpoints",nil];
-	
+	[submissionScore setStudentID:[studentID_tf text]];
+	[submissionScore setPassword:[password_tf text]];
+
 	NSLog(@"here");
 	webInterface = [WebInterface new];
-//	[webInterface initWithURL:@"http://quizmonkey.x10hosting.com/submit.php?" serverVariables:newArray];
-	[webInterface setScore:submitScore];
+	[webInterface setScore:submissionScore];
 	[webInterface submitHighScores];
+	[submitButton setTitle:@"Thank you!" forState: 0];
+	[submitButton setEnabled:FALSE];
+	
 	
 }
 

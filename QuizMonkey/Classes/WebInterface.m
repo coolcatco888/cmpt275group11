@@ -36,14 +36,8 @@
 	
 	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:0] value:[score studentID]];
 	[submitionString appendString:@"&"];
-//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:1] value:[score firstName]];
-//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:2] value:[score lastName]];
-//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:3] value:[score email]];
-//	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:4] value:[score scoreID]];
 	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:1] value:[score password]];
 	[submitionString appendString:@"&"];
-	
-	
 	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:2] value:[[NSNumber numberWithInt:[score timeLeft]] stringValue]];
 	[submitionString appendString:@"&"];
 	[self appendVariableToSubmitionString:[serverVariables objectAtIndex:3] value:[[NSNumber numberWithInt:[score points]] stringValue]];

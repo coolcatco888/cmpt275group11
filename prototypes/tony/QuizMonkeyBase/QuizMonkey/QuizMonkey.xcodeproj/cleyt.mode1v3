@@ -228,6 +228,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -273,8 +275,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>1</integer>
+									<integer>16</integer>
+									<integer>15</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -309,14 +311,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>QuizMonkeyViewController.h</string>
+								<string>testQuestions1.xml</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>QuizMonkeyViewController.h</string>
+										<string>testQuestions1.xml</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4EDFFCC9115431D800680114</string>
+										<string>4EDAA317115C258E00FB85AB</string>
 										<key>history</key>
 										<array>
 											<string>4E7BEA58114AF75F00CB0CE3</string>
@@ -337,20 +337,21 @@
 											<string>4E7BD61B114B413700F366F0</string>
 											<string>4E7BD62A114B42A700F366F0</string>
 											<string>4E7BD62B114B42A700F366F0</string>
-											<string>4E7BD62D114B42A700F366F0</string>
 											<string>4E7BD62F114B42A700F366F0</string>
 											<string>4E7BD630114B42A700F366F0</string>
 											<string>4E7BD631114B42A700F366F0</string>
-											<string>4E7BD674114B49DE00F366F0</string>
-											<string>4E7BD675114B49DE00F366F0</string>
 											<string>4E7BD676114B49DE00F366F0</string>
 											<string>4E7BD677114B49DE00F366F0</string>
 											<string>4E7BD678114B49DE00F366F0</string>
-											<string>4E7BD679114B49DE00F366F0</string>
 											<string>4E7BD67A114B49DE00F366F0</string>
-											<string>4E7BD67B114B49DE00F366F0</string>
-											<string>4E7BD67C114B49DE00F366F0</string>
-											<string>4EED9D2E114DCE15004EC1A3</string>
+											<string>4EDAA307115C258E00FB85AB</string>
+											<string>4EDAA308115C258E00FB85AB</string>
+											<string>4EDAA309115C258E00FB85AB</string>
+											<string>4EDAA30A115C258E00FB85AB</string>
+											<string>4EDAA30B115C258E00FB85AB</string>
+											<string>4EDAA30C115C258E00FB85AB</string>
+											<string>4EDAA30D115C258E00FB85AB</string>
+											<string>4EDAA30E115C258E00FB85AB</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -374,6 +375,14 @@
 											<string>4E7BD61E114B413700F366F0</string>
 											<string>4E7BD641114B42A700F366F0</string>
 											<string>4E7BD642114B42A700F366F0</string>
+											<string>4EDAA30F115C258E00FB85AB</string>
+											<string>4EDAA310115C258E00FB85AB</string>
+											<string>4EDAA311115C258E00FB85AB</string>
+											<string>4EDAA312115C258E00FB85AB</string>
+											<string>4EDAA313115C258E00FB85AB</string>
+											<string>4EDAA314115C258E00FB85AB</string>
+											<string>4EDAA315115C258E00FB85AB</string>
+											<string>4EDAA316115C258E00FB85AB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -431,9 +440,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4EDFFCCA115431D800680114</string>
+				<string>4EDAA305115C248B00FB85AB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>4EDFFCCB115431D800680114</string>
+				<string>4EDAA306115C248B00FB85AB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -567,7 +576,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Volumes/cleyt/cmpt275group11/QuizMonkey/QuizMonkey.xcodeproj</string>
+		<string>/Volumes/cleyt/cmpt275group11/prototypes/tony/QuizMonkeyBase/QuizMonkey/QuizMonkey.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 146 1440 732 0 0 1440 878 </string>

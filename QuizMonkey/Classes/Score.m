@@ -12,13 +12,7 @@
 @implementation Score
 
 @synthesize studentID;
-@synthesize firstName;
-@synthesize lastName;
 @synthesize password;
-@synthesize email;
-
-@synthesize scoreID;
-@synthesize date;
 @synthesize timeLeft;
 @synthesize points;
 @synthesize maxPoints;
