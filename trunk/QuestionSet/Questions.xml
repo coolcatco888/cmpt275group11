@@ -18,8 +18,14 @@
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>It smacked my face all of a sudden.</sentence>
-		<choice>all</choice>
-		<point>10</point>
+		<choice>It</choice><point>-2</point>
+		<choice>smacked</choice><point>-2</point>
+        <choice>my</choice><point>-2</point>
+		<choice>face</choice><point>-2</point>
+		<choice>all</choice><point>10</point>
+        <choice>of</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>sudden</choice><point>-2</point>
 		<time>50</time>
 	</question>
 	
@@ -39,30 +45,18 @@
 	</question>
 	
 	<question>
-		<type>Match the picture</type>
-		<image>mukmuk.png</image>
-		<sentence>Who's he?</sentence>
-		<choice>monkey</choice>
-		<choice>bird</choice>
-		<choice>mukmuk</choice>
-		<choice>mouse</choice>
-		<point>0</point>
-		<point>0</point>
-		<point>10</point>
-		<point>0</point>
-		<time>3</time>
-	</question>
-	
-	<question>
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Last week, I lost my cellphone on the bus.</sentence>
-		<choice>week</choice>
-		<choice>cellphone</choice>
-		<choice>bus</choice>
-		<point>15</point>
-		<point>10</point>
-		<point>10</point>
+        <choice>Last</choice><point>-2</point>
+        <choice>week</choice><point>15</point>
+        <choice>I</choice><point>-2</point>
+        <choice>lost</choice><point>-2</point>
+        <choice>my</choice><point>-2</point>
+        <choice>cellphone</choice><point>10</point>
+        <choice>on</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>bus</choice><point>10</point>
 		<time>50</time>
 	</question>
 	
@@ -115,8 +109,14 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>It smacked my face all of a sudden.</sentence>
-		<choice>smacked</choice>
-		<point>10</point>
+        <choice>It</choice><point>-2</point>
+		<choice>smacked</choice><point>10</point>
+        <choice>my</choice><point>-2</point>
+		<choice>face</choice><point>-2</point>
+		<choice>all</choice><point>-2</point>
+        <choice>of</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>sudden</choice><point>-2</point>
 		<time>5</time>
 	</question>
 	
@@ -274,12 +274,15 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>We watched the birds eat seeds and fly away.</sentence>
-		<choice>watched</choice>
-        <choice>eat</choice>
-        <choice>fly</choice>
-        <point>10</point>
-        <point>10</point>
-		<point>10</point>
+        <choice>We</choice><point>-2</point>
+		<choice>watched</choice><point>10</point>
+        <choice>the</choice><point>-2</point>
+        <choice>birds</choice><point>-2</point>
+        <choice>eat</choice><point>10</point>
+        <choice>seeds</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>fly</choice><point>10</point>
+        <choice>away</choice><point>-2</point>
 		<time>15</time>
 	</question>
     
@@ -287,8 +290,17 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>A new baby zebra was born at the zoo last month.</sentence>
-		<choice>born</choice>
-		<point>10</point>
+		<choice>A</choice><point>-2</point>
+        <choice>new</choice><point>-2</point>
+        <choice>baby</choice><point>-2</point>
+        <choice>zebra</choice><point>-2</point>
+        <choice>was</choice><point>-2</point>
+        <choice>born</choice><point>10</point>
+		<choice>at</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>zoo</choice><point>-2</point>
+        <choice>last</choice><point>-2</point>
+        <choice>month</choice><point>-2</point>
 		<time>5</time>
 	</question>
     
@@ -296,12 +308,16 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Two cute iguanas live in a cage in our classroom.</sentence>
-		<choice>iguanas</choice>
-        <choice>cage</choice>
-        <choice>classroom</choice>
-        <point>15</point>
-        <point>10</point>
-		<point>10</point>
+        <choice>Two</choice><point>-2</point>
+        <choice>cute</choice><point>-2</point>
+		<choice>iguanas</choice><point>15</point>
+        <choice>live</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>cage</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>our</choice><point>-2</point>
+        <choice>classroom</choice><point>10</point>
 		<time>15</time>
 	</question>
     
@@ -309,11 +325,13 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>We wanted to skate last Friday.</sentence>
-		<choice>wanted</choice>
-        <choice>skate</choice>
-        <point>10</point>
-		<point>10</point>
-		<time>10</time>
+        <choice>We</choice><point>-2</point>
+		<choice>wanted</choice><point>10</point>
+        <choice>to</choice><point>-2</point>
+        <choice>skate</choice><point>10</point>
+        <choice>last</choice><point>-2</point>
+        <choice>Friday</choice><point>-2</point>
+        <time>10</time>
 	</question>
 	
 	<question>
@@ -440,8 +458,12 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>Penguins are birds that cannot fly.</sentence>
-		<choice>fly</choice>
-		<point>10</point>
+        <choice>Penguins</choice><point>-2</point>
+        <choice>are</choice><point>-2</point>
+        <choice>birds</choice><point>-2</point>
+        <choice>that</choice><point>-2</point>
+        <choice>cannot</choice><point>-2</point>
+		<choice>fly</choice><point>10</point>
 		<time>10</time>
 	</question>
     
@@ -449,10 +471,15 @@
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>The fat, dirty pig is playing in the mud.</sentence>
-		<choice>fat</choice>
-        <choice>dirty</choice>
-        <point>10</point>
-		<point>10</point>
+        <choice>The</choice><point>-2</point>
+		<choice>fat</choice><point>10</point>
+        <choice>dirty</choice><point>10</point>
+        <choice>pig</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>playing</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>mud</choice><point>-2</point>
 		<time>20</time>
 	</question>
     
@@ -475,14 +502,17 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Michael and Alex played a game after they finished their homework.</sentence>
-		<choice>Michael</choice>
-        <choice>Alex</choice>
-        <choice>game</choice>
-        <choice>homework</choice>
-        <point>15</point>
-        <point>15</point>
-        <point>10</point>
-		<point>10</point>
+		<choice>Michael</choice><point>15</point>
+        <choice>and</choice><point>-2</point>
+        <choice>Alex</choice><point>15</point>
+        <choice>played</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>game</choice><point>10</point>
+        <choice>after</choice><point>-2</point>
+        <choice>they</choice><point>-2</point>
+        <choice>finished</choice><point>-2</point>
+        <choice>their</choice><point>-2</point>
+        <choice>homework</choice><point>10</point>
 		<time>20</time>
 	</question>
     
@@ -505,12 +535,17 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>The sun rises in the east and sets in the west.</sentence>
-		<choice>sun</choice>
-        <choice>east</choice>
-        <choice>west</choice>
-        <point>10</point>
-        <point>10</point>
-		<point>10</point>
+        <choice>The</choice><point>-2</point>
+		<choice>sun</choice><point>10</point>
+        <choice>rises</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>east</choice><point>10</point>
+        <choice>and</choice><point>-2</point>
+        <choice>sets</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>west</choice><point>10</point>
 		<time>15</time>
 	</question>
     
@@ -518,10 +553,12 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Penguins are birds that cannot fly.</sentence>
-		<choice>Penguins</choice>
-        <choice>birds</choice>
-        <point>10</point>
-		<point>10</point>
+		<choice>Penguins</choice><point>10</point>
+        <choice>are</choice><point>-2</point>
+        <choice>birds</choice><point>10</point>
+        <choice>that</choice><point>-2</point>
+        <choice>cannot</choice><point>-2</point>
+		<choice>fly</choice><point>-2</point>
 		<time>10</time>
 	</question>
     
@@ -529,10 +566,17 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>The sun rises in the east and sets in the west.</sentence>
-		<choice>rises</choice>
-        <choice>sets</choice>
-        <point>10</point>
-		<point>10</point>
+		<choice>The</choice><point>-2</point>
+		<choice>sun</choice><point>-2</point>
+        <choice>rises</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>east</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>sets</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>west</choice><point>-2</point>
 		<time>10</time>
 	</question>
     
@@ -540,10 +584,17 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>Michael and Alex played a game after they finished their homework.</sentence>
-		<choice>played</choice>
-        <choice>finished</choice>
-        <point>10</point>
-		<point>10</point>
+		<choice>Michael</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>Alex</choice><point>-2</point>
+        <choice>played</choice><point>10</point>
+        <choice>a</choice><point>-2</point>
+        <choice>game</choice><point>-2</point>
+        <choice>after</choice><point>-2</point>
+        <choice>they</choice><point>-2</point>
+        <choice>finished</choice><point>10</point>
+        <choice>their</choice><point>-2</point>
+        <choice>homework</choice><point>-2</point>
 		<time>10</time>
 	</question>
     
@@ -551,14 +602,15 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Alen and Sammy are playing football in the playground.</sentence>
-		<choice>Alen</choice>
-        <choice>Sammy</choice>
-        <choice>football</choice>
-        <choice>playground</choice>
-        <point>10</point>
-        <point>10</point>
-        <point>10</point>
-		<point>10</point>
+		<choice>Alen</choice><point>10</point>
+        <choice>and</choice><point>-2</point>
+        <choice>Sammy</choice><point>10</point>
+        <choice>are</choice><point>-2</point>
+        <choice>playing</choice><point>-2</point>
+        <choice>football</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>playground</choice><point>10</point>
 		<time>20</time>
 	</question>
     
@@ -566,10 +618,14 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>We saw a beautiful bird in the woods.</sentence>
-		<choice>bird</choice>
-        <choice>woods</choice>
-        <point>10</point>
-		<point>10</point>
+        <choice>We</choice><point>-2</point>
+        <choice>saw</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>beautiful</choice><point>-2</point>
+		<choice>bird</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>woods</choice><point>10</point>
 		<time>10</time>
 	</question>
     
@@ -577,19 +633,23 @@
 		<type>Find the nouns</type>
 		<image></image>
 		<sentence>Armando lives in Mexico.</sentence>
-		<choice>Armando</choice>
-        <choice>Mexico</choice>
-        <point>10</point>
-		<point>10</point>
-		<time>10</time>
+		<choice>Armando</choice><point>10</point>
+        <choice>lives</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>Mexico</choice><point>10</point>
+        <time>10</time>
 	</question>
     
     <question>
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>The early bird catches the worm.</sentence>
-		<choice>early</choice>
-		<point>10</point>
+        <choice>The</choice><point>-2</point>
+		<choice>early</choice><point>10</point>
+        <choice>bird</choice><point>-2</point>
+        <choice>catches</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>worm</choice><point>-2</point>
 		<time>5</time>
 	</question>
     
@@ -597,12 +657,15 @@
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>The little boy is carrying a big, round watermelon.</sentence>
-		<choice>little</choice>
-        <choice>big</choice>
-        <choice>round</choice>
-        <point>10</point>
-        <point>10</point>
-		<point>10</point>
+        <choice>The</choice><point>-2</point>
+		<choice>little</choice><point>10</point>
+        <choice>boy</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>carrying</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>big</choice><point>10</point>
+        <choice>round</choice><point>10</point>
+        <choice>watermelon</choice><point>-2</point>
 		<time>15</time>
 	</question>
     
@@ -610,21 +673,31 @@
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>Jan is a clever girl.</sentence>
-		<choice>clever</choice>
-		<point>10</point>
-		<time>5</time>
+        <choice>Jan</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+		<choice>clever</choice><point>10</point>
+		<choice>girl</choice><point>-2</point>
+        <time>5</time>
 	</question>
     
     <question>
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>When I was young, my elder sister often bought me a delicious ice-cream.</sentence>
-		<choice>young</choice>
-        <choice>elder</choice>
-        <choice>delicious</choice>
-        <point>10</point>
-        <point>10</point>
-		<point>10</point>
+        <choice>When</choice><point>-2</point>
+        <choice>I</choice><point>-2</point>
+        <choice>was</choice><point>-2</point>
+		<choice>young</choice><point>10</point>
+        <choice>my</choice><point>-2</point>
+        <choice>elder</choice><point>10</point>
+        <choice>sister</choice><point>-2</point>
+        <choice>often</choice><point>-2</point>
+        <choice>bought</choice><point>-2</point>
+        <choice>me</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>delicious</choice><point>10</point>
+        <choice>ice-cream</choice><point>-2</point>
 		<time>15</time>
 	</question>
     
@@ -632,8 +705,11 @@
 		<type>Find the adjectives</type>
 		<image></image>
 		<sentence>Cats are smarter than dogs.</sentence>
-		<choice>smarter</choice>
-		<point>10</point>
+        <choice>Cats</choice><point>-2</point>
+        <choice>are</choice><point>-2</point>
+		<choice>smarter</choice><point>10</point>
+        <choice>than</choice><point>-2</point>
+        <choice>dogs</choice><point>-2</point>
 		<time>5</time>
 	</question>
     
@@ -806,8 +882,14 @@
 		<type>Find the verbs</type>
 		<image></image>
 		<sentence>He swept the leaves up into a pile.</sentence>
-		<choice>swept</choice>
-		<point>10</point>
+        <choice>He</choice><point>-2</point>
+		<choice>swept</choice><point>10</point>
+        <choice>the</choice><point>-2</point>
+        <choice>leaves</choice><point>-2</point>
+        <choice>up</choice><point>-2</point>
+        <choice>into</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>pile</choice><point>-2</point>
 		<time>5</time>
 	</question>
     
