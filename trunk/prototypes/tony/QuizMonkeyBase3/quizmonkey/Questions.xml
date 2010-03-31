@@ -1,0 +1,106 @@
+<questions>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>It smacked my face all of a su_den.</sentence>
+		<choice>h</choice>
+		<choice>p</choice>
+		<choice>d</choice>
+		<choice>x</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+
+	<question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>Billy is a very special person.</sentence>
+		<choice>Billy</choice>
+		<choice>is</choice>
+		<choice>a</choice>
+		<choice>very</choice>
+		<choice>special</choice>
+		<choice>person</choice>
+		<point>-2</point>
+		<point>-2</point>
+		<point>-2</point>
+		<point>15</point>
+		<point>15</point>
+		<point>-2</point>
+		<time>50</time>
+	</question>
+	
+	<question>
+		<type>Match the picture</type>
+		<image>banana.jpg</image>
+		<sentence>What's this?</sentence>
+		<choice>apple</choice>
+		<choice>banana</choice>
+		<choice>car</choice>
+		<choice>monkey</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Match the picture</type>
+		<image>mukmuk.jpg</image>
+		<sentence>Who's he?</sentence>
+		<choice>monkey</choice>
+		<choice>bird</choice>
+		<choice>mukmuk</choice>
+		<choice>mouse</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Last week, I lost my cellphone on the bus.</sentence>
+		<choice>Last</choice>
+		<choice>week</choice>
+		<choice>I</choice>
+		<choice>lost</choice>
+		<choice>my</choice>
+		<choice>cellphone</choice>
+		<choice>on</choice>
+		<choice>the</choice>
+		<choice>bus</choice>
+		<point>-2</point>
+		<point>10</point>
+		<point>15</point>
+		<point>-2</point>
+		<point>-2</point>
+		<point>10</point>
+		<point>-2</point>
+		<point>-2</point>
+		<point>10</point>
+		<time>50</time>
+	</question>
+	
+	<question>
+		<type>Match the picture</type>
+		<image>car.jpg</image>
+		<sentence>What's that?</sentence>
+		<choice>apple</choice>
+		<choice>banana</choice>
+		<choice>car</choice>
+		<choice>monkey</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+	
+</questions>
