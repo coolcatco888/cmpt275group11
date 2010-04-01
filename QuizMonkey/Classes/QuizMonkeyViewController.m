@@ -20,8 +20,9 @@
 @implementation QuizMonkeyViewController
 
 @synthesize questionViewController;
-@synthesize submissionViewController;
-@synthesize submitView;
+@synthesize onlineViewController;
+//@synthesize submissionViewController;
+//@synthesize submitView;
 ////////////////////////Main View Functions
 -(IBAction)loadQuestionView:(id)sender {
 	questionViewController = [questionViewController init];
@@ -44,6 +45,15 @@
 	 */
 }
 -(IBAction)loadHighScoresView:(id)sender {
+	onlineViewController = [onlineViewController init];
+//	[mainMenuView addSubview:highScoresView];
+//	[onlineViewController setHighScoresURL:@"http://quizmonkey.x10hosting.com/viewxml.php?"];
+//	[onlineViewController setSubmitScoreURL:@"http://quizmonkey.x10hosting.com/submit.php?"];
+	
+	[onlineViewController loadHighScoresFromURL];
+	
+	
+	/*
 	NSData *highScoresData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://quizmonkey.x10hosting.com/viewxml.php"]];
 	ScoreParser *scoreParser = [ScoreParser new];
 	NSMutableArray *highScoresArray = [scoreParser parseScoresFromData:highScoresData];
@@ -84,6 +94,7 @@
 	[highScoresView addSubview:highScoresSubView];
 	//Shows the high scores view
 	[mainMenuView addSubview:highScoresView];
+	 */
 }
 -(IBAction)exitApplication:(id)sender {
 	//Exits the appliction
@@ -134,19 +145,18 @@
 }
 -(IBAction)exitHighScoresView:(id)sender {
 	//Hides the high scores view
-	[highScoresView removeFromSuperview];
+//	[highScoresView removeFromSuperview];
 }
 
 ////////////////////////Final Score View Functions
 -(IBAction) exitFinalScoreView:(id)sender {
 	//Hides the final view
 	//	NSLog(@"%i",[manager totalPointsAcquired]);
-	Score* score = [questionViewController finalScore];
-	[submissionViewController setSubmissionScore:score];
 	[finalScoreView removeFromSuperview];
-	[mainMenuView addSubview:submitView];
-	
-	//TODO: Add online score submission!
+//	score = ;
+	onlineViewController = [onlineViewController init];
+	[onlineViewController setCurrentScore:[questionViewController finalScore]];
+	[onlineViewController submitCurrentScore];
 }
 
 

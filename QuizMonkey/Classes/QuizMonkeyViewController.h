@@ -25,22 +25,22 @@
 //#import "QuestionViewManager.h"
 #import "QuestionViewController.h"
 #import "SubmissionViewController.h"
+#import "OnlineViewController.h"
 
-#define HIGHSCORES_ORIGN_X 20
-#define HIGHSCORES_ORIGN_Y 95
-#define HIGHSCORES_ORIGN_W 440
-#define HIGHSCORES_ORIGN_H 514
-
-#define HIGHSCORES_SCORE_H 29
 
 
 @class QuestionViewController;
-@class SubmissionViewController;
+//@class SubmissionViewController;
+@class OnlineViewController;
 
 @interface QuizMonkeyViewController : UIViewController {
 	QuestionViewController *questionViewController;
-	SubmissionViewController *submissionViewController;
+	OnlineViewController *onlineViewController;
+	//SubmissionViewController *submissionViewController;
+//	WebInterface *webInterface;
 	//View Outlets
+//	Score *score;
+	
 	IBOutlet UIView *mainMenuView;//A reference to the main menu view
 	IBOutlet UIView *questionView;//A reference to the question view
 	IBOutlet UIView *highScoresView;//A reference to the high scores view
@@ -75,8 +75,10 @@
 }
 
 @property (nonatomic, retain) IBOutlet QuestionViewController *questionViewController;
-@property (nonatomic, retain) IBOutlet SubmissionViewController *submissionViewController;
-@property (assign) IBOutlet UIView *submitView;
+//@property (nonatomic, retain) IBOutlet SubmissionViewController *submissionViewController;
+@property (nonatomic, retain) IBOutlet OnlineViewController *onlineViewController;
+//@property (assign) IBOutlet UIView *submitView;
+
 //Main Menu View Functions
 -(IBAction)loadQuestionView:(id)sender;//Loads the question view
 -(IBAction)loadHighScoresView:(id)sender;//Loads the high scores view
