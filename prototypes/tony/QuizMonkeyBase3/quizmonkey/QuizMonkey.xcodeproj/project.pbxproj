@@ -11,6 +11,8 @@
 		11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E60115D6D2C001FCEE1 /* car.jpg */; };
 		11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */; };
 		1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */; };
+		1D38FE6011641DFF007FF52F /* reward1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D38FE5F11641DFF007FF52F /* reward1.png */; };
+		1D38FE651164292D007FF52F /* reward1_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D38FE641164292D007FF52F /* reward1_fail.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1D7D05F0114DC337003B550F /* QuizMonkeyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */; };
@@ -43,6 +45,8 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyAppDelegate.m; sourceTree = "<group>"; };
+		1D38FE5F11641DFF007FF52F /* reward1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward1.png; sourceTree = "<group>"; };
+		1D38FE641164292D007FF52F /* reward1_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward1_fail.png; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* QuizMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizMonkeyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuizMonkeyTests-Info.plist"; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D38FE641164292D007FF52F /* reward1_fail.png */,
+				1D38FE5F11641DFF007FF52F /* reward1.png */,
 				1D7D0653114DCD7B003B550F /* Questions.xml */,
 				DE101892115D93AD004D378B /* Questions2.xml */,
 				11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */,
@@ -268,6 +274,8 @@
 				11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */,
 				11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */,
 				DE101893115D93AD004D378B /* Questions2.xml in Resources */,
+				1D38FE6011641DFF007FF52F /* reward1.png in Resources */,
+				1D38FE651164292D007FF52F /* reward1_fail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
