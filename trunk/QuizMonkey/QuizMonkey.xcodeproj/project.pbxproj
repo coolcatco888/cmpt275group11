@@ -21,7 +21,6 @@
 		2899E5220DE3E06400AC0155 /* QuizMonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* QuizMonkeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */; };
-		4E47DDA4114B033B00F766B8 /* QuestionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */; };
 		4E47DDB2114B09B800F766B8 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDB1114B09B800F766B8 /* Question.m */; };
 		4E47DDC8114B0FC800F766B8 /* QuestionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E47DDC6114B0FC800F766B8 /* QuestionParser.m */; };
 		DE09920D115D9FCD00507FBD /* WebInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DE09920C115D9FCD00507FBD /* WebInterface.m */; };
@@ -33,6 +32,7 @@
 		DE63BCA611605EB200000E41 /* SubmissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE63BCA411605EB200000E41 /* SubmissionViewController.m */; };
 		DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6EF81A116155E500C5391E /* ScoreParser.m */; };
 		DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5D287115D7E51006B3A5D /* QuestionViewController.m */; };
+		DEE4129B11641D4B008B019A /* OnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4129A11641D4B008B019A /* OnlineViewController.m */; };
 		EA8C413E115566B300F15609 /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D0653114DCD7B003B550F /* Questions.xml */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,6 @@
 		28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* QuizMonkey_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkey_Prefix.pch; sourceTree = "<group>"; };
-		4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewManager.h; sourceTree = "<group>"; };
-		4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewManager.m; sourceTree = "<group>"; };
 		4E47DDB0114B09B800F766B8 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		4E47DDB1114B09B800F766B8 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		4E47DDC6114B0FC800F766B8 /* QuestionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionParser.m; sourceTree = "<group>"; };
@@ -78,6 +76,8 @@
 		DE6EF81A116155E500C5391E /* ScoreParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreParser.m; sourceTree = "<group>"; };
 		DED5D287115D7E51006B3A5D /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		DED5D288115D7E51006B3A5D /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		DEE4129911641D4B008B019A /* OnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineViewController.h; sourceTree = "<group>"; };
+		DEE4129A11641D4B008B019A /* OnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,6 @@
 				28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */,
 				DED5D288115D7E51006B3A5D /* QuestionViewController.h */,
 				DED5D287115D7E51006B3A5D /* QuestionViewController.m */,
-				4E47DDA2114B033B00F766B8 /* QuestionViewManager.h */,
-				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
 				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
 				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
 				4E47DDB0114B09B800F766B8 /* Question.h */,
@@ -124,6 +122,8 @@
 				DE6EF81A116155E500C5391E /* ScoreParser.m */,
 				DE09921C115DA46100507FBD /* Score.h */,
 				DE09921D115DA46100507FBD /* Score.m */,
+				DEE4129911641D4B008B019A /* OnlineViewController.h */,
+				DEE4129A11641D4B008B019A /* OnlineViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -304,7 +304,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* QuizMonkeyViewController.m in Sources */,
-				4E47DDA4114B033B00F766B8 /* QuestionViewManager.m in Sources */,
 				4E47DDB2114B09B800F766B8 /* Question.m in Sources */,
 				4E47DDC8114B0FC800F766B8 /* QuestionParser.m in Sources */,
 				DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */,
@@ -312,6 +311,7 @@
 				DE09921E115DA46100507FBD /* Score.m in Sources */,
 				DE63BCA611605EB200000E41 /* SubmissionViewController.m in Sources */,
 				DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */,
+				DEE4129B11641D4B008B019A /* OnlineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
