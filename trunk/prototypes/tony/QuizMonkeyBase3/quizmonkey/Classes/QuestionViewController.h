@@ -36,7 +36,10 @@
 #define SENTENCE_RECT_WHEN_IMAGE_Y 215
 #define SENTENCE_RECT_WHEN_IMAGE_W 400
 #define SENTENCE_RECT_WHEN_IMAGE_H 35
-
+#define REWARD_ICON_SIZE 55
+#define REWARD_ICON_STRAT_POINT_X 30
+#define REWARD_ICON_STRAT_POINT_Y 110
+#define REWARD_ICON_GAP 20
 
 @interface QuestionViewController : UIViewController {
 	//View Outlets
@@ -62,6 +65,15 @@
 	IBOutlet UIButton *questionChoice3Button;
 	IBOutlet UIButton *questionChoice4Button;
 	NSArray *questionChoiceButtonArray;
+	
+	NSArray *rewardIconFileName;
+	//NSMutableArray *rewardButton;
+	/*UIButton *rewardButton1;
+	UIButton *rewardButton2;
+	UIButton *rewardButton3;
+	UIButton *rewardButton4;
+	UIButton *rewardButton5;
+	UIButton *rewardButton6;*/
 	
 	NSMutableArray *questionListOfXML;//Holds the list of questions
 	NSMutableArray *questionListOfQuiz;
@@ -126,6 +138,14 @@
 @property (assign) NSUInteger totalPointsAcquired;
 @property (assign) Score* finalScore;
 
+//@property (assign) NSMutableArray *rewardButton;
+@property (assign) NSArray *rewardIconFileName;
+/*
+@property (assign) UIButton *rewardButton2;
+@property (assign) UIButton *rewardButton3;
+@property (assign) UIButton *rewardButton4;
+@property (assign) UIButton *rewardButton5;
+@property (assign) UIButton *rewardButton6;*/
 /*
  - (int)getTotalScore;
  - (int)getTotalMaxScore;
@@ -163,8 +183,11 @@
 -(void)updateTimer;//fired every 1 second, checks whether time is up
 -(void)quitGame;//Removes questionScreen from the mainview
 -(void)stopTimer;//Stop timer from view controller
--(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)ix buttonY:(CGFloat)iy;
+-(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)CustomizeX buttonY:(CGFloat)CustomizeY;
 -(void)selectword:(id)sender;
 - (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2;
 -(IBAction)quitButtonPressed:(id)sender;
+-(void)rewardDescription:(UIButton*)sender;
+-(void) rewardIconCreator:(NSString*)image_name iconX:(CGFloat)CustomizeX iconY:(CGFloat)CustomizeY;
+-(void)getReward:(NSUInteger)reward_id;
 @end

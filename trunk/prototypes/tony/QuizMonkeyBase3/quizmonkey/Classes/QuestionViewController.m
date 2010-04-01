@@ -43,7 +43,16 @@
 @synthesize totalPointsAcquired;
 
 @synthesize finalScore;
-
+//@synthesize rewardButton;
+@synthesize rewardIconFileName;
+/*
+@synthesize rewardButton1;
+@synthesize rewardButton2;
+@synthesize rewardButton3;
+@synthesize rewardButton4;
+@synthesize rewardButton5;
+@synthesize rewardButton6;
+*/
 
 - init {
 	questionChoiceButtonArray = [NSArray arrayWithObjects:questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil];
@@ -74,8 +83,34 @@
 	[selectedChoices retain];
 	[questionChoiceButtonArray retain];
 	
+	//Set Score Object
+	finalScore = [Score new];
+	
+	//Init final score rewards
+	rewardIconFileName=[[NSArray alloc] initWithObjects:@"reward1",@"reward1",@"reward1",@"reward1",@"reward1",@"reward1",  nil];
+	NSLog(@"total reward: %i .",[rewardIconFileName count]);
+	for (NSUInteger i=0; i<[rewardIconFileName count]; i++) {
+		[self rewardIconCreator: iconX:i%([rewardIconFileName count]/2) iconY:(i/([rewardIconFileName count]/2))];
+	}
 	return self;
 }
+-(void) rewardIconCreator:(NSUInteger)reward_id iconX:(CGFloat)CustomizeX iconY:(CGFloat)CustomizeY
+{
+	NSMutableString* image_name_str = [NSMutableString stringWithCapacity:100];
+	[image_name_str appendString:[rewardIconFileName objectAtIndex:reward_id] ];
+	[image_name_str appendString:@"_fail.png"];
+	
+	UIButton *iconButton;
+	iconButton=[UIButton buttonWithType:UIButtonTypeCustom];
+	[iconButton setFrame: CGRectMake((CustomizeX*(REWARD_ICON_SIZE+REWARD_ICON_GAP))+REWARD_ICON_STRAT_POINT_X,(CustomizeY*(REWARD_ICON_SIZE+REWARD_ICON_GAP))+REWARD_ICON_STRAT_POINT_Y,REWARD_ICON_SIZE ,REWARD_ICON_SIZE)];
+	[iconButton setTitle:[rewardIconFileName objectAtIndex:reward_id] forState:UIControlStateHighlighted];//in order to hide the title
+	[iconButton setBackgroundImage:[UIImage imageNamed: image_name_str] forState:UIControlStateNormal];
+	[iconButton addTarget:self action:@selector(rewardDescription:) forControlEvents:UIControlEventTouchUpInside];
+	[finalScoreView addSubview:iconButton];
+	
+	
+}
+
 - (void)loadQuestionsFromXML {
 	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions"];
 	[questionListOfXML retain];
@@ -232,6 +267,7 @@
 	if(points == 0) {
 		title = @"Sorry...";
 		[message appendString:@"Your answer is completely WRONG!"];
+		finalScore.combo=0;
 		//Set message if the student got some right
 	} else if (points < totalPointsForCurrentQuestion) {
 		title = @"Not Bad...";
@@ -240,14 +276,26 @@
 		[message appendString:@"/"];
 		[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
 		[message appendString:@" points!"];
+		finalScore.combo=0;
 		//Set Message if the student got all of them right
 	} else {
 		title = @"Perfect!";
 		[message appendString:@"Your answer is correct!"];
+		/*finalScore.combo++;
+		if (finalScore.combo>finalScore.maxCombo)
+		{
+			finalScore.maxCombo=finalScore.combo;
+		}*/
+		[finalScore updateCounters:currentQuestion.type];
+	}
+	if (finalScore.combo==5)
+	{
+		[self getReward:0];
 	}
 	
-	
-	
+	NSLog(@"Combo: %i , Max Combo so far: %i .",finalScore.combo,finalScore.maxCombo);
+	NSLog(@"fill in the blank: %i, pick out words: %i, misspelled word: %i, picture: %i, verb: %i, adj: %i, noun: %i.",finalScore.fillInTheBlank,finalScore.pickOutWords,finalScore.findTheMisspelledWord,finalScore.matchThePic,finalScore.findVerb,finalScore.findAdj,finalScore.findNoun);
+	NSLog(@"Grammar: %i . Vocabulary: %i .",finalScore.grammar,finalScore.vocabulary);
 	alert = [[UIAlertView alloc] initWithTitle:title 
 									   message:message 
 									  delegate:self 
@@ -255,6 +303,70 @@
 							 otherButtonTitles:nil];
 	[alert show];
 	[alert autorelease];
+}
+
+-(void)getReward: (NSUInteger)reward_id
+{
+	NSMutableString* image_name_str = [NSMutableString stringWithCapacity:100];
+	[image_name_str appendString:[rewardIconFileName objectAtIndex:reward_id]];
+	[image_name_str appendString:@".png"];
+	[[rewardButton objectAtIndex:reward_id] setBackgroundImage:[UIImage imageNamed: image_name_str] forState:UIControlStateNormal];
+	
+}
+-(void)rewardDescription:(UIButton*)sender
+{
+	[sender setHighlighted:TRUE];
+	NSString* title;
+	NSMutableString* message = [NSMutableString stringWithCapacity:100];
+	
+	NSLog(@"sender: %i, reward1: %i.",sender,[rewardButton objectAtIndex:0]);
+	if (sender==[rewardButton objectAtIndex:0]) 
+	{
+		title = @"Perfect Answer Combo Reward";
+		[message appendString:@"To get this reward, Your perfect correct answer in a row must be more than 5. \nAnd your current number is: "];
+		[message appendString:[[NSNumber numberWithInt: finalScore.maxCombo] stringValue]];
+	} 
+	else if (sender==[rewardButton objectAtIndex:1])  
+	{
+		title = @" ";
+		[message appendString:@" "];
+		
+	}
+	else if (sender==[rewardButton objectAtIndex:2]) 
+	{
+		title = @" ";
+		[message appendString:@" "];
+	}
+	else if (sender==[rewardButton objectAtIndex:3]) 
+	{
+		title = @" ";
+		[message appendString:@" "];
+	}
+	else if (sender==[rewardButton objectAtIndex:4])  
+	{
+		title = @" ";
+		[message appendString:@" "];
+	}
+	else if (sender==[rewardButton objectAtIndex:5]) 
+	{
+		title = @" ";
+		[message appendString:@" "];
+	}
+	else
+	{
+		title = @"Unknow Reward";
+		[message appendString:@"Nothing..."];
+		
+	}
+		
+	alert = [[UIAlertView alloc] initWithTitle:title 
+									   message:message 
+									  delegate:self 
+							 cancelButtonTitle:@"Continue" 
+							 otherButtonTitles:nil];
+	[alert show];
+	[alert autorelease];
+	[sender setHighlighted:FALSE];
 }
 - (bool)questionHasImage {
 	if([currentQuestion.image isEqualToString:@"\n\t\t"])
@@ -467,8 +579,7 @@
 				[score appendString:@" banana points!"];
 				[finalScoreLabel setText:score];
 				
-				//Set Score Object
-				finalScore = [Score new];
+
 				[finalScore setPoints:totalPointsAcquired];
 				[finalScore setMaxPoints:totalPoints];
 				[finalScore setTimeLeft:totalTimeLeft];
@@ -516,6 +627,8 @@
 }
 - (void)quitGame {
 	[questionView removeFromSuperview];
+	//[rewardIconFileName release];
+	//[rewardButton release];
 /*	[questionChoiceButtonArray release];
 	
 	[questionListOfXML release];
