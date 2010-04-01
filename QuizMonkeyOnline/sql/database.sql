@@ -1,17 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.2.1deb1
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2010 at 05:48 PM
--- Server version: 5.1.37
--- PHP Version: 5.2.10-2ubuntu6.4
+-- Generation Time: Mar 31, 2010 at 09:50 PM
+-- Server version: 5.0.89
+-- PHP Version: 5.2.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
--- Database: `quizmonkey`
+-- Database: `quizmonk_data`
 --
+CREATE DATABASE `quizmonk_data` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `quizmonk_data`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `scores` (
   `date` datetime NOT NULL,
   `points` int(255) NOT NULL,
   `maxpoints` int(255) NOT NULL,
-  PRIMARY KEY (`userid`,`scoreid`)
+  PRIMARY KEY  (`userid`,`scoreid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -35,12 +37,19 @@ CREATE TABLE IF NOT EXISTS `scores` (
 --
 
 INSERT INTO `scores` (`userid`, `scoreid`, `timeleft`, `date`, `points`, `maxpoints`) VALUES
-('im2bz2cup', 0, 2, '2010-03-28 00:00:00', 100, 120),
-('im2bz2cup', 1, 2, '2010-03-28 00:00:00', 100, 120),
-('im2bz2cup', 2, 2, '2010-03-28 00:00:00', 100, 120),
-('im2bz2cup', 3, 2, '2010-03-28 00:00:00', 100, 120),
-('im2bz2cup', 4, 2, '2010-03-28 00:00:00', 100, 120),
-('lestermoe', 0, 2, '2010-03-28 00:00:00', 100, 120);
+('im2bz2cu', 0, 2, '2010-03-28 00:00:00', 100, 120),
+('im2bz2cu', 1, 2, '2010-03-28 00:00:00', 100, 120),
+('lestermoe', 0, 2, '2010-03-28 00:00:00', 100, 120),
+('lestermoe', 1, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 2, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 3, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 4, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 5, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 6, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 7, 2, '2010-03-29 00:00:00', 100, 120),
+('lestermoe', 8, 3, '2010-03-29 00:00:00', 65, 6547),
+('lestermoe', 9, 77, '2010-03-29 00:00:00', 65, 125),
+('lestermoe', 10, 77, '2010-03-29 00:00:00', 65, 125);
 
 -- --------------------------------------------------------
 
@@ -56,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `password` varchar(20) NOT NULL,
   `email` varchar(100) NOT NULL,
   `type` int(32) NOT NULL,
-  PRIMARY KEY (`userid`)
+  PRIMARY KEY  (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='Stores accounts of students and teachers';
 
 --
@@ -64,6 +73,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`userid`, `firstname`, `lastname`, `password`, `email`, `type`) VALUES
-('im2bz2cup', 'Mike', 'Hawke', 'yourmom', 'coolcatco888@hotmail.com', 0),
-('ednakrabappel', 'Edna', 'Krabappel', 'yourmom', 'coolcatco888@hotmail.com', 1),
-('lestermoe', 'Moe', 'Lester', 'yourmom', 'coolcatco888@hotmail.com', 0);
+('im2bz2cu', 'Mike', 'Hawkey', 'teamawesome', 'coolcatco888@hotmail.com', 0),
+('ednakrabappel', 'Edna', 'Krabappel', 'teamawesome', 'coolcatco888@hotmail.com', 1),
+('lestermoe', 'Moeris', 'Lester', 'teamawesome', 'coolcatco888@hotmail.com', 0),
+('besttaever', 'Sebastian', 'Schmidt', 'weloveyou', 'sschmidt@sfu.ca', 0);
