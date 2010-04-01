@@ -88,53 +88,106 @@ class ScoreManager {
     }
 
     function retrieve_all_scores() {
+    	$result = $this->retrieve_user_scores('');
+    	/*
         $result = $this->execute_query("SELECT * FROM `user` "
             ."INNER JOIN `scores` "
             ."ON user.userid=scores.userid "
+            ."ORDER BY user.userid;");*/
+
+        return $result;
+    }
+    
+    function retrieve_user_scores($username) {
+    	$filter = '';
+    	
+    	//Add a username filter if a username is specified,
+    	//otherwise select everything
+    	if($username != '' || is_null($username)) {
+    		$filter = " WHERE user.userid='$username' ";
+    	}
+    	
+        $result = $this->execute_query("SELECT * FROM `user` "
+            ."INNER JOIN `scores` "
+            ."ON user.userid=scores.userid "
+            .$filter
             ."ORDER BY user.userid;");
 
         return $result;
     }
 
     function generate_score_table() {
-        $html = '<table>';
+        //Default message to indicate that there are no scores to display
+        $html = '<p>No Scores to Display</p>';
         
         $scores = $this->retrieve_all_scores();
 
         $currentuser = '';
-        while($row = mysql_fetch_array($scores))
-        {
-            if($row['userid'] != $currentuser) {
-                $html .= "<tr><td colspan='5'>Student ID: ".$row['userid']." | Name: ".$row['firstname']." ".$row['lastname']."</td></tr>";
-                $currentuser = $row['userid'];
-                $html .= "<tr>"
-                ."<th>Score ID</th>"
-                ."<th>Time Left</th>"
-                ."<th>Date</th>"
-                ."<th>Points</th>"
-                ."<th>Max Points</th>"
-                ."</tr>";
-            }
-
-            $html .= "<tr>"
-                ."<td>".$row['scoreid']."</td>"
-                ."<td>".$row['timeleft']."</td>"
-                ."<td>".$row['date']."</td>"
-                ."<td>".$row['points']."</td>"
-                ."<td>".$row['maxpoints']."</td>"
-                ."</tr>";
+        
+        $noscores = false;
+        
+        //If there are scores to display then show the table
+        if(mysql_num_rows($scores) != 0) {
+        	$html = '<table>';
+	        while($row = mysql_fetch_array($scores)) {
+	            if($row['userid'] != $currentuser) {
+	                $html .= "<tr><td colspan='5'>Student ID: ".$row['userid']." | Name: ".$row['firstname']." ".$row['lastname']."</td></tr>";
+	                $currentuser = $row['userid'];
+	                $html .= "<tr>"
+	                ."<th>Score ID</th>"
+	                ."<th>Time Left</th>"
+	                ."<th>Date</th>"
+	                ."<th>Points</th>"
+	                ."<th>Max Points</th>"
+	                ."</tr>";
+	            }
+	
+	            $html .= "<tr>"
+	                ."<td>".$row['scoreid']."</td>"
+	                ."<td>".$row['timeleft']."</td>"
+	                ."<td>".$row['date']."</td>"
+	                ."<td>".$row['points']."</td>"
+	                ."<td>".$row['maxpoints']."</td>"
+	                ."</tr>";
+	        }
+	        $html .= '</table>';
         }
-
-        $html .= '</table>';
-
         return $html;
     }
 
     //Generates an xml representation of the high scores
     function generate_score_xml() {
+    	$html = $this->generate_user_score_xml('');
+    	/*
         $html = '<scores>';
         
         $scores = $this->retrieve_all_scores();
+
+        while($row = mysql_fetch_array($scores))
+        {
+            $html .= "<score>"
+		."<userid>".$row['userid']."</userid>"
+		."<firstname>".$row['firstname']."</firstname>"
+		."<lastname>".$row['lastname']."</lastname>"
+		."<email>".$row['email']."</email>"
+                ."<scoreid>".$row['scoreid']."</scoreid>"
+                ."<timeleft>".$row['timeleft']."</timeleft>"
+                ."<date>".$row['date']."</date>"
+                ."<points>".$row['points']."</points>"
+                ."<maxpoints>".$row['maxpoints']."</maxpoints>"
+                ."</score>";
+        }
+
+        $html .= '</scores>';
+        */
+
+        return $html;
+    }
+    
+    function generate_user_score_xml($username) {
+        $html = '<scores>';
+        
+        $scores = $this->retrieve_user_scores($username);
 
         while($row = mysql_fetch_array($scores))
         {
