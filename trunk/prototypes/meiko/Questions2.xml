@@ -1,0 +1,155 @@
+<questions>
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>My friend Billy eats ch__se.</sentence>
+		<choice>aa</choice>
+		<choice>ee</choice>
+		<choice>cc</choice>
+		<choice>zz</choice>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words below are verbs?</sentence>
+		<choice>cheese</choice>
+		<choice>run</choice>
+		<choice>cat</choice>
+		<choice>fly</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>15</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are animals or bugs?</sentence>
+		<choice>Samurai</choice>
+		<choice>pizza</choice>
+		<choice>cats</choice>
+		<choice>fly</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>15</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: The word rhymes with pasty...</sentence>
+		<choice>monkey</choice>
+		<choice>train</choice>
+		<choice>tasti</choice>
+		<choice>long</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>20</time>
+	</question>
+	
+	<question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words below are not people?</sentence>
+		<choice>beavers</choice>
+		<choice>officers</choice>
+		<choice>dentists</choice>
+		<choice>dolphins</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>20</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>You can make fire with matc_es.</sentence>
+		<choice>x</choice>
+		<choice>h</choice>
+		<choice>o</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Jamie slep_ with Morgan.</sentence>
+		<choice>c</choice>
+		<choice>y</choice>
+		<choice>p</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>5</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>The month that comes after July is Augu_t.</sentence>
+		<choice>s</choice>
+		<choice>e</choice>
+		<choice>n</choice>
+		<choice>w</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>We watched the birds eat seeds and fly away.</sentence>
+        <choice>We</choice><point>-2</point>
+		<choice>watched</choice><point>10</point>
+        <choice>the</choice><point>-2</point>
+        <choice>birds</choice><point>-2</point>
+        <choice>eat</choice><point>10</point>
+        <choice>seeds</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>fly</choice><point>10</point>
+        <choice>away</choice><point>-2</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>A new baby zebra was born at the zoo last month.</sentence>
+		<choice>A</choice><point>-2</point>
+        <choice>new</choice><point>-2</point>
+        <choice>baby</choice><point>-2</point>
+        <choice>zebra</choice><point>-2</point>
+        <choice>was</choice><point>-2</point>
+        <choice>born</choice><point>10</point>
+		<choice>at</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>zoo</choice><point>-2</point>
+        <choice>last</choice><point>-2</point>
+        <choice>month</choice><point>-2</point>
+		<time>5</time>
+	</question>
+</questions>
