@@ -1,0 +1,152 @@
+<questions>   
+   <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words do not belong to days of the week?</sentence>
+		<choice>Birthday</choice>
+		<choice>Monday</choice>
+		<choice>Friday</choice>
+		<choice>June</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>15</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: The word(s) describes a person's age/appearance</sentence>
+		<choice>yung</choice>
+		<choice>qute</choice>
+		<choice>black</choice>
+		<choice>terrible</choice>
+		<point>10</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are vegetables?</sentence>
+		<choice>cabbage</choice>
+		<choice>cucumber</choice>
+		<choice>potato</choice>
+		<choice>carrot</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words are jobs?</sentence>
+		<choice>father</choice>
+		<choice>teacher</choice>
+		<choice>dentist</choice>
+		<choice>woman</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words describe the weather?</sentence>
+		<choice>happy</choice>
+		<choice>snowy</choice>
+		<choice>quick</choice>
+		<choice>low</choice>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: Food name(s)</sentence>
+		<choice>potatos</choice>
+		<choice>tomatos</choice>
+		<choice>photos</choice>
+		<choice>sandwichs</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: A set of printed sheets of paper contains daily or weekly news.</sentence>
+		<choice>magazine</choice>
+		<choice>radio</choice>
+		<choice>newpaper</choice>
+		<choice>television</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: Country name(s)</sentence>
+		<choice>Jepanese</choice>
+		<choice>Vancouver</choice>
+		<choice>China</choice>
+		<choice>Gemany</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>15</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: only one word is misspelled</sentence>
+		<choice>docter</choice>
+		<choice>sailor</choice>
+		<choice>soldier</choice>
+		<choice>driver</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>He swept the leaves up into a pile.</sentence>
+        <choice>He</choice><point>-2</point>
+		<choice>swept</choice><point>10</point>
+        <choice>the</choice><point>-2</point>
+        <choice>leaves</choice><point>-2</point>
+        <choice>up</choice><point>-2</point>
+        <choice>into</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>pile</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+</questions>

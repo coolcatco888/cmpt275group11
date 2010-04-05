@@ -1,0 +1,151 @@
+<questions>
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Two cute iguanas live in a cage in our classroom.</sentence>
+        <choice>Two</choice><point>-2</point>
+        <choice>cute</choice><point>-2</point>
+		<choice>iguanas</choice><point>15</point>
+        <choice>live</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>cage</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>our</choice><point>-2</point>
+        <choice>classroom</choice><point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>We wanted to skate last Friday.</sentence>
+        <choice>We</choice><point>-2</point>
+		<choice>wanted</choice><point>10</point>
+        <choice>to</choice><point>-2</point>
+        <choice>skate</choice><point>10</point>
+        <choice>last</choice><point>-2</point>
+        <choice>Friday</choice><point>-2</point>
+        <time>10</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>The state of _laska borders Canada.</sentence>
+		<choice>T</choice>
+		<choice>B</choice>
+		<choice>L</choice>
+		<choice>A</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>5</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>A pilot flies an a_rplane.</sentence>
+		<choice>y</choice>
+		<choice>i</choice>
+		<choice>b</choice>
+		<choice>u</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>grapes.png</image>
+		<sentence>What're the colors of the grapes?</sentence>
+		<choice>red</choice>
+		<choice>black</choice>
+		<choice>orange</choice>
+		<choice>green</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<time>15</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Sally plays with m_rbles.</sentence>
+		<choice>t</choice>
+		<choice>f</choice>
+		<choice>e</choice>
+		<choice>a</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>5</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>One do_en birds means there are 12 birds.</sentence>
+		<choice>s</choice>
+		<choice>z</choice>
+		<choice>c</choice>
+		<choice>u</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+	
+	<question>
+		<type>Fill in the blank</type>
+		<image></image>
+		<sentence>Rudi climbed the tallest mo_ntain.</sentence>
+		<choice>e</choice>
+		<choice>v</choice>
+		<choice>u</choice>
+		<choice>t</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: The drinks have a lot of caffeine and adults like to drink</sentence>
+		<choice>kofe</choice>
+		<choice>water</choice>
+		<choice>sandwich</choice>
+		<choice>tae</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: Soft footwear that is worn indoors</sentence>
+		<choice>shoes</choice>
+		<choice>sliper</choice>
+		<choice>slipper</choice>
+		<choice>hat</choice>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>20</time>
+	</question>
+</questions>

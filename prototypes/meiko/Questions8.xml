@@ -1,0 +1,157 @@
+<questions>
+	<question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>John is an excellent student and his parents are proud of him.</sentence>
+        <choice>John</choice><point>-2</point>
+		<choice>is</choice><point>-2</point>
+        <choice>an</choice><point>-2</point>
+        <choice>excellent</choice><point>10</point>
+        <choice>student</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>his</choice><point>-2</point>
+        <choice>parents</choice><point>-2</point>
+        <choice>are</choice><point>-2</point>
+        <choice>proud</choice><point>10</point>
+        <choice>of</choice><point>-2</point>
+        <choice>him</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>nurse.png</image>
+		<sentence>Amy is a nice n__se.</sentence>
+		<choice>ir</choice>
+		<choice>ur</choice>
+		<choice>ui</choice>
+		<choice>iu</choice>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>Timmy is afraid of seeing a doctor.</sentence>
+        <choice>Timmy</choice><point>-2</point>
+		<choice>is</choice><point>-2</point>
+        <choice>afraid</choice><point>10</point>
+        <choice>of</choice><point>-2</point>
+        <choice>seeing</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>doctor</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>police_station.png</image>
+		<sentence>Billy's father is working in a poli_e station.</sentence>
+		<choice>a</choice>
+		<choice>e</choice>
+		<choice>c</choice>
+		<choice>z</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>15</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>restaurant.png</image>
+		<sentence>I have a part-time job in a rest__rant.</sentence>
+		<choice>au</choice>
+		<choice>ou</choice>
+		<choice>er</choice>
+		<choice>ir</choice>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>David is a very good teacher.</sentence>
+        <choice>David</choice><point>-2</point>
+		<choice>is</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>very</choice><point>10</point>
+        <choice>good</choice><point>10</point>
+        <choice>teacher</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>banana.png</image>
+		<sentence>Monkeys like banan_s.</sentence>
+		<choice>a</choice>
+		<choice>e</choice>
+		<choice>i</choice>
+		<choice>o</choice>
+		<point>15</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>I'm very worried about my grandma because she is sick in hospital.</sentence>
+        <choice>I</choice><point>-2</point>
+		<choice>am</choice><point>-2</point>
+        <choice>very</choice><point>10</point>
+        <choice>worried</choice><point>10</point>
+        <choice>about</choice><point>-2</point>
+        <choice>my</choice><point>-2</point>
+        <choice>grandma</choice><point>-2</point>
+        <choice>because</choice><point>-2</point>
+        <choice>she</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>sick</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>hospital</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>milk.png</image>
+		<sentence>She has an allergy to dai_y products.</sentence>
+		<choice>l</choice>
+		<choice>e</choice>
+		<choice>a</choice>
+		<choice>r</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>15</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image></image>
+		<sentence>Which of the words below are related to hospital?</sentence>
+		<choice>dentist</choice>
+		<choice>doctor</choice>
+		<choice>cat</choice>
+		<choice>nurse</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+</questions>
