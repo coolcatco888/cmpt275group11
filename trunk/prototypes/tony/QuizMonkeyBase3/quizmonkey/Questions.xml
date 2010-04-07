@@ -24,12 +24,12 @@
 		<choice>very</choice>
 		<choice>special</choice>
 		<choice>person</choice>
-		<point>-2</point>
-		<point>-2</point>
-		<point>-2</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
 		<point>15</point>
 		<point>15</point>
-		<point>-2</point>
+		<point>0</point>
 		<time>50</time>
 	</question>
 	
@@ -76,14 +76,14 @@
 		<choice>on</choice>
 		<choice>the</choice>
 		<choice>bus</choice>
-		<point>-2</point>
+		<point>0</point>
 		<point>10</point>
 		<point>15</point>
-		<point>-2</point>
-		<point>-2</point>
+		<point>0</point>
+		<point>0</point>
 		<point>10</point>
-		<point>-2</point>
-		<point>-2</point>
+		<point>0</point>
+		<point>0</point>
 		<point>10</point>
 		<time>50</time>
 	</question>

@@ -21,7 +21,7 @@
 #import "Question.h"
 #import "QuestionParser.h"
 #import "Score.h"
-
+#import "AnimatedGif.h"
 
 //word buttons' setting
 #define WORD_BUTTON_FONT_SIZE 20
@@ -55,6 +55,7 @@
 	
 	IBOutlet UIImageView *questionImage;
 	IBOutlet UIImageView *questionProfMonkeyImage;
+	//IBOutlet UIView *qImage;
 	
 	IBOutlet UIProgressView *questionTimerProgress;
 	
@@ -67,13 +68,8 @@
 	NSArray *questionChoiceButtonArray;
 	
 	NSArray *rewardIconFileName;
-	//NSMutableArray *rewardButton;
-	/*UIButton *rewardButton1;
-	UIButton *rewardButton2;
-	UIButton *rewardButton3;
-	UIButton *rewardButton4;
-	UIButton *rewardButton5;
-	UIButton *rewardButton6;*/
+	NSMutableArray* rewardButtons;
+
 	
 	NSMutableArray *questionListOfXML;//Holds the list of questions
 	NSMutableArray *questionListOfQuiz;
@@ -90,8 +86,9 @@
 	NSUInteger currentScore;
 	NSUInteger currentNumberOfSelections;
 	
-	
-	
+	//NSUInteger AnimationIndex;
+	///UIImageView* peanut_butter_jelly_time_view;
+	//NSArray* peanut_butter_jelly_time[8];
 	
 	//Created from constructor
 	//	NSArray* questionChoiceButtons;//Holds all of the choice buttons
@@ -126,9 +123,11 @@
 @property (assign) IBOutlet UILabel *questionTitleLabel;
 @property (assign) IBOutlet UILabel *finalScoreLabel;
 @property (assign) IBOutlet UIImageView *questionImage;
+//@property (assign) IBOutlet UIView *qImage;
 @property (assign) IBOutlet UIProgressView *questionTimerProgress;
-//@property (assign) NSArray* questionChoiceButtons;
-//@property (assign) NSMutableArray* questionWords;
+//@property (assign) NSUInteger AnimationIndex;
+//@property (assign) 	UIImageView* peanut_butter_jelly_time_view;
+//@property (assign) NSArray* peanut_butter_jelly_time;
 @property (assign) UIView* buttonWordsView; 
 
 @property (assign) NSUInteger currentQuestionIndex;
@@ -138,14 +137,9 @@
 @property (assign) NSUInteger totalPointsAcquired;
 @property (assign) Score* finalScore;
 
-//@property (assign) NSMutableArray *rewardButton;
-@property (assign) NSArray *rewardIconFileName;
-/*
-@property (assign) UIButton *rewardButton2;
-@property (assign) UIButton *rewardButton3;
-@property (assign) UIButton *rewardButton4;
-@property (assign) UIButton *rewardButton5;
-@property (assign) UIButton *rewardButton6;*/
+@property (assign) NSMutableArray* rewardButtons;
+@property (assign) NSArray* rewardIconFileName;
+
 /*
  - (int)getTotalScore;
  - (int)getTotalMaxScore;
@@ -188,6 +182,7 @@
 - (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2;
 -(IBAction)quitButtonPressed:(id)sender;
 -(void)rewardDescription:(UIButton*)sender;
--(void) rewardIconCreator:(NSString*)image_name iconX:(CGFloat)CustomizeX iconY:(CGFloat)CustomizeY;
+-(UIButton*) rewardIconCreator:(NSString*) IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY;
 -(void)getReward:(NSUInteger)reward_id;
+//- (void) updateAnimation;
 @end
