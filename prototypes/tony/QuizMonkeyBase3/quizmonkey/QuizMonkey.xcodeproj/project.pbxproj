@@ -11,8 +11,6 @@
 		11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E60115D6D2C001FCEE1 /* car.jpg */; };
 		11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */; };
 		1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */; };
-		1D38FE6011641DFF007FF52F /* reward1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D38FE5F11641DFF007FF52F /* reward1.png */; };
-		1D38FE651164292D007FF52F /* reward1_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D38FE641164292D007FF52F /* reward1_fail.png */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1D7D05F0114DC337003B550F /* QuizMonkeyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */; };
@@ -36,6 +34,21 @@
 		DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6EF81A116155E500C5391E /* ScoreParser.m */; };
 		DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5D287115D7E51006B3A5D /* QuestionViewController.m */; };
 		EA8C413E115566B300F15609 /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D0653114DCD7B003B550F /* Questions.xml */; };
+		EA8E91FE11659BF4005C5950 /* cheetchreward.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F111659BF4005C5950 /* cheetchreward.png */; };
+		EA8E91FF11659BF4005C5950 /* cheetchreward_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F211659BF4005C5950 /* cheetchreward_fail.png */; };
+		EA8E920011659BF4005C5950 /* combo5.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F311659BF4005C5950 /* combo5.png */; };
+		EA8E920111659BF4005C5950 /* combo5_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F411659BF4005C5950 /* combo5_fail.png */; };
+		EA8E920211659BF4005C5950 /* grammar.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F511659BF4005C5950 /* grammar.png */; };
+		EA8E920311659BF4005C5950 /* grammar_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F611659BF4005C5950 /* grammar_fail.png */; };
+		EA8E920411659BF4005C5950 /* pass.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F711659BF4005C5950 /* pass.png */; };
+		EA8E920511659BF4005C5950 /* pass_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F811659BF4005C5950 /* pass_fail.png */; };
+		EA8E920611659BF4005C5950 /* top_student.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91F911659BF4005C5950 /* top_student.png */; };
+		EA8E920711659BF4005C5950 /* top_student_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91FA11659BF4005C5950 /* top_student_fail.png */; };
+		EA8E920811659BF4005C5950 /* topstudent.psd in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91FB11659BF4005C5950 /* topstudent.psd */; };
+		EA8E920911659BF4005C5950 /* vocabulary.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91FC11659BF4005C5950 /* vocabulary.png */; };
+		EA8E920A11659BF4005C5950 /* vocabulary_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91FD11659BF4005C5950 /* vocabulary_fail.png */; };
+		EA8E921311659F3E005C5950 /* banana.gif in Resources */ = {isa = PBXBuildFile; fileRef = EA8E921211659F3E005C5950 /* banana.gif */; };
+		EA8E92361165B885005C5950 /* AnimatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8E92341165B885005C5950 /* AnimatedGif.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +58,8 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyAppDelegate.m; sourceTree = "<group>"; };
-		1D38FE5F11641DFF007FF52F /* reward1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward1.png; sourceTree = "<group>"; };
-		1D38FE641164292D007FF52F /* reward1_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward1_fail.png; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* QuizMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizMonkeyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = QuizMonkeyTests.octest; path = "/Users/tony/cmpt275group11/prototypes/tony/QuizMonkeyBase3/quizmonkey/build/Debug-iphonesimulator/QuizMonkeyTests.octest"; sourceTree = "<absolute>"; };
 		1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuizMonkeyTests-Info.plist"; sourceTree = "<group>"; };
 		1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyTestCase.h; sourceTree = "<group>"; };
 		1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyTestCase.m; sourceTree = "<group>"; };
@@ -82,6 +93,22 @@
 		DE6EF81A116155E500C5391E /* ScoreParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreParser.m; sourceTree = "<group>"; };
 		DED5D287115D7E51006B3A5D /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		DED5D288115D7E51006B3A5D /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		EA8E91F111659BF4005C5950 /* cheetchreward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetchreward.png; sourceTree = "<group>"; };
+		EA8E91F211659BF4005C5950 /* cheetchreward_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetchreward_fail.png; sourceTree = "<group>"; };
+		EA8E91F311659BF4005C5950 /* combo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combo5.png; sourceTree = "<group>"; };
+		EA8E91F411659BF4005C5950 /* combo5_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combo5_fail.png; sourceTree = "<group>"; };
+		EA8E91F511659BF4005C5950 /* grammar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grammar.png; sourceTree = "<group>"; };
+		EA8E91F611659BF4005C5950 /* grammar_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grammar_fail.png; sourceTree = "<group>"; };
+		EA8E91F711659BF4005C5950 /* pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass.png; sourceTree = "<group>"; };
+		EA8E91F811659BF4005C5950 /* pass_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass_fail.png; sourceTree = "<group>"; };
+		EA8E91F911659BF4005C5950 /* top_student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_student.png; sourceTree = "<group>"; };
+		EA8E91FA11659BF4005C5950 /* top_student_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_student_fail.png; sourceTree = "<group>"; };
+		EA8E91FB11659BF4005C5950 /* topstudent.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = topstudent.psd; sourceTree = "<group>"; };
+		EA8E91FC11659BF4005C5950 /* vocabulary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vocabulary.png; sourceTree = "<group>"; };
+		EA8E91FD11659BF4005C5950 /* vocabulary_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vocabulary_fail.png; sourceTree = "<group>"; };
+		EA8E921211659F3E005C5950 /* banana.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = banana.gif; sourceTree = "<group>"; };
+		EA8E92341165B885005C5950 /* AnimatedGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedGif.m; sourceTree = "<group>"; };
+		EA8E92351165B885005C5950 /* AnimatedGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedGif.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +145,8 @@
 				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
 				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
 				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
+				EA8E92351165B885005C5950 /* AnimatedGif.h */,
+				EA8E92341165B885005C5950 /* AnimatedGif.m */,
 				4E47DDB0114B09B800F766B8 /* Question.h */,
 				4E47DDB1114B09B800F766B8 /* Question.m */,
 				DE63BCA511605EB200000E41 /* SubmissionViewController.h */,
@@ -136,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* QuizMonkey.app */,
-				1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,8 +195,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1D38FE641164292D007FF52F /* reward1_fail.png */,
-				1D38FE5F11641DFF007FF52F /* reward1.png */,
+				EA8E91F011659BF4005C5950 /* rewards */,
 				1D7D0653114DCD7B003B550F /* Questions.xml */,
 				DE101892115D93AD004D378B /* Questions2.xml */,
 				11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */,
@@ -201,6 +228,27 @@
 				1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		EA8E91F011659BF4005C5950 /* rewards */ = {
+			isa = PBXGroup;
+			children = (
+				EA8E921211659F3E005C5950 /* banana.gif */,
+				EA8E91F111659BF4005C5950 /* cheetchreward.png */,
+				EA8E91F211659BF4005C5950 /* cheetchreward_fail.png */,
+				EA8E91F311659BF4005C5950 /* combo5.png */,
+				EA8E91F411659BF4005C5950 /* combo5_fail.png */,
+				EA8E91F511659BF4005C5950 /* grammar.png */,
+				EA8E91F611659BF4005C5950 /* grammar_fail.png */,
+				EA8E91F711659BF4005C5950 /* pass.png */,
+				EA8E91F811659BF4005C5950 /* pass_fail.png */,
+				EA8E91F911659BF4005C5950 /* top_student.png */,
+				EA8E91FA11659BF4005C5950 /* top_student_fail.png */,
+				EA8E91FB11659BF4005C5950 /* topstudent.psd */,
+				EA8E91FC11659BF4005C5950 /* vocabulary.png */,
+				EA8E91FD11659BF4005C5950 /* vocabulary_fail.png */,
+			);
+			path = rewards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +322,20 @@
 				11EF8E61115D6D2C001FCEE1 /* car.jpg in Resources */,
 				11EF8E63115D6D38001FCEE1 /* mukmuk.jpg in Resources */,
 				DE101893115D93AD004D378B /* Questions2.xml in Resources */,
-				1D38FE6011641DFF007FF52F /* reward1.png in Resources */,
-				1D38FE651164292D007FF52F /* reward1_fail.png in Resources */,
+				EA8E91FE11659BF4005C5950 /* cheetchreward.png in Resources */,
+				EA8E91FF11659BF4005C5950 /* cheetchreward_fail.png in Resources */,
+				EA8E920011659BF4005C5950 /* combo5.png in Resources */,
+				EA8E920111659BF4005C5950 /* combo5_fail.png in Resources */,
+				EA8E920211659BF4005C5950 /* grammar.png in Resources */,
+				EA8E920311659BF4005C5950 /* grammar_fail.png in Resources */,
+				EA8E920411659BF4005C5950 /* pass.png in Resources */,
+				EA8E920511659BF4005C5950 /* pass_fail.png in Resources */,
+				EA8E920611659BF4005C5950 /* top_student.png in Resources */,
+				EA8E920711659BF4005C5950 /* top_student_fail.png in Resources */,
+				EA8E920811659BF4005C5950 /* topstudent.psd in Resources */,
+				EA8E920911659BF4005C5950 /* vocabulary.png in Resources */,
+				EA8E920A11659BF4005C5950 /* vocabulary_fail.png in Resources */,
+				EA8E921311659F3E005C5950 /* banana.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +380,7 @@
 				DE09921E115DA46100507FBD /* Score.m in Sources */,
 				DE63BCA611605EB200000E41 /* SubmissionViewController.m in Sources */,
 				DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */,
+				EA8E92361165B885005C5950 /* AnimatedGif.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
