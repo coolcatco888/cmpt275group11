@@ -602,6 +602,12 @@
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	//Reset Question Screen
+	if(quitting) {
+		if(buttonIndex == yesButton){
+			
+			[self quitGame];	
+		}
+	}
 	[self resetQuestionView];
 	[selectedChoices removeAllObjects];
 	switch(buttonIndex) {
@@ -610,11 +616,17 @@
 				//Exit Quiz Session
 				[self quitGame];
 				//Load Next Question if the index is less than the number of questions - 1 (since it is zero indexed)
-			} else if(currentQuestionIndex < [questionListOfQuiz count] - 1) {
+			} else if((currentQuestionIndex < [questionListOfQuiz count] - 1) && !quitting){
 				currentQuestionIndex++;
 				[self loadQuestionFromIndex:currentQuestionIndex];
 				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-				//If we have reached the end of the questions
+				//If we have reached the end of the questions	
+				
+			} else if(quitting){
+				[self loadQuestionFromIndex:currentQuestionIndex];
+				quitting = FALSE;
+				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+
 			} else if (currentQuestionIndex == [questionListOfQuiz count] - 1) {
 				//Quit game and show final score screen
 				[self quitGame];
@@ -666,10 +678,10 @@
 				
 				
 //				[self release];
-
 			}
-			break;
+		break;
 	}
+	quitting = FALSE;
 }
 - (void)resetQuestionView {
 	questionSentenceLabel.frame = CGRectMake(SENTENCE_RECT_X, SENTENCE_RECT_Y, SENTENCE_RECT_W, SENTENCE_RECT_H);
@@ -740,6 +752,22 @@
 }
 
 -(IBAction)quitButtonPressed:(id)sender {
-	[self quitGame];
+	[timer invalidate];
+	[questionProfMonkeyImage setHidden:FALSE];
+	quitting = TRUE;
+	
+	alert = [[UIAlertView alloc] initWithTitle:@"Quit?" 
+									   message:@"Are you sure you want to quit?"
+									  delegate:self 
+							 cancelButtonTitle:@"No" 
+							 otherButtonTitles:nil];
+	yesButton = [alert addButtonWithTitle:@"Yes"];
+	[alert show];
+	[alert autorelease];
+	
+	//[questionProfMonkeyImage setHidden:TRUE];
+	
+/*	if(buttonIndex = yesButton)
+		[self quitGame];*/
 }
 @end
