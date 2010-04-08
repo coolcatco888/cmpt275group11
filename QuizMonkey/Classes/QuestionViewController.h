@@ -23,6 +23,7 @@
 #import "Score.h"
 
 
+
 //word buttons' setting
 #define WORD_BUTTON_FONT_SIZE 20
 #define WORD_BUTTON_UNIT_HEIGHT 30
@@ -41,6 +42,8 @@
 #define REWARD_ICON_STRAT_POINT_Y 110
 #define REWARD_ICON_GAP 20
 
+
+//@interface QuestionViewController : UIViewController <UIAlertViewDelegate>
 
 @interface QuestionViewController : UIViewController {
 	//View Outlets
@@ -81,6 +84,8 @@
 	NSUInteger currentMaxSelections;
 	NSUInteger currentScore;
 	NSUInteger currentNumberOfSelections;
+	NSInteger yesButton;
+	BOOL quitting;
 	
 	NSArray *rewardIconFileName;
 	NSMutableArray* rewardButtons;
