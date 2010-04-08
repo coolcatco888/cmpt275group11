@@ -48,7 +48,6 @@
 		EA8E920911659BF4005C5950 /* vocabulary.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91FC11659BF4005C5950 /* vocabulary.png */; };
 		EA8E920A11659BF4005C5950 /* vocabulary_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8E91FD11659BF4005C5950 /* vocabulary_fail.png */; };
 		EA8E921311659F3E005C5950 /* banana.gif in Resources */ = {isa = PBXBuildFile; fileRef = EA8E921211659F3E005C5950 /* banana.gif */; };
-		EA8E92361165B885005C5950 /* AnimatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8E92341165B885005C5950 /* AnimatedGif.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,10 +55,10 @@
 		11EF8E60115D6D2C001FCEE1 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mukmuk.jpg; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D327151116D3E3400BE1502 /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = QuizMonkeyTests.octest; path = "build/Debug-iphoneos/QuizMonkeyTests.octest"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* QuizMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = QuizMonkeyTests.octest; path = "/Users/tony/cmpt275group11/prototypes/tony/QuizMonkeyBase3/quizmonkey/build/Debug-iphonesimulator/QuizMonkeyTests.octest"; sourceTree = "<absolute>"; };
 		1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuizMonkeyTests-Info.plist"; sourceTree = "<group>"; };
 		1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyTestCase.h; sourceTree = "<group>"; };
 		1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyTestCase.m; sourceTree = "<group>"; };
@@ -107,8 +106,6 @@
 		EA8E91FC11659BF4005C5950 /* vocabulary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vocabulary.png; sourceTree = "<group>"; };
 		EA8E91FD11659BF4005C5950 /* vocabulary_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vocabulary_fail.png; sourceTree = "<group>"; };
 		EA8E921211659F3E005C5950 /* banana.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = banana.gif; sourceTree = "<group>"; };
-		EA8E92341165B885005C5950 /* AnimatedGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedGif.m; sourceTree = "<group>"; };
-		EA8E92351165B885005C5950 /* AnimatedGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedGif.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +142,6 @@
 				4E47DDA3114B033B00F766B8 /* QuestionViewManager.m */,
 				4E47DDC7114B0FC800F766B8 /* QuestionParser.h */,
 				4E47DDC6114B0FC800F766B8 /* QuestionParser.m */,
-				EA8E92351165B885005C5950 /* AnimatedGif.h */,
-				EA8E92341165B885005C5950 /* AnimatedGif.m */,
 				4E47DDB0114B09B800F766B8 /* Question.h */,
 				4E47DDB1114B09B800F766B8 /* Question.m */,
 				DE63BCA511605EB200000E41 /* SubmissionViewController.h */,
@@ -165,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* QuizMonkey.app */,
+				1D327151116D3E3400BE1502 /* QuizMonkeyTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,7 +282,7 @@
 			);
 			name = QuizMonkeyTests;
 			productName = QuizMonkeyTests;
-			productReference = 1D7D05E3114DC28E003B550F /* QuizMonkeyTests.octest */;
+			productReference = 1D327151116D3E3400BE1502 /* QuizMonkeyTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -380,7 +376,6 @@
 				DE09921E115DA46100507FBD /* Score.m in Sources */,
 				DE63BCA611605EB200000E41 /* SubmissionViewController.m in Sources */,
 				DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */,
-				EA8E92361165B885005C5950 /* AnimatedGif.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

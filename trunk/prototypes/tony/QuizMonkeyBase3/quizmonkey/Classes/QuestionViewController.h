@@ -21,7 +21,6 @@
 #import "Question.h"
 #import "QuestionParser.h"
 #import "Score.h"
-#import "AnimatedGif.h"
 
 //word buttons' setting
 #define WORD_BUTTON_FONT_SIZE 20
