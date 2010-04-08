@@ -366,7 +366,7 @@
 	}
 	else if (sender==[rewardButtons objectAtIndex:5]) 
 	{
-		title = @"Cheetch Reward";
+		title = @"Speed Demon";
 		if (sender.selected)
 		{
 			[message appendString:@"Wow, you finish a quiz SOOoooo.... fast, so I give you this reward!"];

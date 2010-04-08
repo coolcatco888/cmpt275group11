@@ -6,7 +6,8 @@
 //
 //  Worked on by Cley, Ariel, Tony, Meiko, Daniel
 //
-//  Known Bugs: none
+//  Known Bugs:
+//   - 1.0 - Unable to read negative values
 //
 //  Changes:
 //   - 1.0 - Implemented
