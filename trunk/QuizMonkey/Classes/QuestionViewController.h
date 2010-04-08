@@ -14,6 +14,11 @@
 //  Changes:
 //   - 1.0 - Implemented
 //
+//  Tasks:
+//   - 1.0 - Create an alert view (with the picture of the monkey) that instructs the student on how to play the game
+//           This alert will say, "You will be asked 10 questions on spelling and grammar. Click the answers on the screen then click "Next" to proceed to the next question. 
+//           Some questions require you to select multiple answers to obtain all of the points.  Click one of your answers a second time to deselect it before clickng "Next". Good Luck"
+//
 //  Copyright 2010 Team Awesome. All rights reserved.
 //
 
