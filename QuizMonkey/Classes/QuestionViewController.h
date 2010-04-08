@@ -36,6 +36,10 @@
 #define SENTENCE_RECT_WHEN_IMAGE_Y 215
 #define SENTENCE_RECT_WHEN_IMAGE_W 400
 #define SENTENCE_RECT_WHEN_IMAGE_H 35
+#define REWARD_ICON_SIZE 55
+#define REWARD_ICON_STRAT_POINT_X 30
+#define REWARD_ICON_STRAT_POINT_Y 110
+#define REWARD_ICON_GAP 20
 
 
 @interface QuestionViewController : UIViewController {
@@ -78,8 +82,8 @@
 	NSUInteger currentScore;
 	NSUInteger currentNumberOfSelections;
 	
-	
-	
+	NSArray *rewardIconFileName;
+	NSMutableArray* rewardButtons;
 	
 	//Created from constructor
 	//	NSArray* questionChoiceButtons;//Holds all of the choice buttons
@@ -119,6 +123,8 @@
 //@property (assign) NSMutableArray* questionWords;
 @property (assign) UIView* buttonWordsView; 
 
+@property (assign) NSArray *rewardIconFileName;
+@property (assign) NSMutableArray* rewardButtons;
 @property (assign) NSUInteger currentQuestionIndex;
 @property (assign) Question* currentQuestion;
 @property (assign) NSMutableSet* selectedChoices;
@@ -167,4 +173,7 @@
 -(void)selectword:(id)sender;
 - (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2;
 -(IBAction)quitButtonPressed:(id)sender;
+-(void)rewardDescription:(UIButton*)sender;
+-(UIButton*) rewardIconCreator:(NSString*) IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY;
+-(void)getReward:(NSUInteger)reward_id;
 @end

@@ -35,6 +35,8 @@
 //@synthesize questionWords;
 @synthesize buttonWordsView;
 
+@synthesize rewardIconFileName;
+@synthesize rewardButtons;
 //@synthesize questionList;
 @synthesize currentQuestionIndex;
 @synthesize currentQuestion;
@@ -73,9 +75,39 @@
 	[questionView retain];
 	[selectedChoices retain];
 	[questionChoiceButtonArray retain];
+	//Set Score Object
+	finalScore = [Score new];
 	
+	//Init final score rewards
+	rewardIconFileName=[[NSArray alloc] initWithObjects:@"top_student",@"pass",@"combo5",@"grammar",@"vocabulary",@"cheetchreward",  nil];
+	rewardButtons =[NSMutableArray arrayWithCapacity: 6];
+	for (NSUInteger i=0; i<[rewardIconFileName count]; i++) {
+		[rewardButtons addObject:[self rewardIconCreator:[rewardIconFileName objectAtIndex:i] iconX:(NSUInteger)i%([rewardIconFileName count]/2) iconY:(NSUInteger)(i/([rewardIconFileName count]/2))]];
+	}
+	[rewardButtons retain];
 	return self;
 }
+-(UIButton*) rewardIconCreator:(NSString*)IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY
+{
+	NSMutableString* image_name_fail = [NSMutableString stringWithCapacity:100];
+	[image_name_fail appendString: IconFileName];
+	[image_name_fail appendString:@"_fail.png"];
+	NSMutableString* image_name_achd = [NSMutableString stringWithCapacity:100];
+	[image_name_achd appendString:IconFileName ];
+	[image_name_achd appendString:@".png"];
+	
+	UIButton *iconButton;
+	iconButton=[UIButton buttonWithType:UIButtonTypeCustom];
+	[iconButton setFrame: CGRectMake((CustomizeX*(REWARD_ICON_SIZE+REWARD_ICON_GAP))+REWARD_ICON_STRAT_POINT_X,(CustomizeY*(REWARD_ICON_SIZE+REWARD_ICON_GAP))+REWARD_ICON_STRAT_POINT_Y,REWARD_ICON_SIZE ,REWARD_ICON_SIZE)];
+	[iconButton setBackgroundImage:[UIImage imageNamed: image_name_fail] forState:UIControlStateNormal];
+	[iconButton setBackgroundImage:[UIImage imageNamed: image_name_achd] forState:UIControlStateSelected];
+	[iconButton addTarget:self action:@selector(rewardDescription:) forControlEvents:UIControlEventTouchUpInside];
+	[finalScoreView addSubview:iconButton];
+	return iconButton;
+	
+	
+}
+
 - (void)loadQuestionsFromXML {
 	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions"];
 	[questionListOfXML retain];
@@ -232,6 +264,7 @@
 	if(points == 0) {
 		title = @"Sorry...";
 		[message appendString:@"Your answer is completely WRONG!"];
+		finalScore.combo=0;
 		//Set message if the student got some right
 	} else if (points < totalPointsForCurrentQuestion) {
 		title = @"Not Bad...";
@@ -240,12 +273,17 @@
 		[message appendString:@"/"];
 		[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
 		[message appendString:@" points!"];
+		finalScore.combo=0;
 		//Set Message if the student got all of them right
 	} else {
 		title = @"Perfect!";
 		[message appendString:@"Your answer is correct!"];
+		[finalScore updateCounters:currentQuestion.type];
 	}
-	
+	if (finalScore.combo==5)
+	{
+		[self getReward:0];
+	}
 	
 	
 	alert = [[UIAlertView alloc] initWithTitle:title 
@@ -256,6 +294,130 @@
 	[alert show];
 	[alert autorelease];
 }
+
+-(void)getReward: (NSUInteger)reward_id
+{
+	UIButton* temp=[rewardButtons objectAtIndex:reward_id];
+	[temp setSelected:TRUE];
+	
+}
+-(void)rewardDescription:(UIButton*)sender
+{
+	BOOL show_peanut_butter_jelly_time_view=FALSE;
+	
+	NSString* title;
+	NSMutableString* message = [NSMutableString stringWithCapacity:100];
+	if (sender==[rewardButtons objectAtIndex:0]) 
+	{
+		title = @"Top Stduent";
+		
+		if (sender.selected)
+		{
+			[message appendString:@"Wow~ You got "];
+			[message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
+			[message appendString:@"%. Let's dance! Peanut butter jelly time~\n\n\n\n"];
+			show_peanut_butter_jelly_time_view=TRUE;
+		}
+		else
+		{
+			[message appendString:@"To get this reward, you must have more than 90% banana point. \nAnd your current mark is:"];
+			[message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
+			[message appendString:@"%."];
+		}
+		
+		
+	} 
+	else if (sender==[rewardButtons objectAtIndex:1])  
+	{
+		
+		title = @"Pass The Quiz";
+		if (sender.selected)
+		{
+			[message appendString:@"Well done, you have passed this quiz! Congradulations! "];
+		}
+		else
+		{
+			[message appendString:@"Working hard please, you failed this quiz."];
+		}
+		
+		
+		
+	}
+	else if (sender==[rewardButtons objectAtIndex:2]) 
+	{
+		title = @"Perfect Answer Combo";
+		[message appendString:@"To get this reward, your perfect correct answer must be more than 5 in a row . And your current max number in this quiz is: "];
+		[message appendString:[[NSNumber numberWithInt: finalScore.maxCombo] stringValue]];
+	}
+	else if (sender==[rewardButtons objectAtIndex:3]) 
+	{
+		title = @"Grammar Expert";
+		[message appendString:@"To get this reward, you must get more than 5 correct answer in grammar questions. \nAnd you answered "];
+		[message appendString:[[NSNumber numberWithInt: finalScore.grammar] stringValue]];
+		[message appendString:@" grammar question correctly this time."];
+	}
+	else if (sender==[rewardButtons objectAtIndex:4])  
+	{
+		title = @"Vocabulary Master";
+		[message appendString:@"To get this reward, you must get more than 5 correct answer in vocabulary questions. \nAnd you answered "];
+		[message appendString:[[NSNumber numberWithInt: finalScore.vocabulary] stringValue]];
+		[message appendString:@" vocabulary question correctly this time."];
+		
+	}
+	else if (sender==[rewardButtons objectAtIndex:5]) 
+	{
+		title = @"Cheetch Reward";
+		if (sender.selected)
+		{
+			[message appendString:@"Wow, you finish a quiz SOOoooo.... fast, so I give you this reward!"];
+		}
+		else
+		{
+			[message appendString:@"If you want to prove you are really celver, try to finish the quiz as fast as you can. Remember, you also need to pass the quiz. I will give you this reward if you really do."];
+		}
+	}
+	else
+	{
+		title = @"Unknow Reward";
+		[message appendString:@"Nothing about this reward..."];
+		
+	}
+	
+	alert = [[UIAlertView alloc] initWithTitle:title 
+									   message:message 
+									  delegate:self 
+							 cancelButtonTitle:@"Continue" 
+							 otherButtonTitles:nil];
+
+	
+	
+	
+	if (show_peanut_butter_jelly_time_view)
+	{
+		
+		UIImageView* peanut_butter_jelly_time_view= [[UIImageView alloc] initWithFrame:CGRectMake(105, 88, 75, 75)];
+		
+		
+		peanut_butter_jelly_time_view.animationImages=[NSArray arrayWithObjects:	[UIImage imageNamed:@"Banana_Frame1.png"],
+													   [UIImage imageNamed:@"Banana_Frame2.png"],
+													   [UIImage imageNamed:@"Banana_Frame3.png"],
+													   [UIImage imageNamed:@"Banana_Frame4.png"],
+													   [UIImage imageNamed:@"Banana_Frame5.png"],
+													   [UIImage imageNamed:@"Banana_Frame6.png"],
+													   [UIImage imageNamed:@"Banana_Frame7.png"],
+													   [UIImage imageNamed:@"Banana_Frame8.png"],
+													   nil];
+		peanut_butter_jelly_time_view.animationDuration = 2.00;
+		[peanut_butter_jelly_time_view startAnimating];
+		[alert addSubview:peanut_butter_jelly_time_view];
+		[peanut_butter_jelly_time_view release]; 
+		
+	}
+	[alert show];
+	[alert autorelease];
+	
+}
+
 - (bool)questionHasImage {
 	if([currentQuestion.image isEqualToString:@"\n\t\t"])
 		return FALSE;
@@ -468,11 +630,40 @@
 				[finalScoreLabel setText:score];
 				
 				//Set Score Object
-				finalScore = [Score new];
+				//finalScore = [Score new];
 				[finalScore setPoints:totalPointsAcquired];
 				[finalScore setMaxPoints:totalPoints];
 				[finalScore setTimeLeft:totalTimeLeft];
-
+				
+				//check to see Achievement
+				
+				if (((totalPointsAcquired*100)/totalPoints)>50)
+				{	
+					[self getReward:1];
+					if (((totalPointsAcquired*100)/totalPoints)>90)
+					{
+						[self getReward:0];
+					}
+					
+					if (totalTimeLeft*2 > totalTime)
+					{
+						[self getReward:5];
+					}
+				}
+				if (finalScore.combo>5)
+				{
+					[self getReward:2];
+				}
+				if (finalScore.grammar>5)
+				{
+					[self getReward:3];
+				}
+				if (finalScore.vocabulary>5)
+				{
+					[self getReward:4];
+				}
+				
+				
 				
 //				[self release];
 

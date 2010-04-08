@@ -315,15 +315,28 @@
 }
 -(void)rewardDescription:(UIButton*)sender
 {
+	BOOL show_peanut_butter_jelly_time_view=FALSE;
 
 	NSString* title;
 	NSMutableString* message = [NSMutableString stringWithCapacity:100];
 	if (sender==[rewardButtons objectAtIndex:0]) 
 	{
 		title = @"Top Stduent";
-		[message appendString:@"To get this reward, you must have more than 90% banana point. \nAnd your current mark is:"];
-		[message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
-		[message appendString:@"%."];
+		
+		if (sender.selected)
+		{
+			 [message appendString:@"Congradulations! You got "];
+			 [message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
+			 [message appendString:@"%. Let's dance! Peanut butter jelly time~\n\n\n\n\n"];
+			show_peanut_butter_jelly_time_view=TRUE;
+		}
+		else
+		{
+			 [message appendString:@"To get this reward, you must have more than 90% banana point. \nAnd your current mark is:"];
+			 [message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
+			 [message appendString:@"%."];
+		}
+		
 		
 	} 
 	else if (sender==[rewardButtons objectAtIndex:1])  
@@ -387,25 +400,28 @@
 									  delegate:self 
 							 cancelButtonTitle:@"Continue" 
 							 otherButtonTitles:nil];
+	show_peanut_butter_jelly_time_view=TRUE;
 	
 	
 	
+	if (show_peanut_butter_jelly_time_view)
+	{
+	
+		UIImageView* peanut_butter_jelly_time_view= [[UIImageView alloc] initWithFrame:CGRectMake(105, 100, 80, 80)];
 	
 	
+		peanut_butter_jelly_time_view.animationImages=[NSArray arrayWithObjects:	[UIImage imageNamed:@"car.jpg"],[UIImage imageNamed:@"banana.jpg"],[UIImage imageNamed:@"mukmuk.jpg"],nil];
+		peanut_butter_jelly_time_view.animationDuration = 2.00;
+		[peanut_butter_jelly_time_view startAnimating];
+		[alert addSubview:peanut_butter_jelly_time_view];
+		[peanut_butter_jelly_time_view release]; 
 	
-	//[peanut_butter_jelly_time_view setFrame:CGRectMake(50, 100, 50, 50)];
-	//[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-	
+	}
 	[alert show];
 	[alert autorelease];
 
 }
-/*
-- (void) updateAnimation
-{
-	[peanut_butter_jelly_time_view setImage:peanut_butter_jelly_time[AnimationIndex]];
-	AnimationIndex++;
-}*/
+
 - (bool)questionHasImage {
 	if([currentQuestion.image isEqualToString:@"\n\t\t"])
 		return FALSE;
