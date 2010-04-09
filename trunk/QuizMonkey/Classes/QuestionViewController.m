@@ -124,7 +124,7 @@
 	NSUInteger selectedIndex;
 	for(NSUInteger i=0; i<count & i<10; i++) {
 		// Select a random element between i and end of array to swap with.
-		selectedIndex = (random() % [questionListOfXML count]);
+		selectedIndex = (arc4random() % [questionListOfXML count]);
 		[questionListOfQuiz addObject:[questionListOfXML objectAtIndex:selectedIndex]];
 		[questionListOfXML removeObjectAtIndex:selectedIndex];
 		
