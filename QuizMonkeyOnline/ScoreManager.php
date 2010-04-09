@@ -84,17 +84,11 @@ class ScoreManager {
     //Inserts a score entry into the database
     function insert_score($username, $scoreid, $timeleft, $points, $maxpoints) {
         $this->execute_query("INSERT INTO `quizmonk_data`.`scores` (`userid` ,`scoreid` ,`timeleft` ,`date` ,`points` ,`maxpoints`) "
-            ."VALUES ('$username', '$scoreid', '$timeleft', CURDATE(), '$points', '$maxpoints');");
+            ."VALUES ('$username', '$scoreid', '$timeleft', NOW(), '$points', '$maxpoints');");
     }
 
     function retrieve_all_scores() {
     	$result = $this->retrieve_user_scores('');
-    	/*
-        $result = $this->execute_query("SELECT * FROM `user` "
-            ."INNER JOIN `scores` "
-            ."ON user.userid=scores.userid "
-            ."ORDER BY user.userid;");*/
-
         return $result;
     }
     
@@ -111,16 +105,25 @@ class ScoreManager {
             ."INNER JOIN `scores` "
             ."ON user.userid=scores.userid "
             .$filter
-            ."ORDER BY user.userid;");
+            ."ORDER BY user.userid ASC, scores.scoreid DESC;");
 
         return $result;
     }
-
+    
     function generate_score_table() {
+        return $this->generate_user_score_table('');
+    }
+    
+    function generate_user_score_table($username) {
         //Default message to indicate that there are no scores to display
         $html = '<p>No Scores to Display</p>';
         
-        $scores = $this->retrieve_all_scores();
+        $scores;
+        if($username != '' && $username != null) {
+            $scores = $this->retrieve_user_scores($username);
+        } else {
+            $scores = $this->retrieve_all_scores();
+        }
 
         $currentuser = '';
         
@@ -158,29 +161,6 @@ class ScoreManager {
     //Generates an xml representation of the high scores
     function generate_score_xml() {
     	$html = $this->generate_user_score_xml('');
-    	/*
-        $html = '<scores>';
-        
-        $scores = $this->retrieve_all_scores();
-
-        while($row = mysql_fetch_array($scores))
-        {
-            $html .= "<score>"
-		."<userid>".$row['userid']."</userid>"
-		."<firstname>".$row['firstname']."</firstname>"
-		."<lastname>".$row['lastname']."</lastname>"
-		."<email>".$row['email']."</email>"
-                ."<scoreid>".$row['scoreid']."</scoreid>"
-                ."<timeleft>".$row['timeleft']."</timeleft>"
-                ."<date>".$row['date']."</date>"
-                ."<points>".$row['points']."</points>"
-                ."<maxpoints>".$row['maxpoints']."</maxpoints>"
-                ."</score>";
-        }
-
-        $html .= '</scores>';
-        */
-
         return $html;
     }
     

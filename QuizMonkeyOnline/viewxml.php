@@ -19,7 +19,7 @@ if($manager->login_as_teacher($username, $password)) {
 }
 
 //TODO - Delete the line below once iPhone part is finished!
-$xml = $manager->generate_score_xml();
+//$xml = $manager->generate_score_xml();
 
 echo $xml;
 

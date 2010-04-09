@@ -51,7 +51,7 @@ $_SESSION['authenticated'] = false;
             <h1>Student Progress Monitoring System</h1>
             <form action="javascript:void(0);" name="form" id="login">
                 <div id='loginbox' class='display'>
-                    <h2>Teacher Login</h2>
+                    <h2>User Login</h2>
                     <table id="logintable">
                         <tbody>
                             <tr>

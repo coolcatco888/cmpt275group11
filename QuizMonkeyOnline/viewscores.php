@@ -5,7 +5,8 @@ session_start();
 if(!$_SESSION['authenticated']) {
     header('Location: '.'index.php');
 }
-
+$username = $_SESSION['username'];
+$usertype = $_SESSION['usertype'];
 $manager = new ScoreManager();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -22,7 +23,11 @@ $manager = new ScoreManager();
             <h1>Student Scores</h1>
             <div id='scorebox' class='display'>
             <?php
-            echo $manager->generate_score_table();
+            if($usertype == teacher) {
+                echo $manager->generate_score_table();
+            } else {
+                echo $manager->generate_user_score_table($username);
+            }
             ?>
             <p>
             <a href="index.php">Logout</a>
