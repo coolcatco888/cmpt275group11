@@ -23,7 +23,7 @@ $manager = new ScoreManager();
             <h1>Student Scores</h1>
             <div id='scorebox' class='display'>
             <?php
-            if($usertype == teacher) {
+            if($usertype == 'teacher') {
                 echo $manager->generate_score_table();
             } else {
                 echo $manager->generate_user_score_table($username);
