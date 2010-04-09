@@ -2,8 +2,16 @@
 //  ScoreParser.h
 //  QuizMonkey
 //
-//  Created by Ariel Lorenzo-Luaces on 3/29/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Ariel on 08/03/10.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: none
+//
+//  Changes:
+//   - 1.0 - Implemented
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,9 +19,9 @@
 
 
 @interface ScoreParser : NSObject {
-	NSMutableArray *scoreList;
-	Score *scoreInProgress;
-	NSString *textInProgress;
+	NSMutableArray *scoreList;	//An array of parsed scores
+	Score *scoreInProgress;		//A score object of the score in progress
+	NSString *textInProgress;	//The current string between xml elements
 }
 
 

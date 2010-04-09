@@ -2,27 +2,36 @@
 //  Score.h
 //  QuizMonkey
 //
-//  Created by Ariel Lorenzo-Luaces on 3/26/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Ariel on 08/03/10.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: none
+//
+//  Changes:
+//   - 1.0 - Implemented
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 
 @interface Score : NSObject {
-	NSString *studentID;
-	NSString *firstName;
-	NSString *lastName;
-	NSString *email;
-	NSString *password;
-
-	NSUInteger scoreID;
-	NSUInteger timeLeft;
-	NSUInteger points;
-	NSUInteger maxPoints;
-	NSDate *date;
+	NSString *studentID;	//Used when getting or submitting high scores
+	NSString *password;		//Used when getting or submitting high scores
+	NSString *firstName;	//Used when submitting high scores
+	NSString *lastName;		//Used when submitting high scores
+	NSString *email;		//Used when submitting hgih scores
+	
+	NSUInteger scoreID;		//Used when getting high scores
+	NSUInteger timeLeft;	//Used when getting or submitting high scores
+	NSUInteger points;		//Used when getting or submitting high scores
+	NSUInteger maxPoints;	//Used when getting or submitting high scores
+	NSString *date;			//Used when getting high scores
 	
 	//counters for reward system. Statistical analysis users' correct anwswer
+	//The following variables are used when submitting high scores
 	NSUInteger combo;
 	NSUInteger maxCombo;
 	NSUInteger fillInTheBlank;
@@ -46,7 +55,7 @@
 @property (assign) NSUInteger timeLeft;
 @property (assign) NSUInteger points;
 @property (assign) NSUInteger maxPoints;
-@property (assign) NSDate *date;
+@property (assign) NSString *date;
 @property (assign) NSUInteger combo;
 @property (assign) NSUInteger maxCombo;
 @property (assign) NSUInteger fillInTheBlank;
