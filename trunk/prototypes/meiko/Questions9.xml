@@ -1,0 +1,270 @@
+<questions>
+    <question>
+		<type>Match the picture</type>
+		<image>student.png</image>
+		<sentence>What's he doing?</sentence>
+		<choice>sleeping</choice>
+		<choice>reading</choice>
+		<choice>writing</choice>
+		<choice>speaking</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: day(s) of a week</sentence>
+		<choice>birthday</choice>
+		<choice>May</choice>
+		<choice>Thirsday</choice>
+		<choice>February</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: animal(s)</sentence>
+		<choice>maose</choice>
+		<choice>corn</choice>
+		<choice>car</choice>
+		<choice>elephent</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image>teacher.png</image>
+		<sentence>Generally, which of the words below are related to this job?</sentence>
+		<choice>school</choice>
+		<choice>classroom</choice>
+		<choice>book</choice>
+		<choice>car</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image>milk.png</image>
+		<sentence>Hint: dairy product(s)</sentence>
+		<choice>chese</choice>
+		<choice>buter</choice>
+		<choice>flour</choice>
+		<choice>rice</choice>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: month(s) of a year</sentence>
+		<choice>Friday</choice>
+		<choice>Jenuary</choice>
+		<choice>Apirl</choice>
+		<choice>Saturday</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>truck_driver.png</image>
+		<sentence>My _ncle is a truck driver.</sentence>
+		<choice>a</choice>
+		<choice>u</choice>
+		<choice>i</choice>
+		<choice>e</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image>doctor.png</image>
+		<sentence>Generally, which of the words below are related to this job?</sentence>
+		<choice>candy</choice>
+		<choice>panda</choice>
+		<choice>truck</choice>
+		<choice>cough</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Both Jim and Mary love playing basketball.</sentence>
+        <choice>Both</choice><point>-2</point>
+		<choice>Jim</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+		<choice>Mary</choice><point>-2</point>
+		<choice>love</choice><point>10</point>
+        <choice>playing</choice><point>10</point>
+        <choice>basketball</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Fill in the blank</type>
+		<image>mukmuk.png</image>
+		<sentence>Mukmuk is the mascot for the 2010 Winter Ol_mpic Games.</sentence>
+		<choice>i</choice>
+		<choice>a</choice>
+		<choice>y</choice>
+		<choice>e</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Pick out the words</type>
+		<image>restaurant.png</image>
+		<sentence>Generally, which of the actions are related to this place?</sentence>
+		<choice>drinking</choice>
+		<choice>surfing</choice>
+		<choice>skiing</choice>
+		<choice>eating</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>The Great Wall in China is one of the Seven Wonders of the World.</sentence>
+        <choice>The</choice><point>-2</point>
+		<choice>Great</choice><point>-2</point>
+        <choice>Wall</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>China</choice><point>10</point>
+        <choice>is</choice><point>-2</point>
+        <choice>one</choice><point>-2</point>
+        <choice>of</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>Seven</choice><point>-2</point>
+        <choice>Wonders</choice><point>10</point>
+        <choice>of</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>World</choice><point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>What a pretty girl!</sentence>
+        <choice>What</choice><point>-2</point>
+		<choice>a</choice><point>-2</point>
+        <choice>pretty</choice><point>10</point>
+        <choice>girl</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Look! The mouse is running away.</sentence>
+        <choice>Look</choice><point>10</point>
+		<choice>The</choice><point>-2</point>
+        <choice>mouse</choice><point>-2</point>
+		<choice>is</choice><point>-2</point>
+		<choice>running</choice><point>10</point>
+        <choice>away</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>chef.png</image>
+		<sentence>What's he doing?</sentence>
+		<choice>cooking</choice>
+		<choice>dancing</choice>
+		<choice>writing</choice>
+		<choice>fighting</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>hospital.png</image>
+		<sentence>Where's it?</sentence>
+		<choice>school</choice>
+		<choice>cinema</choice>
+		<choice>hospital</choice>
+		<choice>zoo</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Look! The mouse is running away.</sentence>
+        <choice>Look</choice><point>-2</point>
+		<choice>The</choice><point>-2</point>
+        <choice>mouse</choice><point>10</point>
+		<choice>is</choice><point>-2</point>
+		<choice>running</choice><point>-2</point>
+        <choice>away</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>All works and no play makes Jack a dull boy.</sentence>
+        <choice>All</choice><point>-2</point>
+		<choice>works</choice><point>10</point>
+        <choice>and</choice><point>-2</point>
+		<choice>no</choice><point>-2</point>
+		<choice>play</choice><point>10</point>
+        <choice>makes</choice><point>-2</point>
+        <choice>Jack</choice><point>10</point>
+        <choice>a</choice><point>-2</point>
+        <choice>dull</choice><point>-2</point>
+        <choice>boy</choice><point>10</point>
+		<time>5</time>
+	</question>
+</questions>

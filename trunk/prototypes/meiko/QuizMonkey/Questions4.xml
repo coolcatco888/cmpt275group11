@@ -1,0 +1,161 @@
+<questions>
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Penguins are birds that cannot fly.</sentence>
+        <choice>Penguins</choice><point>-2</point>
+        <choice>are</choice><point>-2</point>
+        <choice>birds</choice><point>-2</point>
+        <choice>that</choice><point>-2</point>
+        <choice>cannot</choice><point>-2</point>
+		<choice>fly</choice><point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>The fat, dirty pig is playing in the mud.</sentence>
+        <choice>The</choice><point>-2</point>
+		<choice>fat</choice><point>10</point>
+        <choice>dirty</choice><point>10</point>
+        <choice>pig</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>playing</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>mud</choice><point>-2</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>penguin.png</image>
+		<sentence>What's this?</sentence>
+		<choice>bird</choice>
+		<choice>chicken</choice>
+		<choice>cat</choice>
+		<choice>penguin</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Michael and Alex played a game after they finished their homework.</sentence>
+		<choice>Michael</choice><point>15</point>
+        <choice>and</choice><point>-2</point>
+        <choice>Alex</choice><point>15</point>
+        <choice>played</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>game</choice><point>10</point>
+        <choice>after</choice><point>-2</point>
+        <choice>they</choice><point>-2</point>
+        <choice>finished</choice><point>-2</point>
+        <choice>their</choice><point>-2</point>
+        <choice>homework</choice><point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>surfing.png</image>
+		<sentence>What's he doing?</sentence>
+		<choice>running</choice>
+		<choice>dancing</choice>
+		<choice>surfing</choice>
+		<choice>skiing</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>The sun rises in the east and sets in the west.</sentence>
+        <choice>The</choice><point>-2</point>
+		<choice>sun</choice><point>10</point>
+        <choice>rises</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>east</choice><point>10</point>
+        <choice>and</choice><point>-2</point>
+        <choice>sets</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>west</choice><point>10</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Penguins are birds that cannot fly.</sentence>
+		<choice>Penguins</choice><point>10</point>
+        <choice>are</choice><point>-2</point>
+        <choice>birds</choice><point>10</point>
+        <choice>that</choice><point>-2</point>
+        <choice>cannot</choice><point>-2</point>
+		<choice>fly</choice><point>-2</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>The sun rises in the east and sets in the west.</sentence>
+		<choice>The</choice><point>-2</point>
+		<choice>sun</choice><point>-2</point>
+        <choice>rises</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>east</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>sets</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>west</choice><point>-2</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Michael and Alex played a game after they finished their homework.</sentence>
+		<choice>Michael</choice><point>-2</point>
+        <choice>and</choice><point>-2</point>
+        <choice>Alex</choice><point>-2</point>
+        <choice>played</choice><point>10</point>
+        <choice>a</choice><point>-2</point>
+        <choice>game</choice><point>-2</point>
+        <choice>after</choice><point>-2</point>
+        <choice>they</choice><point>-2</point>
+        <choice>finished</choice><point>10</point>
+        <choice>their</choice><point>-2</point>
+        <choice>homework</choice><point>-2</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Alan and Sammy are playing football in the playground.</sentence>
+		<choice>Alan</choice><point>10</point>
+        <choice>and</choice><point>-2</point>
+        <choice>Sammy</choice><point>10</point>
+        <choice>are</choice><point>-2</point>
+        <choice>playing</choice><point>-2</point>
+        <choice>football</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>playground</choice><point>10</point>
+		<time>20</time>
+	</question>
+</questions>

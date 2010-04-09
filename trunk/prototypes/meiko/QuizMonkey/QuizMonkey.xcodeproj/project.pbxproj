@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1133FCDF116A75C200D160CD /* Questions8.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1133FCDE116A75C200D160CD /* Questions8.xml */; };
 		1198EB361169E11B00D5B843 /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB1B1169E11B00D5B843 /* banana.png */; };
 		1198EB371169E11B00D5B843 /* canada_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB1C1169E11B00D5B843 /* canada_flag.png */; };
 		1198EB391169E11B00D5B843 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB1E1169E11B00D5B843 /* car.png */; };
@@ -32,13 +31,14 @@
 		1198EB4D1169E11B00D5B843 /* surfing.png in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB321169E11B00D5B843 /* surfing.png */; };
 		1198EB4E1169E11B00D5B843 /* teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB331169E11B00D5B843 /* teacher.png */; };
 		1198EB4F1169E11B00D5B843 /* truck_driver.png in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB341169E11B00D5B843 /* truck_driver.png */; };
-		1198EB591169E15500D5B843 /* Questions1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB521169E15500D5B843 /* Questions1.xml */; };
-		1198EB5A1169E15500D5B843 /* Questions2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB531169E15500D5B843 /* Questions2.xml */; };
-		1198EB5B1169E15500D5B843 /* Questions3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB541169E15500D5B843 /* Questions3.xml */; };
-		1198EB5C1169E15500D5B843 /* Questions4.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB551169E15500D5B843 /* Questions4.xml */; };
-		1198EB5D1169E15500D5B843 /* Questions5.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB561169E15500D5B843 /* Questions5.xml */; };
-		1198EB5E1169E15500D5B843 /* Questions6.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB571169E15500D5B843 /* Questions6.xml */; };
-		1198EB5F1169E15500D5B843 /* Questions7.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1198EB581169E15500D5B843 /* Questions7.xml */; };
+		11FB848A116FE3DA005909BA /* Questions1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB8489116FE3DA005909BA /* Questions1.xml */; };
+		11FB848C116FE41C005909BA /* Questions3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB848B116FE41C005909BA /* Questions3.xml */; };
+		11FB8493116FE428005909BA /* Questions4.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB848D116FE428005909BA /* Questions4.xml */; };
+		11FB8494116FE428005909BA /* Questions5.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB848E116FE428005909BA /* Questions5.xml */; };
+		11FB8495116FE428005909BA /* Questions6.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB848F116FE428005909BA /* Questions6.xml */; };
+		11FB8496116FE428005909BA /* Questions7.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB8490116FE428005909BA /* Questions7.xml */; };
+		11FB8497116FE428005909BA /* Questions8.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB8491116FE428005909BA /* Questions8.xml */; };
+		11FB8498116FE428005909BA /* Questions9.xml in Resources */ = {isa = PBXBuildFile; fileRef = 11FB8492116FE428005909BA /* Questions9.xml */; };
 		1D3623260D0F684500981E51 /* QuizMonkeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -64,7 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1133FCDE116A75C200D160CD /* Questions8.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions8.xml; path = ../Questions8.xml; sourceTree = SOURCE_ROOT; };
 		1198EB1B1169E11B00D5B843 /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banana.png; sourceTree = "<group>"; };
 		1198EB1C1169E11B00D5B843 /* canada_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canada_flag.png; sourceTree = "<group>"; };
 		1198EB1E1169E11B00D5B843 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
@@ -89,13 +88,14 @@
 		1198EB321169E11B00D5B843 /* surfing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfing.png; sourceTree = "<group>"; };
 		1198EB331169E11B00D5B843 /* teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher.png; sourceTree = "<group>"; };
 		1198EB341169E11B00D5B843 /* truck_driver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck_driver.png; sourceTree = "<group>"; };
-		1198EB521169E15500D5B843 /* Questions1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions1.xml; path = ../Questions1.xml; sourceTree = SOURCE_ROOT; };
-		1198EB531169E15500D5B843 /* Questions2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions2.xml; path = ../Questions2.xml; sourceTree = SOURCE_ROOT; };
-		1198EB541169E15500D5B843 /* Questions3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions3.xml; path = ../Questions3.xml; sourceTree = SOURCE_ROOT; };
-		1198EB551169E15500D5B843 /* Questions4.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions4.xml; path = ../Questions4.xml; sourceTree = SOURCE_ROOT; };
-		1198EB561169E15500D5B843 /* Questions5.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions5.xml; path = ../Questions5.xml; sourceTree = SOURCE_ROOT; };
-		1198EB571169E15500D5B843 /* Questions6.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions6.xml; path = ../Questions6.xml; sourceTree = SOURCE_ROOT; };
-		1198EB581169E15500D5B843 /* Questions7.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Questions7.xml; path = ../Questions7.xml; sourceTree = SOURCE_ROOT; };
+		11FB8489116FE3DA005909BA /* Questions1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions1.xml; sourceTree = "<group>"; };
+		11FB848B116FE41C005909BA /* Questions3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions3.xml; sourceTree = "<group>"; };
+		11FB848D116FE428005909BA /* Questions4.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions4.xml; sourceTree = "<group>"; };
+		11FB848E116FE428005909BA /* Questions5.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions5.xml; sourceTree = "<group>"; };
+		11FB848F116FE428005909BA /* Questions6.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions6.xml; sourceTree = "<group>"; };
+		11FB8490116FE428005909BA /* Questions7.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions7.xml; sourceTree = "<group>"; };
+		11FB8491116FE428005909BA /* Questions8.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions8.xml; sourceTree = "<group>"; };
+		11FB8492116FE428005909BA /* Questions9.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions9.xml; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* QuizMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyAppDelegate.m; sourceTree = "<group>"; };
@@ -249,14 +249,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1133FCDE116A75C200D160CD /* Questions8.xml */,
-				1198EB521169E15500D5B843 /* Questions1.xml */,
-				1198EB531169E15500D5B843 /* Questions2.xml */,
-				1198EB541169E15500D5B843 /* Questions3.xml */,
-				1198EB551169E15500D5B843 /* Questions4.xml */,
-				1198EB561169E15500D5B843 /* Questions5.xml */,
-				1198EB571169E15500D5B843 /* Questions6.xml */,
-				1198EB581169E15500D5B843 /* Questions7.xml */,
+				11FB848D116FE428005909BA /* Questions4.xml */,
+				11FB848E116FE428005909BA /* Questions5.xml */,
+				11FB848F116FE428005909BA /* Questions6.xml */,
+				11FB8490116FE428005909BA /* Questions7.xml */,
+				11FB8491116FE428005909BA /* Questions8.xml */,
+				11FB8492116FE428005909BA /* Questions9.xml */,
+				11FB848B116FE41C005909BA /* Questions3.xml */,
+				11FB8489116FE3DA005909BA /* Questions1.xml */,
 				1198EB191169E11B00D5B843 /* QuestionSet */,
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
@@ -377,14 +377,14 @@
 				1198EB4D1169E11B00D5B843 /* surfing.png in Resources */,
 				1198EB4E1169E11B00D5B843 /* teacher.png in Resources */,
 				1198EB4F1169E11B00D5B843 /* truck_driver.png in Resources */,
-				1198EB591169E15500D5B843 /* Questions1.xml in Resources */,
-				1198EB5A1169E15500D5B843 /* Questions2.xml in Resources */,
-				1198EB5B1169E15500D5B843 /* Questions3.xml in Resources */,
-				1198EB5C1169E15500D5B843 /* Questions4.xml in Resources */,
-				1198EB5D1169E15500D5B843 /* Questions5.xml in Resources */,
-				1198EB5E1169E15500D5B843 /* Questions6.xml in Resources */,
-				1198EB5F1169E15500D5B843 /* Questions7.xml in Resources */,
-				1133FCDF116A75C200D160CD /* Questions8.xml in Resources */,
+				11FB848A116FE3DA005909BA /* Questions1.xml in Resources */,
+				11FB848C116FE41C005909BA /* Questions3.xml in Resources */,
+				11FB8493116FE428005909BA /* Questions4.xml in Resources */,
+				11FB8494116FE428005909BA /* Questions5.xml in Resources */,
+				11FB8495116FE428005909BA /* Questions6.xml in Resources */,
+				11FB8496116FE428005909BA /* Questions7.xml in Resources */,
+				11FB8497116FE428005909BA /* Questions8.xml in Resources */,
+				11FB8498116FE428005909BA /* Questions9.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
