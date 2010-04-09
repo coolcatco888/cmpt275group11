@@ -1,0 +1,175 @@
+<questions>
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>We saw a beautiful bird in the woods.</sentence>
+        <choice>We</choice><point>-2</point>
+        <choice>saw</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>beautiful</choice><point>-2</point>
+		<choice>bird</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>woods</choice><point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Armando lives in Mexico.</sentence>
+		<choice>Armando</choice><point>10</point>
+        <choice>lives</choice><point>-2</point>
+        <choice>in</choice><point>-2</point>
+        <choice>Mexico</choice><point>10</point>
+        <time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>The early bird catches the worm.</sentence>
+        <choice>The</choice><point>-2</point>
+		<choice>early</choice><point>10</point>
+        <choice>bird</choice><point>-2</point>
+        <choice>catches</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>worm</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>The little boy is carrying a big, round watermelon.</sentence>
+        <choice>The</choice><point>-2</point>
+		<choice>little</choice><point>10</point>
+        <choice>boy</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>carrying</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>big</choice><point>10</point>
+        <choice>round</choice><point>10</point>
+        <choice>watermelon</choice><point>-2</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>Jan is a clever girl.</sentence>
+        <choice>Jan</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+		<choice>clever</choice><point>10</point>
+		<choice>girl</choice><point>-2</point>
+        <time>5</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>When I was young, my elder sister often bought me a delicious ice-cream.</sentence>
+        <choice>When</choice><point>-2</point>
+        <choice>I</choice><point>-2</point>
+        <choice>was</choice><point>-2</point>
+		<choice>young</choice><point>10</point>
+        <choice>my</choice><point>-2</point>
+        <choice>elder</choice><point>10</point>
+        <choice>sister</choice><point>-2</point>
+        <choice>often</choice><point>-2</point>
+        <choice>bought</choice><point>-2</point>
+        <choice>me</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>delicious</choice><point>10</point>
+        <choice>ice-cream</choice><point>-2</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the adjectives</type>
+		<image></image>
+		<sentence>Cats are smarter than dogs.</sentence>
+        <choice>Cats</choice><point>-2</point>
+        <choice>are</choice><point>-2</point>
+		<choice>smarter</choice><point>10</point>
+        <choice>than</choice><point>-2</point>
+        <choice>dogs</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>panda.png</image>
+		<sentence>What animal is it?</sentence>
+		<choice>cat</choice>
+		<choice>panda</choice>
+		<choice>dog</choice>
+		<choice>mouse</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>canada_flag.png</image>
+		<sentence>What country is it?</sentence>
+		<choice>United States</choice>
+		<choice>China</choice>
+		<choice>Japan</choice>
+		<choice>Canada</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>firefighter.png</image>
+		<sentence>What's his job?</sentence>
+		<choice>firefighter</choice>
+		<choice>teacher</choice>
+		<choice>farmer</choice>
+		<choice>sailor</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>police_officer.png</image>
+		<sentence>What's his job?</sentence>
+		<choice>firefighter</choice>
+		<choice>policeman</choice>
+		<choice>waiter</choice>
+		<choice>nurse</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>post_office.png</image>
+		<sentence>Where is it?</sentence>
+		<choice>hospital</choice>
+		<choice>school</choice>
+		<choice>post office</choice>
+		<choice>bus station</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+</questions>

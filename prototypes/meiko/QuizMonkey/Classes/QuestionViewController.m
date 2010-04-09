@@ -77,7 +77,7 @@
 	return self;
 }
 - (void)loadQuestionsFromXML {
-	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions8"];
+	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions9"];
 	[questionListOfXML retain];
 }
 - (void)loadQuizQuestions {

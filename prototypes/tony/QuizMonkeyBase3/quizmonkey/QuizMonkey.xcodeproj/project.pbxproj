@@ -51,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D61161116C76E100062827 /* QuizMonkeyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = QuizMonkeyTests.octest; path = "build/Debug-iphoneos/QuizMonkeyTests.octest"; sourceTree = "<group>"; };
 		11EF8E5E115D6D19001FCEE1 /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana.jpg; sourceTree = "<group>"; };
 		11EF8E60115D6D2C001FCEE1 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		11EF8E62115D6D38001FCEE1 /* mukmuk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mukmuk.jpg; sourceTree = "<group>"; };
@@ -160,7 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* QuizMonkey.app */,
+<<<<<<< .mine
+				11D61161116C76E100062827 /* QuizMonkeyTests.octest */,
+=======
 				1D327151116D3E3400BE1502 /* QuizMonkeyTests.octest */,
+>>>>>>> .r255
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,7 +287,11 @@
 			);
 			name = QuizMonkeyTests;
 			productName = QuizMonkeyTests;
+<<<<<<< .mine
+			productReference = 11D61161116C76E100062827 /* QuizMonkeyTests.octest */;
+=======
 			productReference = 1D327151116D3E3400BE1502 /* QuizMonkeyTests.octest */;
+>>>>>>> .r255
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */

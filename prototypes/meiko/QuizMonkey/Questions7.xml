@@ -1,0 +1,160 @@
+<questions>
+	<question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>Timmy hates seeing a doctor.</sentence>
+        <choice>Timmy</choice><point>-2</point>
+		<choice>hates</choice><point>10</point>
+        <choice>seeing</choice><point>15</point>
+        <choice>a</choice><point>-2</point>
+        <choice>doctor</choice><point>-2</point>
+		<time>5</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>dentist.png</image>
+		<sentence>What's his job?</sentence>
+		<choice>worker</choice>
+		<choice>farmer</choice>
+		<choice>teacher</choice>
+		<choice>dentist</choice>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<point>10</point>
+		<time>3</time>
+	</question>
+	
+	<question>
+		<type>Find the verbs</type>
+		<image></image>
+		<sentence>After finishing working on the project, Mary is going to have a long vocation.</sentence>
+        <choice>After</choice><point>-2</point>
+		<choice>finishing</choice><point>10</point>
+        <choice>working</choice><point>15</point>
+        <choice>on</choice><point>-2</point>
+        <choice>the</choice><point>-2</point>
+        <choice>project</choice><point>-2</point>
+        <choice>Mary</choice><point>-2</point>
+        <choice>is</choice><point>-2</point>
+		<choice>going</choice><point>10</point>
+		<choice>to</choice><point>-2</point>
+		<choice>have</choice><point>10</point>
+		<choice>a</choice><point>-2</point>
+		<choice>long</choice><point>-2</point>
+		<choice>vocation</choice><point>-2</point>
+		<time>15</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image>chef.png</image>
+		<sentence>Hint: look at the picture</sentence>
+		<choice>chef</choice>
+		<choice>cheaf</choice>
+		<choice>chefs</choice>
+		<choice>cheafs</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Match the picture</type>
+		<image>postal_worker.png</image>
+		<sentence>What's her job?</sentence>
+		<choice>postman</choice>
+		<choice>salesman</choice>
+		<choice>teacher</choice>
+		<choice>waitress</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
+		<time>3</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>This Sunday, Tom and his parents are going to have dinner in a high-class restaurant.</sentence>
+        <choice>This</choice><point>-2</point>
+		<choice>Sunday</choice><point>10</point>
+        <choice>Tom</choice><point>10</point>
+        <choice>and</choice><point>-2</point>
+        <choice>his</choice><point>-2</point>
+        <choice>parents</choice><point>10</point>
+        <choice>are</choice><point>-2</point>
+        <choice>going</choice><point>-2</point>
+        <choice>to</choice><point>-2</point>
+        <choice>have</choice><point>-2</point>
+        <choice>dinner</choice><point>10</point>
+        <choice>in</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>high-class</choice><point>-2</point>
+        <choice>restaurant</choice><point>10</point>
+		<time>20</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: even number(s)</sentence>
+		<choice>twe</choice>
+		<choice>three</choice>
+		<choice>fourty</choice>
+		<choice>twelf</choice>
+		<point>10</point>
+		<point>0</point>
+		<point>10</point>
+		<point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>My dream is to be a truck driver.</sentence>
+        <choice>My</choice><point>-2</point>
+		<choice>dream</choice><point>10</point>
+        <choice>is</choice><point>10</point>
+        <choice>to</choice><point>-2</point>
+        <choice>be</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>truck</choice><point>10</point>
+        <choice>driver</choice><point>10</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the misspelled word</type>
+		<image></image>
+		<sentence>Hint: odd number(s)</sentence>
+		<choice>eight</choice>
+		<choice>thriteen</choice>
+		<choice>wone</choice>
+		<choice>six</choice>
+		<point>0</point>
+		<point>10</point>
+		<point>10</point>
+		<point>0</point>
+		<time>10</time>
+	</question>
+    
+    <question>
+		<type>Find the nouns</type>
+		<image></image>
+		<sentence>Timmy is afraid of seeing a doctor.</sentence>
+        <choice>Timmy</choice><point>10</point>
+		<choice>is</choice><point>-2</point>
+        <choice>afraid</choice><point>-2</point>
+        <choice>of</choice><point>-2</point>
+        <choice>seeing</choice><point>-2</point>
+        <choice>a</choice><point>-2</point>
+        <choice>doctor</choice><point>10</point>
+		<time>10</time>
+	</question>
+</questions>
