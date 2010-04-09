@@ -51,7 +51,7 @@
 	questionChoiceButtonArray = [NSArray arrayWithObjects:questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil];
 	
 	[questionTimerProgress setProgress:1.0];
-	
+	totalPoints = 0;
 	
 	//Setup variables
 	selectedChoices = [NSMutableSet setWithCapacity:20];//Used to be 4 but not sure if picking out words questions have more than 4 choices
@@ -64,6 +64,8 @@
 	[self loadQuizQuestions];
 	//Load the first question onto the questionView
 	[self loadQuestionFromIndex:currentQuestionIndex];
+	
+	
 	
 	currentQuestionIndex = 0;
 	[mainMenuView addSubview:questionView];
@@ -109,7 +111,7 @@
 }
 
 - (void)loadQuestionsFromXML {
-	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions"];
+	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions2"];
 	[questionListOfXML retain];
 }
 - (void)loadQuizQuestions {
