@@ -21,13 +21,11 @@
 #import <UIKit/UIKit.h>
 #import "Question.h"
 #import "QuestionParser.h"
+#import "Score.h"
 #import "ScoreParser.h"
-//#import "QuestionViewManager.h"
 #import "QuestionViewController.h"
-#import "SubmissionViewController.h"
+//#import "SubmissionViewController.h"
 #import "OnlineViewController.h"
-
-
 
 @class QuestionViewController;
 //@class SubmissionViewController;
