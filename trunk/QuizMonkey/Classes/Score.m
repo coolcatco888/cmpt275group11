@@ -2,8 +2,15 @@
 //  Score.m
 //  QuizMonkey
 //
-//  Created by Ariel Lorenzo-Luaces on 3/26/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Ariel on 08/03/10.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: See the header file
+//
+//  Changes: See the header file
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import "Score.h"
