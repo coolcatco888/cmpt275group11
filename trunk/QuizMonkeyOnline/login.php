@@ -10,12 +10,19 @@ $action = $_GET['action'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+$_SESSION['username'] = $username;
+
 //Authenticate user
 if($action == 'authenticate') {
+    $_SESSION['authenticated'] = true;
     if($manager->login_as_teacher($username, $password)) {
-        $_SESSION['authenticated'] = true;
+        $_SESSION['usertype'] = "teacher";
+        echo "OK";
+    } else if($manager->login($username, $password)) {
+        $_SESSION['usertype'] = "student";
         echo "OK";
     } else {
+        $_SESSION['authenticated'] = false;
         echo "FAILED";
     }
 
