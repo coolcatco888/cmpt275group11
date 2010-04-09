@@ -18,8 +18,7 @@ if($manager->login_as_teacher($username, $password)) {
 	$xml = $manager->generate_user_score_xml($username);
 }
 
-//TODO - Delete the line below once iPhone part is finished!
-//$xml = $manager->generate_score_xml();
+$xml = $manager->generate_score_xml();
 
 echo $xml;
 
