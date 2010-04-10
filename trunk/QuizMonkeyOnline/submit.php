@@ -13,6 +13,7 @@ $password = $_GET['password'];
 $timeleft = $_GET['timeleft'];
 $points = $_GET['points'];
 $maxpoints = $_GET['maxpoints'];
+$achievements = $_GET['achievements'];
 
 $allnumerical = false;
 if(is_numeric($timeleft) && is_numeric($points) && is_numeric($maxpoints)) {
@@ -23,12 +24,12 @@ $loginsuccess = $manager->login($username, $password);
 //If login is a success, submit score
 if($loginsuccess && $allnumerical) {
     $scoreid = $manager->generate_scoreid($username);
-    $manager->insert_score($username, $scoreid, $timeleft, $points, $maxpoints);
+    $manager->insert_score_with_achievenents($username, $scoreid, $timeleft, $points, $maxpoints, $achievements);
 } else {
+   //return error
    $error = "Unable to submit score, username/password is incorrect";
 }
 
-//TODO - Process error here
-
+echo $error;
 
 ?>
