@@ -93,31 +93,36 @@
 			OneOrMoreAchievementsAchieved = TRUE;
 			[submitScoreURL appendString:@"0"];
 		}
-		if([currentScore reward2]){
+		if([currentScore reward1]){
 			if(OneOrMoreAchievementsAchieved)
 				[submitScoreURL appendString:@"-"];
 			OneOrMoreAchievementsAchieved = TRUE;
 			[submitScoreURL appendString:@"1"];
 		}
-		if([currentScore reward3]){
+		if([currentScore reward2]){
 			if(OneOrMoreAchievementsAchieved)
 				[submitScoreURL appendString:@"-"];
 			OneOrMoreAchievementsAchieved = TRUE;
 			[submitScoreURL appendString:@"2"];
 		}
-		if([currentScore reward4]){
+		if([currentScore reward3]){
 			if(OneOrMoreAchievementsAchieved)
 				[submitScoreURL appendString:@"-"];
 			OneOrMoreAchievementsAchieved = TRUE;
 			[submitScoreURL appendString:@"3"];
 		}
-		if([currentScore reward5]){
+		if([currentScore reward4]){
 			if(OneOrMoreAchievementsAchieved)
 				[submitScoreURL appendString:@"-"];
 			OneOrMoreAchievementsAchieved = TRUE;
 			[submitScoreURL appendString:@"4"];
 		}
-		
+		if([currentScore reward5]){
+			if(OneOrMoreAchievementsAchieved)
+				[submitScoreURL appendString:@"-"];
+			OneOrMoreAchievementsAchieved = TRUE;
+			[submitScoreURL appendString:@"5"];
+		}
 		NSLog(submitScoreURL);
 		[NSData dataWithContentsOfURL:[NSURL URLWithString:submitScoreURL]];
 	}
