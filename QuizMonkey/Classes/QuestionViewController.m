@@ -56,8 +56,8 @@
 	//Setup variables
 	selectedChoices = [NSMutableSet setWithCapacity:20];//Used to be 4 but not sure if picking out words questions have more than 4 choices
 	totalPointsAcquired = 0;
-	//questionWords = [NSMutableSet setWithCapacity:50];
 	
+	currentQuestionIndex = 0;
 	//Parse XML
 	[self loadQuestionsFromXML];
 	//Randomly select 10 questions and Display the questionScreen
@@ -67,7 +67,6 @@
 	
 	
 	
-	currentQuestionIndex = 0;
 	[mainMenuView addSubview:questionView];
 	
 	//Setup Timer
@@ -84,7 +83,7 @@
 	rewardIconFileName=[[NSArray alloc] initWithObjects:@"top_student",@"pass",@"combo5",@"grammar",@"vocabulary",@"cheetchreward",  nil];
 	rewardButtons =[NSMutableArray arrayWithCapacity: 6];
 	for (NSUInteger i=0; i<[rewardIconFileName count]; i++) {
-		[rewardButtons addObject:[self rewardIconCreator:[rewardIconFileName objectAtIndex:i] iconX:(NSUInteger)i%([rewardIconFileName count]/2) iconY:(NSUInteger)(i/([rewardIconFileName count]/2))]];
+		[rewardButtons addObject:[self rewardIconCreator:[rewardIconFileName objectAtIndex:i] iconX:i%([rewardIconFileName count]/2) iconY:(i/([rewardIconFileName count]/2))]];
 	}
 	[rewardButtons retain];
 	return self;
@@ -106,12 +105,10 @@
 	[iconButton addTarget:self action:@selector(rewardDescription:) forControlEvents:UIControlEventTouchUpInside];
 	[finalScoreView addSubview:iconButton];
 	return iconButton;
-	
-	
 }
 
 - (void)loadQuestionsFromXML {
-	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions2"];
+	questionListOfXML = [[QuestionParser new] loadQuestionsFromXML:@"Questions"];
 	[questionListOfXML retain];
 }
 - (void)loadQuizQuestions {
@@ -123,16 +120,11 @@
 	questionListOfQuiz = [NSMutableArray arrayWithCapacity:totalNumberOfQuizQuestions];
 	NSUInteger selectedIndex;
 	for(NSUInteger i=0; i<count & i<10; i++) {
-		// Select a random element between i and end of array to swap with.
+		// Select a random element between i and end of array to inclide in the quiz array
 		selectedIndex = (arc4random() % [questionListOfXML count]);
 		[questionListOfQuiz addObject:[questionListOfXML objectAtIndex:selectedIndex]];
 		[questionListOfXML removeObjectAtIndex:selectedIndex];
-		
-/*		int nElements = count - i;
-		int n = (random() % nElements) + i;
-		[questionListOfXML  exchangeObjectAtIndex:i withObjectAtIndex:n];
-		[questionListOfQuiz addObject:[questionListOfXML objectAtIndex:i]];
-*/		totalTime += [[questionListOfQuiz objectAtIndex:i] time];
+		totalTime += [[questionListOfQuiz objectAtIndex:i] time];
 	}
 	totalTimeLeft = totalTime;
 	[questionListOfQuiz retain];
@@ -215,8 +207,7 @@
 	NSUInteger count = [questions count];
 	for (NSUInteger i = 0; i < count; ++i) {
 		// Select a random element between i and end of array to swap with.
-		int nElements = count - i;
-		int n = (random() % nElements) + i;
+		int n = (arc4random()%(count-i)) + i;
 		[questions  exchangeObjectAtIndex:i withObjectAtIndex:n];
 	}
 	
