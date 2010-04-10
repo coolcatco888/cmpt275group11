@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -268,13 +266,15 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>DE7614C9116FD5CA00480073</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>8</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -310,12 +310,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>OnlineViewController.m</string>
+								<string>QuestionViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -323,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>OnlineViewController.m</string>
+										<string>QuestionViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE7616A6116FEA0100480073</string>
+										<string>DE76174A116FF88100480073</string>
 										<key>history</key>
 										<array>
 											<string>DE9FB144112CAE0500C92017</string>
@@ -388,45 +390,48 @@
 											<string>DEE412DC11641DC6008B019A</string>
 											<string>DE1EE8F3116FBFB900A47C53</string>
 											<string>DE1EE8F4116FBFB900A47C53</string>
-											<string>DE7614D4116FD62B00480073</string>
-											<string>DE7614D5116FD62B00480073</string>
-											<string>DE7614D6116FD62B00480073</string>
-											<string>DE7614D7116FD62B00480073</string>
-											<string>DE7614D8116FD62B00480073</string>
-											<string>DE7614D9116FD62B00480073</string>
-											<string>DE7614DA116FD62B00480073</string>
-											<string>DE7614DB116FD62B00480073</string>
-											<string>DE7614DC116FD62B00480073</string>
-											<string>DE7614DD116FD62B00480073</string>
-											<string>DE7614DE116FD62B00480073</string>
-											<string>DE7614DF116FD62B00480073</string>
-											<string>DE7614E0116FD62B00480073</string>
-											<string>DE7614E1116FD62B00480073</string>
-											<string>DE7614E2116FD62B00480073</string>
-											<string>DE7614E3116FD62B00480073</string>
-											<string>DE7614E4116FD62B00480073</string>
-											<string>DE7614E5116FD62B00480073</string>
-											<string>DE7614E7116FD62B00480073</string>
-											<string>DE7614E9116FD62B00480073</string>
 											<string>DE7614EA116FD62B00480073</string>
 											<string>DE7614EB116FD62B00480073</string>
 											<string>DE7614EC116FD62B00480073</string>
-											<string>DE7615EF116FDE9100480073</string>
-											<string>DE761633116FE60100480073</string>
-											<string>DE761634116FE60100480073</string>
-											<string>DE76164F116FE61900480073</string>
-											<string>DE76168A116FEA0100480073</string>
 											<string>DE76168B116FEA0100480073</string>
 											<string>DE76168C116FEA0100480073</string>
-											<string>DE76168D116FEA0100480073</string>
-											<string>DE76168E116FEA0100480073</string>
-											<string>DE76168F116FEA0100480073</string>
-											<string>DE761690116FEA0100480073</string>
 											<string>DE761691116FEA0100480073</string>
-											<string>DE761692116FEA0100480073</string>
-											<string>DE761693116FEA0100480073</string>
-											<string>DE761694116FEA0100480073</string>
-											<string>DE761695116FEA0100480073</string>
+											<string>DE7616A8116FEEEC00480073</string>
+											<string>DE7616A9116FEEEC00480073</string>
+											<string>DE7616AA116FEEEC00480073</string>
+											<string>DE7616AB116FEEEC00480073</string>
+											<string>DE7616AC116FEEEC00480073</string>
+											<string>DE7616AE116FEEEC00480073</string>
+											<string>DE7616D9116FF22700480073</string>
+											<string>DE7616E7116FF4C000480073</string>
+											<string>DE7616E8116FF4C000480073</string>
+											<string>DE7616E9116FF4C000480073</string>
+											<string>DE7616EA116FF4C000480073</string>
+											<string>DE7616EB116FF4C000480073</string>
+											<string>DE7616EC116FF4C000480073</string>
+											<string>DE7616ED116FF4C000480073</string>
+											<string>DE7616EE116FF4C000480073</string>
+											<string>DE7616EF116FF4C000480073</string>
+											<string>DE7616F0116FF4C000480073</string>
+											<string>DE7616F1116FF4C000480073</string>
+											<string>DE7616F2116FF4C000480073</string>
+											<string>DE7616F3116FF4C000480073</string>
+											<string>DE7616F4116FF4C000480073</string>
+											<string>DE7616F5116FF4C000480073</string>
+											<string>DE7616F6116FF4C000480073</string>
+											<string>DE7616F7116FF4C000480073</string>
+											<string>DE7616F8116FF4C000480073</string>
+											<string>DE7616F9116FF4C000480073</string>
+											<string>DE7616FA116FF4C000480073</string>
+											<string>DE7616FB116FF4C000480073</string>
+											<string>DE7616FC116FF4C000480073</string>
+											<string>DE7616FD116FF4C000480073</string>
+											<string>DE7616FE116FF4C000480073</string>
+											<string>DE761738116FF4ED00480073</string>
+											<string>DE761741116FF88100480073</string>
+											<string>DE761742116FF88100480073</string>
+											<string>DE761743116FF88100480073</string>
+											<string>DE761744116FF88100480073</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -503,7 +508,6 @@
 											<string>DED5D2C5115D8152006B3A5D</string>
 											<string>DED5D2C7115D8152006B3A5D</string>
 											<string>DED5D30B115D83FC006B3A5D</string>
-											<string>DE10189F115D93B9004D378B</string>
 											<string>DEADD7A4115D9C240004736F</string>
 											<string>DE099290115DB00600507FBD</string>
 											<string>DE09929B115DB00600507FBD</string>
@@ -673,9 +677,7 @@
 											<string>DE761622116FE3A000480073</string>
 											<string>DE76163A116FE60100480073</string>
 											<string>DE76163B116FE60100480073</string>
-											<string>DE76163C116FE60100480073</string>
 											<string>DE76163D116FE60100480073</string>
-											<string>DE76163E116FE60100480073</string>
 											<string>DE76163F116FE60100480073</string>
 											<string>DE761640116FE60100480073</string>
 											<string>DE761641116FE60100480073</string>
@@ -709,6 +711,81 @@
 											<string>DE7616A3116FEA0100480073</string>
 											<string>DE7616A4116FEA0100480073</string>
 											<string>DE7616A5116FEA0100480073</string>
+											<string>DE7616AF116FEEEC00480073</string>
+											<string>DE7616B0116FEEEC00480073</string>
+											<string>DE7616B1116FEEEC00480073</string>
+											<string>DE7616B2116FEEEC00480073</string>
+											<string>DE7616B3116FEEEC00480073</string>
+											<string>DE7616B4116FEEEC00480073</string>
+											<string>DE7616B5116FEEEC00480073</string>
+											<string>DE7616B6116FEEEC00480073</string>
+											<string>DE7616B7116FEEEC00480073</string>
+											<string>DE7616B8116FEEEC00480073</string>
+											<string>DE7616B9116FEEEC00480073</string>
+											<string>DE7616BA116FEEEC00480073</string>
+											<string>DE7616BB116FEEEC00480073</string>
+											<string>DE7616BC116FEEEC00480073</string>
+											<string>DE7616C4116FEFE700480073</string>
+											<string>DE7616C5116FEFE700480073</string>
+											<string>DE7616C7116FEFE700480073</string>
+											<string>DE7616DB116FF22700480073</string>
+											<string>DE7616DC116FF22700480073</string>
+											<string>DE7616E3116FF28600480073</string>
+											<string>DE761702116FF4C000480073</string>
+											<string>DE761703116FF4C000480073</string>
+											<string>DE761704116FF4C000480073</string>
+											<string>DE761705116FF4C000480073</string>
+											<string>DE761706116FF4C000480073</string>
+											<string>DE761707116FF4C000480073</string>
+											<string>DE761708116FF4C000480073</string>
+											<string>DE761709116FF4C000480073</string>
+											<string>DE76170A116FF4C000480073</string>
+											<string>DE76170B116FF4C000480073</string>
+											<string>DE76170C116FF4C000480073</string>
+											<string>DE76170D116FF4C000480073</string>
+											<string>DE76170E116FF4C000480073</string>
+											<string>DE76170F116FF4C000480073</string>
+											<string>DE761710116FF4C000480073</string>
+											<string>DE761711116FF4C000480073</string>
+											<string>DE761712116FF4C000480073</string>
+											<string>DE761713116FF4C000480073</string>
+											<string>DE761714116FF4C000480073</string>
+											<string>DE761715116FF4C000480073</string>
+											<string>DE761716116FF4C000480073</string>
+											<string>DE761717116FF4C000480073</string>
+											<string>DE761718116FF4C000480073</string>
+											<string>DE761719116FF4C000480073</string>
+											<string>DE76171A116FF4C000480073</string>
+											<string>DE76171B116FF4C000480073</string>
+											<string>DE76171C116FF4C000480073</string>
+											<string>DE76171D116FF4C000480073</string>
+											<string>DE76171E116FF4C000480073</string>
+											<string>DE76171F116FF4C000480073</string>
+											<string>DE761720116FF4C000480073</string>
+											<string>DE761721116FF4C000480073</string>
+											<string>DE761722116FF4C000480073</string>
+											<string>DE761723116FF4C000480073</string>
+											<string>DE761724116FF4C000480073</string>
+											<string>DE761725116FF4C000480073</string>
+											<string>DE761726116FF4C000480073</string>
+											<string>DE761727116FF4C000480073</string>
+											<string>DE761728116FF4C000480073</string>
+											<string>DE761729116FF4C000480073</string>
+											<string>DE76172A116FF4C000480073</string>
+											<string>DE76172B116FF4C000480073</string>
+											<string>DE76172C116FF4C000480073</string>
+											<string>DE76172D116FF4C000480073</string>
+											<string>DE76172E116FF4C000480073</string>
+											<string>DE76172F116FF4C000480073</string>
+											<string>DE761730116FF4C000480073</string>
+											<string>DE761731116FF4C000480073</string>
+											<string>DE761732116FF4C000480073</string>
+											<string>DE761739116FF4ED00480073</string>
+											<string>DE761745116FF88100480073</string>
+											<string>DE761746116FF88100480073</string>
+											<string>DE761747116FF88100480073</string>
+											<string>DE761748116FF88100480073</string>
+											<string>DE761749116FF88100480073</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -902,12 +979,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>DE761682116FE8C300480073</string>
 		<string>DE76164B116FE60100480073</string>
 		<string>DE76164C116FE60100480073</string>
 		<string>DE207C4A112A473D005AD593</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Volumes/ala76/CMPT_275/Project/cmpt275group11/QuizMonkey/QuizMonkey.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
