@@ -80,6 +80,44 @@
 		[self appendVariableToSubmitionString:@"points" value:[[NSNumber numberWithInt:[currentScore points]] stringValue]];
 		[submitScoreURL appendString:@"&"];
 		[self appendVariableToSubmitionString:@"maxpoints" value:[[NSNumber numberWithInt:[currentScore maxPoints]]  stringValue]];
+		bool OneOrMoreAchievementsAchieved = FALSE;
+		[submitScoreURL appendString:@"&"];
+		[submitScoreURL appendString:@"achievements="];
+
+		if(![currentScore reward0] && ![currentScore reward1] && ![currentScore reward2] && ![currentScore reward3] && ![currentScore reward4] && ![currentScore reward0])
+			[submitScoreURL appendString:@"none"];
+		
+		if([currentScore reward0]){
+			if(OneOrMoreAchievementsAchieved)
+				[submitScoreURL appendString:@"-"];
+			OneOrMoreAchievementsAchieved = TRUE;
+			[submitScoreURL appendString:@"0"];
+		}
+		if([currentScore reward2]){
+			if(OneOrMoreAchievementsAchieved)
+				[submitScoreURL appendString:@"-"];
+			OneOrMoreAchievementsAchieved = TRUE;
+			[submitScoreURL appendString:@"1"];
+		}
+		if([currentScore reward3]){
+			if(OneOrMoreAchievementsAchieved)
+				[submitScoreURL appendString:@"-"];
+			OneOrMoreAchievementsAchieved = TRUE;
+			[submitScoreURL appendString:@"2"];
+		}
+		if([currentScore reward4]){
+			if(OneOrMoreAchievementsAchieved)
+				[submitScoreURL appendString:@"-"];
+			OneOrMoreAchievementsAchieved = TRUE;
+			[submitScoreURL appendString:@"3"];
+		}
+		if([currentScore reward5]){
+			if(OneOrMoreAchievementsAchieved)
+				[submitScoreURL appendString:@"-"];
+			OneOrMoreAchievementsAchieved = TRUE;
+			[submitScoreURL appendString:@"4"];
+		}
+		
 		NSLog(submitScoreURL);
 		[NSData dataWithContentsOfURL:[NSURL URLWithString:submitScoreURL]];
 	}
