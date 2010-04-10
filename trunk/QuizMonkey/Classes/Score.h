@@ -32,17 +32,17 @@
 	
 	//counters for reward system. Statistical analysis users' correct anwswer
 	//The following variables are used when submitting high scores
-	NSUInteger combo;
-	NSUInteger maxCombo;
-	NSUInteger fillInTheBlank;
-	NSUInteger pickOutWords;
-	NSUInteger findTheMisspelledWord;
-	NSUInteger matchThePic;
-	NSUInteger findVerb;
-	NSUInteger findNoun;
-	NSUInteger findAdj;
-	NSUInteger grammar;
-	NSUInteger vocabulary;
+	NSUInteger combo;					//Used to count current correct answers in a row
+	NSUInteger maxCombo;				//Used to store the max correct answers in a row in this quiz
+	NSUInteger fillInTheBlank;			//Used to count how many fill in the blank questions the user got correctly
+	NSUInteger pickOutWords;			//Used to count how many pick out words questions the user got correctly
+	NSUInteger findTheMisspelledWord;	//Used to count how many find the misspelled word questions the user got correctly
+	NSUInteger matchThePic;				//Used to count how many match the picture questions the user got correctly
+	NSUInteger findVerb;				//Used to count how many find the verbs questions the user got correctly
+	NSUInteger findNoun;				//Used to count how many find the nouns questions the user got correctly
+	NSUInteger findAdj;					//Used to count how many find the adjectives questions the user got correctly
+	NSUInteger grammar;					//Used to count how many grammar questions(find the verbs,nouns,adjs) the user got correctly
+	NSUInteger vocabulary;				//Used to count how many vocabulary questions(fill in the blank,pick out words,match the picture, find the misspelled word) the user got correctly
 	
 }
 
@@ -68,5 +68,5 @@
 @property (assign) NSUInteger grammar;
 @property (assign) NSUInteger vocabulary;
 
--(void)updateCounters:(NSString*)questionType;
+-(void)updateCounters:(NSString*)questionType;	//this function is to update counters data for rewards system
 @end
