@@ -129,8 +129,7 @@
 @property (assign) IBOutlet UILabel *finalScoreLabel;
 @property (assign) IBOutlet UIImageView *questionImage;
 @property (assign) IBOutlet UIProgressView *questionTimerProgress;
-//@property (assign) NSArray* questionChoiceButtons;
-//@property (assign) NSMutableArray* questionWords;
+
 @property (assign) UIView* buttonWordsView; 
 
 @property (assign) NSArray *rewardIconFileName;
@@ -179,11 +178,11 @@
 -(void)updateTimer;//fired every 1 second, checks whether time is up
 -(void)quitGame;//Removes questionScreen from the mainview
 -(void)stopTimer;//Stop timer from view controller
--(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)ix buttonY:(CGFloat)iy;
--(void)selectword:(id)sender;
-- (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2;
--(IBAction)quitButtonPressed:(id)sender;
--(void)rewardDescription:(UIButton*)sender;
--(UIButton*) rewardIconCreator:(NSString*) IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY;
--(void)getReward:(NSUInteger)reward_id;
+-(UIButton *) buttonCreator:(NSString*) text buttonX:(CGFloat)ix buttonY:(CGFloat)iy;//this function is to create a button for grammar questions
+-(void)selectword:(id)sender;//this function will be called when the user click a word in grammar questions. it will change the word's color and make it is selected
+- (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2;//this function can compare two strings without punctuations and letter cases.
+-(IBAction)quitButtonPressed:(id)sender;//quit the quiz when user presses 'Quit'
+-(void)rewardDescription:(UIButton*)sender;//display rewards' Descriptions when user presses that reward icon
+-(UIButton*) rewardIconCreator:(NSString*) IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY;//create a reward icon in the final score view
+-(void)getReward:(NSUInteger)reward_id;//give the reward to user then the user achieved the condition
 @end

@@ -40,46 +40,47 @@
 @synthesize grammar;
 @synthesize vocabulary;
 
--(void)updateCounters:(NSString*)questionType
+
+-(void)updateCounters:(NSString*)questionType//this function is to update counters data for rewards system
 {
 	combo++;
-	if (combo>maxCombo)
+	if (combo>maxCombo)			//if the combo is greater than max combo, then update max combo
 	{
 		maxCombo=combo;
 	}
 	
-	if ([questionType isEqualToString:@"Fill in the blank"]) 
+	if ([questionType isEqualToString:@"Fill in the blank"]) //if the question type is fill in the blank, then update fillInTheBlank and vocabulary counters
 	{
 		fillInTheBlank++;
 		vocabulary++;
 		
 	} 
-	else if ([questionType isEqualToString:@"Pick out the words"])
+	else if ([questionType isEqualToString:@"Pick out the words"])//if the question type is pick out words, then update pickOutWords and vocabulary counters
 	{
 		pickOutWords++;
 		vocabulary++;
 	}
-	else if ([questionType isEqualToString:@"Find the misspelled word"])
+	else if ([questionType isEqualToString:@"Find the misspelled word"])//if the question type is find the misspelled word, then update findTheMisspelledWord and vocabulary counters
 	{
 		findTheMisspelledWord++;
 		vocabulary++;
 	}
-	else if ([questionType isEqualToString:@"Match the picture"])
+	else if ([questionType isEqualToString:@"Match the picture"])//if the question type is match the picture, then update matchThePic and vocabulary counters
 	{
 		matchThePic++;
 		vocabulary++;
 	}
-	else if ([questionType isEqualToString:@"Find the nouns"])
+	else if ([questionType isEqualToString:@"Find the nouns"])//if the question type is find the nouns, then update findNoun and grammar counters
 	{
 		findNoun++;
 		grammar++;
 	}
-	else if ([questionType isEqualToString:@"Find the adjectives"])
+	else if ([questionType isEqualToString:@"Find the adjectives"])//if the question type is find the adjectives, then update findAdj and grammarcounters
 	{
 		findAdj++;
 		grammar++;
 	}
-	else if ([questionType isEqualToString:@"Find the verbs"])
+	else if ([questionType isEqualToString:@"Find the verbs"])//if the question type is find the verbs, then update findVerb and vocabulary counters
 	{
 		findVerb++;
 		grammar++;
