@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1100180911701FA000B31B2A /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F111701F9F00B31B2A /* banana.png */; };
+		1100180A11701FA000B31B2A /* canada_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F211701F9F00B31B2A /* canada_flag.png */; };
+		1100180B11701FA000B31B2A /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F311701F9F00B31B2A /* car.png */; };
+		1100180C11701FA000B31B2A /* chef.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F411701FA000B31B2A /* chef.png */; };
+		1100180D11701FA000B31B2A /* dentist.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F511701FA000B31B2A /* dentist.png */; };
+		1100180E11701FA000B31B2A /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F611701FA000B31B2A /* doctor.png */; };
+		1100180F11701FA000B31B2A /* firefighter.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F711701FA000B31B2A /* firefighter.png */; };
+		1100181011701FA000B31B2A /* grapes.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F811701FA000B31B2A /* grapes.png */; };
+		1100181111701FA000B31B2A /* hospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017F911701FA000B31B2A /* hospital.png */; };
+		1100181211701FA000B31B2A /* milk.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017FA11701FA000B31B2A /* milk.png */; };
+		1100181311701FA000B31B2A /* mukmuk.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017FB11701FA000B31B2A /* mukmuk.png */; };
+		1100181411701FA000B31B2A /* nurse.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017FC11701FA000B31B2A /* nurse.png */; };
+		1100181511701FA000B31B2A /* panda.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017FD11701FA000B31B2A /* panda.png */; };
+		1100181611701FA000B31B2A /* penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017FE11701FA000B31B2A /* penguin.png */; };
+		1100181711701FA000B31B2A /* police_officer.png in Resources */ = {isa = PBXBuildFile; fileRef = 110017FF11701FA000B31B2A /* police_officer.png */; };
+		1100181811701FA000B31B2A /* police_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180011701FA000B31B2A /* police_station.png */; };
+		1100181911701FA000B31B2A /* post_office.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180111701FA000B31B2A /* post_office.png */; };
+		1100181A11701FA000B31B2A /* postal_worker.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180211701FA000B31B2A /* postal_worker.png */; };
+		1100181B11701FA000B31B2A /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1100180311701FA000B31B2A /* Questions.xml */; };
+		1100181C11701FA000B31B2A /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180411701FA000B31B2A /* restaurant.png */; };
+		1100181D11701FA000B31B2A /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180511701FA000B31B2A /* student.png */; };
+		1100181E11701FA000B31B2A /* surfing.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180611701FA000B31B2A /* surfing.png */; };
+		1100181F11701FA000B31B2A /* teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180711701FA000B31B2A /* teacher.png */; };
+		1100182011701FA000B31B2A /* truck_driver.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180811701FA000B31B2A /* truck_driver.png */; };
 		11C59C771161F99A0044031C /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C59C761161F99A0044031C /* banana.png */; };
 		11C59C791161F9AA0044031C /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C59C781161F9AA0044031C /* car.png */; };
 		11C59C7B1161F9BA0044031C /* mukmuk.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C59C7A1161F9BA0044031C /* mukmuk.png */; };
@@ -50,10 +74,33 @@
 		DE6EF81B116155E500C5391E /* ScoreParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6EF81A116155E500C5391E /* ScoreParser.m */; };
 		DED5D289115D7E51006B3A5D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED5D287115D7E51006B3A5D /* QuestionViewController.m */; };
 		DEE4129B11641D4B008B019A /* OnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE4129A11641D4B008B019A /* OnlineViewController.m */; };
-		EA8C413E115566B300F15609 /* Questions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1D7D0653114DCD7B003B550F /* Questions.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110017F111701F9F00B31B2A /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banana.png; sourceTree = "<group>"; };
+		110017F211701F9F00B31B2A /* canada_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canada_flag.png; sourceTree = "<group>"; };
+		110017F311701F9F00B31B2A /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		110017F411701FA000B31B2A /* chef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chef.png; sourceTree = "<group>"; };
+		110017F511701FA000B31B2A /* dentist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dentist.png; sourceTree = "<group>"; };
+		110017F611701FA000B31B2A /* doctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctor.png; sourceTree = "<group>"; };
+		110017F711701FA000B31B2A /* firefighter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firefighter.png; sourceTree = "<group>"; };
+		110017F811701FA000B31B2A /* grapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grapes.png; sourceTree = "<group>"; };
+		110017F911701FA000B31B2A /* hospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hospital.png; sourceTree = "<group>"; };
+		110017FA11701FA000B31B2A /* milk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milk.png; sourceTree = "<group>"; };
+		110017FB11701FA000B31B2A /* mukmuk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mukmuk.png; sourceTree = "<group>"; };
+		110017FC11701FA000B31B2A /* nurse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nurse.png; sourceTree = "<group>"; };
+		110017FD11701FA000B31B2A /* panda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda.png; sourceTree = "<group>"; };
+		110017FE11701FA000B31B2A /* penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penguin.png; sourceTree = "<group>"; };
+		110017FF11701FA000B31B2A /* police_officer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = police_officer.png; sourceTree = "<group>"; };
+		1100180011701FA000B31B2A /* police_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = police_station.png; sourceTree = "<group>"; };
+		1100180111701FA000B31B2A /* post_office.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_office.png; sourceTree = "<group>"; };
+		1100180211701FA000B31B2A /* postal_worker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postal_worker.png; sourceTree = "<group>"; };
+		1100180311701FA000B31B2A /* Questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions.xml; sourceTree = "<group>"; };
+		1100180411701FA000B31B2A /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
+		1100180511701FA000B31B2A /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
+		1100180611701FA000B31B2A /* surfing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfing.png; sourceTree = "<group>"; };
+		1100180711701FA000B31B2A /* teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher.png; sourceTree = "<group>"; };
+		1100180811701FA000B31B2A /* truck_driver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck_driver.png; sourceTree = "<group>"; };
 		11C59C761161F99A0044031C /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banana.png; path = ../QuestionSet/banana.png; sourceTree = SOURCE_ROOT; };
 		11C59C781161F9AA0044031C /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car.png; path = ../QuestionSet/car.png; sourceTree = SOURCE_ROOT; };
 		11C59C7A1161F9BA0044031C /* mukmuk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mukmuk.png; path = ../QuestionSet/mukmuk.png; sourceTree = SOURCE_ROOT; };
@@ -85,7 +132,6 @@
 		1D7D05E4114DC28E003B550F /* QuizMonkeyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuizMonkeyTests-Info.plist"; sourceTree = "<group>"; };
 		1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizMonkeyTestCase.h; sourceTree = "<group>"; };
 		1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizMonkeyTestCase.m; sourceTree = "<group>"; };
-		1D7D0653114DCD7B003B550F /* Questions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Questions.xml; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* QuizMonkeyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizMonkeyViewController.xib; sourceTree = "<group>"; };
@@ -142,6 +188,37 @@
 				DE7614CA116FD5D500480073 /* Objects */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		110017F011701F9F00B31B2A /* QuestionSet */ = {
+			isa = PBXGroup;
+			children = (
+				110017F111701F9F00B31B2A /* banana.png */,
+				110017F211701F9F00B31B2A /* canada_flag.png */,
+				110017F311701F9F00B31B2A /* car.png */,
+				110017F411701FA000B31B2A /* chef.png */,
+				110017F511701FA000B31B2A /* dentist.png */,
+				110017F611701FA000B31B2A /* doctor.png */,
+				110017F711701FA000B31B2A /* firefighter.png */,
+				110017F811701FA000B31B2A /* grapes.png */,
+				110017F911701FA000B31B2A /* hospital.png */,
+				110017FA11701FA000B31B2A /* milk.png */,
+				110017FB11701FA000B31B2A /* mukmuk.png */,
+				110017FC11701FA000B31B2A /* nurse.png */,
+				110017FD11701FA000B31B2A /* panda.png */,
+				110017FE11701FA000B31B2A /* penguin.png */,
+				110017FF11701FA000B31B2A /* police_officer.png */,
+				1100180011701FA000B31B2A /* police_station.png */,
+				1100180111701FA000B31B2A /* post_office.png */,
+				1100180211701FA000B31B2A /* postal_worker.png */,
+				1100180311701FA000B31B2A /* Questions.xml */,
+				1100180411701FA000B31B2A /* restaurant.png */,
+				1100180511701FA000B31B2A /* student.png */,
+				1100180611701FA000B31B2A /* surfing.png */,
+				1100180711701FA000B31B2A /* teacher.png */,
+				1100180811701FA000B31B2A /* truck_driver.png */,
+			);
+			path = QuestionSet;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -214,9 +291,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				110017F011701F9F00B31B2A /* QuestionSet */,
 				DE7614CB116FD60C00480073 /* QuestionImages */,
 				1D3271AE116D564C00BE1502 /* rewards */,
-				1D7D0653114DCD7B003B550F /* Questions.xml */,
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
 				DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */,
@@ -350,7 +427,6 @@
 				DE207C30112A44CE005AD593 /* Pic-BackGround.png in Resources */,
 				DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */,
 				DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */,
-				EA8C413E115566B300F15609 /* Questions.xml in Resources */,
 				11C59C771161F99A0044031C /* banana.png in Resources */,
 				11C59C791161F9AA0044031C /* car.png in Resources */,
 				11C59C7B1161F9BA0044031C /* mukmuk.png in Resources */,
@@ -374,6 +450,30 @@
 				1D327207116D5A3300BE1502 /* Banana_Frame6.png in Resources */,
 				1D327208116D5A3300BE1502 /* Banana_Frame7.png in Resources */,
 				1D327209116D5A3300BE1502 /* Banana_Frame8.png in Resources */,
+				1100180911701FA000B31B2A /* banana.png in Resources */,
+				1100180A11701FA000B31B2A /* canada_flag.png in Resources */,
+				1100180B11701FA000B31B2A /* car.png in Resources */,
+				1100180C11701FA000B31B2A /* chef.png in Resources */,
+				1100180D11701FA000B31B2A /* dentist.png in Resources */,
+				1100180E11701FA000B31B2A /* doctor.png in Resources */,
+				1100180F11701FA000B31B2A /* firefighter.png in Resources */,
+				1100181011701FA000B31B2A /* grapes.png in Resources */,
+				1100181111701FA000B31B2A /* hospital.png in Resources */,
+				1100181211701FA000B31B2A /* milk.png in Resources */,
+				1100181311701FA000B31B2A /* mukmuk.png in Resources */,
+				1100181411701FA000B31B2A /* nurse.png in Resources */,
+				1100181511701FA000B31B2A /* panda.png in Resources */,
+				1100181611701FA000B31B2A /* penguin.png in Resources */,
+				1100181711701FA000B31B2A /* police_officer.png in Resources */,
+				1100181811701FA000B31B2A /* police_station.png in Resources */,
+				1100181911701FA000B31B2A /* post_office.png in Resources */,
+				1100181A11701FA000B31B2A /* postal_worker.png in Resources */,
+				1100181B11701FA000B31B2A /* Questions.xml in Resources */,
+				1100181C11701FA000B31B2A /* restaurant.png in Resources */,
+				1100181D11701FA000B31B2A /* student.png in Resources */,
+				1100181E11701FA000B31B2A /* surfing.png in Resources */,
+				1100181F11701FA000B31B2A /* teacher.png in Resources */,
+				1100182011701FA000B31B2A /* truck_driver.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

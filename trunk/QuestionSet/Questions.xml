@@ -1059,7 +1059,7 @@
 		<sentence>My dream is to be a truck driver.</sentence>
         <choice>My</choice><point>-2</point>
 		<choice>dream</choice><point>10</point>
-        <choice>is</choice><point>10</point>
+        <choice>is</choice><point>-2</point>
         <choice>to</choice><point>-2</point>
         <choice>be</choice><point>-2</point>
         <choice>a</choice><point>-2</point>
