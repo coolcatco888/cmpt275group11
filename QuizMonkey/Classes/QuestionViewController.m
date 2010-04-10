@@ -417,7 +417,7 @@
 													   [UIImage imageNamed:@"Banana_Frame7.png"],
 													   [UIImage imageNamed:@"Banana_Frame8.png"],
 													   nil];
-		peanut_butter_jelly_time_view.animationDuration = 2.00;
+		peanut_butter_jelly_time_view.animationDuration = 0.70;
 		[peanut_butter_jelly_time_view startAnimating];
 		[alert addSubview:peanut_butter_jelly_time_view];
 		[peanut_butter_jelly_time_view release]; 
