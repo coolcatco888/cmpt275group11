@@ -205,20 +205,6 @@
 		<time>5</time>
 	</question>
 	<question>
-		<type>Fill in the blank</type>
-		<image>image.jpg</image>
-		<sentence>I love my _unt.</sentence>
-		<choice>a</choice>
-		<choice>b</choice>
-		<choice>c</choice>
-		<choice>d</choice>
-		<point>1</point>
-		<point>0</point>
-		<point>0</point>
-		<point>0</point>
-		<time>3</time>
-	</question>
-	<question>
 		<type>Find the misspelled word</type>
 		<image></image>
 		<sentence>Hint: The word rhymes with pasty...</sentence>
@@ -244,6 +230,20 @@
 		<choice>officers</choice>
 		<choice>dentists</choice>
 		<choice>dolphins</choice>
+		<time>3</time>
+	</question>
+	<question>
+		<type>Fill in the blank</type>
+		<image>image.jpg</image>
+		<sentence>I love my _unt.</sentence>
+		<choice>a</choice>
+		<choice>b</choice>
+		<choice>c</choice>
+		<choice>d</choice>
+		<point>1</point>
+		<point>0</point>
+		<point>0</point>
+		<point>0</point>
 		<time>3</time>
 	</question>
 	<question>

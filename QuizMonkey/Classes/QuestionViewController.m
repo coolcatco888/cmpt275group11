@@ -261,8 +261,9 @@
 	for(id index in selectedChoices) {
 		NSNumber* pointIndex = (NSNumber*)index;
 		NSNumber* pointValue = (NSNumber*) [pointList objectAtIndex:[pointIndex intValue]];
-		points += [pointValue intValue] < 0? 0 : [pointValue intValue];//Because of the Find the word questions, some choices have negative point values
+		points += [pointValue intValue];//Because of the Find the word questions, some choices have negative point values
 	}
+	points < 0? 0 : points;
 	totalPointsAcquired += points;
 	
 	//Display an appropriate message given the results
@@ -286,7 +287,11 @@
 		//Set Message if the student got all of them right
 	} else {
 		title = @"Perfect!";
-		[message appendString:@"Your answer is correct!"];
+		[message appendString:@"You got "];
+		[message appendString:[[NSNumber numberWithInt:points] stringValue]];
+		[message appendString:@"/"];
+		[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
+		[message appendString:@" points!"];
 		[finalScore updateCounters:currentQuestion.type];
 	}
 	
@@ -476,7 +481,7 @@
 		
 		selectedWords=0;
 		maxNumberOfChoiceSelections =[currentQuestion.points count];
-		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
+		totalPointsForCurrentQuestion = [self calculateTotalScore:currentQuestion.points];
 		totalPoints += totalPointsForCurrentQuestion;
 		
 		buttonWordsView=[[UIView alloc] initWithFrame:CGRectMake(40, 85, 400, 160)]; 
@@ -601,7 +606,7 @@
 	
 	int totalScore = 0;
 	for(NSNumber* point in points) {
-		totalScore += [point intValue];
+		totalScore += [point intValue] < 0? 0 : [point intValue];
 	}
 	return totalScore;
 }
