@@ -94,7 +94,7 @@
 	[timer invalidate];
 	[questionProfMonkeyImage setHidden:FALSE];
 	instructionsAlert = [[UIAlertView alloc] initWithTitle:@"Instructions" 
-												   message:@"How to play."
+												   message:@"You will be asked 10 questions on spelling and grammar.\nClick the answers on the screen then click 'Next' to proceed to the next question.\nFor some questions you must select multiple choices to get full marks.\nClick on any one of your answers a second time to deselect it.\nGood Luck"
 												  delegate:self 
 										 cancelButtonTitle:@"Continue" 
 										 otherButtonTitles:nil];
@@ -323,16 +323,16 @@
 		
 		if (sender.selected)
 		{
-			[message appendString:@"Wow~ You got "];
+			[message appendString:@"Wow! You got "];
 			[message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
-			[message appendString:@"%. Let's dance! Peanut butter jelly time~\n\n\n\n"];
+			[message appendString:@"%. Let's dance!\n\n\n\n\n\n"];
 			show_peanut_butter_jelly_time_view=TRUE;
 		}
 		else
 		{
-			[message appendString:@"To get this reward, you must have more than 90% banana point. \nAnd your current mark is:"];
+			[message appendString:@"Get 90% or more banana points to get this reward.\nYou got "];
 			[message appendString:[[NSNumber numberWithInt:((totalPointsAcquired*100)/totalPoints)] stringValue]];
-			[message appendString:@"%."];
+			[message appendString:@"% this time"];
 		}
 		
 		
@@ -343,11 +343,11 @@
 		title = @"Pass The Quiz";
 		if (sender.selected)
 		{
-			[message appendString:@"Well done, you have passed this quiz! Congradulations! "];
+			[message appendString:@"You passed this quiz!\nCongratulations!"];
 		}
 		else
 		{
-			[message appendString:@"Working hard please, you failed this quiz."];
+			[message appendString:@"You failed this quiz.\nSuddy more for the next quiz."];
 		}
 		
 		
@@ -356,20 +356,21 @@
 	else if (sender==[rewardButtons objectAtIndex:2]) 
 	{
 		title = @"Perfect Answer Combo";
-		[message appendString:@"To get this reward, your perfect correct answer must be more than 5 in a row . And your current max number in this quiz is: "];
+		[message appendString:@"Get 5 or more perfect answers in a row to unlock this reward.\nYour longest streak for this quiz was "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.maxCombo] stringValue]];
+		[message appendString:@" perfect answers in a row"];
 	}
 	else if (sender==[rewardButtons objectAtIndex:3]) 
 	{
 		title = @"Grammar Expert";
-		[message appendString:@"To get this reward, you must get more than 5 correct answer in grammar questions. \nAnd you answered "];
+		[message appendString:@"Get 5 or more perfect answers for grammar questions.\nYou answered "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.grammar] stringValue]];
 		[message appendString:@" grammar question correctly this time."];
 	}
 	else if (sender==[rewardButtons objectAtIndex:4])  
 	{
 		title = @"Vocabulary Master";
-		[message appendString:@"To get this reward, you must get more than 5 correct answer in vocabulary questions. \nAnd you answered "];
+		[message appendString:@"Get 5 or more perfect answers for vocabulary questions.\nYou answered "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.vocabulary] stringValue]];
 		[message appendString:@" vocabulary question correctly this time."];
 		
@@ -379,11 +380,11 @@
 		title = @"Speed Demon";
 		if (sender.selected)
 		{
-			[message appendString:@"Wow, you finish a quiz SOOoooo.... fast, so I give you this reward!"];
+			[message appendString:@"Wow! You finish this quiz SOOoooo.... fast!"];
 		}
 		else
 		{
-			[message appendString:@"If you want to prove you are really celver, try to finish the quiz as fast as you can. Remember, you also need to pass the quiz. I will give you this reward if you really do."];
+			[message appendString:@"Finish a quiz as fast as you can.\nBut remember, you also need to pass the quiz to get this reward."];
 		}
 	}
 	else
