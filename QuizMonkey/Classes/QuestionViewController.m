@@ -52,6 +52,8 @@
 	
 	[questionTimerProgress setProgress:1.0];
 	totalPoints = 0;
+	instructionsGiven = FALSE;
+	quitting = FALSE;
 	
 	//Setup variables
 	selectedChoices = [NSMutableSet setWithCapacity:20];//Used to be 4 but not sure if picking out words questions have more than 4 choices
@@ -86,6 +88,20 @@
 		[rewardButtons addObject:[self rewardIconCreator:[rewardIconFileName objectAtIndex:i] iconX:i%([rewardIconFileName count]/2) iconY:(i/([rewardIconFileName count]/2))]];
 	}
 	[rewardButtons retain];
+	
+	
+	//display instructions
+	[timer invalidate];
+	[questionProfMonkeyImage setHidden:FALSE];
+	instructionsAlert = [[UIAlertView alloc] initWithTitle:@"Instructions" 
+												   message:@"How to play."
+												  delegate:self 
+										 cancelButtonTitle:@"Continue" 
+										 otherButtonTitles:nil];
+	[instructionsAlert show];
+	[instructionsAlert autorelease];
+
+	
 	return self;
 }
 -(UIButton*) rewardIconCreator:(NSString*)IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY
@@ -249,7 +265,7 @@
 	}
 	totalPointsAcquired += points;
 	
-	//Display an appropriate message given the reslults
+	//Display an appropriate message given the results
 	NSString* title;
 	NSMutableString* message = [NSMutableString stringWithCapacity:100];
 	
@@ -413,6 +429,7 @@
 	return TRUE;
 }
 - (void)loadQuestionFromIndex: (NSUInteger) index {
+	
 	//Delete current question in memory and add a new question
 	currentQuestion = [questionListOfQuiz objectAtIndex:index];
 	[self resetQuestionView];
@@ -450,6 +467,7 @@
 		totalPointsForCurrentQuestion = [self calculateTotalScore: currentQuestion.points];
 		totalPoints += totalPointsForCurrentQuestion;
 		NSLog(@"Max number od choices:%i",maxNumberOfChoiceSelections);
+
 	}
 	else 
 	{
@@ -489,14 +507,12 @@
 			letterCounter=letterCounter+([word length]);
 		}
 		//[questionWords count];
-		
-		
 		//[questionWords removeAllObjects];
-		
 		//[questionWords retain];
 		
-	}
+		 }
 }
+
 - (UIButton *)buttonCreator:(NSString*) text buttonX:(CGFloat)CustomizeX buttonY:(CGFloat)CustomizeY {
 	
 	CGFloat buttonWidth=(WORD_BUTTON_UNIT_WEIGHT)*([text length]);
@@ -590,32 +606,39 @@
 	return totalScore;
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-	//Reset Question Screen
 	if(quitting) {
 		if(buttonIndex == yesButton){
-			
 			[self quitGame];	
 		}
 	}
-	[self resetQuestionView];
-	[selectedChoices removeAllObjects];
+		//Reset Question Screen
+	if(!quitting && instructionsGiven) {
+		[self resetQuestionView];
+		[selectedChoices removeAllObjects];
+	}
+	
 	switch(buttonIndex) {
 		case 0:	
 			if(totalTimeLeft == 0) {
 				//Exit Quiz Session
 				[self quitGame];
 				//Load Next Question if the index is less than the number of questions - 1 (since it is zero indexed)
-			} else if((currentQuestionIndex < [questionListOfQuiz count] - 1) && !quitting){
+			} else if((currentQuestionIndex < [questionListOfQuiz count] - 1) && !quitting & instructionsGiven){
 				currentQuestionIndex++;
 				[self loadQuestionFromIndex:currentQuestionIndex];
 				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 				//If we have reached the end of the questions	
-				
+
 			} else if(quitting){
-				[self loadQuestionFromIndex:currentQuestionIndex];
+				[questionProfMonkeyImage setHidden:TRUE];
 				quitting = FALSE;
 				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 
+			}else if(!instructionsGiven) {
+				instructionsGiven = TRUE;		
+				[questionProfMonkeyImage setHidden:TRUE];
+				timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+				
 			} else if (currentQuestionIndex == [questionListOfQuiz count] - 1) {
 				//Quit game and show final score screen
 				[self quitGame];
@@ -747,18 +770,19 @@
 }
 
 -(IBAction)quitButtonPressed:(id)sender {
+	quitting = TRUE;
 	[timer invalidate];
 	[questionProfMonkeyImage setHidden:FALSE];
-	quitting = TRUE;
+
 	
-	alert = [[UIAlertView alloc] initWithTitle:@"Quit?" 
+	quitAlert = [[UIAlertView alloc] initWithTitle:@"Quit?" 
 									   message:@"Are you sure you want to quit?"
 									  delegate:self 
 							 cancelButtonTitle:@"No" 
 							 otherButtonTitles:nil];
-	yesButton = [alert addButtonWithTitle:@"Yes"];
-	[alert show];
-	[alert autorelease];
+	yesButton = [quitAlert addButtonWithTitle:@"Yes"];
+	[quitAlert show];
+	[quitAlert autorelease];
 	
 	//[questionProfMonkeyImage setHidden:TRUE];
 	

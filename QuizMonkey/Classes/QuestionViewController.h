@@ -91,6 +91,7 @@
 	NSUInteger currentNumberOfSelections;
 	NSInteger yesButton;
 	BOOL quitting;
+	BOOL instructionsGiven;
 	
 	NSArray *rewardIconFileName;
 	NSMutableArray* rewardButtons;
@@ -112,6 +113,8 @@
 	NSUInteger totalPointsAcquired;//Stores the total points acquired by the student
 	NSTimer* timer;
 	UIAlertView *alert;//Holds alert box for displaying score
+	UIAlertView *instructionsAlert;//the instruction screen
+	UIAlertView *quitAlert;//the quit screen
 	Score* finalScore;
 }
 
