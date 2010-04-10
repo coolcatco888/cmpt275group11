@@ -39,7 +39,24 @@
 @synthesize findAdj;
 @synthesize grammar;
 @synthesize vocabulary;
+@synthesize reward0;
+@synthesize reward1;
+@synthesize reward2;
+@synthesize reward3;
+@synthesize reward4;
+@synthesize reward5;
 
+- init
+{
+	reward0=FALSE;
+	reward1=FALSE;
+	reward2=FALSE;
+	reward3=FALSE;
+	reward4=FALSE;
+	reward5=FALSE;
+	
+	return self;
+}
 
 -(void)updateCounters:(NSString*)questionType//this function is to update counters data for rewards system
 {

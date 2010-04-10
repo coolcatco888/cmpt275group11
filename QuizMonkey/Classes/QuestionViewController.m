@@ -645,27 +645,33 @@
 				if (((totalPointsAcquired*100)/totalPoints)>50)
 				{	
 					[self getReward:1];
+					finalScore.reward1=TRUE;
 					if (((totalPointsAcquired*100)/totalPoints)>90)
 					{
 						[self getReward:0];
+						finalScore.reward0=TRUE;
 					}
 					
 					if (totalTimeLeft*2 > totalTime)
 					{
 						[self getReward:5];
+						finalScore.reward5=TRUE;
 					}
 				}
 				if (finalScore.combo>5)
 				{
 					[self getReward:2];
+					finalScore.reward2=TRUE;
 				}
 				if (finalScore.grammar>5)
 				{
 					[self getReward:3];
+					finalScore.reward3=TRUE;
 				}
 				if (finalScore.vocabulary>5)
 				{
 					[self getReward:4];
+					finalScore.reward4=TRUE;
 				}
 				
 				

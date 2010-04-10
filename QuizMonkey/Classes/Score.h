@@ -43,7 +43,12 @@
 	NSUInteger findAdj;					//Used to count how many find the adjectives questions the user got correctly
 	NSUInteger grammar;					//Used to count how many grammar questions(find the verbs,nouns,adjs) the user got correctly
 	NSUInteger vocabulary;				//Used to count how many vocabulary questions(fill in the blank,pick out words,match the picture, find the misspelled word) the user got correctly
-	
+	bool reward0;						//Used to judge user achieve the top student reward or not
+	bool reward1;						//Used to judge user achieve the pass reward or not
+	bool reward2;						//Used to judge user achieve the combo5 reward or not
+	bool reward3;						//Used to judge user achieve the grammar reward or not
+	bool reward4;						//Used to judge user achieve the vocabulary reward or not
+	bool reward5;						//Used to judge user achieve the speed reward or not
 }
 
 @property (assign) NSString *studentID;
@@ -67,6 +72,13 @@
 @property (assign) NSUInteger findAdj;
 @property (assign) NSUInteger grammar;
 @property (assign) NSUInteger vocabulary;
+
+@property (assign) bool reward0;
+@property (assign) bool reward1;
+@property (assign) bool reward2;
+@property (assign) bool reward3;
+@property (assign) bool reward4;
+@property (assign) bool reward5;
 
 -(void)updateCounters:(NSString*)questionType;	//this function is to update counters data for rewards system
 @end
