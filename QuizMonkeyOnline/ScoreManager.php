@@ -86,6 +86,30 @@ class ScoreManager {
         $this->execute_query("INSERT INTO `quizmonk_data`.`scores` (`userid` ,`scoreid` ,`timeleft` ,`date` ,`points` ,`maxpoints`) "
             ."VALUES ('$username', '$scoreid', '$timeleft', NOW(), '$points', '$maxpoints');");
     }
+    
+    //Inserts a score with achievements
+    function insert_score_with_achievenents($username, $scoreid, $timeleft, $points, $maxpoints, $achievements) {
+        $this->insert_score($username, $scoreid, $timeleft, $points, $maxpoints);
+        $this->insert_achievements($username, $scoreid, $achievements);
+        
+    }
+    
+    //Inserts achievements
+    protected function insert_achievements($username, $scoreid, $achievements) {
+        if($achievements != '' && $achievements != null && $achievements != 'none') {
+	    	$tok = strtok($achievements, " -");
+	
+		while ($tok !== false) {
+		    $this->execute_query("INSERT INTO `quizmonk_data`.`achievements` (`userid` ,`scoreid` ,`achievement`) "
+	            ."VALUES ('$username', '$scoreid', '$tok');");
+		    $tok = strtok("-");
+		}
+	}
+        
+    }
+    
+    
+    
 
     function retrieve_all_scores() {
     	$result = $this->retrieve_user_scores('');
@@ -142,6 +166,7 @@ class ScoreManager {
 	                ."<th>Date</th>"
 	                ."<th>Points</th>"
 	                ."<th>Max Points</th>"
+	                ."<th>Stickers</th>"
 	                ."</tr>";
 	            }
 	
@@ -151,6 +176,7 @@ class ScoreManager {
 	                ."<td>".$row['date']."</td>"
 	                ."<td>".$row['points']."</td>"
 	                ."<td>".$row['maxpoints']."</td>"
+	                ."<td>".$this->generate_achievements_images($row['userid'],$row['scoreid'])."</td>"
 	                ."</tr>";
 	        }
 	        $html .= '</table>';
@@ -186,6 +212,25 @@ class ScoreManager {
 
         $html .= '</scores>';
 
+        return $html;
+    }
+    
+    function retrieve_user_achievements($username, $scoreid) {
+        $result = $this->execute_query("SELECT * FROM `achievements` "
+            ." WHERE achievements.userid='$username' AND achievements.scoreid='$scoreid';");
+        return $result;
+    }
+    
+    function generate_achievements_images($username,$scoreid) {
+        $html = '';
+        
+        $result = $this->retrieve_user_achievements($username, $scoreid);
+       
+        //Append Achievements
+        while($row = mysql_fetch_array($result)) {
+           $html .= "<img src='images/icons/".$row['achievement'].".png' alt='Achievement' />";
+        }
+        
         return $html;
     }
 

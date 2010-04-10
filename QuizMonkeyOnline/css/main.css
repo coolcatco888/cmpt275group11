@@ -86,3 +86,9 @@ a:hover, input.formbuttons:hover {
     margin-right: auto;
     width: 700px;
 }
+
+#legend {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
