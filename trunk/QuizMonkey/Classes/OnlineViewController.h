@@ -43,6 +43,8 @@
 	NSData *highScoresData;
 	NSArray *highScoresArray;
 	
+	NSData *submitScoreData;
+	
 	/*
 	
 	Score *submissionScore;

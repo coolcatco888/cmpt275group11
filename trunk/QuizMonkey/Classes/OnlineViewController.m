@@ -25,6 +25,10 @@
 	[highScoresURL setString:@"http://quizmonkey.x10hosting.com/viewxml.php?"];
 	[highScoresURL retain];
 	[submitScoreURL retain];
+	[submitButton setAlpha:1.0f];
+	[submitButton setEnabled:TRUE];
+	[statusLabel setText:@""];
+	[statusLabel setHidden:TRUE];
 	submitingScore = FALSE;
 	gettingScores = FALSE;
 	return self;
@@ -36,6 +40,7 @@
 		[mainMenuView addSubview:submitView];
 	}
 	else {
+		[highScoresURL setString:@"http://quizmonkey.x10hosting.com/viewxml.php?"];
 		[highScoresURL appendString:@"username="];
 		[highScoresURL appendString:currentStudentID];
 		[highScoresURL appendString:@"&password="];
@@ -60,6 +65,7 @@
 				[self newButtonInHighScoresSubView:points buttonX:220 buttonY:i*29 alignment:UIControlContentHorizontalAlignmentCenter];
 				[self newButtonInHighScoresSubView:maxPoints buttonX:330 buttonY:i*29 alignment:UIControlContentHorizontalAlignmentRight];
 			}
+			[submitView removeFromSuperview];
 			[mainMenuView addSubview:highScoresView];
 		}
 	}
@@ -71,6 +77,7 @@
 		[mainMenuView addSubview:submitView];
 	}
 	else {
+		[submitScoreURL setString:@"http://quizmonkey.x10hosting.com/submit.php?"];
 		[self appendVariableToSubmitionString:@"username" value:currentStudentID];
 		[submitScoreURL appendString:@"&"];
 		[self appendVariableToSubmitionString:@"password" value:currentPassword];
@@ -124,7 +131,16 @@
 			[submitScoreURL appendString:@"5"];
 		}
 		NSLog(submitScoreURL);
-		[NSData dataWithContentsOfURL:[NSURL URLWithString:submitScoreURL]];
+		submitScoreData = [NSData dataWithContentsOfURL:[NSURL URLWithString:submitScoreURL]];
+		if([[[NSString alloc] initWithData:submitScoreData encoding:NSUTF8StringEncoding] isEqualToString:@"FAILED"]) {
+			[statusLabel setText:@"Invalid username or password"];
+			[statusLabel setHidden:FALSE];
+		} else {
+			[statusLabel setText:@"Score submitted successfully"];
+			[statusLabel setHidden:FALSE];
+			[submitButton setEnabled:FALSE];
+			[submitButton setAlpha:0.5f];
+		}
 	}
 }
 - (IBAction)submitScore {
@@ -137,13 +153,13 @@
 	if([self validUsernameAndPassword]){
 		if(submitingScore) {
 			[statusLabel setHidden:TRUE];
-			[submitView removeFromSuperview];
 			[self submitCurrentScore];
 		}
 		if(gettingScores) {
 			[statusLabel setHidden:TRUE];
-			[submitView removeFromSuperview];
+			//[submitView removeFromSuperview];
 			[self loadHighScoresFromURL];
+			
 		}
 	}
 }
