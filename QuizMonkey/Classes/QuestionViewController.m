@@ -273,7 +273,8 @@
 		NSNumber* pointValue = (NSNumber*) [pointList objectAtIndex:[pointIndex intValue]];
 		points += [pointValue intValue];//Because of the Find the word questions, some choices have negative point values
 	}
-	points < 0? 0 : points;
+	if(points < 0)
+		points=0;
 	totalPointsAcquired += points;
 	
 	//Display an appropriate message given the results
@@ -283,7 +284,11 @@
 	//Set message if the student got nothing
 	if(points == 0) {
 		title = @"Sorry...";
-		[message appendString:@"Your answer is completely WRONG!"];
+		[message appendString:@"Your answer is completely WRONG!\n"];
+		[message appendString:[[NSNumber numberWithInt:points] stringValue]];
+		[message appendString:@"/"];
+		[message appendString:[[NSNumber numberWithInt:totalPointsForCurrentQuestion] stringValue]];
+		[message appendString:@" points!"];
 		finalScore.combo=0;
 		//Set message if the student got some right
 	} else if (points < totalPointsForCurrentQuestion) {

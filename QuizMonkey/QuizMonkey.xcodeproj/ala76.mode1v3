@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,21 +267,20 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>DE7614C9116FD5CA00480073</string>
-								<string>DE7614CA116FD5D500480073</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>110017F011701F9F00B31B2A</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>21</integer>
+									<integer>8</integer>
+									<integer>4</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 234}, {272, 650}}</string>
+							<string>{{0, 0}, {272, 650}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -313,12 +310,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Pic-BackGround.png</string>
+								<string>QuestionViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,15 +325,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Pic-BackGround.png</string>
+										<string>QuestionViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DEE95DA81172693300D7DAC2</string>
+										<string>DEE95EA31172779300D7DAC2</string>
 										<key>history</key>
 										<array>
-											<string>DE9FB144112CAE0500C92017</string>
-											<string>DE9FB146112CAE0500C92017</string>
 											<string>DE9FB1C0112CB79F00C92017</string>
 											<string>DEE1522E112CC0500093A263</string>
 											<string>DEE15230112CC0500093A263</string>
@@ -389,16 +386,11 @@
 											<string>DE63BA3B11603BD600000E41</string>
 											<string>DEE412A711641D8F008B019A</string>
 											<string>DEE412DC11641DC6008B019A</string>
-											<string>DE1EE8F3116FBFB900A47C53</string>
-											<string>DE1EE8F4116FBFB900A47C53</string>
 											<string>DE7614EB116FD62B00480073</string>
 											<string>DE76168B116FEA0100480073</string>
 											<string>DE76168C116FEA0100480073</string>
-											<string>DE761691116FEA0100480073</string>
 											<string>DE7616A8116FEEEC00480073</string>
 											<string>DE7616A9116FEEEC00480073</string>
-											<string>DE7616AE116FEEEC00480073</string>
-											<string>DE7616D9116FF22700480073</string>
 											<string>DE7616E8116FF4C000480073</string>
 											<string>DE7616E9116FF4C000480073</string>
 											<string>DE7616EA116FF4C000480073</string>
@@ -422,17 +414,26 @@
 											<string>DE7616FC116FF4C000480073</string>
 											<string>DE7616FD116FF4C000480073</string>
 											<string>DE7616FE116FF4C000480073</string>
-											<string>DE7617751170048800480073</string>
 											<string>DE7617771170048800480073</string>
 											<string>DE7617781170048800480073</string>
 											<string>DE58EA96117010A3002B145F</string>
 											<string>DE58EAA21170124C002B145F</string>
-											<string>DE58EAE0117023B8002B145F</string>
-											<string>DE58EAE1117023B8002B145F</string>
-											<string>DEE95DA21172693300D7DAC2</string>
-											<string>DEE95DA31172693300D7DAC2</string>
 											<string>DEE95DA41172693300D7DAC2</string>
-											<string>DE7616E7116FF4C000480073</string>
+											<string>DEE95E121172701200D7DAC2</string>
+											<string>DEE95E131172701200D7DAC2</string>
+											<string>DEE95E141172701200D7DAC2</string>
+											<string>DEE95E161172701200D7DAC2</string>
+											<string>DEE95E171172701200D7DAC2</string>
+											<string>DEE95E181172701200D7DAC2</string>
+											<string>DEE95E1A1172701200D7DAC2</string>
+											<string>DEE95E1C1172701200D7DAC2</string>
+											<string>DEE95E1D1172701200D7DAC2</string>
+											<string>DEE95E4D1172708200D7DAC2</string>
+											<string>DEE95E791172731100D7DAC2</string>
+											<string>DEE95E901172765700D7DAC2</string>
+											<string>DEE95E911172765700D7DAC2</string>
+											<string>DEE95E9F1172779300D7DAC2</string>
+											<string>DEE95EA01172779300D7DAC2</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -543,6 +544,65 @@
 											<string>DEE95DA51172693300D7DAC2</string>
 											<string>DEE95DA61172693300D7DAC2</string>
 											<string>DEE95DA71172693300D7DAC2</string>
+											<string>DEE95E201172701200D7DAC2</string>
+											<string>DEE95E211172701200D7DAC2</string>
+											<string>DEE95E221172701200D7DAC2</string>
+											<string>DEE95E231172701200D7DAC2</string>
+											<string>DEE95E241172701200D7DAC2</string>
+											<string>DEE95E251172701200D7DAC2</string>
+											<string>DEE95E261172701200D7DAC2</string>
+											<string>DEE95E271172701200D7DAC2</string>
+											<string>DEE95E281172701200D7DAC2</string>
+											<string>DEE95E291172701200D7DAC2</string>
+											<string>DEE95E2A1172701200D7DAC2</string>
+											<string>DEE95E2B1172701200D7DAC2</string>
+											<string>DEE95E2C1172701200D7DAC2</string>
+											<string>DEE95E2D1172701200D7DAC2</string>
+											<string>DEE95E2E1172701200D7DAC2</string>
+											<string>DEE95E2F1172701200D7DAC2</string>
+											<string>DEE95E301172701200D7DAC2</string>
+											<string>DEE95E311172701200D7DAC2</string>
+											<string>DEE95E321172701200D7DAC2</string>
+											<string>DEE95E331172701200D7DAC2</string>
+											<string>DEE95E341172701200D7DAC2</string>
+											<string>DEE95E351172701200D7DAC2</string>
+											<string>DEE95E361172701200D7DAC2</string>
+											<string>DEE95E371172701200D7DAC2</string>
+											<string>DEE95E381172701200D7DAC2</string>
+											<string>DEE95E391172701200D7DAC2</string>
+											<string>DEE95E3A1172701200D7DAC2</string>
+											<string>DEE95E3B1172701200D7DAC2</string>
+											<string>DEE95E3C1172701200D7DAC2</string>
+											<string>DEE95E3D1172701200D7DAC2</string>
+											<string>DEE95E3E1172701200D7DAC2</string>
+											<string>DEE95E3F1172701200D7DAC2</string>
+											<string>DEE95E411172701200D7DAC2</string>
+											<string>DEE95E421172701200D7DAC2</string>
+											<string>DEE95E431172701200D7DAC2</string>
+											<string>DEE95E441172701200D7DAC2</string>
+											<string>DEE95E451172701200D7DAC2</string>
+											<string>DEE95E461172701200D7DAC2</string>
+											<string>DEE95E471172701200D7DAC2</string>
+											<string>DEE95E481172701200D7DAC2</string>
+											<string>DEE95E501172708200D7DAC2</string>
+											<string>DEE95E511172708200D7DAC2</string>
+											<string>DEE95E521172708200D7DAC2</string>
+											<string>DEE95E531172708200D7DAC2</string>
+											<string>DEE95E541172708200D7DAC2</string>
+											<string>DEE95E5B117270E800D7DAC2</string>
+											<string>DEE95E5C117270E800D7DAC2</string>
+											<string>DEE95E5D117270E800D7DAC2</string>
+											<string>DEE95E5E117270E800D7DAC2</string>
+											<string>DEE95E5F117270E800D7DAC2</string>
+											<string>DEE95E691172720100D7DAC2</string>
+											<string>DEE95E6A1172720100D7DAC2</string>
+											<string>DEE95E7B1172731100D7DAC2</string>
+											<string>DEE95E7C1172731100D7DAC2</string>
+											<string>DEE95E8D117275F700D7DAC2</string>
+											<string>DEE95E931172765700D7DAC2</string>
+											<string>DEE95E941172765700D7DAC2</string>
+											<string>DEE95EA11172779300D7DAC2</string>
+											<string>DEE95EA21172779300D7DAC2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -735,7 +795,11 @@
 	<key>WindowJustification</key>
 	<integer>5</integer>
 	<key>WindowOrderList</key>
-	<array/>
+	<array>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>DE207C4A112A473D005AD593</string>
+		<string>/Volumes/ala76/CMPT_275/Project/cmpt275group11/QuizMonkey/QuizMonkey.xcodeproj</string>
+	</array>
 	<key>WindowString</key>
 	<string>-1 168 1438 709 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
@@ -753,12 +817,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>OnlineViewController.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -814,7 +880,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>DE207C4A112A473D005AD593</string>
-				<string>DE58EB0411702504002B145F</string>
+				<string>DEE95DBD1172696500D7DAC2</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -1102,7 +1168,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>DE58EB0B11702504002B145F</string>
+				<string>DEE95E101172700100D7DAC2</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
