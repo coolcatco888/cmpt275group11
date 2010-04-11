@@ -175,6 +175,7 @@
 -(NSUInteger)getMaxNumberOfChoiceSelections:(NSArray*)points;//This function determines the number of choices the student can select for a given questions
 -(IBAction)nextQuestion:(id)sender;//validates the question when user presses 'Next'
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;//Called whenever a button is pressed on an alert window, handles loading next question and quitting the game
+- (void)randomizeChoices;
 -(void)loadQuestionFromIndex:(NSUInteger) index;//Loads a question from a given index
 -(int)calculateTotalScore:(NSArray*) points;//Calculates the total score for this entire quiz
 //-(void)resetAllButtons;//Resets buttons back to normal non-higlighted state
