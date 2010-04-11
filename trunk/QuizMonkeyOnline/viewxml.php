@@ -18,8 +18,6 @@ if($manager->login_as_teacher($username, $password)) {
 	$xml = $manager->generate_user_score_xml($username);
 }
 
-$xml = $manager->generate_score_xml();
-
 echo $xml;
 
 ?>
