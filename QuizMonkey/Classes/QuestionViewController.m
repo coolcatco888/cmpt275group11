@@ -334,7 +334,7 @@
 	NSMutableString* message = [NSMutableString stringWithCapacity:100];
 	if (sender==[rewardButtons objectAtIndex:0]) 
 	{
-		title = @"Top Stduent";
+		title = @"Banana Man";
 		
 		if (sender.selected)
 		{
@@ -355,7 +355,7 @@
 	else if (sender==[rewardButtons objectAtIndex:1])  
 	{
 		
-		title = @"Pass The Quiz";
+		title = @"Quiz Passed";
 		if (sender.selected)
 		{
 			[message appendString:@"You passed this quiz!\nCongratulations!"];
@@ -370,14 +370,14 @@
 	}
 	else if (sender==[rewardButtons objectAtIndex:2]) 
 	{
-		title = @"Perfect Answer Combo";
+		title = @"Teacher's Pet";
 		[message appendString:@"Get 5 or more perfect answers in a row to unlock this reward.\nYour longest streak for this quiz was "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.maxCombo] stringValue]];
 		[message appendString:@" perfect answers in a row"];
 	}
 	else if (sender==[rewardButtons objectAtIndex:3]) 
 	{
-		title = @"Grammar Expert";
+		title = @"Grammar Master";
 		[message appendString:@"Get 5 or more perfect answers for grammar questions.\nYou answered "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.grammar] stringValue]];
 		[message appendString:@" grammar question correctly this time."];
@@ -404,7 +404,7 @@
 	}
 	else
 	{
-		title = @"Unknow Reward";
+		title = @"Unknown Reward";
 		[message appendString:@"Nothing about this reward..."];
 		
 	}

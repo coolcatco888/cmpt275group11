@@ -27,7 +27,7 @@ if($loginsuccess && $allnumerical) {
     $manager->insert_score_with_achievenents($username, $scoreid, $timeleft, $points, $maxpoints, $achievements);
 } else {
    //return error
-   $error = "Unable to submit score, username/password is incorrect";
+   $error = "FAILED";
 }
 
 echo $error;
