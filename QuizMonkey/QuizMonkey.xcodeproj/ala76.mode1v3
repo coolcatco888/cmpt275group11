@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,19 +271,19 @@
 								<string>DE7614C9116FD5CA00480073</string>
 								<string>DE7614CA116FD5D500480073</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>110017F011701F9F00B31B2A</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>4</integer>
-									<integer>1</integer>
+									<integer>22</integer>
+									<integer>21</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {272, 650}}</string>
+							<string>{{0, 234}, {272, 650}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -311,14 +313,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>OnlineViewController.m</string>
+								<string>Pic-BackGround.png</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>OnlineViewController.m</string>
+										<string>Pic-BackGround.png</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE58EB0111702504002B145F</string>
+										<string>DEE95DA81172693300D7DAC2</string>
 										<key>history</key>
 										<array>
 											<string>DE9FB144112CAE0500C92017</string>
@@ -391,9 +391,7 @@
 											<string>DEE412DC11641DC6008B019A</string>
 											<string>DE1EE8F3116FBFB900A47C53</string>
 											<string>DE1EE8F4116FBFB900A47C53</string>
-											<string>DE7614EA116FD62B00480073</string>
 											<string>DE7614EB116FD62B00480073</string>
-											<string>DE7614EC116FD62B00480073</string>
 											<string>DE76168B116FEA0100480073</string>
 											<string>DE76168C116FEA0100480073</string>
 											<string>DE761691116FEA0100480073</string>
@@ -401,7 +399,6 @@
 											<string>DE7616A9116FEEEC00480073</string>
 											<string>DE7616AE116FEEEC00480073</string>
 											<string>DE7616D9116FF22700480073</string>
-											<string>DE7616E7116FF4C000480073</string>
 											<string>DE7616E8116FF4C000480073</string>
 											<string>DE7616E9116FF4C000480073</string>
 											<string>DE7616EA116FF4C000480073</string>
@@ -432,7 +429,10 @@
 											<string>DE58EAA21170124C002B145F</string>
 											<string>DE58EAE0117023B8002B145F</string>
 											<string>DE58EAE1117023B8002B145F</string>
-											<string>DE58EAFA117024EB002B145F</string>
+											<string>DEE95DA21172693300D7DAC2</string>
+											<string>DEE95DA31172693300D7DAC2</string>
+											<string>DEE95DA41172693300D7DAC2</string>
+											<string>DE7616E7116FF4C000480073</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -540,6 +540,9 @@
 											<string>DE76170C116FF4C000480073</string>
 											<string>DE761711116FF4C000480073</string>
 											<string>DE761712116FF4C000480073</string>
+											<string>DEE95DA51172693300D7DAC2</string>
+											<string>DEE95DA61172693300D7DAC2</string>
+											<string>DEE95DA71172693300D7DAC2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -597,9 +600,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>DE58EB0211702504002B145F</string>
+				<string>DEE95DA91172693300D7DAC2</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>DE58EB0311702504002B145F</string>
+				<string>DEE95DAA1172693300D7DAC2</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -732,11 +735,7 @@
 	<key>WindowJustification</key>
 	<integer>5</integer>
 	<key>WindowOrderList</key>
-	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>DE207C4A112A473D005AD593</string>
-		<string>/Volumes/ala76/CMPT_275/Project/cmpt275group11/QuizMonkey/QuizMonkey.xcodeproj</string>
-	</array>
+	<array/>
 	<key>WindowString</key>
 	<string>-1 168 1438 709 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
@@ -935,13 +934,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>DE58EB0511702504002B145F</string>
+				<string>DEE95DAB1172693300D7DAC2</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>DE58EB0611702504002B145F</string>
-				<string>DE58EB0711702504002B145F</string>
-				<string>DE58EB0811702504002B145F</string>
-				<string>DE58EB0911702504002B145F</string>
-				<string>DE58EB0A11702504002B145F</string>
+				<string>DEE95DAC1172693300D7DAC2</string>
+				<string>DEE95DAD1172693300D7DAC2</string>
+				<string>DEE95DAE1172693300D7DAC2</string>
+				<string>DEE95DAF1172693300D7DAC2</string>
+				<string>DEE95DB01172693300D7DAC2</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

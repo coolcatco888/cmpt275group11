@@ -64,6 +64,7 @@
 	[self loadQuestionsFromXML];
 	//Randomly select 10 questions and Display the questionScreen
 	[self loadQuizQuestions];
+	[self randomizeChoices];
 	//Load the first question onto the questionView
 	[self loadQuestionFromIndex:currentQuestionIndex];
 	
@@ -144,6 +145,15 @@
 	}
 	totalTimeLeft = totalTime;
 	[questionListOfQuiz retain];
+}
+- (void)randomizeChoices {
+	for(int i=0;i<10;i++){
+		for(int j=0;j<[[[questionListOfQuiz objectAtIndex:i] choices] count];j++){
+			int k = arc4random()%[[[questionListOfQuiz objectAtIndex:i] choices] count];
+			[[[questionListOfQuiz objectAtIndex:i] choices] exchangeObjectAtIndex:j withObjectAtIndex:k];
+			[[[questionListOfQuiz objectAtIndex:i] points] exchangeObjectAtIndex:j withObjectAtIndex:k];
+		}
+	}
 }
 - (void)loadNextQuestionToView {
 	currentQuestionIndex++;

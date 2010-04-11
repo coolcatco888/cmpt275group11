@@ -31,9 +31,6 @@
 		1100181E11701FA000B31B2A /* surfing.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180611701FA000B31B2A /* surfing.png */; };
 		1100181F11701FA000B31B2A /* teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180711701FA000B31B2A /* teacher.png */; };
 		1100182011701FA000B31B2A /* truck_driver.png in Resources */ = {isa = PBXBuildFile; fileRef = 1100180811701FA000B31B2A /* truck_driver.png */; };
-		11C59C771161F99A0044031C /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C59C761161F99A0044031C /* banana.png */; };
-		11C59C791161F9AA0044031C /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C59C781161F9AA0044031C /* car.png */; };
-		11C59C7B1161F9BA0044031C /* mukmuk.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C59C7A1161F9BA0044031C /* mukmuk.png */; };
 		1D3271BC116D564C00BE1502 /* cheetchreward.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3271AF116D564C00BE1502 /* cheetchreward.png */; };
 		1D3271BD116D564C00BE1502 /* cheetchreward_fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3271B0116D564C00BE1502 /* cheetchreward_fail.png */; };
 		1D3271BE116D564C00BE1502 /* combo5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D3271B1116D564C00BE1502 /* combo5.png */; };
@@ -101,9 +98,6 @@
 		1100180611701FA000B31B2A /* surfing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfing.png; sourceTree = "<group>"; };
 		1100180711701FA000B31B2A /* teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher.png; sourceTree = "<group>"; };
 		1100180811701FA000B31B2A /* truck_driver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck_driver.png; sourceTree = "<group>"; };
-		11C59C761161F99A0044031C /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banana.png; path = ../QuestionSet/banana.png; sourceTree = SOURCE_ROOT; };
-		11C59C781161F9AA0044031C /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car.png; path = ../QuestionSet/car.png; sourceTree = SOURCE_ROOT; };
-		11C59C7A1161F9BA0044031C /* mukmuk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mukmuk.png; path = ../QuestionSet/mukmuk.png; sourceTree = SOURCE_ROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3271AF116D564C00BE1502 /* cheetchreward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetchreward.png; sourceTree = "<group>"; };
 		1D3271B0116D564C00BE1502 /* cheetchreward_fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetchreward_fail.png; sourceTree = "<group>"; };
@@ -292,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				110017F011701F9F00B31B2A /* QuestionSet */,
-				DE7614CB116FD60C00480073 /* QuestionImages */,
 				1D3271AE116D564C00BE1502 /* rewards */,
 				DE207C2D112A44CE005AD593 /* Pic-BackGround.png */,
 				DE207C2E112A44CE005AD593 /* Pic-Title.png */,
@@ -340,16 +333,6 @@
 				DE09921D115DA46100507FBD /* Score.m */,
 			);
 			name = Objects;
-			sourceTree = "<group>";
-		};
-		DE7614CB116FD60C00480073 /* QuestionImages */ = {
-			isa = PBXGroup;
-			children = (
-				11C59C7A1161F9BA0044031C /* mukmuk.png */,
-				11C59C781161F9AA0044031C /* car.png */,
-				11C59C761161F99A0044031C /* banana.png */,
-			);
-			name = QuestionImages;
 			sourceTree = "<group>";
 		};
 		DE9DF177114EEEC50078EA6B /* Tests */ = {
@@ -427,9 +410,6 @@
 				DE207C30112A44CE005AD593 /* Pic-BackGround.png in Resources */,
 				DE207C31112A44CE005AD593 /* Pic-Title.png in Resources */,
 				DE207C32112A44CE005AD593 /* Pic-ProfMonkey.png in Resources */,
-				11C59C771161F99A0044031C /* banana.png in Resources */,
-				11C59C791161F9AA0044031C /* car.png in Resources */,
-				11C59C7B1161F9BA0044031C /* mukmuk.png in Resources */,
 				1D3271BC116D564C00BE1502 /* cheetchreward.png in Resources */,
 				1D3271BD116D564C00BE1502 /* cheetchreward_fail.png in Resources */,
 				1D3271BE116D564C00BE1502 /* combo5.png in Resources */,

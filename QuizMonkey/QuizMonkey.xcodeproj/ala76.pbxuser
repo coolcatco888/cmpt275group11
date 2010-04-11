@@ -1,5 +1,26 @@
 // !$*UTF8*$!
 {
+	11C59C761161F99A0044031C /* banana.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = banana.png;
+		path = /Volumes/ala76/CMPT_275/Project/cmpt275group11/QuestionSet/banana.png;
+		sourceTree = "<absolute>";
+	};
+	11C59C781161F9AA0044031C /* car.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = car.png;
+		path = /Volumes/ala76/CMPT_275/Project/cmpt275group11/QuestionSet/car.png;
+		sourceTree = "<absolute>";
+	};
+	11C59C7A1161F9BA0044031C /* mukmuk.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = mukmuk.png;
+		path = /Volumes/ala76/CMPT_275/Project/cmpt275group11/QuestionSet/mukmuk.png;
+		sourceTree = "<absolute>";
+	};
 	1D3623240D0F684500981E51 /* QuizMonkeyAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1083, 461}}";
@@ -37,24 +58,16 @@
 			sepNavVisRange = "{458, 1112}";
 		};
 	};
-	1D7D0653114DCD7B003B550F /* Questions.xml */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1083, 4480}}";
-			sepNavSelRange = "{5726, 0}";
-			sepNavVisRange = "{5569, 725}";
-			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
-		};
-	};
 	28D7ACF60DDB3853001CB0EB /* QuizMonkeyViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1083, 1554}}";
 			sepNavSelRange = "{1148, 0}";
-			sepNavVisRange = "{503, 1029}";
+			sepNavVisRange = "{500, 1058}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* QuizMonkeyViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1083, 3080}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1083, 3066}}";
 			sepNavSelRange = "{649, 0}";
 			sepNavVisRange = "{690, 1514}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
@@ -215,8 +228,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 292562176;
-			PBXWorkspaceStateSaveDate = 292562176;
+			PBXPerProjectTemplateStateSaveDate = 292710685;
+			PBXWorkspaceStateSaveDate = 292710685;
 		};
 		perUserProjectItems = {
 			DE099256115DB00600507FBD = DE099256115DB00600507FBD /* PBXTextBookmark */;
@@ -241,7 +254,7 @@
 			DE58EAE5117023B8002B145F = DE58EAE5117023B8002B145F /* PBXTextBookmark */;
 			DE58EAE6117023B8002B145F = DE58EAE6117023B8002B145F /* PBXTextBookmark */;
 			DE58EAFA117024EB002B145F = DE58EAFA117024EB002B145F /* PBXTextBookmark */;
-			DE58EB0111702504002B145F /* PBXTextBookmark */ = DE58EB0111702504002B145F /* PBXTextBookmark */;
+			DE58EB0111702504002B145F = DE58EB0111702504002B145F /* PBXTextBookmark */;
 			DE63B9D41160339A00000E41 = DE63B9D41160339A00000E41 /* PBXTextBookmark */;
 			DE63BA3B11603BD600000E41 = DE63BA3B11603BD600000E41 /* PBXTextBookmark */;
 			DE6EF883116168E800C5391E = DE6EF883116168E800C5391E /* PBXTextBookmark */;
@@ -429,6 +442,13 @@
 			DEE80A881148110600150FFF = DEE80A881148110600150FFF /* PBXTextBookmark */;
 			DEE80ADE114816B700150FFF = DEE80ADE114816B700150FFF /* PBXTextBookmark */;
 			DEE80B3411481ABF00150FFF = DEE80B3411481ABF00150FFF /* PBXTextBookmark */;
+			DEE95DA21172693300D7DAC2 /* PBXTextBookmark */ = DEE95DA21172693300D7DAC2 /* PBXTextBookmark */;
+			DEE95DA31172693300D7DAC2 /* PBXBookmark */ = DEE95DA31172693300D7DAC2 /* PBXBookmark */;
+			DEE95DA41172693300D7DAC2 /* PBXBookmark */ = DEE95DA41172693300D7DAC2 /* PBXBookmark */;
+			DEE95DA51172693300D7DAC2 /* PBXTextBookmark */ = DEE95DA51172693300D7DAC2 /* PBXTextBookmark */;
+			DEE95DA61172693300D7DAC2 /* PBXBookmark */ = DEE95DA61172693300D7DAC2 /* PBXBookmark */;
+			DEE95DA71172693300D7DAC2 /* PBXBookmark */ = DEE95DA71172693300D7DAC2 /* PBXBookmark */;
+			DEE95DA81172693300D7DAC2 /* PBXBookmark */ = DEE95DA81172693300D7DAC2 /* PBXBookmark */;
 		};
 		sourceControlManager = DE207C2B112A44B3005AD593 /* Source Control */;
 		userBuildSettings = {
@@ -662,7 +682,6 @@
 	};
 	DE58EAA21170124C002B145F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 1D7D0653114DCD7B003B550F /* Questions.xml */;
 		name = "Questions.xml: 237";
 		rLen = 0;
 		rLoc = 5726;
@@ -1431,9 +1450,9 @@
 	};
 	DED5D288115D7E51006B3A5D /* QuestionViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1122, 2856}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1122, 2814}}";
 			sepNavSelRange = "{602, 324}";
-			sepNavVisRange = "{47, 1192}";
+			sepNavVisRange = "{32, 1208}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
 	};
@@ -1455,7 +1474,6 @@
 	};
 	DED5D2C5115D8152006B3A5D /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 1D7D0653114DCD7B003B550F /* Questions.xml */;
 		name = "Questions.xml: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -2839,7 +2857,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1083, 3038}}";
 			sepNavSelRange = "{3186, 0}";
-			sepNavVisRange = "{2652, 1454}";
+			sepNavVisRange = "{2649, 1457}";
 			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
 		};
 	};
@@ -2918,5 +2936,45 @@
 		rType = 0;
 		vrLen = 595;
 		vrLoc = 0;
+	};
+	DEE95DA21172693300D7DAC2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DEE4129A11641D4B008B019A /* OnlineViewController.m */;
+		name = "OnlineViewController.m: 79";
+		rLen = 0;
+		rLoc = 3186;
+		rType = 0;
+		vrLen = 1497;
+		vrLoc = 2649;
+	};
+	DEE95DA31172693300D7DAC2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */;
+	};
+	DEE95DA41172693300D7DAC2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DE207C2E112A44CE005AD593 /* Pic-Title.png */;
+	};
+	DEE95DA51172693300D7DAC2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DEE4129A11641D4B008B019A /* OnlineViewController.m */;
+		name = "OnlineViewController.m: 79";
+		rLen = 0;
+		rLoc = 3186;
+		rType = 0;
+		vrLen = 1497;
+		vrLoc = 2649;
+	};
+	DEE95DA61172693300D7DAC2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DE207C2F112A44CE005AD593 /* Pic-ProfMonkey.png */;
+	};
+	DEE95DA71172693300D7DAC2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DE207C2E112A44CE005AD593 /* Pic-Title.png */;
+	};
+	DEE95DA81172693300D7DAC2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DE207C2D112A44CE005AD593 /* Pic-BackGround.png */;
 	};
 }
