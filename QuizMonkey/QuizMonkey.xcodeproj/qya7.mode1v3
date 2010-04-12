@@ -228,8 +228,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -271,6 +269,7 @@
 								<string>DE7614CA116FD5D500480073</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>DE9DF177114EEEC50078EA6B</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -278,9 +277,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>16</integer>
-									<integer>11</integer>
-									<integer>1</integer>
+									<integer>33</integer>
+									<integer>32</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -304,7 +302,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>19 121 1440 732 0 0 1440 878 </string>
+						<string>-17 146 1440 732 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -315,12 +313,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ScoreParser.h</string>
+								<string>QuizMonkeyTestCase.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,16 +328,15 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ScoreParser.h</string>
+										<string>QuizMonkeyTestCase.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D5E3E7E1172A29200DFA008</string>
+										<string>1D5E3E921172C7A000DFA008</string>
 										<key>history</key>
 										<array>
 											<string>1D7D06C3114DD59F003B550F</string>
 											<string>1D7D06C4114DD59F003B550F</string>
-											<string>1D7D06C5114DD59F003B550F</string>
 											<string>1D7D070D114DD76B003B550F</string>
 											<string>1D7D073B114DDC90003B550F</string>
 											<string>1DAB8087115D94EC0087B317</string>
@@ -354,7 +353,9 @@
 											<string>1D0F6745116FFA5D001B80FA</string>
 											<string>1D0F6746116FFA5D001B80FA</string>
 											<string>1D0F6747116FFA5D001B80FA</string>
-											<string>1D751F061170099C00C1E00A</string>
+											<string>1D5E3E8C1172C7A000DFA008</string>
+											<string>1D5E3E8D1172C7A000DFA008</string>
+											<string>1D5E3E8E1172C7A000DFA008</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -390,6 +391,9 @@
 											<string>1D0F674B116FFA5D001B80FA</string>
 											<string>1D0F6751116FFA5D001B80FA</string>
 											<string>1D0F6752116FFA5D001B80FA</string>
+											<string>1D5E3E8F1172C7A000DFA008</string>
+											<string>1D5E3E901172C7A000DFA008</string>
+											<string>1D5E3E911172C7A000DFA008</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -403,7 +407,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1232, 513}}</string>
 								<key>RubberWindowFrame</key>
-								<string>19 121 1440 732 0 0 1440 878 </string>
+								<string>-17 146 1440 732 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -423,7 +427,7 @@
 								<key>Frame</key>
 								<string>{{0, 518}, {1232, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>19 121 1440 732 0 0 1440 878 </string>
+								<string>-17 146 1440 732 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -589,7 +593,7 @@
 		<string>/Users/qya7/cmpt275group11/QuizMonkey/QuizMonkey.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>19 121 1440 732 0 0 1440 878 </string>
+	<string>-17 146 1440 732 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

@@ -436,6 +436,76 @@
 		vrLen = 1044;
 		vrLoc = 0;
 	};
+	1D5E3E8C1172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE6EF819116155E500C5391E /* ScoreParser.h */;
+		name = "ScoreParser.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1044;
+		vrLoc = 0;
+	};
+	1D5E3E8D1172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 6";
+		rLen = 0;
+		rLoc = 183;
+		rType = 0;
+		vrLen = 1210;
+		vrLoc = 0;
+	};
+	1D5E3E8E1172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */;
+		name = "QuizMonkeyTestCase.h: 8";
+		rLen = 0;
+		rLoc = 308;
+		rType = 0;
+		vrLen = 704;
+		vrLoc = 0;
+	};
+	1D5E3E8F1172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE6EF819116155E500C5391E /* ScoreParser.h */;
+		name = "ScoreParser.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1044;
+		vrLoc = 0;
+	};
+	1D5E3E901172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */;
+		name = "QuizMonkeyTestCase.h: 8";
+		rLen = 0;
+		rLoc = 308;
+		rType = 0;
+		vrLen = 704;
+		vrLoc = 0;
+	};
+	1D5E3E911172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
+		name = "QuizMonkeyTestCase.m: 6";
+		rLen = 0;
+		rLoc = 183;
+		rType = 0;
+		vrLen = 1210;
+		vrLoc = 0;
+	};
+	1D5E3E921172C7A000DFA008 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */;
+		name = "QuizMonkeyTestCase.h: 6";
+		rLen = 0;
+		rLoc = 178;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 0;
+	};
 	1D6058900D05DD3D006BFB54 /* QuizMonkey */ = {
 		activeExec = 0;
 		executables = (
@@ -494,16 +564,16 @@
 	};
 	1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 481}}";
-			sepNavSelRange = "{306, 0}";
-			sepNavVisRange = "{0, 341}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 458}}";
+			sepNavSelRange = "{178, 0}";
+			sepNavVisRange = "{0, 706}";
 		};
 	};
 	1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1171, 1176}}";
-			sepNavSelRange = "{2478, 0}";
-			sepNavVisRange = "{0, 1081}";
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 1358}}";
+			sepNavSelRange = "{183, 0}";
+			sepNavVisRange = "{0, 1210}";
 		};
 	};
 	1D7D0672114DCFDC003B550F /* PBXTextBookmark */ = {
@@ -511,7 +581,7 @@
 		fRef = 1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */;
 		name = "QuizMonkeyTestCase.h: 15";
 		rLen = 0;
-		rLoc = 335;
+		rLoc = 337;
 		rType = 0;
 		vrLen = 269;
 		vrLoc = 0;
@@ -521,7 +591,7 @@
 		fRef = 1D7D05EF114DC337003B550F /* QuizMonkeyTestCase.m */;
 		name = "QuizMonkeyTestCase.m: 10";
 		rLen = 0;
-		rLoc = 176;
+		rLoc = 177;
 		rType = 0;
 		vrLen = 343;
 		vrLoc = 0;
@@ -594,7 +664,7 @@
 		fRef = 1D7D05EE114DC337003B550F /* QuizMonkeyTestCase.h */;
 		name = "QuizMonkeyTestCase.h: 15";
 		rLen = 0;
-		rLoc = 306;
+		rLoc = 308;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 0;
@@ -835,7 +905,7 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = 1D7D05DA114DC26A003B550F /* QuizMonkey */;
 		activeSDKPreference = iphonesimulator3.1.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* QuizMonkey */;
@@ -953,6 +1023,13 @@
 			1D10A6AB115FFC54003886CF = 1D10A6AB115FFC54003886CF /* PBXTextBookmark */;
 			1D10A6D7115FFD15003886CF = 1D10A6D7115FFD15003886CF /* PBXTextBookmark */;
 			1D5E3E7E1172A29200DFA008 /* PBXTextBookmark */ = 1D5E3E7E1172A29200DFA008 /* PBXTextBookmark */;
+			1D5E3E8C1172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E8C1172C7A000DFA008 /* PBXTextBookmark */;
+			1D5E3E8D1172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E8D1172C7A000DFA008 /* PBXTextBookmark */;
+			1D5E3E8E1172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E8E1172C7A000DFA008 /* PBXTextBookmark */;
+			1D5E3E8F1172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E8F1172C7A000DFA008 /* PBXTextBookmark */;
+			1D5E3E901172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E901172C7A000DFA008 /* PBXTextBookmark */;
+			1D5E3E911172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E911172C7A000DFA008 /* PBXTextBookmark */;
+			1D5E3E921172C7A000DFA008 /* PBXTextBookmark */ = 1D5E3E921172C7A000DFA008 /* PBXTextBookmark */;
 			1D751F061170099C00C1E00A = 1D751F061170099C00C1E00A /* PBXTextBookmark */;
 			1D7D0672114DCFDC003B550F = 1D7D0672114DCFDC003B550F /* PBXTextBookmark */;
 			1D7D0673114DCFDC003B550F = 1D7D0673114DCFDC003B550F /* PBXTextBookmark */;
