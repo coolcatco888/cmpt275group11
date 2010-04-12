@@ -2,8 +2,8 @@
 //  QuizMonkeyTestCase.h
 //  QuizMonkey
 //
-//	This is head file of XML parser testing. At first, parser decode a String,
-//	which contains XML documents, and then it produce a question object. After that,
+//	This is head file of XML parser testing. At first, parser decodes a String,
+//	which contains XML documents, and then it produces a question object. After that,
 //	this test will check every attribute of the question, and it will show up message(s)
 //	if test is failed.
 //
