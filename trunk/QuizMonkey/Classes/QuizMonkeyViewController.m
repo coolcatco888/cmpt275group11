@@ -13,112 +13,30 @@
 //  Copyright 2010 Team Awesome. All rights reserved.
 //
 
-
-
 #import "QuizMonkeyViewController.h"
 
 @implementation QuizMonkeyViewController
 
 @synthesize questionViewController;
 @synthesize onlineViewController;
-//@synthesize submissionViewController;
-//@synthesize submitView;
-////////////////////////Main View Functions
+
+//##############################################################
+//Main View Functions
+//##############################################################
 -(IBAction)loadQuestionView:(id)sender {
+	//Loading a question view controller object and displaying the question view
 	questionViewController = [questionViewController init];
 	[mainMenuView addSubview:questionView];
-	//Set up the array of the four buttons in the question view
-	//	questionChoiceButtons = [NSArray arrayWithObjects: questionChoice1Button, questionChoice2Button, questionChoice3Button, questionChoice4Button, nil]; 
-	/*
-	 //Initiates the question manager and in the initiation it passes all the references of all the question view objects
-	 manager = [[QuestionViewManager alloc] initQuestionViewManager:mainMenuView 
-	 :questionView 
-	 :finalScoreView 
-	 :questionSentenceLabel 
-	 :questionSentenceBottomLabel 
-	 :questionTypeLabel 
-	 :finalScoreLabel 
-	 :questionImage 
-	 :smallMonkeyImage
-	 :timerProgress
-	 :questionChoiceButtons];
-	 */
 }
 -(IBAction)loadHighScoresView:(id)sender {
+	//Loading an online view controller object and displaying the high scores view
 	onlineViewController = [onlineViewController init];
-//	[mainMenuView addSubview:highScoresView];
-//	[onlineViewController setHighScoresURL:@"http://quizmonkey.x10hosting.com/viewxml.php?"];
-//	[onlineViewController setSubmitScoreURL:@"http://quizmonkey.x10hosting.com/submit.php?"];
-	
 	[onlineViewController loadHighScoresFromURL];
-	
-	
-	/*
-	NSData *highScoresData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://quizmonkey.x10hosting.com/viewxml.php"]];
-	ScoreParser *scoreParser = [ScoreParser new];
-	NSMutableArray *highScoresArray = [scoreParser parseScoresFromData:highScoresData];
-//	NSLog(@"%@",[[highScoresArray objectAtIndex:0] studentID]);
-	UIView *highScoresSubView = [UIView new];
-	[highScoresSubView setFrame:CGRectMake(HIGHSCORES_ORIGN_X, HIGHSCORES_ORIGN_Y, HIGHSCORES_ORIGN_W, HIGHSCORES_ORIGN_H)];
-	
-	for(int i = 0; i < 17; i++) {
-		Score *currentScore = [highScoresArray objectAtIndex:i];
-		
-		UIButton *newScore = [UIButton buttonWithType:UIButtonTypeCustom];
-		[newScore setEnabled:FALSE];
-		[newScore setTitle:[currentScore studentID] forState:0];
-		[newScore setFrame:CGRectMake(0, i*HIGHSCORES_SCORE_H, 110, 21)];
-		[newScore setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-		[highScoresSubView addSubview:newScore];
-		
-		newScore = [UIButton buttonWithType:UIButtonTypeCustom];
-		[newScore setEnabled:FALSE];
-		[newScore setTitle:[[NSNumber numberWithInt:[currentScore timeLeft]] stringValue] forState:0];
-		[newScore setFrame:CGRectMake(110, i*HIGHSCORES_SCORE_H, 110, 21)];
-		[highScoresSubView addSubview:newScore];
-
-		newScore = [UIButton buttonWithType:UIButtonTypeCustom];
-		[newScore setEnabled:FALSE];
-		[newScore setTitle:[[NSNumber numberWithInt:[currentScore points]] stringValue] forState:0];
-		[newScore setFrame:CGRectMake(220, i*HIGHSCORES_SCORE_H, 110, 21)];
-		[highScoresSubView addSubview:newScore];
-
-		newScore = [UIButton buttonWithType:UIButtonTypeCustom];
-		[newScore setEnabled:FALSE];
-		[newScore setTitle:[[NSNumber numberWithInt:[currentScore maxPoints]] stringValue] forState:0];
-		[newScore setFrame:CGRectMake(330, i*HIGHSCORES_SCORE_H, 110, 21)];
-		[newScore setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
-		[highScoresSubView addSubview:newScore];
-	}
-	
-	[highScoresView addSubview:highScoresSubView];
-	//Shows the high scores view
-	[mainMenuView addSubview:highScoresView];
-	 */
 }
 -(IBAction)exitApplication:(id)sender {
 	//Exits the appliction
 	exit(0);
 }
-
-
-////////////////////////Question View Functions
-/*-(IBAction) selectChoice:(id)sender {
- //Passes the id of the button which called this function to the selectChoice function in the question manager
- //So that the manager knows which button was pressed
- [manager selectChoice:sender];
- }
- 
- -(IBAction)nextQuestion:(id)sender {
- //Calls the next question function to display the next question
- [manager nextQuestion:sender];	
- }
- -(IBAction)exitQuestionView:(id)sender {
- //Removing subview
- [manager quitGame];
- [manager stopTimer];
- }
- */
 
 ////////////////////////High Scores View Functions
 -(void)touchesBegan: (NSSet *)touches withEvent:(UIEvent *)event {
@@ -143,24 +61,15 @@
 	//Updating the user's tap location
 	TapLocation = TapLocationNew;
 }
--(IBAction)exitHighScoresView:(id)sender {
-	//Hides the high scores view
-//	[highScoresView removeFromSuperview];
-}
 
 ////////////////////////Final Score View Functions
 -(IBAction) exitFinalScoreView:(id)sender {
 	//Hides the final view
-	//	NSLog(@"%i",[manager totalPointsAcquired]);
 	[finalScoreView removeFromSuperview];
-//	score = ;
 	onlineViewController = [onlineViewController init];
 	[onlineViewController setCurrentScore:[questionViewController finalScore]];
 	[onlineViewController submitCurrentScore];
 }
-
-
-
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -181,34 +90,16 @@
 }
 
 - (void)dealloc {
+	//Custom class objects
+	[questionViewController release];
+	[onlineViewController release];
+	
 	//View Outlets
 	[mainMenuView release];
 	[questionView release];
 	[highScoresView release];
 	[finalScoreView release];
-	
-	//Main Menu View Outlets
-	
-	//Question View Outlets (Passed on to QuestionViewManager)
-	/*	[questionQuitButton release];
-	 [questionNextButton release];
-	 [questionSentenceLabel release];
-	 [questionSentenceBottomLabel release];
-	 [questionTypeLabel release];
-	 [questionImage release];
-	 [smallMonkeyImage release];
-	 [timerProgress release];
-	 [questionChoice1Button release];
-	 [questionChoice2Button release];
-	 [questionChoice3Button release];
-	 [questionChoice4Button release];
-	 [questionChoiceButtons release];
-	 [manager release];
-	 */
-	
-	//High Scores View Outlets
-	//(None)
-	
+
 	//Final Score View Outlets
 	[finalScoreLabel release];
 	

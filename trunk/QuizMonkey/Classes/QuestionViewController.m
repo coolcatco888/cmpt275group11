@@ -26,18 +26,14 @@
 
 
 @synthesize questionSentenceLabel;
-//@synthesize questionSentenceBottomLabel;
 @synthesize questionTitleLabel;
 @synthesize finalScoreLabel;
 @synthesize questionImage;
 @synthesize questionTimerProgress;
-//@synthesize questionChoiceButtons;
-//@synthesize questionWords;
 @synthesize buttonWordsView;
 
 @synthesize rewardIconFileName;
 @synthesize rewardButtons;
-//@synthesize questionList;
 @synthesize currentQuestionIndex;
 @synthesize currentQuestion;
 @synthesize selectedChoices;
@@ -107,6 +103,7 @@
 }
 -(UIButton*) rewardIconCreator:(NSString*)IconFileName iconX:(NSUInteger)CustomizeX iconY:(NSUInteger)CustomizeY
 {
+	//Sets up the image file names and assignes them to their proper buttons in the final score view
 	NSMutableString* image_name_fail = [NSMutableString stringWithCapacity:100];
 	[image_name_fail appendString: IconFileName];
 	[image_name_fail appendString:@"_fail.png"];
@@ -129,6 +126,7 @@
 	[questionListOfXML retain];
 }
 - (void)loadQuizQuestions {
+	//Randomly selects the 10 questions that will be displayed
 	NSUInteger count = [questionListOfXML count];
 	totalNumberOfQuizQuestions = 10;
 	totalMaxPoints = 0;
@@ -155,57 +153,7 @@
 		}
 	}
 }
-- (void)loadNextQuestionToView {
-	currentQuestionIndex++;
-	currentQuestion = [questionListOfQuiz objectAtIndex:currentQuestionIndex];
-	
-	if([self questionHasImage])
-		questionSentenceLabel.frame = CGRectMake(SENTENCE_RECT_WHEN_IMAGE_X, SENTENCE_RECT_WHEN_IMAGE_Y, SENTENCE_RECT_WHEN_IMAGE_W, SENTENCE_RECT_WHEN_IMAGE_H);
-	
-	[questionTitleLabel setText:currentQuestion.type];
-	if([currentQuestion.type isEqualToString:@"Fill in the blank"]
-	   || [currentQuestion.type isEqualToString:@"Pick out the words"]
-	   || [currentQuestion.type isEqualToString:@"Find the misspelled word"]){
-		[questionSentenceLabel setText:currentQuestion.sentence];
-		[questionSentenceLabel setHidden:FALSE];
-		for(int i = 0; i < 4; i++) {
-			[[questionChoiceButtonArray objectAtIndex:i] setTitle:[currentQuestion.choices objectAtIndex:i] forState:0];
-			[[questionChoiceButtonArray objectAtIndex:i] setHidden:FALSE];
-		}
-		
-		currentMaxPoints=0;
-		currentMaxSelections=0;
-		
-		for(int i=0;i<[[currentQuestion points] count];i++){
-			currentMaxPoints = [[currentQuestion.points objectAtIndex:i] intValue];
-			if([currentQuestion.points objectAtIndex:i]>0)
-				currentMaxSelections++;
-		}
-		
-		totalMaxPoints += currentMaxPoints;
-	}
-	else {
-		
-	}
-	
-	
-}
-
 - (IBAction)selectChoice:(id)sender {
-/*	if(![sender isSelected]) {
-		if(currentNumberOfSelections < currentMaxSelections) {
-			[sender setSelected:TRUE];
-			currentNumberOfSelections++;
-		}
-	}
-	else {
-		if(currentNumberOfSelections > 0) {
-			[sender setSelected:FALSE];
-			currentNumberOfSelections--;
-		}
-	}
-	
-*/
 	UIButton* buttonPressed = (UIButton*)sender;
 	NSString* choice = buttonPressed.titleLabel.text;
 	
@@ -456,10 +404,7 @@
 	//Delete current question in memory and add a new question
 	currentQuestion = [questionListOfQuiz objectAtIndex:index];
 	[self resetQuestionView];
-	
-	NSLog(@"New Question Set at Index:%i",index);
-//	NSLog([[NSNumber numberWithInt:index] stringValue]);
-	
+
 	if([self questionHasImage]) {
 		questionSentenceLabel.frame = CGRectMake(SENTENCE_RECT_WHEN_IMAGE_X, SENTENCE_RECT_WHEN_IMAGE_Y, SENTENCE_RECT_WHEN_IMAGE_W, SENTENCE_RECT_WHEN_IMAGE_H);
 		[questionImage setImage:[UIImage imageNamed:currentQuestion.image]];
@@ -494,7 +439,6 @@
 	}
 	else 
 	{
-		//currentQuestion.sentence=@"To get a user’s answer out a given number of choices, the tap screen will be used. The application will use “.jpg” files for displaying graphical aspects of the application";//just for testing
 		[questionTitleLabel setText:currentQuestion.type];
 		
 		selectedWords=0;
@@ -512,6 +456,7 @@
 		NSArray *sentenceArray = [currentQuestion.sentence componentsSeparatedByString:@" "];
 		for(NSUInteger wordIndex=0;wordIndex<[sentenceArray count];wordIndex++)
 		{
+			//Sets up the location of buttons for the choces
 			word=[sentenceArray objectAtIndex:wordIndex];
 			
 			
@@ -523,46 +468,34 @@
 				letterCounter=(iy+1)*( 400 / WORD_BUTTON_UNIT_WEIGHT );
 				iy++;
 			}
-			
-			
-			//[questionWords addObject:[self buttonCreator:word  buttonX:(CGFloat)ix buttonY: (CGFloat)iy]];
+
 			[self buttonCreator:word  buttonX:(CGFloat)ix buttonY: (CGFloat)iy];
 			letterCounter=letterCounter+([word length]);
 		}
-		//[questionWords count];
-		//[questionWords removeAllObjects];
-		//[questionWords retain];
-		
-		 }
+
+	}
 }
 
 - (UIButton *)buttonCreator:(NSString*) text buttonX:(CGFloat)CustomizeX buttonY:(CGFloat)CustomizeY {
-	
+	//Created buttons for questions that need it
 	CGFloat buttonWidth=(WORD_BUTTON_UNIT_WEIGHT)*([text length]);
 	UIButton *wordButton;
-	//wordButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
 	wordButton=[UIButton buttonWithType:UIButtonTypeCustom];
 	[wordButton setFrame: CGRectMake((CustomizeX*WORD_BUTTON_UNIT_WEIGHT), (CustomizeY*WORD_BUTTON_UNIT_HEIGHT),buttonWidth ,WORD_BUTTON_UNIT_HEIGHT)];
 	[wordButton setTitle:text forState:UIControlStateNormal];
 	[wordButton setTitleColor:[UIColor yellowColor] forState:UIControlStateSelected];
-	//[wordButton.titleLabel setTextColor:[UIColor yellowColor]];
 	wordButton.titleLabel.font=[UIFont boldSystemFontOfSize:WORD_BUTTON_FONT_SIZE];
 	
-	//[wordButton.titleLabel adjustsFontSizeToFitWidth];
 	[wordButton addTarget:self action:@selector(selectword:) forControlEvents:UIControlEventTouchUpInside];
 	[buttonWordsView addSubview:wordButton];
 	[wordButton setShowsTouchWhenHighlighted:TRUE];
-	//[wordButton retain];
 	return wordButton;
 }
 - (void)selectword:(id)sender {
-	//[sender.titleLabel setTextColor:[UIColor yellowColor]];
-	//[sender setHighlighted:TRUE];
+	//Function called when a customly made button is pressed
 	UIButton* currentWord=sender;
 	if(currentWord.selected==TRUE) 
 	{
-		
-		//removeObject:currentSelection];
 		[currentWord setSelected:FALSE];
 		selectedWords--;
 		for(int i = 0; i < [currentQuestion.choices count]; i++) 
@@ -596,6 +529,7 @@
 }
 
 - (BOOL) roughCompare: (NSString*) str1 otherString: (NSString*) str2{
+	//This is to replace sentence so that the shown characters are filtered out of it
 	str1 = [str1 lowercaseString];
 	str1 = [str1 stringByReplacingOccurrencesOfString:@"," withString:@""];
 	str1 = [str1 stringByReplacingOccurrencesOfString:@"." withString:@""];
@@ -621,7 +555,6 @@
 	
 }
 - (int)calculateTotalScore:(NSArray*)points {
-	
 	int totalScore = 0;
 	for(NSNumber* point in points) {
 		totalScore += [point intValue] < 0? 0 : [point intValue];
@@ -677,13 +610,11 @@
 				[finalScoreLabel setText:score];
 				
 				//Set Score Object
-				//finalScore = [Score new];
 				[finalScore setPoints:totalPointsAcquired];
 				[finalScore setMaxPoints:totalPoints];
 				[finalScore setTimeLeft:totalTimeLeft];
 				
 				//check to see Achievement
-				
 				if (((totalPointsAcquired*100)/totalPoints)>=50)
 				{	
 					[self getReward:1];
@@ -715,10 +646,6 @@
 					[self getReward:4];
 					finalScore.reward4=TRUE;
 				}
-				
-				
-				
-//				[self release];
 			}
 		break;
 	}
@@ -760,33 +687,6 @@
 }
 - (void)quitGame {
 	[questionView removeFromSuperview];
-/*	[questionChoiceButtonArray release];
-	
-	[questionListOfXML release];
-	[questionListOfQuiz release];
-	
-	[currentQuestion release];
-	
-	[questionWords release];
-	[buttonWordsView release];
-	
-	[selectedChoices release];
-
-
-
-
-	
-	[currentQuestion release];
-	
-	[questionWords release];
-	[buttonWordsView release];
-
-
-*/
-	
-	
-
-
 }
 - (void)stopTimer {
 	[timer invalidate];
@@ -806,10 +706,5 @@
 	yesButton = [quitAlert addButtonWithTitle:@"Yes"];
 	[quitAlert show];
 	[quitAlert autorelease];
-	
-	//[questionProfMonkeyImage setHidden:TRUE];
-	
-/*	if(buttonIndex = yesButton)
-		[self quitGame];*/
 }
 @end

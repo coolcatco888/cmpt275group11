@@ -3,7 +3,14 @@
 //  QuizMonkey
 //
 //  Created by Ariel Lorenzo-Luaces on 3/31/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//
+//  Worked on by Cley, Ariel, Tony, Meiko, Daniel
+//
+//  Known Bugs: See the header file
+//
+//  Changes: See the header file
+//
+//  Copyright 2010 Team Awesome. All rights reserved.
 //
 
 #import "OnlineViewController.h"
@@ -16,6 +23,7 @@
 @synthesize currentScore;
 
 - init {
+	//Seting up Objects for later use
 	scoreParser = [ScoreParser new];
 	currentStudentID = @"";
 	currentPassword = @"";
@@ -34,6 +42,7 @@
 	return self;
 }
 - (void)loadHighScoresFromURL {
+	//The first time this function runs it sets gettingScores to true and modifies the submitView acordingly
 	if (!gettingScores) {
 		gettingScores = TRUE;
 		[submitButton setTitle:@"Get Scores" forState:0];
@@ -46,12 +55,14 @@
 		[highScoresURL appendString:@"&password="];
 		[highScoresURL appendString:currentPassword];
 		NSLog(highScoresURL);
+		//After we have a URL, we load the data using the URL
 		highScoresData = [NSData dataWithContentsOfURL:[NSURL URLWithString:highScoresURL]];
 		if([[[NSString alloc] initWithData:highScoresData encoding:NSUTF8StringEncoding] isEqualToString:@"FAILED"]) {
 			[statusLabel setText:@"Invalid username or password"];
 			[statusLabel setHidden:FALSE];
 		}
 		else {
+			//Then display all the scores onto the high score view
 			NSLog(@"%@",[[NSString alloc] initWithData:highScoresData encoding:NSUTF8StringEncoding]);
 			highScoresArray = [scoreParser parseScoresFromData:highScoresData];
 			for(int i = 0; i < 17 && i<[highScoresArray count]; i++) {
@@ -71,12 +82,14 @@
 	}
 }
 - (void)submitCurrentScore {
+	//The first time this function runs it sets submitingScores to true and modifies the submitView acordingly
 	if (!submitingScore){
 		submitingScore = TRUE;
 		[submitButton setTitle:@"Submit" forState:0];
 		[mainMenuView addSubview:submitView];
 	}
 	else {
+		//A URL is set up containing all the data in the current score object
 		[submitScoreURL setString:@"http://quizmonkey.x10hosting.com/submit.php?"];
 		[self appendVariableToSubmitionString:@"username" value:currentStudentID];
 		[submitScoreURL appendString:@"&"];
@@ -131,6 +144,7 @@
 			[submitScoreURL appendString:@"5"];
 		}
 		NSLog(submitScoreURL);
+		//Then Data is loaded from the server and at the same time the score data is sent
 		submitScoreData = [NSData dataWithContentsOfURL:[NSURL URLWithString:submitScoreURL]];
 		if([[[NSString alloc] initWithData:submitScoreData encoding:NSUTF8StringEncoding] isEqualToString:@"FAILED"]) {
 			[statusLabel setText:@"Invalid username or password"];
@@ -144,6 +158,7 @@
 	}
 }
 - (IBAction)submitScore {
+	//The submit score button
 	[studentID_tf resignFirstResponder];
 	[password_tf resignFirstResponder];
 
@@ -157,7 +172,6 @@
 		}
 		if(gettingScores) {
 			[statusLabel setHidden:TRUE];
-			//[submitView removeFromSuperview];
 			[self loadHighScoresFromURL];
 			
 		}
@@ -194,40 +208,6 @@
 	[theTextField resignFirstResponder];
 	return TRUE;
 }
-
-
-
-
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
