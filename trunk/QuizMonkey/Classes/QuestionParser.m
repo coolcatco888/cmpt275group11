@@ -81,7 +81,10 @@ qualifiedName:(NSString *)qName{
 	
 	if(!([question.type isEqualToString:@"Match the picture"] ||		//checks if the listed type matches a known type
 		 [question.type isEqualToString:@"Find the nouns"] ||
+		 [question.type isEqualToString:@"Find the verbs"] ||
 		 [question.type isEqualToString:@"Find the adjectives"] ||
+		 [question.type isEqualToString:@"Find the misspelled word"] ||
+		 [question.type isEqualToString:@"Pick out the words"] ||
 		 [question.type isEqualToString:@"Fill in the blank"]))
 		isValid = FALSE;
 	

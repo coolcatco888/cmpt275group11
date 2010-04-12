@@ -104,6 +104,7 @@
 	[questionListOfQuiz retain];
 }
 - (void)loadNextQuestionToView {
+	[currentQuestion release];
 	currentQuestionIndex++;
 	currentQuestion = [questionListOfQuiz objectAtIndex:currentQuestionIndex];
 	
@@ -111,9 +112,9 @@
 		questionSentenceLabel.frame = CGRectMake(SENTENCE_RECT_WHEN_IMAGE_X, SENTENCE_RECT_WHEN_IMAGE_Y, SENTENCE_RECT_WHEN_IMAGE_W, SENTENCE_RECT_WHEN_IMAGE_H);
 	
 	[questionTitleLabel setText:currentQuestion.type];
-	if([currentQuestion.type isEqualToString:@"Fill in the blank"]
+	if([currentQuestion.type isEqualToString:@"Find the misspelled word"]
 	   || [currentQuestion.type isEqualToString:@"Pick out the words"]
-	   || [currentQuestion.type isEqualToString:@"Find the misspelled word"]){
+	   || [currentQuestion.type isEqualToString:@"Fill in the blank"]){
 		[questionSentenceLabel setText:currentQuestion.sentence];
 		[questionSentenceLabel setHidden:FALSE];
 		for(int i = 0; i < 4; i++) {
