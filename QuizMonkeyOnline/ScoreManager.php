@@ -233,6 +233,24 @@ class ScoreManager {
         
         return $html;
     }
+    
+    function create_new_user($username, $password, $firstname, $lastname) {
+    	$status = '';
+    	
+    	$result = $this->execute_query("SELECT * FROM `user` "
+            ." WHERE user.userid='$username';");
+        if(mysql_num_rows($result) == 0) {
+        	$this->execute_query("INSERT INTO `quizmonk_data`.`user` (`userid` ,`firstname` ,`lastname` ,`password` ,`email` ,`type`)"
+        	."VALUES ('$username', '$firsname', '$lastname', '$password', 'nothing@nothing.com', '0');");
+        	$status = "User successfully created!";
+        } else {
+        	$status = "Username already exists!";
+        }
+    	
+    	
+    	return $status;
+    
+    }
 
 
 }
