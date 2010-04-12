@@ -355,14 +355,16 @@
 	else if (sender==[rewardButtons objectAtIndex:1])  
 	{
 		
-		title = @"Quiz Passed";
+		
 		if (sender.selected)
 		{
+			title = @"Quiz Passed";
 			[message appendString:@"You passed this quiz!\nCongratulations!"];
 		}
 		else
 		{
-			[message appendString:@"You failed this quiz.\nSuddy more for the next quiz."];
+			title = @"Quiz Failed";
+			[message appendString:@"You failed this quiz.\nStudy harder for the next quiz."];
 		}
 		
 		
@@ -373,21 +375,21 @@
 		title = @"Teacher's Pet";
 		[message appendString:@"Get 5 or more perfect answers in a row to unlock this reward.\nYour longest streak for this quiz was "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.maxCombo] stringValue]];
-		[message appendString:@" perfect answers in a row"];
+		[message appendString:@" perfect answer(s) in a row"];
 	}
 	else if (sender==[rewardButtons objectAtIndex:3]) 
 	{
 		title = @"Grammar Master";
 		[message appendString:@"Get 5 or more perfect answers for grammar questions.\nYou answered "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.grammar] stringValue]];
-		[message appendString:@" grammar question correctly this time."];
+		[message appendString:@" grammar question(s) correctly this time."];
 	}
 	else if (sender==[rewardButtons objectAtIndex:4])  
 	{
 		title = @"Vocabulary Master";
 		[message appendString:@"Get 5 or more perfect answers for vocabulary questions.\nYou answered "];
 		[message appendString:[[NSNumber numberWithInt: finalScore.vocabulary] stringValue]];
-		[message appendString:@" vocabulary question correctly this time."];
+		[message appendString:@" vocabulary question(s) correctly this time."];
 		
 	}
 	else if (sender==[rewardButtons objectAtIndex:5]) 

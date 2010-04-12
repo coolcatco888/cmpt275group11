@@ -13,21 +13,6 @@
 		<point>0</point>
 		<time>5</time>
 	</question>
-
-	<question>
-		<type>Find the adjectives</type>
-		<image></image>
-		<sentence>It smacked my face all of a sudden.</sentence>
-		<choice>It</choice><point>-2</point>
-		<choice>smacked</choice><point>-2</point>
-        <choice>my</choice><point>-2</point>
-		<choice>face</choice><point>-2</point>
-		<choice>all</choice><point>10</point>
-        <choice>of</choice><point>-2</point>
-        <choice>a</choice><point>-2</point>
-        <choice>sudden</choice><point>-2</point>
-		<time>50</time>
-	</question>
 	
 	<question>
 		<type>Match the picture</type>
@@ -367,7 +352,7 @@
     <question>
 		<type>Match the picture</type>
 		<image>grapes.png</image>
-		<sentence>What're the colors of the grapes?</sentence>
+		<sentence>What are the colors of these grapes?</sentence>
 		<choice>red</choice>
 		<choice>black</choice>
 		<choice>orange</choice>
@@ -427,7 +412,7 @@
     <question>
 		<type>Find the misspelled word</type>
 		<image></image>
-		<sentence>Hint: The drinks have a lot of caffeine and adults like to drink</sentence>
+		<sentence>Hint: The drinks have a lot of caffeine and adults like to drink them.</sentence>
 		<choice>kofe</choice>
 		<choice>water</choice>
 		<choice>sandwich</choice>
@@ -442,7 +427,7 @@
     <question>
 		<type>Find the misspelled word</type>
 		<image></image>
-		<sentence>Hint: Soft footwear that is worn indoors</sentence>
+		<sentence>Hint: Soft footwear that is worn indoors.</sentence>
 		<choice>shoes</choice>
 		<choice>sliper</choice>
 		<choice>slipper</choice>
@@ -806,7 +791,7 @@
     <question>
 		<type>Find the misspelled word</type>
 		<image></image>
-		<sentence>Hint: A set of printed sheets of paper contains daily or weekly news.</sentence>
+		<sentence>Hint: A set of printed sheets of paper contains daily or weekly news</sentence>
 		<choice>magazine</choice>
 		<choice>radio</choice>
 		<choice>newpaper</choice>
@@ -968,10 +953,10 @@
 	<question>
 		<type>Find the verbs</type>
 		<image></image>
-		<sentence>After finishing working on the project, Mary is going to have a long vocation.</sentence>
+		<sentence>After finishing work on the project, Mary is going to have a long vocation.</sentence>
         <choice>After</choice><point>-2</point>
 		<choice>finishing</choice><point>10</point>
-        <choice>working</choice><point>15</point>
+        <choice>work</choice><point>15</point>
         <choice>on</choice><point>-2</point>
         <choice>the</choice><point>-2</point>
         <choice>project</choice><point>-2</point>
@@ -1129,20 +1114,6 @@
 		<point>0</point>
 		<point>0</point>
 		<time>3</time>
-	</question>
-    
-    <question>
-		<type>Find the adjectives</type>
-		<image></image>
-		<sentence>Timmy is afraid of seeing a doctor.</sentence>
-        <choice>Timmy</choice><point>-2</point>
-		<choice>is</choice><point>-2</point>
-        <choice>afraid</choice><point>10</point>
-        <choice>of</choice><point>-2</point>
-        <choice>seeing</choice><point>-2</point>
-        <choice>a</choice><point>-2</point>
-        <choice>doctor</choice><point>-2</point>
-		<time>5</time>
 	</question>
     
     <question>
