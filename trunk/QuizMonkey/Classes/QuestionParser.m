@@ -88,7 +88,8 @@ qualifiedName:(NSString *)qName{
 		 [question.type isEqualToString:@"Fill in the blank"]))
 		isValid = FALSE;
 	
-	if((([question.points count] != 4 ||[question.choices count] != 4) && [question.type rangeOfString:@"Find the "].location == NSNotFound))
+	if((([question.points count] != 4 ||[question.choices count] != 4) && ([question.type isEqualToString:@"Find the misspelled word"]|| [question.type rangeOfString:@"Find the "].location == NSNotFound)))
+
 		isValid = FALSE;
 	
 	if([question.type isEqualToString:@"Match the picture"]) 			//checks if the given string is capable of loading an image, but only if 
