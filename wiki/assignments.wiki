@@ -6,8 +6,8 @@ These assignments contain the software design and project planning documents for
 
     * [http://code.google.com/p/cmpt275group11/wiki/Assignment2 Assignment 2] - Requirements, Design, and Quality Assurance Documents
 
-    * Assignment 3 - Not Available
+    * [http://code.google.com/p/cmpt275group11/wiki/Group-11-Assignment3 Assignment 3] - Version 1 Prototype
 
-    * Assignment 4 - Not Available
+    * [http://code.google.com/p/cmpt275group11/wiki/Group-11-Assignment3 Assignment 4] - Version 2 Complete with Online Score Server, visit [http://quizmonkey.x10hosting.com Quiz Monkey Online]
 
-    * Assignment 5 - Not Available
+    * [http://code.google.com/p/cmpt275group11/wiki/Group-11-Assignment5 Assignment 5] - Final Version
