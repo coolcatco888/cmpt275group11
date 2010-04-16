@@ -10,4 +10,4 @@ These assignments contain the software design and project planning documents for
 
     * [http://cmpt275group11.googlecode.com/files/Group11-Assignment4.zip Assignment 4] - Version 2 Complete with Online Score Server, visit [http://quizmonkey.x10hosting.com Quiz Monkey Online]
 
-    * [http://cmpt275group11.googlecode.com/files/Group-11-Assignment5.zip Assignment 5] - Final Version
+    * [http://cmpt275group11.googlecode.com/files/Group-11-Assignment5.zip Assignment 5] - Final Version, See our [http://www.youtube.com/watch?v=eIlro9SSx4s Tutorial Video]!
